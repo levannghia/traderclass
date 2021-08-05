@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 522 522" style="enable-background:new 0 0 522 522;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#686B70;}
+	.st1{fill:#FA8322;}
+	.st2{font-family:'CaliFont-ExtraLight';}
+	.st3{font-size:280.6292px;}
+	.st4{clip-path:url(#SVGID_2_);}
+	.st5{fill:#FFFFFF;}
+</style>
+<g>
+	<circle class="st0" cx="261" cy="261" r="261"/>
+</g>
+<g>
+	<path class="st1" d="M522,261c0,144.1-116.9,261-261,261c-74.1,0-140.9-30.9-188.4-80.4c-10.1-10.5-27.5-33.9-27.5-33.9L489,133.8
+		c0,0,8.8,16.8,12.5,25.6C514.7,190.6,522,225,522,261z"/>
+</g>
+<text transform="matrix(0.9846 0 0 1 102.4893 341.9229)" class="st1 st2 st3">NL</text>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M522,261c0,144.1-116.9,261-261,261c-74.1,0-140.9-30.9-188.4-80.4c-10.1-10.5-27.5-33.9-27.5-33.9
+			L489,133.8c0,0,8.8,16.8,12.5,25.6C514.7,190.6,522,225,522,261z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st4">
+		<text transform="matrix(0.9846 0 0 1 102.4893 341.9229)" class="st5 st2 st3">NL</text>
+	</g>
+</g>
+</svg>
