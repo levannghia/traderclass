@@ -71,7 +71,7 @@
                     <div class="right_nav">
                         <ul>
                             <li>
-                                <a href="{{url('/login')}}" title="log in" class="text-uppercase">log in</a>
+                                <a href="<?php echo e(url('/login')); ?>" title="log in" class="text-uppercase">log in</a>
                             </li>
                         </ul>
                     </div>
@@ -779,4 +779,4 @@
     <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
 </body>
 
-</html>
+</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/home/index.blade.php ENDPATH**/ ?>

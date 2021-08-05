@@ -8,21 +8,22 @@
 </head>
 <body>
 <form method="post">
-    @csrf
-    @if(session()->has('message'))
+    <?php echo csrf_field(); ?>
+    <?php if(session()->has('message')): ?>
        <div class="alert alert-success">
-         {{ session()->get('message') }}
+         <?php echo e(session()->get('message')); ?>
+
        </div>
-       @endif  
+       <?php endif; ?>  
     <p>Site login</p>
     <input type="email" name="email" placeholder="email" /><br/>
     <input type="password" name="password" placeholder="passsword"  /><br/>
     <button type="submit" name="button">Submit</button>
     <div class="text-center mt-4 font-weight-light">
-        <a href="{{url('/forgotpassword')}}" class="text-primary">Forgot password</a>
+        <a href="<?php echo e(url('/forgotpassword')); ?>" class="text-primary">Forgot password</a>
       </div> 
       <div class="text-center mt-4 font-weight-light">
-         Don't have an account? <a href="{{url('/register')}}" class="text-primary">Create</a>
+         Don't have an account? <a href="<?php echo e(url('/register')); ?>" class="text-primary">Create</a>
       </div> 
     </form>
     <h5 class="text-center pt-2">OR</h5>
@@ -43,8 +44,9 @@
                 </div>
 
                 <form id="social-login-form" action="" method="POST" style="display: none;">
-                @csrf
-                  {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
                   <input id="access-token" name="token" type="text">
                   <input id="tokenId" name="tokenId" type="text">
                   <input id="uid" name="uid" type="text">
@@ -53,8 +55,9 @@
                   <input id="photo" name="photo" type="text">
                 </form>
                 <form id="social-login-form" action="" method="POST" style="display: none;">
-                @csrf
-                  {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
                   <input id="token" name="token" type="text">
                   <input id="tokenId" name="tokenId" type="text">
                   <input id="uid" name="uid" type="text">
@@ -108,7 +111,7 @@
             return;
          }
       firebase.auth().signInWithPopup(socialProvider).then(function(result) {
-           /** @type {firebase.auth.OAuthCredential} */
+           /** @type  {firebase.auth.OAuthCredential} */
              var credential = result.credential;
           // This gives you a Google Access Token. You can use it to access the Google API.
             var token = credential.accessToken;
@@ -134,4 +137,4 @@
       }
       </script>
 </body>
-</html>
+</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/users/login.blade.php ENDPATH**/ ?>
