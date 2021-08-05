@@ -140,6 +140,26 @@
                     </a>
                 </li>
                 <?php endif; ?>
+                <?php if(Gate::allows('view', 'Course')): ?>
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class="fe-home"></i>
+                        <span> Home</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level nav collapse" aria-expanded="false" style="">
+                        <li class="">
+                            <a href="/dashboard/home-section-1">Section 1</a>
+                        </li>
+                        <li class="">
+                            <a href="/dashboard/home-section-2">Section 2</a>
+                        </li>
+                        <li class="">
+                            <a href="/dashboard/home-section-3">Section 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <?php endif; ?>
 
                 <?php /*
                 

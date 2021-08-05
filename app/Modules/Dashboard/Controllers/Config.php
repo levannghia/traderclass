@@ -34,6 +34,9 @@ class Config extends Controller
 
     public function postSetting(Request $request)
     {
+        if (!Gate::allows('edit', explode("\\", get_class())[4])) {
+            abort(403);
+        }
         $config_link_youtube = Config_Model::find(6);
         $config_link_youtube->value = $request->LINK_YOUTUBE;
 

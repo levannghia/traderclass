@@ -19,17 +19,17 @@
             </div>
             <div class="col-md-4">
                 <div class="card-box">
-                    <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> Logo</h5>
-                    @if ($logo->value != '')
+                    <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> {{ $image->name }}</h5>
+                    @if ($image->value != '')
                         <div class="form-group mb-2">
-                            <img src="/public/upload/images/logo/{{ $logo->value }}"
+                            <img src="/public/upload/images/sites_home/{{ $image->value }}"
                                 style="width: auto;max-width: 100%">
                         </div>
                     @endif
                     <div class="form-group mb-2">
                         <div class="input-group">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input " name="{{ $logo->name }}" id="photo">
+                                <input type="file" class="custom-file-input " name="{{ $image->name }}" id="photo">
                                 <label class="custom-file-label" for="photo">Choose file</label>
                             </div>
                         </div>
@@ -40,3 +40,4 @@
         @include('Dashboard::inc.formfooter')
     </form>
 @endsection
+

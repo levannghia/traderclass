@@ -6,7 +6,7 @@
             <p class="title">
                 <span>today’s</span> the day.
             </p>
-            <p class="desc">Learn from the world’s best.</p>
+            <p class="desc">{{$config_title_banner_top_left->value}}</p>
             <div class="form_search">
                 <input type="text" value="" class="search_input" placeholder="Your email address" />
                 <a href="#" class="btn btn sign_up">SIGN UP</a>
@@ -14,7 +14,7 @@
                     <input type="checkbox" value="0" />
                     <span>Keep me up to date on class events and new releases.</span>
                 </label>
-                <p class="pricing text-center">$15/month (billed annually)</p>
+                <p class="pricing text-center">{{$config_title_banner_top_tuition->value}}</p>
             </div>
         </div>
         <div class="item-right">
@@ -50,31 +50,31 @@
     <div class="container">
         <div class="list_category">
             <div class="left_content">
-                <h3 class="title_main">Get 100+ classes across 11 categories.</h3>
+                <h3 class="title_main">{{$config_title_banner_center_class->value}}</h3>
                 <ul>
                     <li><svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"
                                 fill="#6E7488" />
-                        </svg> Download and watch offline</li>
+                        </svg> {{$config_title_banner_center_funtion_1->value}}</li>
                     <li><svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"
                                 fill="#6E7488" />
-                        </svg> PDF workbooks for every class</li>
+                        </svg> {{$config_title_banner_center_funtion_2->value}}</li>
                     <li><svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"
                                 fill="#6E7488" />
-                        </svg> Watch on desktop, phone, or TV</li>
+                        </svg> {{$config_title_banner_center_funtion_3->value}}</li>
                     <li><svg width="18" height="14" viewBox="0 0 18 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"
                                 fill="#6E7488" />
-                        </svg> New classes added every month</li>
+                        </svg> {{$config_title_banner_center_funtion_4->value}}</li>
                 </ul>
                 <div class="app_store">
-                    <a href="" title="">
+                    <a href="{{$config_apple_store_link->value}}" title="">
                         <svg width="144" height="43" viewBox="0 0 144 43" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -153,7 +153,7 @@
                                 fill="white" />
                         </svg>
                     </a>
-                    <a href="" title="">
+                    <a href="{{$config_chplay_link->value}}" title="">
                         <svg width="144" height="43" viewBox="0 0 144 43" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -224,7 +224,7 @@
             </div>
             <div class="right_content">
                 <div class="tivi_show">
-                    <img src="/public/sites/images/438aee537126225509f13a8ee02c0edf.png" alt="classes" />
+                    <img src="{{'/public/upload/images/sites_home/'.$config_banner_center_image->value}}" alt="classes" />
                 </div>
             </div>
         </div>
@@ -234,12 +234,12 @@
     <div class="container">
         <div class="info mb-100">
             <div class="left_conent">
-                <p class="title">$15/mo</p>
-                <p class="desc">Billed annually</p>
+                <p class="title">{{$config_title_banner_center_tuition->value}}</p>
+                <p class="desc">{{$config_title_banner_bottom_center_payment->value}}</p>
                 <a href="#" class="btn btn_continute" title="Continute">CONTINUE</a>
             </div>
             <div class="right_content">
-                <img src="/public/sites/images/597fe2798d3695d5c6eb393d275c4117.png" alt="" />
+                <img src="{{'/public/upload/images/sites_home/'.$config_banner_bottom_image->value}}" alt="" />
             </div>
         </div>
     </div>
@@ -266,26 +266,26 @@
         <div class="row mb-100">
             <div class="col-md-4">
                 <div class="item_block">
-                    <p class="title text-center">100+ Classes</p>
-                    <p class="desc text-center">From the World's best</p>
+                    <p class="title text-center">{{$config_title_banner_bottom_class->value}}</p>
+                    <p class="desc text-center">{{$config_title_banner_bottom_review_class->value}}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="item_block">
-                    <p class="title text-center">20 Lessons</p>
-                    <p class="desc text-center">Average per class</p>
+                    <p class="title text-center">{{$config_title_banner_bottom_lessons->value}}</p>
+                    <p class="desc text-center">{{$config_title_banner_bottom_review_lessons->value}}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="item_block">
-                    <p class="title text-center">10 Minutes</p>
-                    <p class="desc text-center">Average per lesson</p>
+                    <p class="title text-center">{{$config_title_banner_bottom_minite->value}}</p>
+                    <p class="desc text-center">{{$config_title_banner_bottom_review_minute->value}}</p>
                 </div>
             </div>
         </div>
         <form class="mt-100 form_valitade" id="form_subcribe">
-            <h4 class="title_main text-center mb-3">No time to browse? We'll find classes for you.</h4>
-            <p class="text-center sub_title_1">Pick any topics that you are interested in.</p>
+            <h4 class="title_main text-center mb-3">{{$config_title_banner_bottom_1->value}}</h4>
+            <p class="text-center sub_title_1">{{$config_title_banner_bottom_2->value}}</p>
             <div class="row list_option mb-100">
                 @foreach ($course_category as $value)
                     <div class="col-md-4">
@@ -301,8 +301,8 @@
             </div>
             <div class="row subcribe mt-100">
                 <div class="col-md-6">
-                    <p class="title">Try some of our classes</p>
-                    <p class="sub_title_2">Enter your email and we’ll send you some samples of our favorite classes.
+                    <p class="title">{{$config_title_banner_bottom_3->value}}</p>
+                    <p class="sub_title_2">{{$config_title_banner_bottom_4->value}}
                     </p>
                 </div>
                 <div class="col-md-6">

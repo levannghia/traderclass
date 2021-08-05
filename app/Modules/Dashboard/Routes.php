@@ -325,6 +325,23 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 // Route::get("social", ["as" => "admin.config.social", "uses" => "Config@social"]);
                 // Route::post("social", ["as" => "admin.config.postSocial", "uses" => "Config@postSocial"]);
             });
+             //config home section 1
+             Route::group(["prefix" => "home-section-1"], function() {
+                Route::get("/", ["as" => "admin.home.section1", "uses" => "Home@section1"]);
+                Route::post("/", ["as" => "admin.home.section1", "uses" => "Home@postSection1"]);
+            });
+
+             //config home section 2
+             Route::group(["prefix" => "home-section-2"], function() {
+                Route::get("/", ["as" => "admin.home.section2", "uses" => "Home@section2"]);
+                Route::post("/", ["as" => "admin.home.section2", "uses" => "Home@postSection2"]);
+            });
+
+            //config home section 3
+            Route::group(["prefix" => "home-section-3"], function() {
+                Route::get("/", ["as" => "admin.home.section3", "uses" => "Home@section3"]);
+                Route::post("/", ["as" => "admin.home.section3", "uses" => "Home@postSection3"]);
+            });
         
             //setting
             Route::group(["prefix" => "setting"], function() {
