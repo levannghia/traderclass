@@ -50,7 +50,7 @@ class Users extends Controller
 
             $titlename = "Đăng ký tài khoản";
             $token_random = Str::random();
-            if ($user->very_email === 0) {
+            if ($user->status === 0) {
                 $link_register = url('/registerpassword?email='.$user->email.'&token='.$token_random);
     
                 $data = array("fullname"=>$user->fullname,"linkreset"=>$link_register,'email'=> $user->email);
@@ -63,7 +63,7 @@ class Users extends Controller
                     $message->from($data['email'],$titlename);
                 });
     
-                
+               
                 session()->flash('message', 'Bạn cần xác thực tài khoản, chúng tôi đã gửi mã xác thực vào email của bạn, hãy kiểm tra và làm theo hướng dẫn.');
                 $this->logout();
                 return redirect()->route('users.login');
@@ -163,7 +163,7 @@ class Users extends Controller
             $user->password =  Hash::make($request->password);
             $user->type =  $request->type;
 
-            $user->very_email =  0;
+            $user->status =  0;
             $user->save();
             $check = Users_Model::find($user->id);
             //send mail
@@ -188,7 +188,7 @@ class Users extends Controller
     {
         $email = $_GET['email'];
         $checkEmail =  Users_Model::where('email',$email)->first();
-        $checkEmail->very_email = 1;
+        $checkEmail->status = 1;
         $checkEmail->save();
         session()->flash('message', 'Xác thực thành công');
         return redirect()->route("users.login"); 
