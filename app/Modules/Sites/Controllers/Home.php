@@ -4,9 +4,9 @@ namespace App\Modules\Sites\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Modules\Dashboard\Models\CourseCategory_Model as ModelsCourseCategory_Model;
 use Illuminate\Support\Facades\Auth;
 use App\Modules\Sites\Models\Testimonials_Model;
+use App\Modules\Sites\Models\CourseCtagory_Model;
 use App\Modules\Sites\Models\Teachers_Model;
 use App\Modules\Sites\Models\Faq_Model;
 use App\Modules\Sites\Models\Config_Model;

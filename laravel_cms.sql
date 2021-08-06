@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 02, 2021 at 01:43 AM
+-- Generation Time: Aug 06, 2021 at 07:28 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.4.9
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `la_admins` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`) USING BTREE
+  UNIQUE KEY `admin_email` (`email`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `la_admins` (
 --
 
 INSERT INTO `la_admins` (`id`, `email`, `fullname`, `photo`, `gender`, `phone`, `address`, `password`, `remember_token`, `status`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'admin@gmail.com', 'luan', 'aomanchester4-1627020617.jpg', 1, '1234567890', NULL, '$2y$10$YK4bR5TBsePYFGclQtJQ5uXOHmK6eIAn4UOyeIuwI6WufLCJq3jV.', '3kSpVV1IJylwvWFVKSRZdP2MqnRHZbVoYjFkGGP3iPfKT9ZfcK3X5kTWR582', 1, 1, '2021-05-09 21:27:50', '2021-07-30 11:48:25'),
+(1, 'admin@gmail.com', 'luan', 'aomanchester4-1627020617.jpg', 1, '1234567890', NULL, '$2y$10$cUeBRKbpGnry1ZdvVOG3T.HsASFyGIaAVC.NxGmK1njXDYt0qqcWO', 'H0OgZBRzA178cbUpUCJG0LDuFVVEFzssdWptrYENNIehXwt5dOYEGhefWmES', 1, 1, '2021-05-09 21:27:50', '2021-08-06 08:05:04'),
 (10, 'meoem2712@gmail.com', 'Nghia', 'aophong4jpg-1627205658.jpg', 1, '0123456789', 'wewewewee', '$2y$10$kFuS8y/VF6jLssybj.J8q.ruNQWXpy5tw2WhbVpLHHY7QMVOCM6Y2', 'a6yrEZfQu3tS1rzFyOPVWEAGTsQgS3qAF2UAL5nsGq6j3sf6lsNeJ0yJzgCZ', 1, 1, '2021-07-25 16:34:19', '2021-08-02 08:13:38');
 
 -- --------------------------------------------------------
@@ -942,7 +942,7 @@ CREATE TABLE IF NOT EXISTS `la_config` (
   `value` text COLLATE utf8_unicode_ci,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `la_config`
@@ -953,7 +953,7 @@ INSERT INTO `la_config` (`id`, `name`, `value`, `updated_at`) VALUES
 (3, 'TITLE', 'Dịch vụ thiết kế website - ngoluan.com', '2019-12-07 22:33:20'),
 (4, 'META_KEYWORD', 'dịch vụ,thiết kế website,thiết kế', '2019-12-07 22:33:20'),
 (5, 'META_DESCRIPTION', 'Dịch vụ thiết kế website', '2019-12-07 22:33:20'),
-(6, 'LINK_YOUTUBE', 'https://www.youtube.com.vn', '2021-07-29 08:28:10'),
+(6, 'LINK_YOUTUBE', 'https://www.youtube.com', '2021-08-05 10:01:17'),
 (7, 'LINK_FACEBOOK', 'https://www.facebook.com/profile.php?id=100015068807055', '2019-09-10 14:01:21'),
 (8, 'LINK_INSTAGRAM', 'https://www.instagram.com.vn', '2021-07-29 08:33:40'),
 (9, 'LINK_LINKEDIN', 'https://www.linkedin.com', '2019-09-10 14:01:21'),
@@ -963,7 +963,7 @@ INSERT INTO `la_config` (`id`, `name`, `value`, `updated_at`) VALUES
 (13, 'FOOTER_TEXT', NULL, '2019-09-09 23:51:54'),
 (14, 'PHONE', '0987109856', '2020-01-01 01:05:45'),
 (15, 'PHOTO_SHARE', 'game-overpng-1568088577.png', '2019-09-10 11:09:38'),
-(16, 'PHOTO_LOGO', 'logo-luansvg-1577815504-1627522937.svg', '2021-07-29 08:42:17'),
+(16, 'PHOTO_LOGO', 'logo-luan-1628134773.svg', '2021-08-05 10:39:33'),
 (17, 'PHOTO_FAVICON', 'logo-luan-onepng-1577815545.png', '2020-01-01 01:05:45'),
 (18, 'PHOTO_LOGO_FOOTER', 'logo-luansvg-1577815531.svg', '2020-01-01 01:05:31'),
 (19, 'LINK_SKYPE', '@ngoluan123', '2019-09-10 14:01:21'),
@@ -986,7 +986,28 @@ INSERT INTO `la_config` (`id`, `name`, `value`, `updated_at`) VALUES
 (38, 'APPLE_STORE_LINK', NULL, '2021-07-06 14:52:32'),
 (39, 'THUMB_SIZE_ADMIN', '{\"width\":200,\"height\":200}', '2021-07-07 14:54:41'),
 (40, 'THUMB_SIZE_TEACHERS', '{\"width\":285,\"height\":500}', '2021-07-28 11:27:37'),
-(41, 'THUMB_SIZE_TESTIMONIALS', '{\"width\":340,\"height\":450}', '2021-07-29 14:50:29');
+(41, 'THUMB_SIZE_TESTIMONIALS', '{\"width\":340,\"height\":450}', '2021-07-29 14:50:29'),
+(42, 'TITLE_BANNER_TOP_LEFT', 'Learn from the world’s best.', '2021-08-05 09:55:03'),
+(43, 'TITLE_BANNER_TOP_TUITION', '$15/month (billed annually)', '2021-08-05 09:33:38'),
+(44, 'TITLE_BANNER_CENTER_CLASS', 'Get 100+ classes across 11 categories.', '2021-08-05 09:33:38'),
+(45, 'TITLE_BANNER_CENTER_FUNTION_1', 'Download and watch offline', '2021-08-05 09:33:38'),
+(46, 'TITLE_BANNER_CENTER_FUNTION_2', 'PDF workbooks for every class', '2021-08-05 09:33:38'),
+(47, 'TITLE_BANNER_CENTER_FUNTION_3', 'Watch on desktop, phone, or TV', '2021-08-05 09:33:38'),
+(48, 'TITLE_BANNER_CENTER_FUNTION_4', 'New classes added every month', '2021-08-05 09:33:38'),
+(49, 'BANNER_CENTER_IMAGE', '438aee537126225509f13a8ee02c0edf-1628134921.png', '2021-08-05 10:42:01'),
+(50, 'TITLE_BANNER_CENTER_TUITION', '$15/mo', '2021-08-05 09:33:38'),
+(51, 'TITLE_BANNER_CENTER_PAYMENT_TIME', 'Billed annually', '2021-08-05 09:33:38'),
+(52, 'BANNER_BOTTOM_IMAGE', '597fe2798d3695d5c6eb393d275c4117-1628136274.png', '2021-08-05 11:04:34'),
+(53, 'TITLE_BANNER_BOTTOM_CLASS', '100+ Classes', '2021-08-05 09:33:38'),
+(54, 'TITLE_BANNER_BOTTOM_REVIEW_CLASS', 'From the World\'s best', '2021-08-05 09:33:38'),
+(55, 'TITLE_BANNER_BOTTOM_LESSONS', '20 Lessons', '2021-08-05 09:33:38'),
+(56, 'TITLE_BANNER_BOTTOM_REVIEW_LESSONS', 'Average per class', '2021-08-05 13:30:35'),
+(57, 'TITLE_BANNER_BOTTOM_MINUTES', '10 Minutes', '2021-08-05 09:33:38'),
+(58, 'TITLE_BANNER_BOTTOM_REVIEW_MINUTES', 'Average per lesson', '2021-08-05 09:33:38'),
+(59, 'TITLE_BANNER_BOTTOM_1', 'No time to browse? We\'ll find classes for you.', '2021-08-05 09:33:38'),
+(60, 'TITLE_BANNER_BOTTOM_2', 'Pick any topics that you are interested in.', '2021-08-05 09:33:38'),
+(61, 'TITLE_BANNER_BOTTOM_3', 'Try some of our classes', '2021-08-05 09:33:38'),
+(62, 'TITLE_BANNER_BOTTOM_4', 'Enter your email and we’ll send you some samples of our favorite classes.', '2021-08-05 09:33:38');
 
 -- --------------------------------------------------------
 
@@ -1022,6 +1043,7 @@ CREATE TABLE IF NOT EXISTS `la_course` (
   `status` int(11) NOT NULL,
   `created_at` timestamp NOT NULL,
   `updated_at` timestamp NOT NULL,
+  `teacher_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1029,10 +1051,10 @@ CREATE TABLE IF NOT EXISTS `la_course` (
 -- Dumping data for table `la_course`
 --
 
-INSERT INTO `la_course` (`id`, `name`, `course_category_id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Van vi ve', 1, 1, '2021-07-30 09:26:49', '2021-07-30 09:26:49'),
-(2, 'toan vui', 2, 1, '2021-07-30 09:26:49', '2021-07-30 09:26:49'),
-(3, 'Van phung phinh', 1, 0, '2021-07-30 09:27:50', '2021-07-30 09:27:50');
+INSERT INTO `la_course` (`id`, `name`, `course_category_id`, `status`, `created_at`, `updated_at`, `teacher_id`) VALUES
+(1, 'Van vi ve', 1, 1, '2021-07-30 09:26:49', '2021-07-30 09:26:49', 2),
+(2, 'toan vui', 2, 1, '2021-07-30 09:26:49', '2021-07-30 09:26:49', 3),
+(3, 'Van phung phinh', 1, 0, '2021-07-30 09:27:50', '2021-07-30 09:27:50', 4);
 
 -- --------------------------------------------------------
 
@@ -1048,7 +1070,7 @@ CREATE TABLE IF NOT EXISTS `la_course_category` (
   `updated_at` timestamp NOT NULL,
   `status` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `la_course_category`
@@ -1056,7 +1078,8 @@ CREATE TABLE IF NOT EXISTS `la_course_category` (
 
 INSERT INTO `la_course_category` (`id`, `title`, `created_at`, `updated_at`, `status`) VALUES
 (1, 'Lop TA', '2021-07-30 07:17:45', '2021-07-30 07:17:45', 1),
-(2, 'Lớp Toán', '2021-07-30 07:17:45', '2021-07-30 07:17:45', 1);
+(2, 'Lớp Toán', '2021-07-30 07:17:45', '2021-07-30 07:17:45', 1),
+(4, 'Lop Chứng Khoán', '2021-08-03 03:26:50', '2021-08-03 03:26:50', 1);
 
 -- --------------------------------------------------------
 
@@ -1081,8 +1104,8 @@ CREATE TABLE IF NOT EXISTS `la_faq` (
 --
 
 INSERT INTO `la_faq` (`id`, `title`, `content`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(4, 'day la bai viet thu 4', '<p><em><strong>Test FAQ</strong></em></p>', 1, 1, '2021-07-30 01:20:16', '2021-07-30 01:20:16'),
-(5, 'day la bai viet thu 5', '<p><strong>Test nua</strong> ne</p>', 0, 0, '2021-07-30 01:20:48', '2021-07-30 01:20:48');
+(4, 'day la bai viet thu 4', 'Test FAQ', 1, 1, '2021-07-30 01:20:16', '2021-08-02 01:47:46'),
+(5, 'day la bai viet thu 5', 'Test nua', 0, 1, '2021-07-30 01:20:48', '2021-08-02 01:47:40');
 
 -- --------------------------------------------------------
 
@@ -1162,7 +1185,7 @@ CREATE TABLE IF NOT EXISTS `la_permission` (
   `name` varchar(255) NOT NULL,
   `note` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Resources - được phép làm gì( tương tác ui)';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='Resources - được phép làm gì( tương tác ui)';
 
 --
 -- Dumping data for table `la_permission`
@@ -1180,7 +1203,8 @@ INSERT INTO `la_permission` (`id`, `name`, `note`) VALUES
 (9, 'Teacher', 'thông tin giáo viên'),
 (10, 'Testimonials', 'Lời chứng thực'),
 (11, 'FAQ', 'faq'),
-(12, 'Course', 'Khóa học');
+(12, 'Course', 'Khóa học'),
+(13, 'Home', 'Quản lý nội dung trang chủ');
 
 -- --------------------------------------------------------
 
@@ -1483,7 +1507,7 @@ CREATE TABLE IF NOT EXISTS `la_role_permission` (
   `deletes` int(11) NOT NULL,
   `edits` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `la_role_permission`
@@ -1491,7 +1515,7 @@ CREATE TABLE IF NOT EXISTS `la_role_permission` (
 
 INSERT INTO `la_role_permission` (`id`, `role_id`, `permission_id`, `ClassName`, `views`, `adds`, `deletes`, `edits`) VALUES
 (1, 1, 1, 'Dashboard', 1, 0, 0, 0),
-(2, 1, 2, 'Products', 1, 0, 0, 0),
+(2, 1, 2, 'Products', 1, 1, 0, 0),
 (3, 1, 4, 'Blog', 1, 0, 0, 0),
 (4, 1, 5, 'Admins', 1, 1, 1, 1),
 (5, 1, 6, 'Role', 1, 0, 1, 0),
@@ -1506,7 +1530,8 @@ INSERT INTO `la_role_permission` (`id`, `role_id`, `permission_id`, `ClassName`,
 (18, 3, 9, 'Teachers', 1, 0, 0, 0),
 (19, 1, 10, 'Testimonials', 1, 1, 1, 1),
 (20, 1, 11, 'Faq', 1, 1, 1, 1),
-(21, 1, 12, 'Course', 1, 1, 1, 1);
+(21, 1, 12, 'Course', 1, 1, 1, 1),
+(22, 1, 13, 'Home', 1, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -1690,19 +1715,46 @@ DROP TABLE IF EXISTS `la_subcribe`;
 CREATE TABLE IF NOT EXISTS `la_subcribe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `course_category_id` int(11) NOT NULL,
+  `course_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL,
   `updated_at` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `la_subcribe`
 --
 
 INSERT INTO `la_subcribe` (`id`, `email`, `course_category_id`, `created_at`, `updated_at`) VALUES
-(3, 'nn@gmail.com', 2, '2021-07-30 08:59:38', '2021-07-23 08:59:38'),
-(2, 'hh@gmail.com', 1, '2021-07-30 08:36:51', '2021-07-30 08:36:51');
+(3, 'nn@gmail.com', '2,4', '2021-07-30 08:59:38', '2021-07-23 08:59:38'),
+(2, 'hh@gmail.com', '2', '2021-07-30 08:36:51', '2021-07-30 08:36:51'),
+(4, 'meoem2712@gmail.com', '4,2', '2021-08-03 03:45:54', '2021-08-03 03:45:54'),
+(5, 'loinh.41.student@fit.tdc.edu.vn', '4,2,1', '2021-08-03 08:19:06', '2021-08-03 08:19:06'),
+(6, 'meoem2712@gmail.com', '4,2,1', '2021-08-04 01:40:54', '2021-08-04 01:40:54'),
+(7, 'meoem2712@gmail.com', '2', '2021-08-04 02:31:36', '2021-08-04 02:31:36'),
+(25, 'meoem22@gmail.com', '4,2', '2021-08-04 07:35:54', '2021-08-04 07:35:54'),
+(24, 'meoem22@gmail.com', '4,2', '2021-08-04 07:35:53', '2021-08-04 07:35:53'),
+(23, 'meoem22@gmail.com', '4,2', '2021-08-04 07:35:51', '2021-08-04 07:35:51'),
+(22, 'meoem22@gmail.com', '4,2', '2021-08-04 07:30:47', '2021-08-04 07:30:47'),
+(21, 'meoem2712@gmail.com', '4,2', '2021-08-04 07:30:34', '2021-08-04 07:30:34'),
+(26, 'meoem22@gmail.com', '4,2', '2021-08-04 07:36:18', '2021-08-04 07:36:18'),
+(27, 'meoem22@gmail.com', '4,2', '2021-08-04 07:36:19', '2021-08-04 07:36:19'),
+(28, 'meoem22@gmail.com', '4,2', '2021-08-04 07:36:19', '2021-08-04 07:36:19'),
+(29, 'meoem22@gmail.com', '4,2', '2021-08-04 07:36:19', '2021-08-04 07:36:19'),
+(30, 'meoem22@gmail.com', '4,2', '2021-08-04 07:36:20', '2021-08-04 07:36:20'),
+(31, 'meoem2712@gmail.com', '4,2', '2021-08-04 07:59:38', '2021-08-04 07:59:38'),
+(32, 'admin@gmail.com', '4,2', '2021-08-04 08:11:14', '2021-08-04 08:11:14'),
+(33, 'admin@gmail.com', '4,2', '2021-08-04 08:15:21', '2021-08-04 08:15:21'),
+(34, 'levannghia.tdc2018@gmail.com', '4', '2021-08-04 08:15:57', '2021-08-04 08:15:57'),
+(35, 'meoem2712@gmail.com', '4,2', '2021-08-04 08:23:25', '2021-08-04 08:23:25'),
+(36, 'meoem2712@gmail.com', '4,2,1', '2021-08-04 08:40:27', '2021-08-04 08:40:27'),
+(37, 'meoem2712@gmail.com', '4,2,1', '2021-08-04 08:41:00', '2021-08-04 08:41:00'),
+(38, 'loinh.41.student@fit.tdc.edu.vn', '4,2', '2021-08-04 08:41:08', '2021-08-04 08:41:08'),
+(39, 'dddd', '2', '2021-08-04 09:20:21', '2021-08-04 09:20:21'),
+(40, 'test', '1', '2021-08-04 09:20:52', '2021-08-04 09:20:52'),
+(41, 'ddddd', '2', '2021-08-04 09:27:10', '2021-08-04 09:27:10'),
+(42, 'ngouyen72@gmail.com', '4,2', '2021-08-05 07:10:38', '2021-08-05 07:10:38'),
+(43, 'levannghia.tdc2018@gmail.com', '4,2', '2021-08-06 01:32:51', '2021-08-06 01:32:51');
 
 -- --------------------------------------------------------
 
@@ -1719,16 +1771,18 @@ CREATE TABLE IF NOT EXISTS `la_teachers` (
   `created_at` timestamp NOT NULL,
   `updated_at` timestamp NOT NULL,
   `status` int(11) NOT NULL,
+  `type` int(11) NOT NULL COMMENT '1: New, 2:""',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `la_teachers`
 --
 
-INSERT INTO `la_teachers` (`id`, `fullname`, `photo`, `position`, `created_at`, `updated_at`, `status`) VALUES
-(2, 'Nghai 0o', 'aophong3-1627539531.jpg', 'Giáo Viên Chính Trị', '2021-07-22 04:16:26', '2021-07-29 08:33:49', 2),
-(3, 'abc', 'aomanchester4-1627542957.jpg', 'Giao vien nhac', '2021-07-29 04:36:10', '2021-07-29 09:41:17', 1);
+INSERT INTO `la_teachers` (`id`, `fullname`, `photo`, `position`, `created_at`, `updated_at`, `status`, `type`) VALUES
+(2, 'Nghai 0o', 'aophong2-1627897335.jpg', 'Giáo Viên Chính Trị', '2021-07-22 04:16:26', '2021-08-02 09:42:51', 2, 1),
+(3, 'abc', 'aomanchester4-1627542957.jpg', 'Giao vien nhac', '2021-07-29 04:36:10', '2021-07-29 09:41:17', 1, 0),
+(4, 'Nghai 0o', 'aomanchester3jpg-1627898224.jpg', 'Giao vien nhac', '2021-08-02 09:57:04', '2021-08-02 09:57:04', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1745,14 +1799,15 @@ CREATE TABLE IF NOT EXISTS `la_testimonials` (
   `created_at` timestamp NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `la_testimonials`
 --
 
 INSERT INTO `la_testimonials` (`id`, `photo`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'aophong3-1627548345.jpg', '<p><em><strong>H&ocirc;m nay vui qu&aacute; mọi người vui thiệt m&agrave;</strong></em></p>', 1, '2021-07-29 08:11:09', '2021-07-30 08:13:51');
+(1, 'aophong3-1627548345.jpg', '<p><em>Gi&ocirc;ng b&atilde;o l&agrave;m cho con người mạnh mẽ hơn v&agrave; kh&ocirc;ng bao giờ tồn tại m&atilde;i m&atilde;i &ndash; Roy T. Bennett</em></p>', 1, '2021-07-29 08:11:09', '2021-08-02 17:08:47'),
+(2, 'a8a27a3e091785de49b2b08bd9a9a6e9jpg-1627898878.jpg', '<p><em>Mục đ&iacute;ch ch&iacute;nh của ch&uacute;ng ta trong cuộc sống n&agrave;y l&agrave; gi&uacute;p đỡ người kh&aacute;c. V&agrave; nếu bạn kh&ocirc;ng thể gi&uacute;p họ, &iacute;t nhất đừng l&agrave;m họ bị thương &ndash; Đức Đạt Lai Lạt Ma XIV</em></p>', 1, '2021-08-02 10:07:58', '2021-08-02 17:07:58');
 
 -- --------------------------------------------------------
 
@@ -1766,26 +1821,31 @@ CREATE TABLE IF NOT EXISTS `la_users` (
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `fullname` text COLLATE utf8_unicode_ci NOT NULL,
   `photo` text COLLATE utf8_unicode_ci,
-  `gender` int(11) NOT NULL,
+  `gender` int(11) DEFAULT NULL,
   `phone` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
   `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `password` text COLLATE utf8_unicode_ci NOT NULL,
-  `remember_token` text COLLATE utf8_unicode_ci NOT NULL,
-  `status` int(11) NOT NULL,
-  `type` int(11) NOT NULL COMMENT '0 - nomal, 1 - dev',
+  `password` text COLLATE utf8_unicode_ci,
+  `remember_token` text COLLATE utf8_unicode_ci,
+  `status` int(11) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL COMMENT '0 - nomal, 1 - dev',
+  `forgotpassword_token` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `very_email` int(1) DEFAULT NULL COMMENT '0:Chưa kích hoạt\r\n1:kích hoạt thành công',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `la_users`
 --
 
-INSERT INTO `la_users` (`id`, `email`, `fullname`, `photo`, `gender`, `phone`, `address`, `password`, `remember_token`, `status`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'ngodinhluan1@gmail.com', 'Ngô Đình Luận', 'game-overpng-1568086123png-1577114756.png', 1, '231231231231', 'đây là địa chỉ', '$2y$10$ZVpjHv0eBpaWIiYwmDqoNOHIYZ59mVqOl1.Np3fBc8bhYvHg9ukpa', '2FRtF2np8QVZDeHXOP5UWJRHKkFiaHdF0u9TC8AAqQlz59OxkiwxzrcEinXG', 1, 1, '2019-09-09 01:27:04', '2019-12-23 22:25:56'),
-(2, 'ngoluancreative@gmail.com', 'Tài khoản thường', NULL, 1, NULL, NULL, '$2y$10$wXT/40M79D7pb6ZYFZ7KhurhlTtZPVv8UpTe1z1zo.bwbFADG1pxm', 'RQrrpPrtoqZAJ8ionf7rCTsE5j4lYKl9oHZZyUJcVdZCv5LfUcOkGWHmOTeH', 2, 0, '2019-12-21 02:52:45', '2021-07-28 16:23:55'),
-(3, 'admin@ngoluan.com', 'Admin', '5dcec893e1d54png-1577807796.png', 1, NULL, NULL, '$2y$10$Vfnjt4U3ltqwRcpFwopZNOY.P5Xo6RRGY7K.v0JD3ShKB.VF1Me8S', 'uFGV1zDXVjVQ44gXQnT9e9dr3FppXWUwj7qFtXQvuK13giDGbLs3uNu8LKXH', 2, 0, '2019-12-31 22:56:36', '2021-07-30 09:28:57');
+INSERT INTO `la_users` (`id`, `email`, `fullname`, `photo`, `gender`, `phone`, `address`, `password`, `remember_token`, `status`, `type`, `forgotpassword_token`, `very_email`, `created_at`, `updated_at`) VALUES
+(1, 'ngodinhluan1@gmail.com', 'Ngô Đình Luận', 'game-overpng-1568086123png-1577114756.png', 1, '231231231231', 'đây là địa chỉ', '$2y$10$ZVpjHv0eBpaWIiYwmDqoNOHIYZ59mVqOl1.Np3fBc8bhYvHg9ukpa', '33BUN3mia5aioHfiL9fUhR2gRJ7qjH8MxI3KNngQhoTy3tNNM0CYOKtiMoyM', 1, 1, NULL, NULL, '2019-09-09 01:27:04', '2019-12-23 22:25:56'),
+(2, 'ngoluancreative@gmail.com', 'Tài khoản thường', NULL, 1, NULL, NULL, '$2y$10$wXT/40M79D7pb6ZYFZ7KhurhlTtZPVv8UpTe1z1zo.bwbFADG1pxm', 'RQrrpPrtoqZAJ8ionf7rCTsE5j4lYKl9oHZZyUJcVdZCv5LfUcOkGWHmOTeH', 2, 0, NULL, NULL, '2019-12-21 02:52:45', '2021-07-28 16:23:55'),
+(3, 'admin@ngoluan.com', 'Admin', '5dcec893e1d54png-1577807796.png', 1, NULL, NULL, '$2y$10$Vfnjt4U3ltqwRcpFwopZNOY.P5Xo6RRGY7K.v0JD3ShKB.VF1Me8S', 'uFGV1zDXVjVQ44gXQnT9e9dr3FppXWUwj7qFtXQvuK13giDGbLs3uNu8LKXH', 2, 0, NULL, NULL, '2019-12-31 22:56:36', '2021-07-30 09:28:57'),
+(9, '19211tt2861@mail.tdc.edu.vn', 'Trung Nguyễn Hiếu', 'https://lh3.googleusercontent.com/a/AATXAJwrPdGXWE2qLBKRQbY37XW-n_Hf3BVtZcULW0B9=s96-c', NULL, NULL, NULL, NULL, 'RqSlGZwtDfhP6au4soLgNHVKSmSIdT4lWYLKHDaHhMjhaJ8Kyr47TaxcmaKS', NULL, NULL, NULL, NULL, '2021-08-03 19:59:17', '2021-08-03 19:59:17'),
+(34, 'meoem2712@gmail.com', 'Nghia', NULL, 1, '+256364674092', 'tp.hochiminh', '$2y$10$VvFzOd0CImU1TvJaimss6OWU63dulA2ETHFbgw..HVOOZPWTHfQEa', NULL, 0, 0, NULL, NULL, '2021-08-06 14:24:47', '2021-08-06 14:24:47'),
+(31, 'traderclass1234@gmail.com', 'dsds', NULL, 1, '+256364674092', 'tp.hochiminh', '$2y$10$FvRLNAgFTBkt7XzbZDU4MOTjCTvjkanQVuzAu88SgZwCHGtfXfXOC', NULL, 0, 0, NULL, NULL, '2021-08-06 14:01:45', '2021-08-06 14:01:45');
 
 -- --------------------------------------------------------
 
