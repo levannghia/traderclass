@@ -11,6 +11,8 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
 
     //All Class
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
+    //Terms
+    Route::get("/terms", ["as" => "sites.terms.index", "uses" => "Terms@index"]);
 
     Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
     Route::post("/login", ["as" => "users.login_request", "uses" => "Users@login_request"]);

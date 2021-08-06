@@ -46,9 +46,9 @@ class Course extends Controller{
     }
 
     // public function add() {
-    //     // if (!Gate::allows('add', explode("\\", get_class())[4])) {
-    //     //     abort(403);
-    //     // }
+    //     if (!Gate::allows('add', explode("\\", get_class())[4])) {
+    //         abort(403);
+    //     }
     //     $settings = config('global.settings');
     //     $row = json_decode(json_encode([
     //         "title" => "Course Categories - Thêm",
@@ -70,9 +70,9 @@ class Course extends Controller{
     // }
 
     // public function edit($id = 0) {
-    //     // if (!Gate::allows('edit', explode("\\", get_class())[4])) {
-    //     //     abort(403);
-    //     // }
+    //     if (!Gate::allows('edit', explode("\\", get_class())[4])) {
+    //         abort(403);
+    //     }
     //     $data = Course_Model::find($id);
     //     $row = json_decode(json_encode([
     //         "title" => "Course Categories - Cập nhật",
@@ -94,9 +94,9 @@ class Course extends Controller{
     // }
 
     // public function delete($id = "") {
-    //     // if (!Gate::allows('delete', explode("\\", get_class())[4])) {
-    //     //     abort(403);
-    //     // }
+    //     if (!Gate::allows('delete', explode("\\", get_class())[4])) {
+    //         abort(403);
+    //     }
     //     $list_id = json_decode($id);
     //     if (!isset($list_id[0]->id)) {
     //         return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu để xóa."]);
@@ -130,9 +130,9 @@ class Course extends Controller{
     // }
 
     // public function trash() {
-    //     // if (!Gate::allows('delete', explode("\\", get_class())[4])) {
-    //     //     abort(403);
-    //     // }
+    //     if (!Gate::allows('delete', explode("\\", get_class())[4])) {
+    //         abort(403);
+    //     }
     //     $data = Course_Model::where("status", 2)->orderBy('id', 'desc')->paginate(15);
     //     $data->setPath('trash');
     //     $row = json_decode(json_encode([

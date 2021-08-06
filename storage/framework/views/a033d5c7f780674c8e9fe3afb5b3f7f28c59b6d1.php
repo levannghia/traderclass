@@ -45,7 +45,7 @@
                             <a href="index.html" class="text-reset">Home</a>
                         </p>
                         <p>
-                            <a href="./All Class.html" class="text-reset">All Classes</a>
+                            <a href="/all-class" class="text-reset">All Classes</a>
                         </p>
                         <p>
                             <a href="./Contact.html" class="text-reset">Contact</a>
@@ -54,7 +54,7 @@
                             <a href="./Privacy.html" class="text-reset">Privacy</a>
                         </p>
                         <p>
-                            <a href="./Terms.html" class="text-reset">Terms</a>
+                            <a href="/terms" class="text-reset">Terms</a>
                         </p>
                         <p>
                             <a href="./Return&Refund Policy.html" class="text-reset">Return & Refund Policy</a>

@@ -1,4 +1,5 @@
-new WOW().init();
+<script>
+    new WOW().init();
 $('.trader_teacher .owl-carousel').owlCarousel({
     loop: true,
     margin: 15,
@@ -185,3 +186,4 @@ function reset_password() {
     reset_password.classList.toggle('active');
     log_in.classList.remove('active');
 }
+</script><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/appscript.blade.php ENDPATH**/ ?>

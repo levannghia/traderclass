@@ -1,7 +1,6 @@
 
-
+<?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
-
 <div class="main">
     <div class="intro">
         <p style="font-size: 18px;">Start your first course</p>
@@ -11,11 +10,12 @@
     <div class="teacher">
         <div class="container">
             <div class="row">
+                <?php $__currentLoopData = $all_class; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-4">
                     <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
+                        <img src="<?php echo e('./public/upload/images/teachers/thumb/'.$value->photo); ?>" alt="">
                         <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
+                            <div class="text"><span class="a"><?php echo e($value->fullname); ?></span> <br> <span class="b">-</span> <br><span class="c"><?php echo e($value->name); ?></span>
                             </div>
                             <div class="button">
                                 <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
@@ -23,68 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>

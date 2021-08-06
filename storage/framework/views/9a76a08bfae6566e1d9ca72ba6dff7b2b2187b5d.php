@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title></title>
+    <title>Home</title>
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
@@ -39,8 +39,8 @@
     <script src="./public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="./public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="./public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
     <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('Sites::inc.appscript', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 </html>

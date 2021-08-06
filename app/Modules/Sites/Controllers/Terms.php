@@ -8,11 +8,10 @@ use App\Modules\Dashboard\Controllers\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Config_Model;
-use App\Modules\Sites\Models\Course_Model;
 use Validator;
 use Carbon\Carbon;
 
-class AllClass extends Controller
+class Terms extends Controller
 {
     public function index()
     {
@@ -21,12 +20,11 @@ class AllClass extends Controller
         $config_link_instagram = Config_Model::find(8);
         $config_chplay_link = Config_Model::find(37);
         $config_apple_store_link = Config_Model::find(38);
-        $all_class = DB::table('course')->select('fullname','name','course.status','course.created_at','course.updated_at','photo')->join('teachers', 'teachers.id', '=', 'course.teacher_id')->orderBy('course.id', 'desc')->get();
 
         $row = json_decode(json_encode([
-            "title" => "All class",
+            "title" => "Terms",
         ]));
 
-        return view('Sites::all_class.index', compact('row','config_link_youtube','config_link_facebook','config_link_instagram','config_chplay_link','config_apple_store_link','all_class'));
+        return view('Sites::terms.index', compact('row','config_link_youtube','config_link_facebook','config_link_instagram','config_chplay_link','config_apple_store_link'));
     }
 }
