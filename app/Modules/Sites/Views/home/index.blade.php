@@ -9,7 +9,7 @@
             <p class="desc">{{$config_title_banner_top_left->value}}</p>
             <div class="form_search">
                 <input type="text" value="" class="search_input" placeholder="Your email address" />
-                <a href="#" class="btn btn sign_up">SIGN UP</a>
+                <a href="#" class="btn btn sign_up" onclick="toggle()">SIGN UP</a>
                 <label>
                     <input type="checkbox" value="0" />
                     <span>Keep me up to date on class events and new releases.</span>

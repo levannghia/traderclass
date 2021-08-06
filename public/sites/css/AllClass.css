@@ -1,0 +1,169 @@
+.intro p {
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main {
+    padding-top: 50px !important;
+}
+
+.img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.img {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.img:hover .text-center {
+    margin-top: -100px;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to top, #171921 1%, transparent 40%, transparent)
+}
+
+.button a {
+    color: black;
+}
+
+.text-center {
+    position: absolute;
+    top: 97%;
+    left: 35%;
+    transform: translate(-27%, -60%);
+    color: white;
+    transition-duration: 0.8s;
+}
+
+.a {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.b {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.c {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.teacher .container .row .col-md-4 {
+    padding-bottom: 30px;
+}
+
+.button {
+    background-color: white;
+    border: 1px solid #EF8D21;
+    border-radius: 7px;
+    width: 118%;
+    margin-left: -8%;
+    margin-top: 25px;
+}
+
+.button button {
+    width: 100%;
+    background-color: white;
+    border: 0px;
+    border-radius: 7px;
+}
+
+button p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 500;
+}
+
+button p i {
+    margin-right: 5px;
+}
+
+
+/*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 1024px) {
+    .a {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .c {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+
+@media screen and (max-width: 768px) {
+    .a {
+        font-weight: bold;
+        font-size: 23px;
+    }
+    .c {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    .a {
+        font-weight: bold;
+        font-size: 48px;
+    }
+    .c {
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    .a {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .c {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    .a {
+        font-weight: bold;
+        font-size: 23px;
+    }
+    .c {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}

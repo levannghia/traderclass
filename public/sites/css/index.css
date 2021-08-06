@@ -1,0 +1,2102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+a:hover {
+    color: #f08e21;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #171921;
+}
+
+body.active~.create-account.active {
+    opacity: 0;
+}
+
+.h-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 8;
+    background-color: #fff;
+    top: 0;
+    display: block;
+}
+
+header.active {
+    opacity: 0.3;
+}
+
+header .header_bottom {
+    background-color: #171921;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+header .header_bottom .main {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+header .header_bottom .main .logo {
+    max-width: 250px;
+    width: 100%;
+}
+
+header .header_bottom .main .menu {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+}
+
+header .header_bottom .main .menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header .header_bottom .main .menu ul li {
+    margin-right: 30px;
+}
+
+header .header_bottom .main .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .header_bottom .main .menu ul li a:hover {
+    color: #f08e21;
+}
+
+header .header_bottom .main .right_nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70%;
+}
+
+header .header_bottom .main .right_nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header .header_bottom .main .right_nav ul li {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+header .header_bottom .main .right_nav ul li .btn_signup {
+    font-size: 12.5px;
+    color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+header .header_bottom .main .right_nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .header_bottom .main .right_nav ul li a:hover svg path {
+    fill: #f08e21;
+}
+
+header .header_bottom .main .right_nav ul li a:hover {
+    color: #f08e21;
+}
+
+header .header_bottom .main .right_nav ul li .btn_signup:hover {
+    background-color: #f08e21;
+    border-color: #f08e21;
+    color: #fff;
+}
+
+
+/*banner home*/
+
+.banner_home {
+    background-image: url(../images/baner_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner_home.active {
+    opacity: 0.3;
+}
+
+.banner_home .main_item {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #171921;
+}
+
+.banner_home .main_item .item-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.banner_home .main_item .item-left .title {
+    color: #fff;
+    font-size: 60px;
+}
+
+.banner_home .main_item .item-left .title span {
+    color: #EF8D21;
+    font-weight: bold;
+}
+
+.banner_home .main_item .item-left .desc {
+    font-size: 18px;
+    color: #7B8197;
+}
+
+.banner_home .main_item .item-left .form_search {
+    max-width: 315px;
+}
+
+.banner_home .main_item .item-left .form_search input.search_input {
+    background: none;
+    background: #171921;
+    border: 0.5px solid #7B8197;
+    border-radius: 3px;
+    padding: 11px 20px;
+    color: #7B8197;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.banner_home .main_item .item-left .form_search .sign_up {
+    background-color: #EF8D21;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 13px 20px;
+}
+
+.banner_home .main_item .item-left .form_search label {
+    display: flex;
+    margin-top: 20px;
+    color: #C4C4C4;
+    font-size: 12px;
+}
+
+.banner_home .main_item .item-left .form_search label input {
+    margin-right: 15px;
+}
+
+.banner_home .main_item .item-left .form_search label span {
+    line-height: 18px;
+    margin-top: -2px;
+}
+
+.banner_home .main_item .item-left .form_search .pricing {
+    margin-top: 15px;
+    color: #C4C4C4;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.banner_home .main_item .item-right {
+    max-width: 1280px;
+}
+
+
+/*Teacher*/
+
+.trader_teacher .owl-carousel .owl-nav,
+.client_say .slide .owl-carousel .owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.trader_teacher .owl-carousel .owl-nav .owl-prev,
+.client_say .slide .owl-carousel .owl-nav .owl-prev {
+    left: -30px;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #191C21;
+    border-radius: 50%;
+}
+
+.trader_teacher .owl-carousel .owl-nav .owl-next,
+.client_say .slide .owl-carousel .owl-nav .owl-next {
+    right: -30px;
+    width: 48px;
+    height: 48px;
+    background: #191C21;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.trader_teacher .owl-carousel .owl-nav .owl-prev:hover,
+.trader_teacher .owl-carousel .owl-nav .owl-next:hover,
+.client_say .slide .owl-carousel .owl-nav .owl-prev:hover,
+.client_say .slide .owl-carousel .owl-nav .owl-next:hover {
+    background-color: #EF8D21;
+}
+
+.trader_teacher .owl-carousel .owl-nav .owl-prev:hover svg path,
+.trader_teacher .owl-carousel .owl-nav .owl-next:hover svg path,
+.client_say .slide .owl-carousel .owl-nav .owl-prev:hover svg path,
+.client_say .slide .owl-carousel .owl-nav .owl-next:hover svg path {
+    fill: #fff;
+}
+
+.trader_teacher .owl-carousel .item {
+    position: relative;
+}
+
+.trader_teacher .owl-carousel .item .mark {
+    position: absolute;
+    top: 15px;
+    border-radius: 12px;
+    padding: 4px 17px;
+    left: 15px;
+}
+
+.trader_teacher .owl-carousel .item .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient( 180deg, rgba(50, 55, 65, 0) 0%, #171921 92.99%);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trader_teacher .owl-carousel .item .info .name {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+.trader_teacher .owl-carousel .item .class_name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.trader_teacher .owl-carousel .item .info .name::after {
+    content: "";
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    margin: 15px auto 0;
+}
+
+
+/*class*/
+
+.classes .list_category {
+    display: flex;
+}
+
+.classes .list_category .left_content {
+    max-width: 380px;
+    width: 100%;
+}
+
+.classes .list_category .left_content .app_store a {
+    text-decoration: none;
+}
+
+.classes .list_category .left_content ul {
+    list-style: none;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.classes .list_category .left_content ul li {
+    color: #7B8197;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.classes .list_category .left_content ul li svg {
+    margin-right: 10px;
+}
+
+.classes .list_category .right_content {
+    width: 100%;
+}
+
+.classes .list_category .right_content .tivi_show {
+    border: 4px solid #323741;
+    position: relative;
+    height: 480px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.classes .list_category .right_content .tivi_show::before {
+    content: "";
+    position: absolute;
+    width: 307px;
+    height: 50px;
+    bottom: -44px;
+    background-image: url(../images/aadd.png);
+    margin: 0 auto;
+    display: block;
+    left: 32%;
+    right: 30%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+.classes .list_category .right_content .tivi_show img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.device .info {
+    display: flex;
+}
+
+.device .info .left_conent {
+    width: 100%;
+    max-width: 300px;
+}
+
+.device .info .left_conent .title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.device .info .left_conent .desc {
+    font-size: 15px;
+    color: #7B8197;
+}
+
+.device .info .right_content {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.device .info .left_conent .btn_continute {
+    background: #EF8D21;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 13px 43px;
+    width: 100%;
+}
+
+.client_say .item {
+    position: relative;
+    align-items: center;
+    display: flex;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.client_say .item .desc {
+    max-width: 490px;
+    background-color: #EF8D21;
+    border-radius: 3px;
+    padding: 40px;
+    color: #fff;
+    max-height: 308px;
+    margin-right: -50px;
+    z-index: 2;
+}
+
+.client_say .item img {
+    max-width: 250px;
+}
+
+.client_say .slide {
+    margin-top: 40px;
+}
+
+.try_lession {
+    background: #111319;
+}
+
+.try_lession .item_block {
+    background: #171921;
+    padding: 20px 0;
+}
+
+.try_lession .item_block .title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #EF8D21;
+}
+
+.try_lession .item_block .title {
+    margin-bottom: 0;
+}
+
+.try_lession .item_block .desc {
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.try_lession .sub_title_1 {
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.try_lession .list_option .item {
+    border-radius: 3px;
+    border: 1px solid #7B8197;
+    padding: 15px;
+}
+
+.try_lession .list_option .item label {
+    display: flex;
+    align-items: center;
+}
+
+.try_lession .list_option .item label span {
+    font-weight: 500;
+    font-size: 25px;
+    color: #fff;
+    width: 100%;
+}
+
+.try_lession .list_option .item label input {
+    background: none;
+}
+
+.try_lession .list_option {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.try_lession .subcribe .title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.try_lession .subcribe {
+    font-size: 15px;
+}
+
+.try_lession .subcribe .box_subcribe div input {
+    background: none;
+    border-radius: 10px;
+    border: 1px solid #7B8197;
+    padding: 12px 18px;
+    width: 100%;
+    margin-right: 10px;
+    color: #C4C4C4;
+}
+
+.try_lession .subcribe .box_subcribe {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.try_lession .subcribe .box_subcribe div {
+    display: flex;
+    width: 100%;
+}
+
+.try_lession .subcribe .box_subcribe label {
+    display: flex;
+    color: #7B8197;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.try_lession .subcribe .box_subcribe label input {
+    margin-right: 10px;
+}
+
+.try_lession .subcribe .box_subcribe div input:focus-visible {
+    outline: none;
+}
+
+.try_lession .subcribe .sub_title_2 {
+    margin: 0;
+    color: #C4C4C4;
+}
+
+.try_lession .subcribe .btn_subcribe {
+    font-weight: bold;
+    font-size: 14px;
+    color: #C4C4C4;
+    border: 1px solid #7B8197;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 13px 60px;
+}
+
+.try_lession .subcribe .btn_subcribe:hover {
+    background-color: #EF8D21;
+}
+
+.faq .list_faq {
+    margin-top: 60px;
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+.faq .list_faq .question .item .title_faq {
+    border: 0.5px solid #464A58;
+    border-radius: 3px;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.faq .list_faq .question .item .title_faq span {
+    width: 100%;
+}
+
+
+/* .faq .list_faq .question .item .title_faq svg {} */
+
+.faq .list_faq .question .item .collapse {
+    color: #C4C4C4;
+    padding: 20px;
+    border: 0.5px solid #464A58;
+    background: #111319;
+    border-top: 0;
+}
+
+.faq .list_faq .question .item {
+    margin-bottom: 10px;
+}
+
+.faq .list_faq .label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+footer {
+    background: #111319;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #C4C4C4;
+    font-size: 13px;
+}
+
+footer ul li {
+    margin-bottom: 25px;
+}
+
+footer .footer_bottom {
+    color: #C4C4C4;
+}
+
+footer p {
+    color: #C4C4C4;
+}
+
+footer .footer_right a {
+    display: block;
+    margin-bottom: 15px;
+}
+
+footer ul li a svg {
+    margin-right: 10px;
+}
+
+#btn-toggle-sidebar svg {
+    width: 30px;
+}
+
+#btn-toggle-sidebar svg path {
+    fill: #f08e21;
+}
+
+
+/*Common css*/
+
+.title_main {
+    font-size: 30px;
+    line-height: 45px;
+    color: #EF8D21;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+
+/* --------------create account------------- */
+
+.create-account {
+    text-align: -webkit-center;
+    position: absolute;
+    width: 336px;
+    height: 650px;
+    background: #ffffff;
+    top: 415px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.create-account.active {
+    display: block;
+    opacity: 1;
+}
+
+.create-account h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.create-account .btn-google {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    width: 304px;
+    height: 49px;
+    background: #4285F4;
+    border-radius: 10px;
+    border: 0;
+}
+
+.create-account .btn-google a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.create-account .btn-facebook {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    width: 304px;
+    height: 49px;
+    background: #3C5A99;
+    border-radius: 10px;
+    border: 0;
+}
+
+.create-account .btn-facebook a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.create-account a {
+    margin-bottom: 100px;
+}
+
+.signup-or {
+    margin-top: 20px;
+    position: relative;
+}
+
+.signup-or span {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.signup-or::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background: #999;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.create-account label {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.signup-input {
+    border: 0.5px solid #A7A9AC;
+    border-radius: 20px;
+    width: 304px;
+    height: 48px;
+    outline: 0;
+    font-size: 15px;
+}
+
+.create-account .btn-create {
+    width: 304px;
+    height: 48px;
+    background: #EF8D21;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.sign-in {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.text {
+    margin: 17px 17px 17px 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #A7A9AC;
+}
+
+.create-account input[type="checkbox"] {
+    top: -18px;
+    margin-right: 20px;
+    height: 80px;
+    width: 28px;
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.checkmark {
+    top: 432px;
+    border: 0.5px solid #323741;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.create-account input:checked~.checkmark {
+    background-color: #191C21;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.create-account input:checked~.checkmark:after {
+    display: block;
+}
+
+.create-account .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* --------------log in------------- */
+
+.log-in {
+    text-align: -webkit-center;
+    position: absolute;
+    width: 336px;
+    height: 650px;
+    background: #ffffff;
+    top: 415px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.log-in.active {
+    display: block;
+    opacity: 1;
+}
+
+.log-in h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.log-in .btn-google {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    width: 304px;
+    height: 49px;
+    background: #4285F4;
+    border-radius: 10px;
+    border: 0;
+}
+
+.log-in .btn-google a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.log-in .btn-facebook {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    width: 304px;
+    height: 49px;
+    background: #3C5A99;
+    border-radius: 10px;
+    border: 0;
+}
+
+.log-in .btn-facebook a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.log-in a {
+    margin-bottom: 100px;
+}
+
+.signup-or {
+    margin-top: 20px;
+    position: relative;
+}
+
+.signup-or span {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.signup-or::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background: #999;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.log-in label {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.signup-input {
+    border: 0.5px solid #A7A9AC;
+    border-radius: 20px;
+    width: 304px;
+    height: 48px;
+    outline: 0;
+    font-size: 15px;
+}
+
+.btn-create {
+    width: 304px;
+    height: 48px;
+    background: #EF8D21;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.sign-in {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.text {
+    margin: 17px 17px 17px 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #A7A9AC;
+}
+
+.create-account input[type="checkbox"] {
+    top: -18px;
+    margin-right: 20px;
+    height: 80px;
+    width: 28px;
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    top: 432px;
+    border: 0.5px solid #323741;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.create-account input:checked~.checkmark {
+    background-color: #191C21;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.create-account input:checked~.checkmark:after {
+    display: block;
+}
+
+.create-account .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ----------login with google------------ */
+
+.login-with-google {
+    text-align: -webkit-center;
+    position: absolute;
+    width: 714px;
+    height: 1024px;
+    /* left: 792px; */
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login-with-google.active {
+    display: block!important;
+    opacity: 1;
+}
+
+.login-with-google form {
+    position: absolute;
+    left: 41px;
+    top: 124px;
+    width: 633px;
+    height: 719px;
+    background: #FFFFFF;
+    border: 1px solid #C5C0C0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* .sign-in{
+    position: absolute;
+    left: 65px;
+    top: 37px;
+    color: #333333;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+} */
+
+.login-with-google span {
+    position: absolute;
+    width: 631px;
+    height: 0px;
+    left: 0px;
+    top: 76px;
+    border: 1px solid #C5C0C0;
+}
+
+.choose {
+    position: absolute;
+    width: 237px;
+    height: 36px;
+    left: 198px;
+    top: 145px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+.btn-continued {
+    width: 514px;
+    height: 42px;
+    background: #4285F4;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.btn-continued a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn-cancel {
+    width: 514px;
+    height: 42px;
+    background: #D0D0D0;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.btn-cancel a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.login-with-google .text {
+    color: #4285f4;
+}
+
+
+/* ----------login with facebook------------ */
+
+.login-with-facebook {
+    text-align: -webkit-center;
+    position: absolute;
+    width: 714px;
+    height: 1024px;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login-with-facebook.active {
+    display: block!important;
+    opacity: 1;
+}
+
+.login-with-facebook form {
+    position: absolute;
+    left: 41px;
+    top: 124px;
+    width: 633px;
+    height: 719px;
+    background: #FFFFFF;
+    border: 1px solid #C5C0C0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-with-facebook span {
+    position: absolute;
+    width: 631px;
+    height: 0px;
+    left: 0px;
+    top: 76px;
+    border: 1px solid #C5C0C0;
+}
+
+.choose {
+    position: absolute;
+    width: 237px;
+    height: 36px;
+    left: 198px;
+    top: 145px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+.btn-continued {
+    width: 514px;
+    height: 42px;
+    background: #4285F4;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.btn-continued a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn-cancel {
+    width: 514px;
+    height: 42px;
+    background: #D0D0D0;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.btn-cancel a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.login-with-facebook .text1 {
+    color: #4285f4;
+}
+
+
+/* ------------reset password----------- */
+
+.reset-password {
+    text-align: -webkit-center;
+    position: absolute;
+    width: 336px;
+    height: 276px;
+    /* left: 792px; */
+    top: 228px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    background: #ffffff;
+}
+
+.reset-password.active {
+    opacity: 1;
+    display: block;
+}
+
+.reset-password h1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.reset-password .btn-google {
+    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    width: 304px;
+    height: 49px;
+    background: #4285F4;
+    border-radius: 10px;
+    border: 0;
+}
+
+.reset-password .btn-facebook {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    width: 304px;
+    height: 49px;
+    background: #3C5A99;
+    border-radius: 10px;
+    border: 0;
+}
+
+.reset-password a {
+    margin-bottom: 100px;
+}
+
+.signup-or {
+    margin-top: 20px;
+    position: relative;
+}
+
+.signup-or span {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.signup-or::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background: #999;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.reset-password label {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.signup-input {
+    border: 0.5px solid #A7A9AC;
+    border-radius: 20px;
+    width: 304px;
+    height: 48px;
+    outline: 0;
+    font-size: 15px;
+}
+
+.btn-create {
+    width: 304px;
+    height: 48px;
+    background: #EF8D21;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.sign-in {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.text {
+    margin: 17px 17px 17px 17px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #A7A9AC;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 767.98px) {
+    header .header_bottom .main .menu {
+        display: none;
+    }
+    header .header_bottom .main .right_nav {
+        display: none;
+    }
+    header .header_bottom .main .logo {
+        max-width: 100%;
+    }
+    .banner_home .main_item {
+        flex-direction: column;
+    }
+    .banner_home .main_item .item-right img {
+        max-width: 100%;
+        width: auto;
+    }
+    .banner_home .main_item .item-left {
+        margin-bottom: 30px;
+    }
+    .classes .list_category {
+        flex-direction: column;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 215px;
+    }
+    .classes .list_category .right_content {
+        margin-top: 30px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 6%;
+    }
+    .device .info {
+        flex-direction: column;
+    }
+    .device .info .right_content img {
+        max-width: 100%;
+        width: auto;
+    }
+    .device .info .left_conent {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .client_say .item .desc {
+        margin-right: auto;
+    }
+    .client_say .item {
+        flex-direction: column-reverse;
+    }
+    footer ul {
+        margin-bottom: 60px;
+    }
+    .try_lession .subcribe .box_subcribe {
+        margin-top: 30px;
+    }
+    .try_lession .list_option .item {
+        margin-bottom: 30px;
+    }
+    .trader_teacher .owl-carousel .owl-nav .owl-prev,
+    .client_say .slide .owl-carousel .owl-nav .owl-prev {
+        left: 0px;
+    }
+    .trader_teacher .owl-carousel .owl-nav .owl-next,
+    .client_say .slide .owl-carousel .owl-nav .owl-next {
+        right: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    #btn-toggle-sidebar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 100%;
+    }
+    header .header_bottom .main .right_nav {
+        width: 60%;
+    }
+    header .header_bottom .main .logo {
+        max-width: 230px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 100%;
+    }
+    header .header_bottom .main .right_nav {
+        margin-right: 30px;
+    }
+    #btn-toggle-sidebar {
+        display: none;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 228px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 11%;
+    }
+    .device .info {
+        flex-direction: column;
+    }
+    .device .info .left_conent {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .device .info .left_conent .btn_continute {
+        max-width: 199px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .banner_home .main_item {
+        flex-direction: column;
+    }
+    .banner_home .main_item .item-right img {
+        max-width: 100%;
+        width: auto;
+    }
+    .banner_home .main_item .item-left {
+        margin-bottom: 30px;
+    }
+    .trader_teacher .owl-carousel .owl-nav .owl-prev,
+    .client_say .slide .owl-carousel .owl-nav .owl-prev {
+        left: 0px;
+    }
+    .trader_teacher .owl-carousel .owl-nav .owl-next,
+    .client_say .slide .owl-carousel .owl-nav .owl-next {
+        right: 0px;
+    }
+    .device .info .right_content img {
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .classes .list_category .right_content .tivi_show {
+        height: 376px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 28%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .banner_home .main_item .item-left {
+        width: 70%;
+    }
+    .banner_home .main_item .item-right .list_img img {
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .banner_home .main_item .item-left {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:560px) {
+    /* ---------create account--------- */
+    .create-account {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 750px;
+    }
+    .create-account .signup-label {
+        margin-left: 134px;
+    }
+    .create-account .remember-box {
+        margin-left: 108px;
+    }
+    .create-account .btn-google {
+        width: 500px;
+    }
+    .create-account .btn-google {
+        width: 500px;
+    }
+    .create-account .btn-facebook {
+        width: 500px;
+    }
+    .create-account .signup-input {
+        width: 500px;
+    }
+    .create-account .btn-google {
+        width: 500px;
+    }
+    .create-account .btn-create {
+        width: 500px;
+    }
+    /* ----------log in------------- */
+    .log-in {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 750px;
+    }
+    .log-in .signup-label {
+        margin-left: 134px;
+    }
+    .log-in .remember-box {
+        margin-left: 108px;
+    }
+    .log-in .btn-google {
+        width: 500px;
+    }
+    .log-in .btn-google {
+        width: 500px;
+    }
+    .log-in .btn-facebook {
+        width: 500px;
+    }
+    .log-in .signup-input {
+        width: 500px;
+    }
+    .log-in .btn-google {
+        width: 500px;
+    }
+    .log-in .btn-create {
+        width: 500px;
+    }
+    /* -------reset password------ */
+    .reset-password {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 1102px;
+    }
+    .reset-password .signup-label {
+        margin-left: 134px;
+    }
+    .reset-password .remember-box {
+        margin-left: 108px;
+    }
+    .reset-password .btn-google {
+        width: 500px;
+    }
+    .reset-password .btn-google {
+        width: 500px;
+    }
+    .reset-password .btn-facebook {
+        width: 500px;
+    }
+    .reset-password .signup-input {
+        width: 500px;
+    }
+    .reset-password .btn-google {
+        width: 500px;
+    }
+    .reset-password .btn-create {
+        width: 500px;
+    }
+    /* -----------login with google--------- */
+    .login-with-google {
+        position: fixed;
+        width: 714px;
+        height: 100%;
+        /* left: 792px; */
+        top: 708px;
+        left: 50%;
+    }
+    .login-with-google form {
+        position: absolute;
+        left: 41px;
+        top: 0px;
+        width: 633px;
+        height: 628px;
+    }
+    .login-with-google .text {
+        top: 526px!important;
+    }
+    .login-with-google .left {
+        position: absolute;
+        top: -229px;
+        left: 58px;
+    }
+    .login-with-google .right {
+        position: absolute;
+        margin-top: -229px;
+        margin-left: -20px;
+    }
+    /* ----------login with facebook----------- */
+    .login-with-facebook {
+        position: fixed;
+        width: 714px;
+        height: 100%;
+        /* left: 792px; */
+        top: 708px;
+        left: 50%;
+    }
+    .login-with-facebook form {
+        position: absolute;
+        left: 41px;
+        top: 0px;
+        width: 633px;
+        height: 628px;
+    }
+    .policy {
+        top: 573px!important;
+        left: 190px!important;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    /* ---------create account--------- */
+    .create-account {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 750px;
+    }
+    .create-account .signup-label {
+        margin-left: 134px;
+    }
+    .create-account .remember-box {
+        margin-left: 108px;
+    }
+    .create-account .btn-google {
+        width: 444px;
+    }
+    .create-account .btn-google {
+        width: 444px;
+    }
+    .create-account .btn-facebook {
+        width: 444px;
+    }
+    .create-account .signup-input {
+        width: 444px;
+    }
+    .create-account .btn-google {
+        width: 444px;
+    }
+    .create-account .btn-create {
+        width: 444px;
+    }
+    /* -------------log in-------------- */
+    .log-in {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 750px;
+    }
+    .log-in .signup-label {
+        margin-left: 134px;
+    }
+    .log-in .remember-box {
+        margin-left: 108px;
+    }
+    .log-in .btn-google {
+        width: 444px;
+    }
+    .log-in .btn-google {
+        width: 444px;
+    }
+    .log-in .btn-facebook {
+        width: 444px;
+    }
+    .log-in .signup-input {
+        width: 444px;
+    }
+    .log-in .btn-google {
+        width: 444px;
+    }
+    .log-in .btn-create {
+        width: 444px;
+    }
+    /* -------reset password------ */
+    .reset-password {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 1102px;
+    }
+    .reset-password .signup-label {
+        margin-left: 134px;
+    }
+    .reset-password .remember-box {
+        margin-left: 108px;
+    }
+    .reset-password .btn-google {
+        width: 444px;
+    }
+    .reset-password .btn-facebook {
+        width: 444px;
+    }
+    .reset-password .signup-input {
+        width: 444px;
+    }
+    .reset-password .btn-google {
+        width: 444px;
+    }
+    .reset-password .btn-create {
+        width: 444px;
+    }
+    /* <!-- ------------login with google---------------- --> */
+    .login-with-google form {
+        left: 128px;
+        width: 459px;
+        height: 658px;
+    }
+    .choose {
+        position: initial;
+        margin-top: 40px;
+    }
+    .continue {
+        position: initial!important;
+    }
+    .link {
+        position: initial!important;
+    }
+    .login-with-google span {
+        width: 350px!important;
+    }
+    .login-with-google .text {
+        width: 340px!important;
+    }
+    .login-with-google .left {
+        top: -201px;
+        left: 95px;
+    }
+    .login-with-google .right {
+        position: absolute;
+        margin-left: -65px;
+        margin-top: -210px;
+    }
+    /* <!-- ------------login with facebook---------------- --> */
+    .btn-continued {
+        width: 435px;
+        top: 323px!important;
+        left: 102px!important;
+    }
+    .btn-cancel {
+        left: 102px!important;
+        width: 435px;
+    }
+    .warning {
+        width: 436px!important;
+        left: 105px!important;
+    }
+    .policy {
+        top: 595px!important;
+    }
+}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    /* -------reset password------ */
+    .reset-password {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 1102px;
+    }
+    .reset-password .signup-label {
+        margin-left: 134px;
+    }
+    .reset-password .remember-box {
+        margin-left: 108px;
+    }
+    .reset-password .btn-google {
+        width: 286px;
+    }
+    .reset-password .btn-facebook {
+        width: 286px;
+    }
+    .reset-password .signup-input {
+        width: 286px;
+    }
+    .reset-password .btn-google {
+        width: 286px;
+    }
+    .reset-password .btn-create {
+        width: 286px;
+    }
+    /* ---------create account--------- */
+    .create-account {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 720px;
+    }
+    .create-account .signup-label {
+        margin-left: 134px;
+    }
+    .create-account .remember-box {
+        margin-left: 108px;
+    }
+    .create-account .btn-google {
+        width: 286px;
+    }
+    .create-account .btn-google {
+        width: 286px;
+    }
+    .create-account .btn-facebook {
+        width: 286px;
+    }
+    .create-account .signup-input {
+        width: 286px;
+    }
+    .create-account .btn-google {
+        width: 286px;
+    }
+    .create-account .btn-create {
+        width: 286px;
+    }
+    /* ----------log in------------ */
+    .log-in {
+        position: fixed;
+        width: 100%;
+        height: 98%;
+        top: 720px;
+    }
+    .log-in .signup-label {
+        margin-left: 134px;
+    }
+    .log-in .remember-box {
+        margin-left: 108px;
+    }
+    .log-in .btn-google {
+        width: 286px;
+    }
+    .log-in .btn-google {
+        width: 286px;
+    }
+    .log-in .btn-facebook {
+        width: 286px;
+    }
+    .log-in .signup-input {
+        width: 286px;
+    }
+    .log-in .btn-google {
+        width: 286px;
+    }
+    .log-in .btn-create {
+        width: 286px;
+    }
+    /* <!-- ------------login with google---------------- --> */
+    .login-with-google .user {
+        position: absolute;
+        margin-top: -310px;
+        margin-left: 30px;
+    }
+    .login-with-google .use {
+        width: 147px;
+    }
+    .login-with-google .text {
+        top: 459px!important;
+        left: 62px!important;
+        width: 297px!important;
+    }
+    .login-with-google form {
+        height: 620px!important;
+    }
+    .login-with-google .left {
+        margin-left: 179px;
+        top: -10px;
+    }
+    .login-with-google .right {
+        margin-left: -166px;
+        top: -38px;
+    }
+    /* <!-- ------------login with facebook---------------- --> */
+    .login-with-facebook form {
+        height: 672px;
+    }
+    .login-with-facebook .title {
+        position: initial!important;
+        top: 141px;
+        left: 109px;
+        font-size: 24px;
+        font-weight: 500;
+        width: 278px;
+        margin-top: 0px!important;
+    }
+    .login-with-facebook .title1 {
+        position: initial!important;
+        top: 133px;
+        left: 109px;
+        font-size: 24px;
+        font-weight: 500;
+        width: 274px;
+        margin-top: 117px;
+    }
+    .fa-pencil-alt {
+        position: initial!important;
+    }
+    .login-with-facebook .btn-continued {
+        width: 290px;
+        top: 323px!important;
+        left: 171px!important;
+        height: 51px;
+    }
+    .login-with-facebook .btn-cancel {
+        width: 290px;
+        top: 375px!important;
+        left: 171px!important;
+    }
+    .warning {
+        position: initial!important;
+        width: 307px!important;
+        margin-top: 64px;
+    }
+    .policy {
+        top: 638px!important;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 250px) {
+    /* <!-- ------------login with facebook---------------- --> */
+    .login-with-facebook form {
+        width: 223px;
+        left: 247px;
+        height: 885px;
+    }
+    .login-with-facebook img {
+        position: initial!important;
+    }
+    .login-with-facebook .title {
+        position: initial!important;
+        top: 141px;
+        left: 109px;
+        font-size: 24px;
+        font-weight: 500;
+        width: 196px;
+        margin-top: 0px!important;
+    }
+    .login-with-facebook .title1 {
+        margin-top: 0px;
+        width: 215px;
+        height: 54px;
+        margin-bottom: 50px;
+    }
+    .fa-pencil-alt {
+        position: initial!important;
+    }
+    .btn-continued {
+        width: 215px;
+        height: 54px;
+    }
+    .btn-cancel {
+        left: 102px!important;
+        width: 215px;
+    }
+    .warning {
+        position: initial!important;
+        width: 197px!important;
+    }
+    .policy {
+        position: initial!important;
+        margin-top: 265px;
+    }
+    /* <!-- ------------login with google---------------- --> */
+    .login-with-google .user {
+        margin-left: 47px!important;
+    }
+    .login-with-google .text {
+        left: 98px!important;
+        width: 220px!important;
+    }
+    .login-with-google form {
+        height: 660px!important;
+    }
+    .login-with-google .left {
+        margin-left: 206px;
+        top: -70px;
+    }
+    .login-with-google .right {
+        margin-left: -172px;
+        top: -56px;
+    }
+    .login-with-google .terms {
+        left: 598px!important;
+    }
+    /* ---------create account------------ */
+    .create-account {
+        height: 700px;
+    }
+    .create-account .btn-google {
+        width: 214px;
+    }
+    .create-account .btn-facebook {
+        width: 214px;
+    }
+    .btn-create {
+        width: 214px!important;
+    }
+    .create-account label {
+        margin-left: 60px!important;
+    }
+    .signup-input {
+        width: 214px;
+    }
+    .remember-box {
+        width: 220px;
+    }
+    .sign-in {
+        width: 210px;
+    }
+    /* ---------log in------------ */
+    .log-in .btn-google {
+        width: 214px;
+    }
+    .log-in .btn-facebook {
+        width: 214px;
+    }
+    .btn-create {
+        width: 214px;
+    }
+    .log-in label {
+        margin-left: 60px!important;
+    }
+    .signup-input {
+        width: 214px;
+    }
+    .remember-box {
+        width: 220px;
+    }
+    .sign-in {
+        width: 210px;
+    }
+}

@@ -1,0 +1,964 @@
+.whitee {
+    background-color: white;
+    margin-bottom: 6%;
+}
+
+.diss {
+    color: #A7A9AC;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 25px;
+}
+
+.order {
+    display: flex;
+    border-bottom: 2px solid #000000;
+}
+
+.un {
+    width: 66%;
+    margin-right: 66px;
+}
+
+.un #yo {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.un #yo2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.buy {
+    margin-left: 4px;
+    width: 122px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+#price {
+    background-color: black;
+    color: #EF8D21;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#pricee {
+    background-color: #C4C4C4;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.dis {
+    color: #A7A9AC;
+    font-size: 15px;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    padding-top: 25px;
+}
+
+.pan {
+    padding: 30px;
+}
+
+#sav {
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#pre {
+    color: #A7A9AC;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dis #we {
+    display: flex;
+}
+
+.dis .cre {
+    display: flex;
+}
+
+.dis div i {
+    padding-right: 10px;
+    padding-top: 4px;
+    color: #EF8D21;
+}
+
+.cou {
+    display: flex;
+    color: #EF8D21;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 15px;
+    border-bottom: 1px solid black;
+}
+
+#is {
+    width: 66%;
+    display: flex;
+}
+
+#is img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 6px;
+}
+
+.total {
+    display: flex;
+    padding-top: 10px;
+}
+
+#se p {
+    color: #EF8D21;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#se {
+    background-color: black;
+    border-radius: 3px;
+    width: 122px;
+    height: 30px;
+}
+
+#tot p {
+    color: #EF8D21;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#tot {
+    width: 80%;
+}
+
+.buyy {
+    display: flex;
+    color: white;
+}
+
+.buyy p {
+    background-color: #EF8D21;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.unn {
+    width: 40%;
+    margin-right: 60px;
+}
+
+.unn #yo {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.orde {
+    display: flex;
+}
+
+.cre {
+    display: flex;
+}
+
+.cre img {
+    width: 60%;
+}
+
+.cre div {
+    text-align: center;
+    margin: 1px;
+    padding: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cre #atm {
+    width: 30%;
+}
+
+.cre p {
+    margin-bottom: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.cre #momo {
+    width: 24%;
+}
+
+.fr {
+    display: flex;
+}
+
+#let {
+    margin-right: 17%;
+}
+
+.for {
+    padding: 30px;
+    padding-bottom: 10px;
+    background-color: #F2F2F2;
+}
+
+#will {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#to {
+    color: #A7A9AC;
+    font-size: 14px;
+}
+
+.pay div {
+    text-align: center;
+}
+
+.pay button {
+    background-color: #EF8D21;
+    color: white;
+    border: 0px;
+    width: 100%;
+    border-radius: 5px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.be,
+.pay {
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.bankk {
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+
+.bankk .row .col-md-4 div {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    height: 45px;
+    width: 100%;
+}
+
+.bankk .row .col-md-4 div img {
+    width: auto;
+}
+
+.bankk .row .col-md-4 {
+    padding: 8px;
+}
+
+.ban p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ban {
+    background-color: #F2F2F2;
+    padding: 30px;
+    padding-bottom: 1px;
+    padding-top: 15px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.form-group label {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#tran {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.suu {
+    display: flex;
+}
+
+.suu img {
+    width: 60%;
+}
+
+.suu label {
+    width: 20%;
+    background-color: #f2f2f2;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 7px 5px 7px 7px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid #ced4da;
+    border-right: 0px;
+}
+
+.fo {
+    padding: 30px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+}
+
+#in {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px;
+}
+
+.cree {
+    display: flex;
+}
+
+.cree .dott {
+    text-align: center;
+    margin: 1px;
+    padding: 1px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    margin: 0 2px;
+    background-color: #F2F2F2;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #EF8D21;
+}
+
+.dott {
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dott:hover {
+    background-color: #EF8D21;
+}
+
+.main {
+    padding-top: 50px;
+}
+
+.pann {
+    padding: 30px;
+    text-align: center;
+}
+
+.pann p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#have {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pann button {
+    color: white;
+    background-color: #C4C4C4;
+    font-size: 15px;
+    font-weight: bold;
+    width: 60%;
+    height: 33px;
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.ve {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5%;
+}
+
+#secu {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bue {
+    display: flex;
+    color: white;
+    left: 23%;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.bue p {
+    background-color: #EF8D21;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 30%;
+}
+
+
+/*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 1024px) {
+    .unn {
+        width: 40%;
+        margin-right: 12px;
+    }
+    .unn #yo {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+    #choo {
+        font-size: 13px;
+    }
+    #let {
+        margin-right: 4%;
+        width: 50%;
+    }
+    .bankk .row .col-md-4 div img {
+        width: 88%;
+    }
+    .suu label {
+        width: 25%;
+        background-color: #f2f2f2;
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 7px 5px 7px 7px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid #ced4da;
+        border-right: 0px;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+
+@media screen and (max-width: 768px) {
+    #price {
+        background-color: black;
+        color: #EF8D21;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .unn #yo {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
+    .unn {
+        width: 40%;
+        margin-right: 14px;
+    }
+    .un #yo2 {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    #pre {
+        color: #A7A9AC;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #is {
+        width: 55%;
+        display: flex;
+    }
+    .bue p {
+        background-color: #EF8D21;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        width: 35%;
+        font-size: 12px;
+    }
+    .suu label {
+        width: 40%;
+        background-color: #f2f2f2;
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 7px 5px 7px 7px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid #ced4da;
+        border-right: 0px;
+    }
+    .suu {
+        display: flex;
+        /* width: 21%; */
+        height: 40px;
+    }
+    #in {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: 0px;
+    }
+    #sav {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #choo {
+        font-size: 12px;
+    }
+    #se {
+        background-color: black;
+        border-radius: 3px;
+        width: 122px;
+        height: 25px;
+    }
+    #se p {
+        color: #EF8D21;
+        font-size: 16px;
+        margin-bottom: 0px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .diss {
+        padding-top: 0px;
+    }
+    .bankk .row .col-md-4 div img {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .bankk .row .col-md-4 div {
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        height: 35px;
+        width: 100%;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    #is {
+        width: 68%;
+        display: flex;
+    }
+    .unn #yo {
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .unn {
+        width: 52%;
+        margin-right: 14px;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    #atm {
+        width: 40%;
+    }
+    #momo {
+        width: 30%;
+    }
+    #in {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: 0px;
+    }
+    .suu label {
+        width: 22%;
+        background-color: #f2f2f2;
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 7px 5px 7px 7px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border: 1px solid #ced4da;
+        border-right: 0px;
+    }
+    .bankk .row .col-md-4 {
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+    }
+    .bankk .row .col-md-4 div {
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        height: 55px;
+        width: 80%;
+    }
+    .bankk .row .col-md-4 div img {
+        width: 40%;
+        padding-bottom: -10px;
+    }
+}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    #sav {
+        color: red;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    #price {
+        background-color: black;
+        color: #EF8D21;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    #pre {
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .un {
+        width: 66%;
+        margin-right: 51px;
+    }
+    .un #yo2 {
+        font-size: 11px;
+        font-weight: 500;
+    }
+    .dis {
+        color: #A7A9AC;
+        font-size: 12px;
+        font-weight: 400;
+        border-bottom: 1px solid black;
+        padding-top: 25px;
+    }
+    .cou {
+        display: flex;
+        color: #EF8D21;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 15px;
+        border-bottom: 1px solid black;
+    }
+    #choo {
+        font-size: 11px;
+    }
+    #is {
+        width: 50%;
+        display: flex;
+    }
+    #choo {
+        font-size: 11px;
+        padding-top: 4px;
+    }
+    .pann button {
+        color: white;
+        background-color: #C4C4C4;
+        font-size: 12px;
+        font-weight: bold;
+        width: 60%;
+        height: 33px;
+        border: 0px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .bue p {
+        background-color: #EF8D21;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        width: 45%;
+        font-size: 12px;
+    }
+    .unn {
+        width: 50%;
+        margin-right: 0px;
+    }
+    .unn #yo {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 7px;
+    }
+    .form-group label {
+        color: black;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .bankk .row .col-md-4 div {
+        background-color: white;
+        text-align: center;
+        padding: 10px;
+        height: 40px;
+        width: 80%;
+    }
+    .bankk .row .col-md-4 div img {
+        width: 50%;
+        padding-bottom: 0px;
+    }
+    .suu label {
+        width: 45%;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    #price {
+        background-color: black;
+        color: #EF8D21;
+        font-size: 8px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    #pre {
+        font-size: 8px;
+        font-weight: bold;
+    }
+    #sav {
+        color: red;
+        font-size: 7px;
+        font-weight: bold;
+    }
+    .un #yo {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .un {
+        width: 128%;
+        margin-right: 12px;
+    }
+    .un #yo {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .un #yo2 {
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .buy {
+        margin-left: 4px;
+        width: 122px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .dis {
+        color: #A7A9AC;
+        font-size: 9px;
+        font-weight: 400;
+        border-bottom: 1px solid black;
+        padding-top: 25px;
+    }
+    #is img {
+        width: 13px;
+        height: 13px;
+        margin-top: 1px;
+        margin-right: 3px;
+    }
+    #is p {
+        font-size: 11px;
+    }
+    #is {
+        width: 45%;
+        display: flex;
+    }
+    #choo {
+        font-size: 8px;
+        padding-top: 2px;
+        font-weight: 700;
+    }
+    .pann button {
+        color: white;
+        background-color: #C4C4C4;
+        font-size: 10px;
+        font-weight: bold;
+        width: 80%;
+        height: 33px;
+        border: 0px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .bue p {
+        background-color: #EF8D21;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        width: 50%;
+        font-size: 8px;
+    }
+    .unn #yo {
+        font-size: 9px;
+        font-weight: 700;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 4px;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 2px;
+        padding-top: 3px;
+        border-radius: 2px;
+        margin-right: 1px;
+        font-size: 6px;
+    }
+    .pan {
+        padding: 20px;
+    }
+    .cre p {
+        margin-bottom: 0px;
+        font-size: 6px;
+        font-weight: bold;
+        color: black;
+    }
+    .cre img {
+        width: 100%;
+    }
+    .cre #atm {
+        width: 60%;
+    }
+    .cre #momo {
+        width: 50%;
+    }
+    #tran {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .ban p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .ban {
+        background-color: #F2F2F2;
+        padding: 20px;
+        padding-bottom: 1px;
+        padding-top: 15px;
+    }
+    .suu img {
+        width: 50%;
+    }
+    .bankk {
+        background-color: #F2F2F2;
+        padding: 20px;
+    }
+    .bankk .row .col-md-4 div img {
+        width: 60%;
+        padding-bottom: 0px;
+    }
+    .form-group label {
+        color: black;
+        font-size: 7px;
+        font-weight: 500;
+        padding-top: 3px;
+    }
+    #to {
+        color: #A7A9AC;
+        font-size: 10px;
+    }
+    .be,
+    .pay {
+        padding: 20px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .pay button {
+        background-color: #EF8D21;
+        color: white;
+        border: 0px;
+        width: 86%;
+        border-radius: 5px;
+        height: 32px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .form-group {
+        margin-bottom: 0px;
+    }
+    .for {
+        padding: 20px;
+        padding-bottom: 10px;
+        background-color: #F2F2F2;
+    }
+    .form-control {
+        height: 20px;
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    .fo {
+        padding: 20px;
+        padding-bottom: 10px;
+        background-color: #ffffff;
+    }
+    .suu label {
+        width: 30%;
+        height: 20px;
+    }
+}

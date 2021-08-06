@@ -54,14 +54,14 @@ class Users extends Controller
                 $link_register = url('/registerpassword?email='.$user->email.'&token='.$token_random);
     
                 $data = array("fullname"=>$user->fullname,"linkreset"=>$link_register,'email'=> $user->email);
-    
-                Mail::send("Sites::Mail.registerpassword_mail",['data'=>$data],function($message) use ($titlename,$data)
-                {
                 
-                    $message->to($data['email']);
-                    $message->subject($titlename);
-                    $message->from($data['email'],$titlename);
-                });
+                // Mail::send("Sites::Mail.registerpassword_mail",['data'=>$data],function($message) use ($titlename,$data)
+                // {
+                
+                //     $message->to($data['email']);
+                //     $message->subject($titlename);
+                //     $message->from($data['email'],$titlename);
+                // });
     
                 
                 session()->flash('message', 'Bạn cần xác thực tài khoản, chúng tôi đã gửi mã xác thực vào email của bạn, hãy kiểm tra và làm theo hướng dẫn.');

@@ -8,6 +8,10 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     
     Route::get("/", ["as" => "sites.home.index", "uses" => "Home@index"]);
     Route::post("/subcribe", ["as" => "sites.home.", "uses" => "Home@postSubcribe"]);
+
+    //All Class
+    Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
+
     Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
     Route::post("/login", ["as" => "users.login_request", "uses" => "Users@login_request"]);
     Route::post('login/google/callback',["as" => "users.logingoogle", "uses" => "Users@GoogleLogin"]);

@@ -96,3 +96,86 @@ function closeSidebar() {
     closeOut();
     jQuery(".sidebar_overlay").remove();
 }
+
+
+function toggle() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var log_in = document.querySelector('.log-in');
+    var login_with_google = document.querySelector('.login-with-google');
+    var login_with_facebook = document.querySelector('.login-with-facebook');
+    var reset_password = document.querySelector('.reset-password');
+
+    header.classList.toggle('active');
+    banner.classList.toggle('active');
+    create_account.classList.toggle('active');
+
+    window.addEventListener('mouseup', function (e) {
+        if (document.querySelector('.create-account').contains(e.target)) {
+
+        } else {
+            header.classList.remove('active');
+            banner.classList.remove('active');
+            create_account.classList.remove('active');
+            log_in.classList.remove('active');
+            login_with_google.classList.remove('active');
+            login_with_facebook.classList.remove('active');
+            reset_password.classList.remove('active');
+        }
+    });
+}
+function sign_in() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var log_in = document.querySelector('.log-in');
+    var reset_password = document.querySelector('.reset-password');
+
+    window.addEventListener('mouseup', function (e) {
+        if (document.querySelector('.log-in').contains(e.target)) {
+
+        } else {
+            header.classList.add('active');
+            banner.classList.add('active');
+            log_in.classList.toggle('active');
+            create_account.classList.remove('active');
+            reset_password.classList.remove('active');
+        }
+    });
+}
+function login_with_google() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var login_with_google = document.querySelector('.login-with-google');
+
+    header.classList.add('active');
+    banner.classList.add('active');
+    login_with_google.classList.toggle('active');
+    create_account.classList.remove('active');
+}
+function login_with_facebook() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var login_with_facebook = document.querySelector('.login-with-facebook');
+
+    header.classList.add('active');
+    banner.classList.add('active');
+    login_with_facebook.classList.toggle('active');
+    create_account.classList.remove('active');
+}
+function reset_password() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var reset_password = document.querySelector('.reset-password');
+    var log_in = document.querySelector('.log-in');
+
+    header.classList.add('active');
+    banner.classList.add('active');
+    reset_password.classList.toggle('active');
+    log_in.classList.remove('active');
+}
+
+
