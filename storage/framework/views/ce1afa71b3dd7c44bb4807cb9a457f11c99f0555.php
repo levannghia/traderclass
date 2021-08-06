@@ -137,4 +137,4 @@
       }
       </script>
 </body>
-</html><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/users/login.blade.php ENDPATH**/ ?>
+</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/users/login.blade.php ENDPATH**/ ?>
