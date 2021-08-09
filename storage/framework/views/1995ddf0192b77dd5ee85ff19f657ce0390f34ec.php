@@ -118,7 +118,6 @@ function toggle() {
 
     window.addEventListener('mouseup', function(e) {
         if (document.querySelector('.create-account').contains(e.target)) {
-
         } else {
             header.classList.remove('active');
             banner.classList.remove('active');
@@ -136,6 +135,8 @@ function sign_in() {
     var banner = document.querySelector('.banner_home');
     var create_account = document.querySelector('.create-account');
     var log_in = document.querySelector('.log-in');
+    var login_with_google = document.querySelector('.login-with-google');
+    var login_with_facebook = document.querySelector('.login-with-facebook');
     var reset_password = document.querySelector('.reset-password');
 
     window.addEventListener('mouseup', function(e) {
@@ -145,7 +146,33 @@ function sign_in() {
             header.classList.add('active');
             banner.classList.add('active');
             log_in.classList.toggle('active');
+            login_with_google.classList.remove('active');
+            login_with_facebook.classList.remove('active');
             create_account.classList.remove('active');
+            reset_password.classList.remove('active');
+        }
+    });
+}
+
+function sign_up() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var log_in = document.querySelector('.log-in');
+    var login_with_google = document.querySelector('.login-with-google');
+    var login_with_facebook = document.querySelector('.login-with-facebook');
+    var reset_password = document.querySelector('.reset-password');
+
+    window.addEventListener('mouseup', function(e) {
+        if (document.querySelector('.create-account').contains(e.target)) {
+
+        } else {
+            header.classList.add('active');
+            banner.classList.add('active');
+            log_in.classList.remove('active');
+            create_account.classList.toggle('active');
+            login_with_google.classList.remove('active');
+            login_with_facebook.classList.remove('active');
             reset_password.classList.remove('active');
         }
     });

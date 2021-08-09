@@ -158,7 +158,8 @@
                     <div class="form-group mb-2">
                         <label>Class Name</label>
                         <select class="form-control form-control-sm" name="class_name">
-                            <option value="Course">Home</option>
+                            <option value="Privacy">Privacy</option>
+                            <option value="Home">Home</option>
                             <option value="Course">Course</option>
                             <option value="Faq">Faq</option>
                             <option value="Testimonials">Testimonials</option>

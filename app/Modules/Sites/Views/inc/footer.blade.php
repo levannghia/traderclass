@@ -1,3 +1,16 @@
+<?php
+use App\Modules\Sites\Models\Config_Model;
+use App\Modules\Sites\Models\Contact_Model;
+
+    $config_link_youtube = Config_Model::find(6);
+    $config_link_facebook = Config_Model::find(7);
+    $config_link_instagram = Config_Model::find(8);
+    $config_chplay_link = Config_Model::find(37);
+    $config_apple_store_link = Config_Model::find(38);
+    $contact = Contact_Model::find(4);
+    
+
+?>
 <div class="footer">
     <div class="text-lg-start text-muted">
         <section class="" style="
@@ -7,13 +20,13 @@
                 <div class="row mt-3">
                     <div class="col-md-3 ">
                         <h6 class="text-uppercase fw-bold mb-4">
-                            ONICORN MEDIA JOINT STOCK COMPANY
+                            {{$contact->name}}
                         </h6>
                         <p>
-                            Enterprise code: 0316690536
+                            {{$contact->enterprise_code}}
                         </p>
-                        <p>Founding date: 2021-01-27</p>
-                        <p>Active taxpayers (who have been granted registration certificates)</p>
+                        <p>{{$contact->founding_date}}</p>
+                        <p>{{$contact->message}}</p>
                         <p><img src="./public/sites/svg/icondangki.svg" alt=""></p>
                     </div>
                     <div class="col-md-4 mx-auto">
@@ -23,13 +36,13 @@
                         "> padding</p>
                         </h6>
                         <p>
-                            <i class="bi bi-geo-alt-fill"></i> 9 Floor, Vien Dong Building, 14 PhanTon,Da Kao, 1 District, Ho Chi Minh City
+                            <i class="bi bi-geo-alt-fill"></i> {{$contact->address}}
                         </p>
                         <p>
-                            <i class="bi bi-telephone-fill"></i> +976 1244 6785
+                            <i class="bi bi-telephone-fill"></i> {{$contact->phone}}
                         </p>
                         <p>
-                            <i class="bi bi-envelope-fill"></i> hr@onicorn.vn
+                            <i class="bi bi-envelope-fill"></i> {{$contact->email}}
                         </p>
                         <div class="IconConnec">
                             <li><a href="{{$config_link_facebook->value}}"><i class="bi bi-facebook"></i></a></li>
@@ -42,22 +55,22 @@
                             About
                         </h6>
                         <p>
-                            <a href="index.html" class="text-reset">Home</a>
+                            <a href="/" class="text-reset">Home</a>
                         </p>
                         <p>
                             <a href="/all-class" class="text-reset">All Classes</a>
                         </p>
                         <p>
-                            <a href="./Contact.html" class="text-reset">Contact</a>
+                            <a href="/contact" class="text-reset">Contact</a>
                         </p>
                         <p>
-                            <a href="./Privacy.html" class="text-reset">Privacy</a>
+                            <a href="/policy/privacy-policy.html" class="text-reset">Privacy</a>
                         </p>
                         <p>
-                            <a href="/terms" class="text-reset">Terms</a>
+                            <a href="/policy/terms-of-service.html" class="text-reset">Terms</a>
                         </p>
                         <p>
-                            <a href="./Return&Refund Policy.html" class="text-reset">Return & Refund Policy</a>
+                            <a href="/policy/return-and-refund-policy.html" class="text-reset">Return & Refund Policy</a>
                         </p>
                     </div>
                     <div class="col-md-3 ">

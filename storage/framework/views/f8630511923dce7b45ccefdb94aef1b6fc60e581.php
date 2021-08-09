@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./public/sites/css/style.css">
     <link href="./public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="./public/sites/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/sites/css/index.css">
     <link rel="stylesheet" href="./public/sites/css/AllClass.css">
-    <link rel="stylesheet" href="./public/sites/css/terms.css">
     <script src="./public/sites/js/js.js"></script>
     <!--Icon-->
     <title><?php echo $__env->yieldContent('title'); ?></title>
@@ -20,8 +20,8 @@
 
 <body>
 
-    
-    <?php echo $__env->make('Sites::inc.headerlogin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('Sites::inc.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php echo $__env->yieldContent('content'); ?>
 

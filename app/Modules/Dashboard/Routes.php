@@ -121,6 +121,20 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("/trash/delete/{id}", ["as" => "admin.faq.trash", "uses" => "Faq@trashDelete"]);
             });
 
+            //policy
+            Route::group(["prefix" => "policy"], function() {
+                Route::get("/", ["as" => "admin.policy", "uses" => "Policy@index"]);
+                Route::post("/", ["as" => "admin.policy", "uses" => "Policy@postIndex"]);
+                Route::get("add", ["as" => "admin.policy.getAdd", "uses" => "Policy@add"]);
+                Route::post("add", ["as" => "admin.policy.postAdd", "uses" => "Policy@postAdd"]);
+                Route::get("edit/{id}", ["as" => "admin.policy.edit", "uses" => "Policy@edit"]);
+                Route::post("edit/{id}", ["as" => "admin.policy.postEdit", "uses" => "Policy@postEdit"]);
+                Route::get("delete/{id}", ["as" => "admin.policy.delete", "uses" => "Policy@delete"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.policy.status", "uses" => "Policy@status"]);
+                Route::get("/trash", ["as" => "admin.policy.trash", "uses" => "Policy@trash"]);
+                Route::get("/trash/delete/{id}", ["as" => "admin.policy.trash", "uses" => "Policy@trashDelete"]);
+            });
+
              //course
              Route::group(["prefix" => "course"], function() {
                 Route::get("/", ["as" => "admin.course", "uses" => "Course@index"]);

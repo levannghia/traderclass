@@ -313,8 +313,8 @@
                                 <span class="text-danger error-text email_error"></span>
                                 <button type="button" class="btn btn_subcribe">SUBMIT</button>
                             </div>
-                            <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                         </div>
+                        <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                         <label>
                             <input id="agree_chk" type="checkbox" name="agree_chk" required> I agree to receive email updates
                         </label>

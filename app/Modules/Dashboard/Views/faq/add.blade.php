@@ -20,18 +20,18 @@
         </div>
         <div class="col-md-4">
             <div class="card-box">
-                <div class="form-group mb-0">
+                <div class="form-group mb-2">
                     <label>Trạng thái</label>
                     <select class="form-control form-control-sm" name="status">
                         <option value="1" {{(old('status')!="" && old('status')==1)? "selected" :"" }}>Kích hoạt</option>
                         <option value="0" {{(old('status')!="" && old('status')==0)? "selected" :"" }}>Khóa</option>
                     </select>
                 </div>
-                <div class="form-group mb-0">
+                <div class="form-group mb-2">
                     <label>Type</label>
                     <select class="form-control form-control-sm" name="type">
                         <option value="1" {{(old('type')!="" && old('type')==1)? "selected" :"" }}>Pricing & Payment</option>
-                        <option value="0" {{(old('type')!="" && old('type')==0)? "selected" :"" }}>general</option>
+                        <option value="0" {{(old('type')!="" && old('type')==0)? "selected" :"" }}>General</option>
                     </select>
                 </div>
             </div>
