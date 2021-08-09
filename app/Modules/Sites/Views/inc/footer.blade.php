@@ -88,7 +88,7 @@ use App\Modules\Sites\Models\Contact_Model;
                         <a class="app-btn blu flex vert" href="{{$config_chplay_link->value}}">
                             <i style="
                             margin-bottom: 3px;
-                        "><img src="./public/sites/images/CHPlay.png" alt=""></i>
+                        "><img src="/public/sites/images/CHPlay.png" alt=""></i>
                             <p>Get it on <br/> <span class="big-txt">Google Play</span></p>
                         </a>
                     </div>
