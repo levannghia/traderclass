@@ -6,7 +6,7 @@
     <title></title>
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta name="description" content="">
     <meta property="og:url" itemprop="url" content="">
     <meta property="og:title" content="">
@@ -21,7 +21,7 @@
     <link href="./public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="./public/sites/css/animate.css" rel="stylesheet">
     <link href="./public/sites/css/index.css?v=1" rel="stylesheet">
-    <link href="./public/sites/css/style.css?v={{ time() }}" rel="stylesheet">
+    <link href="./public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <script src="./public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -29,15 +29,16 @@
 
 <body>
 
-    @include('Sites::inc.header')
+    <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
 
-    @include('Sites::inc.footer')
+    <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <form id="social-login-form" action="" method="POST" style="display: none;">
-                @csrf
-                  {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
                   <input id="access-token" name="token" type="text">
                   <input id="tokenId" name="tokenId" type="text">
                   <input id="uid" name="uid" type="text">
@@ -46,8 +47,9 @@
                   <input id="photo" name="photo" type="text">
                 </form>
                 <form id="social-login-form" action="" method="POST" style="display: none;">
-                @csrf
-                  {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
                   <input id="token" name="token" type="text">
                   <input id="tokenId" name="tokenId" type="text">
                   <input id="uid" name="uid" type="text">
@@ -63,7 +65,7 @@
     <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
     <script src="./public/sites/js/conf-firebase.js" type="text/javascript"></script>
     <script src="./public/sites/js/logingoogle.js" type="text/javascript"></script>
-    @include('Sites::inc.script')
+    <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 </html>
@@ -74,8 +76,8 @@
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
    
-    <form action="{{url('/register_request')}}" method="post">
-    @csrf
+    <form action="<?php echo e(url('/register_request')); ?>" method="post">
+    <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="text" class="signup-input" name = "email">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -103,7 +105,7 @@
     <button class="btn-google"><a onclick="login_with_google()" >SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
-    <form action="{{url('/login')}}" method="post">
+    <form action="<?php echo e(url('/login')); ?>" method="post">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" class="signup-input" name="email">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -188,3 +190,4 @@
         <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;">Log In.</a></p>
     </div>
 </div>
+<?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/layout.blade.php ENDPATH**/ ?>
