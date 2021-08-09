@@ -17,17 +17,17 @@
     <script src="/public/sites/js/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Icon-->
-    <title>@yield('title')</title>
+    <title><?php echo $__env->yieldContent('title'); ?></title>
 </head>
 
 <body>
 
-    @include('Sites::inc.sidebar')
-    @include('Sites::inc.header')
+    <?php echo $__env->make('Sites::inc.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
 
-    @include('Sites::inc.footer')
+    <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -40,3 +40,4 @@
 
 </html>
 
+<?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/master.blade.php ENDPATH**/ ?>

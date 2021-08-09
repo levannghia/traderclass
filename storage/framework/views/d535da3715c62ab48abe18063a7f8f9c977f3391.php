@@ -9,7 +9,7 @@
             <p class="desc"><?php echo e($config_title_banner_top_left->value); ?></p>
             <div class="form_search">
                 <input type="text" value="" class="search_input" placeholder="Your email address" />
-                <a href="#" class="btn btn sign_up">SIGN UP</a>
+                <a href="#" class="btn btn sign_up" onclick="toggle()">SIGN UP</a>
                 <label>
                     <input type="checkbox" value="0" />
                     <span>Keep me up to date on class events and new releases.</span>
@@ -314,8 +314,8 @@
                                 <span class="text-danger error-text email_error"></span>
                                 <button type="button" class="btn btn_subcribe">SUBMIT</button>
                             </div>
-                            <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                         </div>
+                        <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                         <label>
                             <input id="agree_chk" type="checkbox" name="agree_chk" required> I agree to receive email updates
                         </label>

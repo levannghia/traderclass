@@ -18,7 +18,7 @@
                             <div class="font" style="color: white;"><span class="a">{{$value->fullname}}</span> <br> <span class="b">-</span> <br><span class="c">{{$value->name}}</span>
                             </div>
                             <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
+                                <button><a href="{{url('/teacher/'.$value->teacher_id)}}"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
                             </div>
                         </div>
                     </div>
