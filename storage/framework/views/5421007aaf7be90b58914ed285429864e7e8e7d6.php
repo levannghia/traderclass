@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./public/sites/css/style.css">
-    <link href="./public/sites/css/menu-mobile.css" rel="stylesheet">
-    <link href="./public/sites/css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="./public/sites/css/Teacher.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--Icon-->
-    <title>Teacher</title>
-</head>
-<body>
-    <?php echo $__env->make('Sites::inc.headerlogin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+<?php $__env->startSection('title', $row->title); ?>
 
     <?php $__env->startSection('content'); ?>
     <div class="main">
         <div class="img">
-            <img src="./public/sites/images/ted-nguyenn.png" width="100%" alt="">
+            <img src="/public/upload/images/teachers/thumb/<?php echo e($teacher->photo); ?>" width="100%" alt="">
             <div class="text-center">
-                <div style="display: grid;"><span id="a">Ted Nguyen</span> <span id="b">-</span> <span id="c">Teacher Crypto Trader</span></div>
+                <div style="display: grid;"><span id="a"><?php echo e($teacher->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($teacher->position); ?></span></div>
                 <div class="info">
                     <div class="share">
                         <a href="#">
@@ -57,9 +40,9 @@
                 <div class="col-md-8">
                     <div class="wrappe" onclick="playvideo()">
                         <video class="video" controls>
-                        <source src="./mp4/Teacher1.mp4" type="video/mp4">
+                        <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
                       </video>
-                        <div class="playpause"><img src="./public/sites/images/media_play_pause_resume.png" alt=""></div>
+                        <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div>
                     </div>
                     <div class="in">
                         <p>From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength
@@ -82,43 +65,43 @@
                         <p>Browse Lesson Plan</p>
                     </div>
                     <div class="im">
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>1. Meet Your Instructor: Robin Arzón</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
                             <p>2. Hustle and Grit</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>3. Overcoming Mental Blocks</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
                             <p>4. Know Your Worth</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>5. Food as Fuel</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
                             <p>6. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>7. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
                             <p>8. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>9. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
                             <p>10. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('./mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
                             <p>11. The Joy Metric</p>
                         </div>
                     </div>
                     <div class="upnext">
                         <div style="margin-right: 20px">
-                            <a href="#"> <img src="./images/girl.png" alt=""></a>
+                            <a href="#"> <img src="/public/sites/images/girl.png" alt=""></a>
 
                         </div>
                         <div id="up">
@@ -137,42 +120,42 @@
                 <div class="row">
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/daniel_pink.jpg" alt="">
+                            <img src="/public/sites/images/daniel_pink.jpg" alt="">
                             <p id="name">Daniel Pink</p>
                             <p id="namee">Teaches Sales and Persuasion</p>
                         </a>
                     </div>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/issa_rae.jpg" alt="">
+                            <img src="/public/sites/images/issa_rae.jpg" alt="">
                             <p id="name">Issa Rae</p>
                             <p id="namee">Teaches Creating Outside the Lines</p>
                         </a>
                     </div>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/a8a27a3e091785de49b2b08bd9a9a6e9.jpg" alt="">
+                            <img src="/public/sites/images/a8a27a3e091785de49b2b08bd9a9a6e9.jpg" alt="">
                             <p id="name">Matthew Ưalker</p>
                             <p id="namee">Teaches the Science of Better Sleep</p>
                         </a>
                     </div>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/kelldy_nguyen.jpg" alt="">
+                            <img src="/public/sites/images/kelldy_nguyen.jpg" alt="">
                             <p id="name">Kelly Wearstler</p>
                             <p id="namee">Teaches Interior Design</p>
                         </a>
                     </div>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/Annie Leibovitz.png" alt="">
+                            <img src="/public/sites/images/Annie Leibovitz.png" alt="">
                             <p id="name">Annie Leibovitz</p>
                             <p id="namee">Teaches Photography</p>
                         </a>
                     </div>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="./images/Alicia Keys.png" alt="">
+                            <img src="/public/sites/images/Alicia Keys.png" alt="">
                             <p id="name">Alicia Keys</p>
                             <p id="namee">Teaches Songwriting and Producing</p>
                         </a>
@@ -222,21 +205,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <p>
-                                        <a href="#"><img src="./images/sam2.png" alt="">&ensp; All 100+ classes and categories
+                                        <a href="#"><img src="/public/sites/images/sam2.png" alt="">&ensp; All 100+ classes and categories
                                         </a>
                                     </p>
                                     <p>
-                                        <a href="#"><img src="./images/audio.png" alt="">&ensp; Audio-only lessons</a>
+                                        <a href="#"><img src="/public/sites/images/audio.png" alt="">&ensp; Audio-only lessons</a>
                                     </p>
                                     <p>
-                                        <a href="#"><img src="./images/down.png" alt="">&ensp; Download and watch offline</a>
+                                        <a href="#"><img src="/public/sites/images/down.png" alt="">&ensp; Download and watch offline</a>
                                     </p>
                                 </div>
                                 <div class="col-md-6">
                                     <p><a href="#"><i class="fas fa-list-ul"></i>&ensp; PDF workbooks for every class</a>
                                     </p>
                                     <p>
-                                        <a href="#"><img src="./images/sam2.png" alt="">&ensp; Watch on your desktop, phone, or TV</a>
+                                        <a href="#"><img src="/public/sites/images/sam2.png" alt="">&ensp; Watch on your desktop, phone, or TV</a>
                                     </p>
                                     <p><a href="#"><i class="fas fa-star"></i>&ensp; New classes added every month</a></p>
                                 </div>
@@ -322,19 +305,10 @@
     </div>
 
     <?php $__env->stopSection(); ?>
-    <?php echo $__env->yieldContent('content'); ?>
+   
 
-    <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
 
    
-    <script src="./public/sites/js/Course Introduction.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="./public/sites/js/wow.min.js" type="text/javascript"></script>
-    <script src="./public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
-    
-</body>
-</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>
+   
+<?php echo $__env->make('Sites::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>

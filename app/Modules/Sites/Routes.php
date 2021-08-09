@@ -12,8 +12,22 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //All Class
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
     //Teachers
-    Route::get("/teacher", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
+    Route::get("/teacher/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
+
+    Route::group(["prefix" => "policy"], function() {
+        //Terms
+        Route::get("/terms-of-service.html", ["as" => "sites.terms.index", "uses" => "Policy@terms"]);
+        //Privacy
+        Route::get("/privacy-policy.html", ["as" => "sites.privacy.index", "uses" => "Policy@privacy"]);
+        //Refund Policy
+        Route::get("/return-and-refund-policy.html", ["as" => "sites.policy.index", "uses" => "Policy@refundPolicy"]);
+    });
+
+    //Contact
+    Route::get("/contact", ["as" => "sites.contact.index", "uses" => "Contact@index"]);
+
+    Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
     Route::post("/login", ["as" => "users.login_request", "uses" => "Users@login_request"]);
     Route::post('login/google/callback',["as" => "users.logingoogle", "uses" => "Users@GoogleLogin"]);
     Route::get("/logout", ["as" => "users.logout", "uses" => "Users@logout"]);

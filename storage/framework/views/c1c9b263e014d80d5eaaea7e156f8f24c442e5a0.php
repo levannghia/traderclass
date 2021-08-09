@@ -1,24 +1,3 @@
-<div id="sidebar">
-    <nav id="mobile-nav">
-        <ul>
-            <li class="nav-item">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="./My Course.html">My Course</a>
-            </li>
-            <li class="nav-item"> <a href="./Course Introduction.html">Course Introduction</a></li>
-            <li class="nav-item">
-                <a href="./Invite friends.html"> <img class="friend" src="./public/sites/images/add.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
-            </li>
-            <li class="nav-item">
-                <a href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>
-            </li>
-            <li class="nav-item"><a href="./account.html">Account information</a></li>
-            <li class="nav-item"> <a href="#">Log out</a></li>
-        </ul>
-    </nav>
-</div>
 <div class="header">
     <div class="header_bottom">
         <div class="container">
@@ -55,7 +34,7 @@
                 </div>
                 <div class="right_nav">
                     <div class="dropdown">
-                        <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./svg/avt.svg" alt=""></a>
+                        <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./public/sites/svg/avt.svg" alt=""></a>
                         <div class="dropdown-content">
                             <a href="./account.html">Account information</a>
                             <a href="#">Log out</a>

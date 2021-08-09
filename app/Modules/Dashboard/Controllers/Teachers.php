@@ -69,12 +69,18 @@ class Teachers extends Controller{
         if ($request->hasFile('photo')) {
             $file = $request->photo;
             $file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            $file_name_2 = "all_class".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
                 $image_resize = Image::make($file->getRealPath());
                 $thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
                 $image_resize->fit($thumb_size->width, $thumb_size->height);
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
+
+                $image_resize_2 = Image::make($file->getRealPath());
+                //$thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
+                $image_resize_2->fit(350, 467);
+                $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }
             // close upload image
             $file->move("public/upload/images/teachers/large", $file_name);
@@ -121,9 +127,14 @@ class Teachers extends Controller{
                 File::delete($image_thumb);
             }
 
+            $image_thumb_2 = str_replace("\\", "/", base_path()) . '/public/upload/images/teachers/thumb/' .'all_class'. $teacher->photo;
+            if (file_exists($image_thumb_2)) {
+                File::delete($image_thumb_2);
+            }
+
             $file = $request->photo;
             $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
-
+            $file_name_2 = "all_class".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
                 $image_resize = Image::make($file->getRealPath());
@@ -132,6 +143,11 @@ class Teachers extends Controller{
                 $image_resize->fit($thumb_size->width, $thumb_size->height);
 
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
+
+                $image_resize_2 = Image::make($file->getRealPath());
+                //$thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
+                $image_resize_2->fit(350, 467);
+                $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }
 
             $file->move("public/upload/images/teachers/large", $file_name);

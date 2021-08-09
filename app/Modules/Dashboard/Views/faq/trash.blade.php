@@ -24,7 +24,8 @@
                                     <thead>
                                         <tr>
                                             <th>Tên lớp học</th>
-                                            <th>Trạng thái</th>
+                                            <th>Type</th>
+                                            <th>Trạng thái</th>   
                                             <th>Created at</th>
                                             <th>Updated at</th>
                                             <th>Tools</th>
@@ -34,6 +35,11 @@
                                         @foreach($data as $value)
                                         <tr>
                                             <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->title}}">{{$value->title}}</a></td>
+                                            @if ($value->type)
+                                                <td>Pricing & Payment</td>
+                                            @elseif(!$value->type)
+                                                <td>General</td>
+                                            @endif
                                             <td>
                                                 @if($value->status==2)
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Thùng rác</span>

@@ -13,13 +13,12 @@ use Carbon\Carbon;
 
 class Teacher extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $config_link_youtube = Config_Model::find(6);
-        $config_link_facebook = Config_Model::find(7);
-        $config_link_instagram = Config_Model::find(8);
-        $config_chplay_link = Config_Model::find(37);
-        $config_apple_store_link = Config_Model::find(38);
-        return view('Sites::teacher.index', compact('config_link_youtube','config_link_facebook','config_link_instagram','config_chplay_link','config_apple_store_link'));
+        $teacher = DB::table('teachers')->where('id',$id)->first();
+        $row = json_decode(json_encode([
+            "title" => "$teacher->fullname",
+        ]));
+        return view('Sites::teacher.index',compact('row','teacher'));
     }
 }

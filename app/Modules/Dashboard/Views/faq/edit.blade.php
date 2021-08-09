@@ -31,7 +31,7 @@
                     <label>Type</label>
                     <select class="form-control form-control-sm" name="type">
                         <option value="1" {{old('type',$data->type)==1? "selected" :"" }}>Pricing & Payment</option>
-                        <option value="0" {{old('type',$data->type)==0? "selected" :"" }}>general</option>
+                        <option value="0" {{old('type',$data->type)==0? "selected" :"" }}>General</option>
                     </select>
                 </div>
             </div>

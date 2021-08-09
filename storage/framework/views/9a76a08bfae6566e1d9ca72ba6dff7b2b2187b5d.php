@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title></title>
+    <title><?php echo $__env->yieldContent('title'); ?></title>
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
@@ -13,37 +13,41 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:image:alt" content="">
-    <link href="./public/sites/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="./public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="./public/sites/css/menu-mobile.css" rel="stylesheet">
-    <link href="./public/sites/css/animate.css" rel="stylesheet">
-    <link href="./public/sites/css/index.css?v=1" rel="stylesheet">
-    <link href="./public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
-    <script src="./public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
+    <link href="/public/sites/css/animate.css" rel="stylesheet">
+    <link href="/public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v=1" rel="stylesheet">
+    <link rel="stylesheet" href="/public/sites/css/terms.css">
+    <link rel="stylesheet" href="/public/sites/css/privacy.css">
+    <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
+    <link rel="stylesheet" href="/public/sites/css/contact.css">
+    <script src="/public/sites/js/js.js"></script>
+    <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
-
+    <?php echo $__env->make('Sites::inc.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    <script src="./public/sites/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="./public/sites/js/popper.min.js" type="text/javascript"></script>
-    <script src="./public/sites/js/wow.min.js" type="text/javascript"></script>
-    <script src="./public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
+    <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
+    <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
+    <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
     <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
-</html>
+
 <!-- -------------create account--------------- -->
 <div class="create-account">
     <h1>Create Account</h1>
@@ -72,15 +76,17 @@
 </div>
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
-    <h1>Log In</h1>
+    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
+        <h1>Log In</h1>
     <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
-    <input type="text" class="signup-input">
-    <button class="btn-create" style="margin-top: 30px;">LOG IN</button>
+    <input type="text" name="password" class="signup-input">
+    <button class="btn-create" type="submit" style="margin-top: 30px;">LOG IN</button>
     <div class="sign-in">
         <p>Need an account? <a onclick="toggle()" style="color: #000000;cursor: pointer;">Sign up.</a></p>
     </div>
@@ -94,6 +100,7 @@
             <a href="" style="color: #A7A9AC;">Privacy Policy</a> and
             <a href="" style="color: #A7A9AC;">Terms of Service</a>.</p>
     </div>
+    </form>
 </div>
 <!-- ------------login with google---------------- -->
 <div class="login-with-google">
@@ -159,4 +166,6 @@
         <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;">Log In.</a></p>
     </div>
 </div>
+</html>
+
 <?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/layout.blade.php ENDPATH**/ ?>

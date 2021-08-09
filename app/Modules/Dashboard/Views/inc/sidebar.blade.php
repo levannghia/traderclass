@@ -104,6 +104,20 @@
                     </ul>
                 </li>
                 @endif
+                @if(Gate::allows('view', 'Policy'))
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class="fa fa-user-secret"></i>
+                        <span> Policy</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level nav collapse" aria-expanded="false" style="">
+                        <li class="">
+                            <a href="/dashboard/policy">Danh sách</a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
                 <li class="menu-title mt-2">Hệ thống</li>
                 @if(Gate::allows('view', 'Admins'))
                 <li>
@@ -160,6 +174,8 @@
                     </ul>
                 </li>
                 @endif
+
+                
 
                 <?php /*
                 

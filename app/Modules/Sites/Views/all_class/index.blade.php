@@ -1,7 +1,6 @@
-
-@extends('Sites::layoutlogin')
+@extends('Sites::master')
+@section('title', $row->title)
 @section('content')
-
 <div class="main">
     <div class="intro">
         <p style="font-size: 18px;">Start your first course</p>
@@ -11,80 +10,20 @@
     <div class="teacher">
         <div class="container">
             <div class="row">
+                @foreach ($all_class as $value)
                 <div class="col-md-4">
                     <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
+                        <img src="{{'./public/upload/images/teachers/thumb/'.'all_class'.$value->photo}}" alt="">
                         <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
+                            <div class="font" style="color: white;"><span class="a">{{$value->fullname}}</span> <br> <span class="b">-</span> <br><span class="c">{{$value->name}}</span>
                             </div>
                             <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
+                                <button><a href="{{url('/teacher/'.$value->teacher_id)}}"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="./public/sites/images/Jarratt Davis.jpg" alt="">
-                        <div class="text-center">
-                            <div class="text"><span class="a">Jarratt Davis</span> <br> <span class="b">-</span> <br><span class="c">Teacher Forex Trader</span>
-                            </div>
-                            <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

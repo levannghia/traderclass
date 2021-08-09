@@ -50,6 +50,7 @@
     transform: translate(-27%, -60%);
     color: white;
     transition-duration: 0.8s;
+    text-align: center!important;
 }
 
 .a {
