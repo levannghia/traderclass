@@ -38,7 +38,7 @@
                         <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./public/sites/svg/avt.svg" alt=""></a>
                         <div class="dropdown-content">
                             <a href="./account.html">Account information</a>
-                            <a href="#">Log out</a>
+                            <a href="{{route('users.logout')}}">Log out</a>
                         </div>
                     </div>
                 </div>

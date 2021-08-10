@@ -62,14 +62,16 @@
 
 <!-- -------------create account--------------- -->
 <div class="create-account">
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <h1>Create Account</h1>
     <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
-    <input type="text" class="signup-input">
+    <input type="password" name="password" class="signup-input">
     <div class="remember-box" style="display: flex;margin-left: 20px;margin-top: 10px;align-items: center;">
         <input type="checkbox">
         <span class="checkmark"></span>
@@ -85,6 +87,7 @@
             <a href="" style="color: #A7A9AC;">Terms of Service</a>.
         </p>
     </div>
+    </form>
 </div>
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
@@ -170,13 +173,16 @@
 </div>
 <!-- -----------reset password----------------->
 <div class="reset-password">
+    <form action=" <?php echo e(route('users.forgot')); ?>" method="post">
+    <?php echo csrf_field(); ?>
     <h1>Reset Password</h1>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <button class="btn-create">SEND EMAIL</button>
     <div class="sign-in">
         <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;">Log In.</a></p>
     </div>
+    </form>
 </div>
 </html>
 

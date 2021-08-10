@@ -16,7 +16,7 @@
                 <a href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>
             </li>
             <li class="nav-item"><a href="./account.html">Account information</a></li>
-            <li class="nav-item"> <a href="#">Log out</a></li>
+            <li class="nav-item"> <a href="{{route('users.logout')}}">Log out</a></li>
         </ul>
     </nav>
 </div>

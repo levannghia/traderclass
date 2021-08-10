@@ -26,7 +26,7 @@
                             </a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="./Invite friends.html"> <img class="friend" src="./public/sites/images/add-friend.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
+                            <a style="padding-top: 0px;" class="nav-link" href="./Invite friends.html"> <img class="friend" src="/public/sites/images/add-friend.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
                         </li>
                         <li>
                             <a style="padding-top: 0px;" class="nav-link" href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>
@@ -38,7 +38,7 @@
                         <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./public/sites/svg/avt.svg" alt=""></a>
                         <div class="dropdown-content">
                             <a href="./account.html">Account information</a>
-                            <a href="#">Log out</a>
+                            <a href="<?php echo e(route('users.logout')); ?>">Log out</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="right_nav">
                     <ul>
                         <li>
-                            <a href="#" title="log in" onclick="toggle()" class="text-uppercase">log in</a>
+                            <a href="#" title="log in" onclick="login()" class="text-uppercase">log in</a>
                         </li>
                     </ul>
                 </div>
