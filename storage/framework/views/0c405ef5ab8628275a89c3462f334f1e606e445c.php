@@ -1,11 +1,27 @@
+
+                <form id="social-login-form" action="" method="POST" style="display: none;">
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
+                  <input id="token" name="token" type="text">
+                  <input id="tokenId" name="tokenId" type="text">
+                  <input id="uid" name="uid" type="text">
+                  <input id="displayName" name="displayName" type="text">
+                  <input id="_email" name="_email" type="text">
+                  <input id="photo" name="photo" type="text">
+                </form>
+
+<?php echo $__env->make('Sites::inc.loginGoogle', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  
 <!-- -------------create account--------------- -->
 <div class="create-account">
-    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
-        <?php echo csrf_field(); ?>
+   
     <h1>Create Account</h1>
-    <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
+    <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -29,12 +45,13 @@
 </div>
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
-    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
-        <?php echo csrf_field(); ?>
+   
         <h1>Log In</h1>
-    <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
+    <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>

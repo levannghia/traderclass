@@ -79,6 +79,7 @@ class Users extends Controller
 
             $checkUser->email = $request->_email;
             $checkUser->fullname = $request->displayName;
+            $checkUser->type = 0;
             $checkUser->save();
             Auth::loginUsingId($checkUser->id, true);
             response()->json([
