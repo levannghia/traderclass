@@ -16,8 +16,8 @@
                                 All Categories <i class="bi bi-chevron-down"></i>
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
-                                <a style="color: black;" class="dropdown-item" href="./Course Introduction.html">Course Introduction</a>
+                                <a style="color: black;" class="dropdown-item" href="/my-course">My Course</a>
+                                <a style="color: black;" class="dropdown-item" href="/course-introduction">Course Introduction</a>
                             </div>
                         </li>
                         <li>

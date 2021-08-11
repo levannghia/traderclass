@@ -2,7 +2,7 @@
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
 <div class="main">
-    <div class="container  ">
+    <div class="container">
         <?php echo $refund_policy->content; ?>
 
     </div>
