@@ -52,8 +52,6 @@
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
-    <script src="/public/sites/js/conf-firebase.js" type="text/javascript"></script>
-    <script src="/public/sites/js/logingoogle.js" type="text/javascript"></script>
     <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
