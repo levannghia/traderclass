@@ -254,6 +254,7 @@
         reset_password.classList.toggle('active');
         log_in.classList.remove('active');
     }
+
     var slideIndex = 1;
     showSlides(slideIndex);
 

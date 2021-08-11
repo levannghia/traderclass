@@ -144,7 +144,7 @@
 
     function toggle() {
         var header = document.querySelector('header');
-        var banner = document.querySelector('.banner_home');
+        // var banner = document.querySelector('.banner_home');
         var create_account = document.querySelector('.create-account');
         var log_in = document.querySelector('.log-in');
         var login_with_google = document.querySelector('.login-with-google');
@@ -152,13 +152,13 @@
         var reset_password = document.querySelector('.reset-password');
 
         header.classList.toggle('active');
-        banner.classList.toggle('active');
+        // banner.classList.toggle('active');
         create_account.classList.toggle('active');
 
         window.addEventListener('mouseup', function(e) {
             if (document.querySelector('.create-account').contains(e.target)) {} else {
                 header.classList.remove('active');
-                banner.classList.remove('active');
+                // banner.classList.remove('active');
                 create_account.classList.remove('active');
                 log_in.classList.remove('active');
                 login_with_google.classList.remove('active');
@@ -168,10 +168,10 @@
         });
     }
 
-    
+
     function login() {
         var header = document.querySelector('header');
-        var banner = document.querySelector('.banner_home');
+        // var banner = document.querySelector('.banner_home');
         var create_account = document.querySelector('.create-account');
         var log_in = document.querySelector('.log-in');
         var login_with_google = document.querySelector('.login-with-google');
@@ -179,14 +179,13 @@
         var reset_password = document.querySelector('.reset-password');
 
         header.classList.toggle('active');
-        banner.classList.toggle('active');
+        // banner.classList.toggle('active');
         log_in.classList.toggle('active');
 
         window.addEventListener('mouseup', function(e) {
-            if (document.querySelector('.log_in').contains(e.target)) {}
-             else {
+            if (document.querySelector('.log_in').contains(e.target)) {} else {
                 header.classList.remove('active');
-                banner.classList.remove('active');
+                // banner.classList.remove('active');
                 create_account.classList.remove('active');
                 log_in.classList.remove('active');
                 login_with_google.classList.remove('active');
@@ -254,6 +253,40 @@
         banner.classList.add('active');
         reset_password.classList.toggle('active');
         log_in.classList.remove('active');
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("tab-pane");
+        var dots = document.getElementsByClassName("tab-item");
+        var dotts = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" actives", "");
+            dotts[i].className = dotts[i].className.replace(" actives", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " actives";
+        dotts[slideIndex - 1].className += " actives";
     }
 </script>
 <?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/inc/script.blade.php ENDPATH**/ ?>

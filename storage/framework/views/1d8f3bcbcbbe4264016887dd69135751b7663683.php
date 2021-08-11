@@ -1,7 +1,8 @@
 
                 <form id="social-login-form" action="" method="POST" style="display: none;">
-                @csrf
-                  {{ csrf_field() }}
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
                   <input id="token" name="token" type="text">
                   <input id="tokenId" name="tokenId" type="text">
                   <input id="uid" name="uid" type="text">
@@ -10,7 +11,7 @@
                   <input id="photo" name="photo" type="text">
                 </form>
 
-@include('Sites::inc.loginGoogle')
+<?php echo $__env->make('Sites::inc.loginGoogle', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   
 <!-- -------------create account--------------- -->
 <div class="create-account">
@@ -19,8 +20,8 @@
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
-    <form action="{{route('users.create_request')}}" method="post">
-        @csrf
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -49,8 +50,8 @@
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
-    <form action="{{route('users.login_request')}}" method="post">
-        @csrf
+    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -127,8 +128,8 @@
 </div>
 <!-- -----------reset password----------------->
 <div class="reset-password">
-    <form action=" {{route('users.forgot')}}" method="post">
-    @csrf
+    <form action=" <?php echo e(route('users.forgot')); ?>" method="post">
+    <?php echo csrf_field(); ?>
     <h1>Reset Password</h1>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
@@ -139,3 +140,4 @@
     </form>
 </div>
 </html>
+<?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/inc/login.blade.php ENDPATH**/ ?>
