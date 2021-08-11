@@ -13,22 +13,21 @@
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/index.css">
     <link rel="stylesheet" href="/public/sites/css/Teacher.css?v=1">
-    <link rel="stylesheet" href="/public/sites/css/AllClass.css">
     <script src="/public/sites/js/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Icon-->
-    <title><?php echo $__env->yieldContent('title'); ?></title>
+    <title>@yield('title')</title>
 </head>
 
 <body>
 
-    <?php echo $__env->make('Sites::inc.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    @include('Sites::inc.sidebar')
+    @include('Sites::inc.header')
 
-    <?php echo $__env->yieldContent('content'); ?>
+    @yield('content')
 
-    <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
+    @include('Sites::inc.footer')
+    @include('Sites::inc.login')
    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -36,8 +35,8 @@
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
+    @include('Sites::inc.script')
 </body>
 
 </html>
 
-<?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/master.blade.php ENDPATH**/ ?>

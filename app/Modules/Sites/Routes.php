@@ -24,13 +24,18 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/return-and-refund-policy.html", ["as" => "sites.policy.index", "uses" => "Policy@refundPolicy"]);
     });
 
+    Route::group(["prefix" => "account",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.account.index", "uses" => "Account@index"]);
+        Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Account@logout"]);
+    });
+
     //Contact
     Route::get("/contact", ["as" => "sites.contact.index", "uses" => "Contact@index"]);
 
     Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
     Route::post("/login", ["as" => "users.login_request", "uses" => "Users@login_request"]);
     Route::post('login/google/callback',["as" => "users.logingoogle", "uses" => "Users@GoogleLogin"]);
-    Route::get("/logout", ["as" => "users.logout", "uses" => "Users@logout"]);
+    
 
     //Route::get("/register",["as" =>"user.create","uses" => "Users@create"]);
     Route::post("/register_request", ["as" => "users.create_request", "uses" => "Users@create_request"]);

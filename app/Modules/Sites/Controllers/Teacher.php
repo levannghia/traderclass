@@ -7,18 +7,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Config_Model;
-
-use Validator;
-use Carbon\Carbon;
+use App\Modules\Sites\Models\Teachers_Model;
 
 class Teacher extends Controller
 {
     public function index($id)
     {
-        $teacher = DB::table('teachers')->where('id',$id)->first();
+        $list_teacher = Teachers_Model::orderBy('id', 'desc')->limit(6)->get();
+        $teacher = Teachers_Model::find($id);
         $row = json_decode(json_encode([
-            "title" => "$teacher->fullname",
+            "title" => $teacher->fullname,
         ]));
-        return view('Sites::teacher.index',compact('row','teacher'));
+        return view('Sites::teacher.index',compact('row','teacher','list_teacher'));
     }
 }

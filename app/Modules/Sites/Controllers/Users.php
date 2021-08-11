@@ -106,14 +106,7 @@ class Users extends Controller
             }
         }
     }
-
-    public function logout()
-    {
-        Auth::guard("web")->logout();
-        if (!Auth::guard("web")->check()) {
-            return redirect()->route("users.login");
-        }
-    }
+    
     public function create()
     {
 

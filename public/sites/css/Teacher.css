@@ -14,22 +14,6 @@
     background-color: black;
 }
 
-.black p a {
-    color: #ffffff;
-    text-align: left;
-    margin-bottom: 0;
-    padding: 15px;
-    margin-top: 10px;
-}
-
-.black p {
-    color: #ffffff;
-    text-align: left;
-    margin-bottom: 0;
-    padding: 15px;
-    margin-top: 10px;
-}
-
 .header .header_bottom .main {
     display: flex;
     align-items: center;
@@ -175,6 +159,26 @@
     height: 280px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.blacks {
+    background-color: #000000;
+}
+
+.blacks p a {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.blacks p {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-top: 10px;
 }
 
 .im div {

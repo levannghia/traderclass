@@ -35,10 +35,10 @@
                 </div>
                 <div class="right_nav">
                     <div class="dropdown">
-                        <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./public/sites/svg/avt.svg" alt=""></a>
+                        <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="/public/sites/svg/avt.svg" alt=""></a>
                         <div class="dropdown-content">
-                            <a href="./account.html">Account information</a>
-                            <a href="#">Log out</a>
+                            <a href="/account">Account information</a>
+                            <a href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,12 @@
-/* main */
+/* mainss */
 
-.main {
+.mainss {
     background: #171921;
     padding-top: 30px;
     padding-bottom: 94px;
 }
 
-.main .avatar {
+.mainss .avatar {
     width: 100px;
     height: 100px;
     background: #C4C4C4;
@@ -15,13 +15,13 @@
     margin-top: 52px;
 }
 
-.main span {
+.mainss span {
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
 }
 
-.main a {
+.mainss a {
     position: absolute;
     right: 15px;
     font-weight: normal;
@@ -29,13 +29,13 @@
     line-height: 22px;
 }
 
-.main #email,
+.mainss #email,
 #password {
     margin-top: 10px;
     margin-bottom: 23px;
 }
 
-.main #google {
+.mainss #google {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
@@ -47,7 +47,7 @@
     border-radius: 5px;
 }
 
-.main #facebook {
+.mainss #facebook {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
@@ -62,12 +62,12 @@
 
 /* member */
 
-.main .col-md-7 {
+.mainss .col-md-7 {
     margin-left: 20px;
     background: #fff;
 }
 
-.main .member {
+.mainss .member {
     background: #FFFFFF;
     margin-bottom: 30px;
 }
@@ -129,7 +129,7 @@
     transition: all 0.2s ease;
 }
 
-.active,
+.actives,
 .dott:hover {
     background-color: #EF8D21;
 }
@@ -157,7 +157,7 @@
     border-color: rgba(194, 53, 100, 0.1);
 }
 
-.tab-item.active {
+.tab-item.actives {
     opacity: 1;
 }
 
@@ -170,7 +170,7 @@
     display: none;
 }
 
-.tab-pane.active {
+.tab-pane.actives {
     display: block;
 }
 
@@ -384,7 +384,7 @@ footer .copy {
         padding-right: 28%;
         margin-top: -3%;
     }
-    .main .col-md-7 {
+    .mainss .col-md-7 {
         min-width: 720px;
         left: -20px;
         top: 10px;
@@ -421,7 +421,7 @@ footer .copy {
     .member {
         max-width: 480px;
     }
-    .main .col-md-7 {
+    .mainss .col-md-7 {
         min-width: 480px;
         left: -20px;
         top: 10px;
@@ -472,12 +472,12 @@ footer .copy {
     body {
         max-width: 320px;
     }
-    .main .col-md-7 {
+    .mainss .col-md-7 {
         min-width: 320px;
         /* left: -20px;
         top: 10px; */
     }
-    .main span {
+    .mainss span {
         margin-left: -52px;
     }
     form a {
@@ -519,7 +519,7 @@ footer .copy {
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
-    .main span {
+    .mainss span {
         margin-left: -46px;
     }
     form a {
@@ -539,7 +539,7 @@ footer .copy {
         width: 170px !important;
         margin-left: -22px;
     }
-    .main .col-md-7 {
+    .mainss .col-md-7 {
         min-width: 240px;
         left: -20px;
         top: 10px;

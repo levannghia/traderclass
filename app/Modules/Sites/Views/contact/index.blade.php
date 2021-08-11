@@ -2,7 +2,7 @@
 @section('title', $row->title)
 @section('content')
 <div class="main">
-    <div class="container  ">
+    <div class="container">
         <p id="title">Information about us</p>
         @foreach ($contact as $value)
         <p>{{$value->name}}</p>

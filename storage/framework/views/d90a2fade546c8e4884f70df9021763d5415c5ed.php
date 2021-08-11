@@ -34,10 +34,10 @@
                 <a href="/">FAQ</a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="sign_in()">Sign In</a>
+                <a href="#" onclick="login()">Sign In</a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="sign_up()">Sign Up</a>
+                <a href="#" onclick="toggle()">Sign Up</a>
             </li>
         </ul>
     </nav>
