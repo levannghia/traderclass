@@ -70,6 +70,7 @@ class Teachers extends Controller{
             $file = $request->photo;
             $file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             $file_name_2 = "all_class".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            //$file_name_3 = "teacher".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
                 $image_resize = Image::make($file->getRealPath());
@@ -78,7 +79,6 @@ class Teachers extends Controller{
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
 
                 $image_resize_2 = Image::make($file->getRealPath());
-                //$thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
                 $image_resize_2->fit(350, 467);
                 $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }
@@ -135,17 +135,16 @@ class Teachers extends Controller{
             $file = $request->photo;
             $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             $file_name_2 = "all_class".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            //$file_name_3 = "teacher".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
                 $image_resize = Image::make($file->getRealPath());
 
                 $thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
                 $image_resize->fit($thumb_size->width, $thumb_size->height);
-
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
 
                 $image_resize_2 = Image::make($file->getRealPath());
-                //$thumb_size = json_decode($settings["THUMB_SIZE_TEACHERS"]);
                 $image_resize_2->fit(350, 467);
                 $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }

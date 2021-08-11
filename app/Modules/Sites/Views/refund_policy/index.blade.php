@@ -2,7 +2,7 @@
 @section('title', $row->title)
 @section('content')
 <div class="main">
-    <div class="container  ">
+    <div class="container">
         {!! $refund_policy->content !!}
     </div>
 </div>

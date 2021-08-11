@@ -1,4 +1,4 @@
-@extends('Sites::master')
+@extends('Sites::allClass')
 @section('title', $row->title)
 @section('content')
 <div class="main">

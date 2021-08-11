@@ -1,6 +1,6 @@
-@extends('Sites::teacher')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="blacks">
         <div class="container">
@@ -10,8 +10,8 @@
     <div class="img">
         <img src="/public/sites/images/ted-nguyenn.png" width="100%" alt="">
         <div class="text-center">
-            <div style="display: grid;"><span id="a">{{ $teacher->fullname }}</span> <span id="b">-</span> <span
-                    id="c">{{ $teacher->position }}</span></div>
+            <div style="display: grid;"><span id="a"><?php echo e($teacher->fullname); ?></span> <span id="b">-</span> <span
+                    id="c"><?php echo e($teacher->position); ?></span></div>
             <div class="info">
                 <div class="share">
                     <a href="#">
@@ -128,15 +128,15 @@
         <div class="member">
             <p id="memb">Members who liked this class also liked</p>
             <div class="row">
-                @foreach ($list_teacher as $value)
+                <?php $__currentLoopData = $list_teacher; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-2">
                     <a href="#">
-                        <img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
-                        <p id="name">{{$value->fullname}}</p>
-                        <p id="namee">{{$value->position}}</p>
+                        <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">
+                        <p id="name"><?php echo e($value->fullname); ?></p>
+                        <p id="namee"><?php echo e($value->position); ?></p>
                     </a>
                 </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </div>
@@ -294,4 +294,6 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>

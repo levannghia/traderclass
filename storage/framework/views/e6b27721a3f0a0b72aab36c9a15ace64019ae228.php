@@ -18,7 +18,7 @@
                             <div class="font" style="color: white;"><span class="a"><?php echo e($value->fullname); ?></span> <br> <span class="b">-</span> <br><span class="c"><?php echo e($value->name); ?></span>
                             </div>
                             <div class="button">
-                                <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
+                                <button><a href="<?php echo e(url('/teacher/'.$value->teacher_id)); ?>"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
                             </div>
                         </div>
                     </div>
@@ -30,4 +30,4 @@
 </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Sites::master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/all_class/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Sites::allClass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/all_class/index.blade.php ENDPATH**/ ?>

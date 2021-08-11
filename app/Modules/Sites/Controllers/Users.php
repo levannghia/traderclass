@@ -65,7 +65,7 @@ class Users extends Controller
                 $this->logout();
                 return redirect()->route('users.login');
             }
-            return redirect()->route('sites.home.index');
+            return redirect()->back();
         } else {
 
             return redirect()->route("users.login")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
@@ -106,14 +106,7 @@ class Users extends Controller
             }
         }
     }
-
-    public function logout()
-    {
-        Auth::guard("web")->logout();
-        if (!Auth::guard("web")->check()) {
-            return redirect()->route("sites.home.index");
-        }
-    }
+    
     public function create()
     {
 
@@ -148,7 +141,7 @@ class Users extends Controller
             //$user->address =  $request->address;
            // $user->phone =  $request->phone;
             $user->password =  Hash::make($request->password);
-           // $user->type =  $request->type;
+            $user->type =  0;
             $user->status = 0;
             $user->save();
             $check = Users_Model::find($user->id);

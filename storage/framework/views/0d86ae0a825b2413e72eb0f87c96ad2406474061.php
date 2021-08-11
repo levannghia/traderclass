@@ -1,9 +1,17 @@
 
 <?php $__env->startSection('content'); ?>
 <section class="banner_home">
+<?php echo csrf_field(); ?>
+            <?php if(session()->has('message')): ?>
+       <div class="alert alert-success">
+         <?php echo e(session()->get('message')); ?>
+
+       </div>
+       <?php endif; ?>  
     <div class="main_item">
         <div class="item-left">
             <p class="title">
+              
                 <span>today’s</span> the day.
             </p>
             <p class="desc"><?php echo e($config_title_banner_top_left->value); ?></p>
