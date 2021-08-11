@@ -65,7 +65,7 @@ class Users extends Controller
                 $this->logout();
                 return redirect()->route('users.login');
             }
-            return redirect()->route('sites.home.index');
+            return redirect()->back();
         } else {
 
             return redirect()->route("users.login")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
@@ -119,29 +119,29 @@ class Users extends Controller
 
         $validate = $this->validate($request, [
             "email" => "required|email",
-            "fullname" => "required",
+         
             "password" => "required",
-            "password_comfirmation" => "required|same:password",
+           
         ], [
             "email.required" => "Vui lòng nhập email",
-            "fullname.required" => "Vui lòng nhập name",
+           
             "password.required" => "Vui lòng nhập mật khẩu",
-            "password_comfirmation.same" => "Mật khẩu không khớp",
+           
         ]);
         $checkEmail = Users_Model::where('email', $request->email)->first();
         if ($checkEmail) {
             session()->flash('message', 'Tạo tài khoản thất bại');
-            return redirect()->route("user.create");
+            return redirect()->route("sites.home.index");
         } else {
             $token_random = Str::random();
             $user = new Users_Model;
             $user->email =  $request->email;
-            $user->fullname =  $request->fullname;
-            $user->gender =  $request->gender;
-            $user->address =  $request->address;
-            $user->phone =  $request->phone;
+           // $user->fullname =  $request->fullname;
+           // $user->gender =  $request->gender;
+            //$user->address =  $request->address;
+           // $user->phone =  $request->phone;
             $user->password =  Hash::make($request->password);
-            $user->type =  $request->type;
+            $user->type =  0;
             $user->status = 0;
             $user->save();
             $check = Users_Model::find($user->id);
@@ -159,7 +159,7 @@ class Users extends Controller
                 $message->from($data['email'], $titlename);
             });
             session()->flash('message', 'Bạn cần xác nhận email để đăng ký thành công');
-            return redirect()->route("user.create");
+            return redirect()->route("sites.home.index");
         }
     }
     public function register_accuracy(Request $request)
@@ -169,7 +169,7 @@ class Users extends Controller
         $checkEmail->status = 1;
         $checkEmail->save();
         session()->flash('message', 'Xác thực thành công');
-        return redirect()->route("users.login");
+        return redirect()->route("sites.home.index");
     }
 
     public function forgotpassword()

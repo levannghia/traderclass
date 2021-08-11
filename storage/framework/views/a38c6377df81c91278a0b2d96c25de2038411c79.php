@@ -12,7 +12,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/index.css?v=1">
-    <link rel="stylesheet" href="/public/sites/css/account.css?v=1">
+    <link rel="stylesheet" href="/public/sites/css/account.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/AllClass.css">
     <script src="/public/sites/js/js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

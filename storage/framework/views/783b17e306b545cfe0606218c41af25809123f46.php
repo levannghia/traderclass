@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title><?php echo $__env->yieldContent('title'); ?></title>
     <meta name="robots" content="index, follow">
@@ -26,8 +26,10 @@
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
     <link rel="stylesheet" href="/public/sites/css/contact.css">
+    <link rel="stylesheet" href="/public/sites/css/Teacher.css">
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
@@ -40,24 +42,36 @@
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
+    <script src="./public/sites/js/Course Introduction.js"></script>
+    <script src="./public/sites/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./public/sites/js/popper.min.js" type="text/javascript"></script>
+    <script src="./public/sites/js/wow.min.js" type="text/javascript"></script>
+    <script src="./public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="./public/sites/js/app.js?v=1" type="text/javascript"></script>
+    <script src="./public/sites/js/conf-firebase.js" type="text/javascript"></script>
+    <script src="./public/sites/js/logingoogle.js" type="text/javascript"></script>
     <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS	+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-	h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 
 <!-- -------------create account--------------- -->
 <div class="create-account">
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <h1>Create Account</h1>
     <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
-    <input type="text" class="signup-input">
+    <input type="password" name="password" class="signup-input">
     <div class="remember-box" style="display: flex;margin-left: 20px;margin-top: 10px;align-items: center;">
         <input type="checkbox">
         <span class="checkmark"></span>
@@ -73,6 +87,7 @@
             <a href="" style="color: #A7A9AC;">Terms of Service</a>.
         </p>
     </div>
+    </form>
 </div>
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
@@ -158,13 +173,16 @@
 </div>
 <!-- -----------reset password----------------->
 <div class="reset-password">
+    <form action=" <?php echo e(route('users.forgot')); ?>" method="post">
+    <?php echo csrf_field(); ?>
     <h1>Reset Password</h1>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <button class="btn-create">SEND EMAIL</button>
     <div class="sign-in">
         <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;">Log In.</a></p>
     </div>
+    </form>
 </div>
 </html>
 

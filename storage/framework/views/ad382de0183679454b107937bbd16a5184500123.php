@@ -29,7 +29,7 @@ use App\Modules\Sites\Models\Contact_Model;
                         </p>
                         <p><?php echo e($contact->founding_date); ?></p>
                         <p><?php echo e($contact->message); ?></p>
-                        <p><img src="./public/sites/svg/icondangki.svg" alt=""></p>
+                        <p><img src="/public/sites/svg/icondangki.svg" alt=""></p>
                     </div>
                     <div class="col-md-4 mx-auto">
                         <h6 class="text-uppercase fw-bold mb-4">

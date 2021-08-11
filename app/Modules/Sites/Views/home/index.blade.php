@@ -1,9 +1,16 @@
 @extends('Sites::layout')
 @section('content')
 <section class="banner_home">
+@csrf
+            @if(session()->has('message'))
+       <div class="alert alert-success">
+         {{ session()->get('message') }}
+       </div>
+       @endif  
     <div class="main_item">
         <div class="item-left">
             <p class="title">
+              
                 <span>today’s</span> the day.
             </p>
             <p class="desc">{{$config_title_banner_top_left->value}}</p>

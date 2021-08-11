@@ -16,7 +16,7 @@
                 <a href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>
             </li>
             <li class="nav-item"><a href="./account.html">Account information</a></li>
-            <li class="nav-item"> <a href="#">Log out</a></li>
+            <li class="nav-item"> <a href="<?php echo e(route('users.logout')); ?>">Log out</a></li>
         </ul>
     </nav>
 </div>
@@ -34,10 +34,10 @@
                 <a href="/">FAQ</a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="sign_in()">Sign In</a>
+                <a href="#" onclick="login()">Sign In</a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="sign_up()">Sign Up</a>
+                <a href="#" onclick="toggle()">Sign Up</a>
             </li>
         </ul>
     </nav>

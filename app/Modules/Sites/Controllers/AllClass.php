@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Modules\Dashboard\Controllers\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Modules\Sites\Models\Config_Model;
 use App\Modules\Sites\Models\Course_Model;
 use Validator;
 use Carbon\Carbon;
