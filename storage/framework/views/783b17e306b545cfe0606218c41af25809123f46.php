@@ -39,9 +39,36 @@
     <?php echo $__env->make('Sites::inc.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php echo $__env->yieldContent('content'); ?>
+                <form id="social-login-form" action="" method="POST" style="display: none;">
+                <?php echo csrf_field(); ?>
+                  <?php echo e(csrf_field()); ?>
+
+                  <input id="access-token" name="token" type="text">
+                  <input id="tokenId" name="tokenId" type="text">
+                  <input id="uid" name="uid" type="text">
+                  <input id="displayName" name="displayName" type="text">
+                  <input id="_email" name="_email" type="text">
+                  <input id="photo" name="photo" type="text">
+                </form>
+    
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
+    <!--Firebase files -->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+    <!-- <script src="./public/sites/js/conf-firebase.js"></script> 
+    <script src="./public/sites/js/logingoogle.js"></script> -->
     <script src="./public/sites/js/Course Introduction.js"></script>
     <script src="./public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="./public/sites/js/popper.min.js" type="text/javascript"></script>
@@ -57,17 +84,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS	+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-	h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('Sites::inc.loginGoogle', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 
 <!-- -------------create account--------------- -->
 <div class="create-account">
-    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
-        <?php echo csrf_field(); ?>
+   
     <h1>Create Account</h1>
-    <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
+    <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -91,12 +120,13 @@
 </div>
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
-    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
-        <?php echo csrf_field(); ?>
+   
         <h1>Log In</h1>
-    <button class="btn-google"><a onclick="login_with_google()">SIGN UP WITH GOOGLE</a></button>
+    <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 15px;">Password</label>
@@ -119,7 +149,7 @@
 </div>
 <!-- ------------login with google---------------- -->
 <div class="login-with-google">
-    <form>
+               
         <p class="sign-in">Sign in with Google</p>
         <span></span>
         <p class="choose">Choose an account</p>
@@ -145,7 +175,7 @@
         <p class="text" style="position: absolute;top: 579px;left: 47px;width: 480px;color: #929191;font-size: 18px;font-weight: 300;">
             To continue, Google will share your name, email address, language preferences, and profile picture with traderclass.vn
         </p>
-    </form>
+   
     <ul class="left">
         <p style="position: absolute;top: 862px;left: 41px;">English</p>
         <i class="fas fa-chevron-down" style="position: absolute;top: 870.59px;left: 115px;"></i>

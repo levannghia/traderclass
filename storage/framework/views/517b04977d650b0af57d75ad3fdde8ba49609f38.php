@@ -255,5 +255,6 @@
         reset_password.classList.toggle('active');
         log_in.classList.remove('active');
     }
+
 </script>
 <?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/inc/script.blade.php ENDPATH**/ ?>

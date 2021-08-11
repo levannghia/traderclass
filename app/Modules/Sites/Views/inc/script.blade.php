@@ -255,4 +255,5 @@
         reset_password.classList.toggle('active');
         log_in.classList.remove('active');
     }
+
 </script>
