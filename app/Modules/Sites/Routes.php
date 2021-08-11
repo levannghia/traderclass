@@ -40,10 +40,10 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.course.index", "uses" => "MyCourse@index"]);
     });
 
-    //course Introduction
-    Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
-        Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
-    });
+    // //course Introduction
+    // Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
+    //     Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
+    // });
 
     //Contact
     Route::get("/contact", ["as" => "sites.contact.index", "uses" => "Contact@index"]);
