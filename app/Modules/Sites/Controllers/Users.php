@@ -63,12 +63,12 @@ class Users extends Controller
                
                 session()->flash('message', 'Bạn cần xác thực tài khoản, chúng tôi đã gửi mã xác thực vào email của bạn, hãy kiểm tra và làm theo hướng dẫn.');
                 $this->logout();
-                return redirect()->route('users.login');
+                return redirect()->route('sites.home.index');
             }
             return redirect()->back();
         } else {
 
-            return redirect()->route("users.login")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
+            return redirect()->route("sites.home.index")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
         }
     }
     public function GoogleLogin(Request $request)
@@ -209,6 +209,15 @@ class Users extends Controller
     {
         return View("Sites::users.updatepassword");
     }
+
+    public function logout()
+    {
+        Auth::guard("web")->logout();
+        if (!Auth::guard("web")->check()) {
+            return redirect()->route("sites.home.index");
+        }
+    }
+
     public function updatepassword_request(Request $request)
     {
         $data = $request->all();
@@ -227,5 +236,7 @@ class Users extends Controller
         } else {
             return redirect()->route('user.forgot')->with('message', 'Vui lòng nhập lại email vì link đã quá hạn');
         }
+
+        
     }
 }

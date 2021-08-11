@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
     <link rel="stylesheet" href="/public/sites/css/contact.css">
-    <link rel="stylesheet" href="/public/sites/css/Invite friends.css?v={{ time() }}">
+    <link rel="stylesheet" href="/public/sites/css/Invite friends.css?v={{time()}}">
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -40,10 +40,7 @@
 
     @yield('content')
               
-    
-
     @include('Sites::inc.footer')
-  
     @include('Sites::inc.login')
 
    

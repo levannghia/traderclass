@@ -27,7 +27,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //Account
     Route::group(["prefix" => "account",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.account.index", "uses" => "Account@index"]);
-        Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Account@logout"]);
+        Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Users@logout"]);
     });
 
     //invite friends

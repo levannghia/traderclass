@@ -18,12 +18,4 @@ class Account extends Controller
         ]));
         return view('Sites::account.index',compact('row'));
     }
-
-    public function logout()
-    {
-        Auth::guard("web")->logout();
-        if (!Auth::guard("web")->check()) {
-            return redirect()->route("sites.home.index");
-        }
-    }
 }

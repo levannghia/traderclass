@@ -81,10 +81,10 @@
         font-weight: 600 !important;
         transform: translate(0, -110%);
     }
-    input {
+    inputs {
         width: 65%;
     }
-    .main {
+    .mains {
         padding-top: 45px;
     }
 }
@@ -113,7 +113,7 @@
     .static h5 i {
         margin-left: 74%;
     }
-    input {
+    inputs {
         width: 68%;
     }
 }
@@ -136,10 +136,10 @@
     .static {
         width: 72%;
     }
-    input {
+    inputs {
         width: 73%;
     }
-    .main {
+    .mains {
         padding-top: 90px;
     }
 }
