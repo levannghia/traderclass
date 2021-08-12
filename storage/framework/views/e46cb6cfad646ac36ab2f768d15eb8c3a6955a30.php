@@ -66,5 +66,39 @@
          });
         }
 
+        function loginFacebook()
+        {
+         var facebookProvider = new firebase.auth.FacebookAuthProvider();
+
+         var facebookCallbackLink = 'login/facebook/callback';
+         socialProvider = facebookProvider;
+            //document.getElementById('social-login-form').action = facebookCallbackLink;
+
+            firebase.auth().signInWithPopup(socialProvider).then(function(result) {
+           /** @type  {firebase.auth.OAuthCredential} */
+             var credential = result.credential;
+          // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            
+            console.log(user);
+            
+            document.getElementById('uid').value = result.user.uid;
+            document.getElementById('displayName').value = result.user.displayName;
+            document.getElementById('_email').value = result.user.email;
+            document.getElementById('photo').value = result.user.photoURL;
+            result.user.getIdToken().then(function(result) {
+                
+                document.getElementById('tokenId').value = result;
+              
+                //document.getElementById('social-login-form').submit();
+            });
+         }).catch(function(error) {
+            // do error handling
+            console.log(error);
+         });
+        }
+
 
 </script><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/loginGoogle.blade.php ENDPATH**/ ?>

@@ -162,7 +162,7 @@
                             <div class="be">
                                 <p id="will">You will be redirected to CyberSource to complete your purchase</p>
                                 <p id="to">To ensure safety, your card information is encrypted and securely stored by CyberSource, the world's largest payment management company (under VISA organization) VietNam Master does not store your card directly.</p>
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/policy/terms-of-service.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -308,7 +308,7 @@
                                 </div>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -319,7 +319,7 @@
                                 <p>You will be redirected to Momo to complete your purchase</p>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -356,7 +356,7 @@
                                 </div>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/policy/terms-of-service.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
