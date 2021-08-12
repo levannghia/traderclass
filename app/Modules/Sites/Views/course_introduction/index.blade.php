@@ -1,4 +1,4 @@
-@extends('Sites::allClass')
+@extends('Sites::courseIntroduction')
 @section('title', $row->title)
 @section('content')
 <div class="main">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col-md-3" id="col-md-3">
                         <button><p> <i class="bi bi-plus-lg"></i> &ensp;Take part in the course</p></button>
-                        <button id="but"><p><img width="12px" style="margin-bottom: 3px;"  src="./images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                        <button id="but"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
                     </div>
                 </div>
                 <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can

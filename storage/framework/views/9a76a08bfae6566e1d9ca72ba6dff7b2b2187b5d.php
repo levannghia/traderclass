@@ -47,7 +47,6 @@
     
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
-    <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>

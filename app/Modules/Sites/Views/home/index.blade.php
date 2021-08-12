@@ -6,6 +6,10 @@
             <div class="alert alert-success">
                 {{ session()->get('message') }}
             </div>
+        @elseif (session()->has('flash_message'))
+            <div class="alert alert-danger">
+                {{ session()->get('flash_message') }}
+            </div>
         @endif
         <div class="main_item">
             <div class="item-left">

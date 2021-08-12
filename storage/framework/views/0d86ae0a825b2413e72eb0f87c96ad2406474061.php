@@ -7,6 +7,11 @@
                 <?php echo e(session()->get('message')); ?>
 
             </div>
+        <?php elseif(session()->has('flash_message')): ?>
+            <div class="alert alert-danger">
+                <?php echo e(session()->get('flash_message')); ?>
+
+            </div>
         <?php endif; ?>
         <div class="main_item">
             <div class="item-left">

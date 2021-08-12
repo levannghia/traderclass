@@ -41,9 +41,9 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     });
 
     // //course Introduction
-    // Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
-    //     Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
-    // });
+    Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
+    });
 
     //Contact
     Route::get("/contact", ["as" => "sites.contact.index", "uses" => "Contact@index"]);

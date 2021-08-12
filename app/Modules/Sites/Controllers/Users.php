@@ -54,13 +54,13 @@ class Users extends Controller
 
                 $data = array("fullname" => $user->fullname, "linkreset" => $link_register, 'email' => $user->email);
 
-                 Mail::send("Sites::Mail.registerpassword_mail", ['data' => $data], function ($message) use ($titlename, $data) {
+                Mail::send("Sites::Mail.registerpassword_mail", ['data' => $data], function ($message) use ($titlename, $data) {
 
                     $message->to($data['email']);
                     $message->subject($titlename);
                     $message->from($data['email'], $titlename);
                 });
-               
+
                 session()->flash('message', 'Bạn cần xác thực tài khoản, chúng tôi đã gửi mã xác thực vào email của bạn, hãy kiểm tra và làm theo hướng dẫn.');
                 $this->logout();
                 return redirect()->route('sites.home.index');
@@ -107,7 +107,7 @@ class Users extends Controller
             }
         }
     }
-    
+
     public function create()
     {
 
@@ -120,14 +120,14 @@ class Users extends Controller
 
         $validate = $this->validate($request, [
             "email" => "required|email",
-         
+
             "password" => "required",
-           
+
         ], [
             "email.required" => "Vui lòng nhập email",
-           
+
             "password.required" => "Vui lòng nhập mật khẩu",
-           
+
         ]);
         $checkEmail = Users_Model::where('email', $request->email)->first();
         if ($checkEmail) {
@@ -137,10 +137,10 @@ class Users extends Controller
             $token_random = Str::random();
             $user = new Users_Model;
             $user->email =  $request->email;
-           // $user->fullname =  $request->fullname;
-           // $user->gender =  $request->gender;
+            // $user->fullname =  $request->fullname;
+            // $user->gender =  $request->gender;
             //$user->address =  $request->address;
-           // $user->phone =  $request->phone;
+            // $user->phone =  $request->phone;
             $user->password =  Hash::make($request->password);
             $user->type =  0;
             $user->status = 0;
@@ -236,7 +236,5 @@ class Users extends Controller
         } else {
             return redirect()->route('user.forgot')->with('message', 'Vui lòng nhập lại email vì link đã quá hạn');
         }
-
-        
     }
 }
