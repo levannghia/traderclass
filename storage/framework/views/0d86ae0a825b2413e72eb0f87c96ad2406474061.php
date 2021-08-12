@@ -351,15 +351,15 @@
                         ?>
                         <?php if($value->type == 0): ?>
                             <div class="item">
-                                <a class="title_faq" data-bs-toggle="collapse" href="#item_1" role="button"
-                                    aria-expanded="false" aria-controls="item_1">
+                                <a class="title_faq" data-bs-toggle="collapse" href="<?php echo e('#item_' . $i); ?>" role="button"
+                                    aria-expanded="false" aria-controls="<?php echo e('item_' . $i); ?>">
                                     <span><?php echo e($value->title); ?></span>
                                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.41 0L6 4.59L10.59 0L12 1.42L6 7.42L0 1.42L1.41 0Z" fill="white" />
                                     </svg>
                                 </a>
-                                <div class="collapse" id="item_1">
+                                <div class="collapse" id="<?php echo e('item_' . $i); ?>">
                                     <?php echo $value->content; ?>
 
                                 </div>
@@ -370,6 +370,9 @@
                 <p class="label mt-5">Pricing & Payment</p>
                 <div class="question">
                     <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php
+                            $i++;
+                        ?>
                         <?php if($value->type == 1): ?>
                             <div class="item">
                                 <a class="title_faq" data-bs-toggle="collapse" href="<?php echo e('#item_' . $i); ?>" role="button"

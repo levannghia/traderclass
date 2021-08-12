@@ -12,7 +12,6 @@ use App\Modules\Sites\Models\Users_Model;
 use Facade\FlareClient\View;
 use Illuminate\Support\Facades\Hash;
 
-//use App\Modules\Sites\Models\Users_Model;
 class Users extends Controller
 {
 

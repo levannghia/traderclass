@@ -45,6 +45,11 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
     });
 
+    //invite friends
+    Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
+    });
+
     //Contact
     Route::get("/contact", ["as" => "sites.contact.index", "uses" => "Contact@index"]);
 

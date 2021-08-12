@@ -29,7 +29,7 @@
                             <a style="padding-top: 0px;" class="nav-link" href="/invite-friends"> <img class="friend" src="/public/sites/images/add-friend.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="/log-into"> <i class="fas fa-shopping-cart"></i> Access all</a>
                         </li>
                     </ul>
                 </div>
