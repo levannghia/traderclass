@@ -24,9 +24,25 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/return-and-refund-policy.html", ["as" => "sites.policy.index", "uses" => "Policy@refundPolicy"]);
     });
 
+    //Account
     Route::group(["prefix" => "account",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.account.index", "uses" => "Account@index"]);
-        Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Account@logout"]);
+        Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Users@logout"]);
+    });
+
+    //invite friends
+    Route::group(["prefix" => "invite-friends",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.inviteFriend.index", "uses" => "InviteFriend@index"]);
+    });
+
+    //My course
+    Route::group(["prefix" => "my-course",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.course.index", "uses" => "MyCourse@index"]);
+    });
+
+    // //course Introduction
+    Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
     });
 
     //Contact

@@ -6,16 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Modules\Sites\Models\Users_Model;
+use App\Modules\Sites\Models\Course_Model;
 
-class Account extends Controller
+class MyCourse extends Controller
 {
     public function index()
     {
-
         $row = json_decode(json_encode([
-            "title" => "Account information",
+            "title" => "My course",
         ]));
-        return view('Sites::account.index',compact('row'));
+        return view('Sites::my_course.index',compact('row'));
     }
 }

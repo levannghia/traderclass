@@ -8,14 +8,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Users_Model;
 
-class Account extends Controller
+class InviteFriend extends Controller
 {
     public function index()
     {
-
         $row = json_decode(json_encode([
-            "title" => "Account information",
+            "title" => "Invite Friends",
         ]));
-        return view('Sites::account.index',compact('row'));
+        return view('Sites::invite_friends.index',compact('row'));
     }
 }

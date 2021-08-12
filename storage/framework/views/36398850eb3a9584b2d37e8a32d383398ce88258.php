@@ -16,8 +16,8 @@
                                 All Categories <i class="bi bi-chevron-down"></i>
                       </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
-                                <a style="color: black;" class="dropdown-item" href="./Course Introduction.html">Course Introduction</a>
+                                <a style="color: black;" class="dropdown-item" href="/my-course">My Course</a>
+                                <a style="color: black;" class="dropdown-item" href="/course-introduction">Course Introduction</a>
                             </div>
                         </li>
                         <li>
@@ -26,7 +26,7 @@
                             </a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="./Invite friends.html"> <img class="friend" src="/public/sites/images/add-friend.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
+                            <a style="padding-top: 0px;" class="nav-link" href="/invite-friends"> <img class="friend" src="/public/sites/images/add-friend.png" width="16px" height="16px" style="margin-top: -4px;" alt=""> Invite friends </a>
                         </li>
                         <li>
                             <a style="padding-top: 0px;" class="nav-link" href="./Log into.html"> <i class="fas fa-shopping-cart"></i> Access all</a>

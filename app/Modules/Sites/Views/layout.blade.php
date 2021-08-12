@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
     <link rel="stylesheet" href="/public/sites/css/contact.css">
-    <script src="/public/sites/js/js.js"></script>
+    <link rel="stylesheet" href="/public/sites/css/My Course.css?v={{time()}}">
+    <link rel="stylesheet" href="/public/sites/css/Invite friends.css?v={{time()}}">
     <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -39,23 +40,17 @@
 
     @yield('content')
               
-    
-
     @include('Sites::inc.footer')
-  
     @include('Sites::inc.login')
 
    
     
-    
+    <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
-    <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
-    <script src="/public/sites/js/conf-firebase.js" type="text/javascript"></script>
-    <script src="/public/sites/js/logingoogle.js" type="text/javascript"></script>
     <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>

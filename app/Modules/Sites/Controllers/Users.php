@@ -54,21 +54,21 @@ class Users extends Controller
 
                 $data = array("fullname" => $user->fullname, "linkreset" => $link_register, 'email' => $user->email);
 
-                 Mail::send("Sites::Mail.registerpassword_mail", ['data' => $data], function ($message) use ($titlename, $data) {
+                Mail::send("Sites::Mail.registerpassword_mail", ['data' => $data], function ($message) use ($titlename, $data) {
 
                     $message->to($data['email']);
                     $message->subject($titlename);
                     $message->from($data['email'], $titlename);
                 });
-               
+
                 session()->flash('message', 'Bạn cần xác thực tài khoản, chúng tôi đã gửi mã xác thực vào email của bạn, hãy kiểm tra và làm theo hướng dẫn.');
                 $this->logout();
-                return redirect()->route('users.login');
+                return redirect()->route('sites.home.index');
             }
             return redirect()->back();
         } else {
 
-            return redirect()->route("users.login")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
+            return redirect()->route("sites.home.index")->with(["type" => "danger", "flash_message" => "Email hoặc mật khẩu không đúng"]);
         }
     }
     public function GoogleLogin(Request $request)
@@ -79,6 +79,7 @@ class Users extends Controller
 
             $checkUser->email = $request->_email;
             $checkUser->fullname = $request->displayName;
+            $checkUser->type = 0;
             $checkUser->save();
             Auth::loginUsingId($checkUser->id, true);
             response()->json([
@@ -106,7 +107,7 @@ class Users extends Controller
             }
         }
     }
-    
+
     public function create()
     {
 
@@ -119,14 +120,14 @@ class Users extends Controller
 
         $validate = $this->validate($request, [
             "email" => "required|email",
-         
+
             "password" => "required",
-           
+
         ], [
             "email.required" => "Vui lòng nhập email",
-           
+
             "password.required" => "Vui lòng nhập mật khẩu",
-           
+
         ]);
         $checkEmail = Users_Model::where('email', $request->email)->first();
         if ($checkEmail) {
@@ -136,10 +137,10 @@ class Users extends Controller
             $token_random = Str::random();
             $user = new Users_Model;
             $user->email =  $request->email;
-           // $user->fullname =  $request->fullname;
-           // $user->gender =  $request->gender;
+            // $user->fullname =  $request->fullname;
+            // $user->gender =  $request->gender;
             //$user->address =  $request->address;
-           // $user->phone =  $request->phone;
+            // $user->phone =  $request->phone;
             $user->password =  Hash::make($request->password);
             $user->type =  0;
             $user->status = 0;
@@ -208,6 +209,15 @@ class Users extends Controller
     {
         return View("Sites::users.updatepassword");
     }
+
+    public function logout()
+    {
+        Auth::guard("web")->logout();
+        if (!Auth::guard("web")->check()) {
+            return redirect()->route("sites.home.index");
+        }
+    }
+
     public function updatepassword_request(Request $request)
     {
         $data = $request->all();

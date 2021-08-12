@@ -13,11 +13,11 @@
     margin-top: 5%;
 }
 
-.mail p {
+.invite_mail p {
     color: white;
 }
 
-input {
+.inputs {
     background-color: #5A5A5A;
     border: 1px;
     width: 70%;
@@ -59,7 +59,7 @@ input {
     padding-top: 5px;
 }
 
-.mail button {
+.invite_mail button {
     background-color: #EF8D21;
     border: 7px solid #EF8D21;
     border-radius: 5px;
@@ -81,10 +81,10 @@ input {
         font-weight: 600 !important;
         transform: translate(0, -110%);
     }
-    input {
+    inputs {
         width: 65%;
     }
-    .main {
+    .mains {
         padding-top: 45px;
     }
 }
@@ -102,7 +102,7 @@ input {
     .static h5 {
         font-size: 13px;
     }
-    .mail button {
+    .invite_mail button {
         color: white;
         font-size: 10px;
         margin-bottom: 0px;
@@ -113,7 +113,7 @@ input {
     .static h5 i {
         margin-left: 74%;
     }
-    input {
+    inputs {
         width: 68%;
     }
 }
@@ -136,10 +136,10 @@ input {
     .static {
         width: 72%;
     }
-    input {
+    inputs {
         width: 73%;
     }
-    .main {
+    .mains {
         padding-top: 90px;
     }
 }
@@ -156,7 +156,7 @@ input {
         padding-right: 5px;
         padding-top: 13px;
     }
-    .mail button {
+    .invite_mail button {
         font-size: 8px;
     }
 }
@@ -179,7 +179,7 @@ input {
         font-size: 7px;
         padding-right: 5px;
     }
-    .mail p,
+    .invite_mail p,
     .fri p {
         color: white;
         font-size: 15px;
