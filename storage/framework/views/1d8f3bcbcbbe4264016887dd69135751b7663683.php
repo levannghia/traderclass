@@ -18,7 +18,7 @@
    
     <h1>Create Account</h1>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
-    <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
+    <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
     <form action="<?php echo e(route('users.create_request')); ?>" method="post">
         <?php echo csrf_field(); ?>
@@ -48,7 +48,7 @@
    
         <h1>Log In</h1>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
-    <button class="btn-facebook"><a onclick="login_with_facebook()">SIGN UP WITH FACEBOOK</a></button>
+    <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
     <form action="<?php echo e(route('users.login_request')); ?>" method="post">
         <?php echo csrf_field(); ?>
