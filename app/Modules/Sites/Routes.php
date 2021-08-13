@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Modules\Sites\Controllers"], function () {
     
     Route::get("/", ["as" => "sites.home.index", "uses" => "Home@index"]);
-    Route::post("/subcribe", ["as" => "sites.home.", "uses" => "Home@postSubcribe"]);
+    Route::post("/subcribe", ["as" => "sites.home.index", "uses" => "Home@postSubcribe"]);
 
     //All Class
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
     //Teachers
     Route::get("/teacher/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
+
+    //Register
+    Route::get("/register", ["as" => "sites.register.index", "uses" => "Register@index"]);
 
     Route::group(["prefix" => "policy"], function() {
         //Terms

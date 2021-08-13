@@ -85,8 +85,8 @@ use App\Modules\Sites\Models\Contact_Model;
                         </h6>
                         <a class="app-btn blu flex vert" href="<?php echo e($config_apple_store_link->value); ?>">
                             <i class="fab fa-apple" style="
-                            margin-left: -20px;
-                        "></i>
+                            margin-left: -20px;">
+                            </i>
                             <p>Available on the <br/> <span class="big-txt">App Store</span></p>
                         </a>
 

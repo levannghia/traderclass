@@ -144,48 +144,25 @@
 
     function toggle() {
         var header = document.querySelector('header');
-        // var banner = document.querySelector('.banner_home');
+        var banner = document.querySelector('.main');
         var create_account = document.querySelector('.create-account');
         var log_in = document.querySelector('.log-in');
         var login_with_google = document.querySelector('.login-with-google');
         var login_with_facebook = document.querySelector('.login-with-facebook');
         var reset_password = document.querySelector('.reset-password');
 
-        header.classList.toggle('active');
-        // banner.classList.toggle('active');
-        create_account.classList.toggle('active');
+        header.classList.add('active');
+        banner.classList.add('active');
+        create_account.classList.add('active');
+        create_account.classList.remove('active2');
+        log_in.classList.remove('active');
 
-        window.addEventListener('mouseup', function(e) {
-            if (document.querySelector('.create-account').contains(e.target)) {} else {
+        window.addEventListener('mouseup', function my_function(e) {
+            if (document.querySelector('.create-account').contains(e.target)) {
+
+            } else {
                 header.classList.remove('active');
-                // banner.classList.remove('active');
-                create_account.classList.remove('active');
-                log_in.classList.remove('active');
-                login_with_google.classList.remove('active');
-                login_with_facebook.classList.remove('active');
-                reset_password.classList.remove('active');
-            }
-        });
-    }
-
-
-    function login() {
-        var header = document.querySelector('header');
-        // var banner = document.querySelector('.banner_home');
-        var create_account = document.querySelector('.create-account');
-        var log_in = document.querySelector('.log-in');
-        var login_with_google = document.querySelector('.login-with-google');
-        var login_with_facebook = document.querySelector('.login-with-facebook');
-        var reset_password = document.querySelector('.reset-password');
-
-        header.classList.toggle('active');
-        // banner.classList.toggle('active');
-        log_in.classList.toggle('active');
-
-        window.addEventListener('mouseup', function(e) {
-            if (document.querySelector('.log_in').contains(e.target)) {} else {
-                header.classList.remove('active');
-                // banner.classList.remove('active');
+                banner.classList.remove('active');
                 create_account.classList.remove('active');
                 log_in.classList.remove('active');
                 login_with_google.classList.remove('active');
@@ -196,27 +173,35 @@
     }
 
     function sign_in() {
+
         var header = document.querySelector('header');
-        var banner = document.querySelector('.banner_home');
+        var banner = document.querySelector('.main');
         var create_account = document.querySelector('.create-account');
         var log_in = document.querySelector('.log-in');
-        var login_with_google = document.querySelector('.login-with-google');
-        var login_with_facebook = document.querySelector('.login-with-facebook');
         var reset_password = document.querySelector('.reset-password');
 
-        window.addEventListener('mouseup', function(e) {
-            if (document.querySelector('.log-in').contains(e.target)) {
+        window.addEventListener('mouseup', myfunc);
 
-            } else {
+        function myfunc(e) {
+            if (document.querySelector('.log-in').contains(e.target)) {
+                log_in.classList.add('active');
                 header.classList.add('active');
                 banner.classList.add('active');
-                log_in.classList.toggle('active');
-                login_with_google.classList.remove('active');
-                login_with_facebook.classList.remove('active');
-                create_account.classList.remove('active');
-                reset_password.classList.remove('active');
+            } else {
+                // header.classList.remove('active');
+                // banner.classList.remove('active');
+                create_account.classList.remove('active2');
+                // log_in.classList.remove('active');
+                // reset_password.classList.remove('active');
             }
-        });
+        }
+
+        create_account.classList.remove('active');
+        create_account.classList.add('active2');
+        header.classList.add('active');
+        banner.classList.add('active');
+        log_in.classList.add('active');
+        reset_password.classList.remove('active');
     }
 
     function login_with_google() {
@@ -224,6 +209,22 @@
         var banner = document.querySelector('.banner_home');
         var create_account = document.querySelector('.create-account');
         var login_with_google = document.querySelector('.login-with-google');
+
+        window.addEventListener('mouseup', myfunc);
+
+        function myfunc(e) {
+            if (document.querySelector('.login-with-google').contains(e.target)) {
+                login_with_google.classList.add('active');
+                header.classList.add('active');
+                banner.classList.add('active');
+            } else {
+                // header.classList.remove('active');
+                // banner.classList.remove('active');
+                // create_account.classList.remove('active');
+                // log_in.classList.remove('active');
+                // reset_password.classList.remove('active');
+            }
+        }
 
         header.classList.add('active');
         banner.classList.add('active');
@@ -237,6 +238,22 @@
         var create_account = document.querySelector('.create-account');
         var login_with_facebook = document.querySelector('.login-with-facebook');
 
+        window.addEventListener('mouseup', myfunc);
+
+        function myfunc(e) {
+            if (document.querySelector('.login-with-facebook').contains(e.target)) {
+                login_with_facebook.classList.add('active');
+                header.classList.add('active');
+                banner.classList.add('active');
+            } else {
+                // header.classList.remove('active');
+                // banner.classList.remove('active');
+                // create_account.classList.remove('active');
+                // log_in.classList.remove('active');
+                // reset_password.classList.remove('active');
+            }
+        }
+
         header.classList.add('active');
         banner.classList.add('active');
         login_with_facebook.classList.toggle('active');
@@ -249,11 +266,30 @@
         var reset_password = document.querySelector('.reset-password');
         var log_in = document.querySelector('.log-in');
 
+        window.addEventListener('mouseup', myfunc);
+
+        function myfunc(e) {
+            if (document.querySelector('.reset-password').contains(e.target)) {
+                reset_password.classList.add('active');
+                header.classList.add('active');
+                banner.classList.add('active');
+            } else {
+                // header.classList.remove('active');
+                // banner.classList.remove('active');
+                // create_account.classList.remove('active');
+                // log_in.classList.remove('active');
+                // reset_password.classList.remove('active');
+            }
+        }
+
         header.classList.add('active');
         banner.classList.add('active');
         reset_password.classList.toggle('active');
         log_in.classList.remove('active');
     }
+
+
+
 
     var slideIndex = 1;
     showSlides(slideIndex);

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Config_Model;
 use App\Modules\Sites\Models\Teachers_Model;
+use App\Modules\Sites\Models\Faq_Model;
 
 class Teacher extends Controller
 {
@@ -15,9 +16,10 @@ class Teacher extends Controller
     {
         $list_teacher = Teachers_Model::orderBy('id', 'desc')->limit(6)->get();
         $teacher = Teachers_Model::find($id);
+        $faq = Faq_Model::orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => $teacher->fullname,
         ]));
-        return view('Sites::teacher.index',compact('row','teacher','list_teacher'));
+        return view('Sites::teacher.index',compact('row','teacher','list_teacher','faq'));
     }
 }

@@ -4,7 +4,7 @@
 <div class="main">
     <div class="blacks">
         <div class="container">
-            <p><span><a href="">/ &nbsp;  All Classes </a></span> <span><a href="">/ &nbsp;  Wellness</a></span> <span><a href="">/  &nbsp; Ted Nguyen</a></span></p>
+            <p><span><a href="">/ &nbsp;  All Classes </a></span> <span><a href="">/ &nbsp;  Wellness</a></span> <span><a href="">/  &nbsp; <?php echo e($teacher->fullname); ?></a></span></p>
         </div>
     </div>
     <div class="img">
@@ -33,9 +33,9 @@
                 </div>
             </div>
             <div class="lin">
-                <a href="#">Class Info</a>
-                <a href="#">Related</a>
-                <a href="#">FAQ</a>
+                <a href="#money" id="1" onclick="hover(1)">Class Info</a>
+                <a href="#Related" id="2" onclick="hover(2)">Related</a>
+                <a href="#FAQ" id="3" onclick="hover(3)">FAQ</a>
             </div>
 
         </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="member">
+        <div class="member" id="Related">
             <p id="memb">Members who liked this class also liked</p>
             <div class="row">
                 <?php $__currentLoopData = $list_teacher; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -159,7 +159,7 @@
                             <label class="contai">
                                 I agree to receive email updates
                                 <input type="checkbox">
-                                <span class="checkmark"></span>
+                                <span class="checkmarks"></span>
                             </label>
                             <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
@@ -212,56 +212,39 @@
             </div>
         </div>
     </div>
-    <div class="containar">
+    <div class="container">
         <div class="row">
             <div class="col-md"></div>
-            <div class="col-md-6">
-                <div style="color: white; margin-top: 50px;">
+            <div class="col-md-7">
+                <div style="color: white; margin-top: 50px;" id="FAQ">
                     <p id="tt">Frequently asked questions</p>
                     <div id="wen">
                         <p id="gen">General</p>
+                       <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if($value->type == 0): ?>
                         <div id="wht">
-                            <p>What isTraderClass? <span style="float: right;"><i
-                                        class="fas fa-chevron-down"></i></span></p>
+                            <p class="collapsible"><?php echo e($value->title); ?> <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
+                            <div class="content">
+                                <p><?php echo e($value->content); ?></p>
+                            </div>
                         </div>
-                        <div id="wht">
-                            <p>What is included in a TraderClass membership?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                        <div id="wht">
-                            <p>Where can I watch?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                        <div id="wht">
-                            <p>Which classes are right for me?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
+                        <?php endif; ?>
+                       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                     <div id="wen">
                         <p id="gen">Pricing & Payment</p>
-                        <div id="wht">
-                            <p>How much does TraderClass cost?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                        <div id="wht">
-                            <p>Will I be charged taxes?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                        <div id="wht">
-                            <p>How does the 30-day guarantee work?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
-                        <div id="wht">
-                            <p>How do I cancel?
-                                <span style="float: right;"><i class="fas fa-chevron-down"></i></span>
-                            </p>
-                        </div>
+                        <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($value->type == 1): ?>
+                            <div id="wht">
+                                <p class="collapsible"><?php echo e($value->title); ?>
+
+                                    <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
+                                <div class="content">
+                                    <p><?php echo e($value->content); ?></p>
+                                </div>
+                            </div>
+                            <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
                 <div id="pum">
@@ -294,6 +277,30 @@
         </div>
     </div>
 </div>
+<div id="light">
+    <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+    <video id="VisaChipCardVideo" controls>
+        <source src="./mp4/Teacher1.mp4" type="video/mp4">
+      </video>
+</div>
+<div id="share">
+    <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+    <div id="share2">
+        <div id="share3">
+            <p>Share this class with your friends</p>
+        </div>
+        <div id="share4">
+            <a href="https://www.facebook.com/"><img src="./images/icon-facebook.png" alt=""></a>
+            <a href="https://www.messenger.com/"><img src="./images/brand_facebook_messenger_icon_157342.png" alt=""></a>
+            <a href="https://twitter.com/?lang=vi"><img src="./images/free-twitter-logo-icon-2429-thumb.png" alt=""></a>
+            <a href="https://mail.google.com/mail/u/0/"><img src="./images/512px-Gmail_icon_(2020).svg.png" alt=""></a>
+        </div>
+        <div class="static">
+            <input type="text" id="copyTarget" readonly="readonly" value="https://traderclass.vn/class/TedNguyen/"> <button id="copyButton"><i class="fas fa-copy">          Copy</i></button><br><br>
+        </div>
+    </div>
+</div>
+<div id="fade" onClick="lightbox_close();"></div>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>

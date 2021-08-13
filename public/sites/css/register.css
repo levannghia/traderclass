@@ -1,0 +1,239 @@
+.black {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 1px;
+}
+
+table {
+    width: 100%;
+    color: #fff;
+}
+
+.title-sale {
+    border: 2px solid #EF8D21;
+    text-align: center;
+    background-color: #EF8D21;
+}
+
+.title-table th {
+    border: 2px solid #373943;
+    text-align: center;
+}
+
+.tb-left {
+    text-align: left !important;
+    padding-left: 20px;
+}
+
+.tb-cen {
+    width: 25%;
+}
+
+.tb-ri {
+    width: 25%;
+}
+
+.body-table td {
+    border-left: 2px solid #373943;
+    border-right: 2px solid #373943;
+    border-bottom: 2px dashed #373943;
+}
+
+.footer-table td {
+    border-left: 2px solid #373943;
+    border-right: 2px solid #373943;
+    border-bottom: 2px solid #373943;
+}
+
+.txt {
+    text-align: center;
+}
+
+.dif {
+    border-left: 2px solid #EF8D21 !important;
+    border-right: 2px solid #EF8D21 !important;
+}
+
+.cen {
+    border-right: 2px solid #EF8D21 !important;
+}
+
+.footer-table p {
+    text-decoration-line: line-through;
+    font-size: 14px;
+    color: gray;
+}
+
+.footer-table h5 {
+    font-size: 24px;
+    margin-top: -18px;
+}
+
+.footer-table h4 {
+    margin-bottom: 15%;
+}
+
+.cous {
+    border: 1px solid gray;
+    background-color: gray;
+    margin: 10px 78px;
+    padding: 4px 0px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.pac {
+    border: 1px solid #EF8D21;
+    background-color: #EF8D21;
+    margin: 10px 38px;
+    padding: 4px 0px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.hotline-workingtimes {
+    color: #fff;
+    margin-top: 6%;
+    background-color: #111319;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.worlef {
+    text-align: right;
+}
+
+.worlef i {
+    padding-right: 15px;
+}
+
+.worrig {
+    text-align: center;
+}
+
+.worrig h5 {
+    font-weight: normal;
+}
+
+.worrig h5,
+.worrig h4 {
+    font-size: 16px;
+}
+
+
+/* responsive */
+
+
+/*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 1024px) {
+    .cous {
+        margin: 0 54px;
+    }
+    .pac {
+        margin: 0 23px;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+
+@media screen and (max-width: 768px) {
+    .black h2,
+    .black h3 {
+        font-size: 135%;
+    }
+    .txt p,
+    .txt h5 {
+        font-size: 16px;
+    }
+    .cous {
+        font-size: 10px;
+        margin: 0 47px;
+    }
+    .pac {
+        font-size: 10px;
+        margin: 0 23px;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    table {
+        font-size: 76%;
+    }
+    .tb-left {
+        padding-left: 5px;
+    }
+    .txt p,
+    .txt h5 {
+        font-size: 14px;
+    }
+    .cous {
+        font-size: 10px;
+        margin: 0 16px;
+    }
+    .pac {
+        font-size: 9px;
+        margin: 0 0;
+    }
+    .worlef {
+        text-align: center;
+    }
+}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    .black h2,
+    .black h3 {
+        font-size: 90%;
+    }
+    .txt p,
+    .txt h5 {
+        font-size: 12px;
+    }
+    .cous {
+        font-size: 10px;
+        margin: 0 0;
+    }
+    .pac {
+        font-size: 8px;
+        margin: 0 4px;
+    }
+    .worlef h4,
+    .worrig h5,
+    .worrig h4 {
+        font-size: 90%;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    .black h2,
+    .black h3 {
+        font-size: 74%;
+    }
+    .txt p,
+    .txt h5 {
+        font-size: 9px;
+    }
+    .cous {
+        font-size: 8px;
+        margin: 0 -1px;
+    }
+    .pac {
+        font-size: 8px;
+        margin: 0 4px;
+    }
+    .worlef h4,
+    .worrig h5,
+    .worrig h4 {
+        font-size: 76%;
+    }
+}

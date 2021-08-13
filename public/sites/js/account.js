@@ -1,3 +1,28 @@
+// Popup-account
+
+function toggle1(){
+    const popup_account = document.querySelector('.popup-account');
+    popup_account.classList.toggle('active');
+
+    const popup = document.querySelector('.popup');
+    popup.classList.toggle('active');
+}
+function toggle2(){
+
+    const popup_account = document.querySelector('.popup-account');
+    popup_account.classList.toggle('active');
+
+    const update_email = document.querySelector('.update-email');
+    update_email.classList.toggle('active');
+}
+function toggle3(){
+    const popup_account = document.querySelector('.popup-account');
+    popup_account.classList.toggle('active');
+    
+    const change_password = document.querySelector('.change-password');
+    change_password.classList.toggle('active');
+}
+
 // const $ = document.querySelector.bind(document)
 // const $$ = document.querySelectorAll.bind(document)
 

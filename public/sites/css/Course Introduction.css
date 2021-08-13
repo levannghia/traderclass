@@ -78,6 +78,13 @@
             border-radius: 3px;
         }
         
+        .col-md-3 button p a {
+            font-size: 12px;
+            margin-bottom: 0px;
+            color: white;
+            font-weight: 600;
+        }
+        
         .col-md-3 button p {
             font-size: 12px;
             margin-bottom: 0px;

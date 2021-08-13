@@ -14,6 +14,22 @@
     background-color: black;
 }
 
+.blacks p a {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.blacks p {
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 0;
+    padding: 15px;
+    margin-top: 10px;
+}
+
 .header .header_bottom .main {
     display: flex;
     align-items: center;
@@ -159,26 +175,6 @@
     height: 280px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.blacks {
-    background-color: #000000;
-}
-
-.blacks p a {
-    color: #ffffff;
-    text-align: left;
-    margin-bottom: 0;
-    padding: 15px;
-    margin-top: 10px;
-}
-
-.blacks p {
-    color: #ffffff;
-    text-align: left;
-    margin-bottom: 0;
-    padding: 15px;
-    margin-top: 10px;
 }
 
 .im div {
@@ -329,7 +325,7 @@
     width: 0;
 }
 
-.checkmark {
+.checkmarks {
     position: absolute;
     top: 0;
     left: 0;
@@ -341,25 +337,25 @@
     border-radius: 5px;
 }
 
-.contai:hover input~.checkmark {
+.contai:hover input~.checkmarks {
     background-color: rgb(136, 135, 135);
 }
 
-.contai input:checked~.checkmark {
+.contai input:checked~.checkmarks {
     background-color: #111319;
 }
 
-.checkmark:after {
+.checkmarks:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-.contai input:checked~.checkmark:after {
+.contai input:checked~.checkmarks:after {
     display: block;
 }
 
-.contai .checkmark:after {
+.contai .checkmarks:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -420,8 +416,9 @@
 #wht {
     border: 1px solid #464A58;
     border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 #wht p {
@@ -477,6 +474,151 @@
     margin-bottom: 50px;
 }
 
+.all {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.content {
+    padding-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.content p {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    padding-top: 15px;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+#light {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: -300px;
+    margin-top: -180px;
+    z-index: 1002;
+    overflow: visible;
+}
+
+#share {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 40%;
+    background: #FFF;
+    z-index: 1002;
+    overflow: visible;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#share2 {
+    padding: 50px;
+}
+
+#share2 a img {
+    width: 12%;
+    padding: 10px;
+}
+
+#share3 {
+    font-size: 26px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+#share4 {
+    height: 50px;
+}
+
+#share4 a {
+    height: 100%;
+}
+
+.static {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.static input {
+    padding: 12px;
+    margin-bottom: 0px;
+    width: 82%;
+    text-align: initial;
+    border: 0px;
+    background-color: #f0f8ff00;
+}
+
+.static button {
+    float: right;
+    /* padding: 5px; */
+    color: #ef8d21;
+    border: 0px;
+    background-color: #f3f3f300;
+}
+
+#boxclose {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 3px;
+    background: #222222;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+}
+
+.boxclose:before {
+    content: "×";
+}
+
+#fade:hover~#boxclose {
+    display: none;
+}
+
+.test:hover~.test2 {
+    display: none;
+}
+
+#VisaChipCardVideo {
+    width: 900px;
+}
+
 
 /*Ipad ngang(1024 x 768)*/
 
@@ -500,6 +642,13 @@
         transform: translate(0px, 201%);
         width: 62px;
     }
+    #light {
+        top: 35%;
+        left: 35%;
+    }
+    #share2 a img {
+        width: 15%;
+    }
 }
 
 
@@ -519,6 +668,7 @@
     }
     .pla {
         padding: 0px;
+        font-size: 12px;
     }
     .pla img {
         width: 17px;
@@ -572,7 +722,7 @@
         color: white;
         height: 34px;
     }
-    .checkmark {
+    .checkmarks {
         position: absolute;
         top: 0;
         left: 0;
@@ -595,6 +745,23 @@
     }
     .tee {
         margin-top: 10%;
+    }
+    .blacks p {
+        padding: 10px;
+        font-size: 12px;
+    }
+    #share2 {
+        padding: 30px;
+    }
+    #share2 a img {
+        width: 18%;
+    }
+    #light {
+        top: 40%;
+        left: 50%;
+    }
+    #VisaChipCardVideo {
+        width: 600px;
     }
 }
 
@@ -661,6 +828,20 @@
     #wen {
         margin: 15px;
     }
+    .blacks p {
+        font-size: 10px;
+    }
+    #light {
+        top: 60%;
+        left: 71%;
+    }
+    #VisaChipCardVideo {
+        width: 400px;
+    }
+    #share {
+        left: 20%;
+        width: 62%;
+    }
 }
 
 
@@ -669,7 +850,7 @@
 @media screen and (max-width: 320px) {
     .text-center {
         top: 165%;
-        left: 24%;
+        left: 34%;
     }
     .path p {
         margin-bottom: 0;
@@ -691,18 +872,18 @@
         margin-bottom: 95%;
     }
     .lin a {
-        padding: 20px;
+        padding: 21px;
         padding-left: 18px;
         padding-right: 18px;
         color: white;
         border-bottom: 2px solid #323741;
-        font-size: 15px;
+        font-size: 11px;
         font-weight: 600;
     }
     .lin {
         border-bottom: 2px solid #323741;
         height: 44px;
-        width: 94%;
+        width: 100%;
     }
     .playpause img {
         transform: translate(0px, 207%);
@@ -729,12 +910,44 @@
         margin-right: 5px;
         margin-bottom: 10px;
     }
+    .info {
+        padding: 30px 0 30px 0px;
+    }
+    .share a {
+        font-size: 10px;
+    }
+    #myInput {
+        font-size: 12px;
+    }
+    #light {
+        top: 60%;
+        left: 105%;
+    }
+    #VisaChipCardVideo {
+        width: 250px;
+    }
+    #share3 {
+        font-size: 20px;
+    }
+    #share {
+        left: 12%;
+        width: 75%;
+    }
+    #share2 a img {
+        width: 22%;
+    }
+    .static {
+        font-size: 13px;
+    }
 }
 
 
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
+    .blacks p {
+        font-size: 5px;
+    }
     .path p {
         margin-bottom: 0;
         padding: 15px;
@@ -757,24 +970,24 @@
         font-size: 7px;
     }
     .info {
-        padding: 50px;
+        padding: 0px;
         padding-bottom: 20px;
         padding-top: 17px;
     }
     .text-center {
         top: 188%;
-        left: 23%;
+        left: 33%;
     }
     .img {
         margin-bottom: 122%;
     }
     .lin a {
-        padding: 20px;
-        padding-left: 18px;
-        padding-right: 18px;
+        padding: 22px;
+        padding-left: 15px;
+        padding-right: 15px;
         color: white;
         border-bottom: 2px solid #323741;
-        font-size: 10px;
+        font-size: 8px;
         font-weight: 600;
     }
     .lin {
@@ -786,12 +999,6 @@
         transform: translate(0px, 168%);
         width: 25px;
     }
-    #wht p {
-        margin-bottom: 0px;
-        font-size: 10px;
-        font-weight: bold;
-        padding-left: 10px;
-    }
     #gen {
         font-size: 13px;
         font-weight: bold;
@@ -799,5 +1006,28 @@
     .member img {
         width: 75%;
         height: 250px;
+    }
+    #light {
+        top: 60%;
+        left: 133%;
+    }
+    #VisaChipCardVideo {
+        width: 200px;
+    }
+    #share {
+        left: 10%;
+        width: 80%;
+    }
+    #share3 {
+        font-size: 16px;
+    }
+    #share2 a img {
+        width: 20%;
+        padding: 2px;
+    }
+    .static {
+        font-size: 10px;
+        margin-top: 0px;
+        height: 35px;
     }
 }

@@ -7,19 +7,17 @@
             <div class="col-md-4 bg-light">
                 <div class="avatar"></div>
                 <form action="">
-                    @if (Auth::guard("web")->check())
                     <span>Email</span> <a href="" id="edit1">Edit</a>
-                    <input type="text" name="" id="email" size="44" value="{{Auth::user()->email}}">
-                    <span>Password</span> <a href="">Edit</a>
-                    <input type="password" name="" id="password" size="44" placeholder="***********">
-                    @else
-                    <span>Email</span> <a href="" id="edit1">Edit</a>
-                    <input type="text" name="" id="email" size="44" placeholder="mail@mail.com">
+                    <input type="text" name="" id="email" size="44" placeholder="trongduytruong@gmail.com">
                     <span>Password</span> <a href="">Edit</a>
                     <input type="text" name="" id="password" size="44" placeholder="***************">
-                    @endif
                     <input type="button" id="google" value="CONNECT WITH GOOGLE">
                     <input type="button" id="facebook" value="CONNECT WITH FACEBOOK">
+                    <div class="btn-account">
+                        <input type="button" onclick="toggle1()" value="Update account information"><br>
+                        <input type="button" onclick="toggle2()" value="Update email address."><br>
+                        <input type="button" onclick="toggle3()" value="Update password.">
+                    </div>
                 </form>
             </div>
             <!-- <div class="col-md-1"></div> -->
@@ -72,8 +70,11 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
+
     </div>
 </div>
 @endsection

@@ -1,1 +1,0 @@
-aaaadss<?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/Mail/test.blade.php ENDPATH**/ ?>

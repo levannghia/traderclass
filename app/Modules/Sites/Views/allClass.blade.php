@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/public/sites/css/style.css">
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public/sites/css/index.css?v=1">
+    <link rel="stylesheet" href="/public/sites/css/index2.css?v=1">
     <link rel="stylesheet" href="/public/sites/css/account.css?v={{ time() }}">
     <link rel="stylesheet" href="/public/sites/css/AllClass.css">
     <link rel="stylesheet" href="/public/sites/css/Course Introduction.css">
@@ -29,8 +29,11 @@
 
     @include('Sites::inc.footer')
     @include('Sites::inc.login')
-   
+    @include('Sites::inc.popupAccount')
+
     <script src="/public/sites/js/js.js"></script>
+    <script src="/public/sites/js/account.js"></script>
+    <script src="/public/sites/js/teacher.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>

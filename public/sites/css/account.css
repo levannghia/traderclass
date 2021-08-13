@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /* mainss */
 
 .mainss {
@@ -33,6 +35,7 @@
 #password {
     margin-top: 10px;
     margin-bottom: 23px;
+    width: 350px;
 }
 
 .mainss #google {
@@ -129,7 +132,7 @@
     transition: all 0.2s ease;
 }
 
-.actives,
+.active,
 .dott:hover {
     background-color: #EF8D21;
 }
@@ -157,7 +160,7 @@
     border-color: rgba(194, 53, 100, 0.1);
 }
 
-.tab-item.actives {
+.tab-item.active {
     opacity: 1;
 }
 
@@ -170,7 +173,7 @@
     display: none;
 }
 
-.tab-pane.actives {
+.tab-pane.active {
     display: block;
 }
 
@@ -246,9 +249,9 @@ footer span i {
 }
 
 .text p {
-    color: #6C757D;
-    font-weight: normal;
-    font-size: 14px;
+    color: #000000;
+    font-weight: 300;
+    font-size: 11px;
     line-height: 21px;
 }
 
@@ -327,6 +330,274 @@ footer .copy {
     width: 100%;
 }
 
+#upimg {
+    background-color: #ef8d21;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+
+/* 3 buttons yellow */
+
+.btn-account {
+    margin-top: -36px;
+    text-align: center;
+}
+
+.btn-account input[type="button"] {
+    background: #EF8D21;
+    width: 100%;
+    margin-top: -27px;
+    margin-bottom: 10px;
+    padding: 0.5rem 3rem;
+    color: #FFFFFF;
+    font-weight: 700;
+    size: 14px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Popup-account */
+
+.row1 {
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.col1 {
+    width: 100%;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.align-item-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup-account {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.popup-account.active {
+    display: block;
+}
+
+.popup {
+    padding: 2rem;
+    width: 100%;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.popup.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup h2 {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 0!important;
+    line-height: 1.5!important;
+    color: #000000;
+}
+
+.image {
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: #C4C4C4;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.text p {
+    margin-right: 45px;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.text button {
+    background: #EF8D21;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 400;
+    width: 65%;
+    border: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list-input {
+    margin-top: 50px;
+}
+
+.list-input label {
+    margin-bottom: 5px;
+    font-size: 13px!important;
+}
+
+.input-group input[type="text"] {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    padding: 0.3rem 0rem;
+}
+
+.important {
+    color: red;
+}
+
+.btn-save {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    background: #EF8D21;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 400;
+    width: 30%;
+    border: 0;
+    outline: 0;
+}
+
+.footer-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Update Account */
+
+.update-email {
+    padding: 2rem 1rem;
+    width: 100%;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: 0.5s;
+}
+
+.update-email.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.update-email .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-email h2 {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 0!important;
+    line-height: 1.5!important;
+    color: #000000;
+}
+
+.update-email .list-input {
+    flex-direction: column;
+}
+
+.update-email .list-input .input-group input[type="text"] {
+    width: 100%;
+}
+
+.update-email .input-group {
+    margin-bottom: 15px;
+}
+
+
+/* Change Password */
+
+.change-password {
+    padding: 2rem;
+    width: 100%;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: 0.5s;
+}
+
+.change-password.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.change-password .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.change-password h2 {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 0!important;
+    line-height: 1.5!important;
+    color: #000000;
+}
+
+.change-password .list-input {
+    flex-direction: column;
+}
+
+.change-password .list-input .input-group input[type="text"] {
+    width: 100%;
+}
+
+.change-password .input-group {
+    margin-bottom: 15px;
+}
+
 
 /* responsive */
 
@@ -336,11 +607,11 @@ footer .copy {
 @media screen and (max-width: 1024px) {
     #email,
     #password {
-        width: 288px;
+        width: 288px!important;
     }
     #google,
     #facebook {
-        width: 288px !important;
+        width: 288px!important;
     }
     .span.member {
         left: -2%;
@@ -405,6 +676,10 @@ footer .copy {
     .tabs .line {
         width: 72%;
     }
+    /* 3 buttons yellow */
+    .btn-account input[type="button"] {
+        width: 288px!important;
+    }
 }
 
 
@@ -463,6 +738,56 @@ footer .copy {
     .tabs .line {
         width: 100%;
     }
+    /* Popup-account */
+    .list-input {
+        flex-direction: column;
+        text-align: left!important;
+        justify-content: left;
+    }
+    .input-group {
+        flex-direction: column;
+    }
+    .input-group.right {
+        margin-left: 0!important;
+    }
+    .input-group.address input[type="text"] {
+        margin-top: -30px!important;
+    }
+}
+
+
+/* iPhone X max-width 375px */
+
+@media screen and (max-width: 375px) {
+    .mainss span,
+    .mainss a,
+    #email,
+    #password,
+    #google,
+    #facebook {
+        margin-left: -3px!important;
+    }
+    .member {
+        max-width: 300px;
+    }
+    .member .col-md-3 {
+        max-width: 300px;
+    }
+    .span.member {
+        left: 14%;
+    }
+    .tab-pane h6 {
+        margin-left: 7%;
+    }
+    .mainss .col-md-7 {
+        min-width: 375px;
+    }
+    .lbo {
+        max-width: 375px;
+    }
+    .bg-light form {
+        margin-left: 9%;
+    }
 }
 
 
@@ -478,17 +803,17 @@ footer .copy {
         top: 10px; */
     }
     .mainss span {
-        margin-left: -52px;
+        margin-left: -52px!important;
     }
     form a {
         left: 85%;
     }
     #edit1 {
-        top: 35%;
+        top: 30%;
     }
     #email,
     #password {
-        margin-left: -55px;
+        margin-left: -55px!important;
     }
     #google,
     #facebook {
@@ -513,6 +838,13 @@ footer .copy {
     .tab-pane h6 {
         margin-left: 2%;
     }
+    /* 3 buttons yellow */
+    .btn-account input[type="button"] {
+        width: 190px!important;
+    }
+    .bg-light form {
+        margin-left: 20%;
+    }
 }
 
 
@@ -520,7 +852,7 @@ footer .copy {
 
 @media screen and (max-width: 240px) {
     .mainss span {
-        margin-left: -46px;
+        margin-left: -46px!important;
     }
     form a {
         padding-right: 6%;
@@ -528,16 +860,16 @@ footer .copy {
     }
     #email,
     #password {
-        margin-left: -48px;
-        width: 218px;
+        margin-left: -48px!important;
+        width: 218px!important;
     }
     #edit1 {
-        margin-top: -5%;
+        margin-top: -7%;
     }
     #google,
     #facebook {
         width: 170px !important;
-        margin-left: -22px;
+        margin-left: -22px!important;
     }
     .mainss .col-md-7 {
         min-width: 240px;
@@ -563,5 +895,14 @@ footer .copy {
     }
     .tabs .line {
         width: 110%;
+    }
+    /* 3 buttons yellow */
+    .btn-account input[type="button"] {
+        width: 170px!important;
+        margin-left: -22px;
+    }
+    .text p {
+        margin-right: 0px;
+        font-size: 14px;
     }
 }
