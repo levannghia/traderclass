@@ -15,19 +15,31 @@
     border-bottom: 2px solid #000000;
 }
 
-.uns {
+.un {
     width: 66%;
     margin-right: 66px;
+    margin-bottom: 10px;
+    display: flex;
 }
 
-.uns #yo {
+.un img {
+    width: 30%;
+}
+
+#yo {
     font-size: 20px;
     font-weight: 500;
 }
 
-.uns #yo2 {
+.un #yo2 {
     font-size: 16px;
     font-weight: 500;
+    padding-left: 10px;
+}
+
+#cl_name {
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .buy {
@@ -457,20 +469,42 @@
         border: 1px solid #ced4da;
         border-right: 0px;
     }
+    .un img {
+        width: 32%;
+    }
+    .un {
+        width: 90%;
+        margin-right: 0px;
+    }
+    #price {
+        font-size: 16px;
+    }
+    #pre {
+        font-size: 13px;
+    }
+    #sav {
+        font-size: 14px;
+    }
 }
 
 
 /*Ipad dọc(768 x 1024)*/
 
 @media screen and (max-width: 768px) {
-    #price {
-        background-color: black;
-        color: #EF8D21;
+    #se p,
+    #tot p,
+    .cou,
+    .dis {
         font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 0px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
+    }
+    .un img {
+        width: 40%;
+    }
+    .buy {
+        width: 90px;
+    }
+    #price {
+        font-size: 12px;
     }
     .unn #yo {
         font-size: 13px;
@@ -487,13 +521,13 @@
         width: 40%;
         margin-right: 14px;
     }
-    .uns #yo2 {
+    .un #yo2 {
         font-size: 13px;
         font-weight: 500;
     }
     #pre {
         color: #A7A9AC;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: bold;
     }
     #is {
@@ -531,7 +565,7 @@
     }
     #sav {
         color: red;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: bold;
     }
     #choo {
@@ -542,13 +576,6 @@
         border-radius: 3px;
         width: 122px;
         height: 25px;
-    }
-    #se p {
-        color: #EF8D21;
-        font-size: 16px;
-        margin-bottom: 0px;
-        font-weight: bold;
-        text-align: center;
     }
     .diss {
         padding-top: 0px;
@@ -584,9 +611,30 @@
 /*Tablet nhỏ(480 x 640)*/
 
 @media screen and (max-width: 480px) {
+    #se p,
+    #tot p,
+    .cou,
+    .dis {
+        font-size: 16px;
+    }
+    .un img {
+        width: 30%;
+    }
+    .un #yo2,
+    #price {
+        font-size: 16px;
+    }
+    #cl_name {
+        font-size: 15px;
+    }
+    #pre,
+    #sav {
+        font-size: 12px;
+    }
     #is {
         width: 68%;
         display: flex;
+        font-size: 16px;
     }
     .unn #yo {
         font-size: 17px;
@@ -647,6 +695,10 @@
 /*Iphone(480 x 640)*/
 
 @media screen and (max-width: 320px) {
+    .pan .order {}
+    .order {
+        display: flow-root;
+    }
     #sav {
         color: red;
         font-size: 10px;
@@ -665,13 +717,20 @@
         font-size: 10px;
         font-weight: bold;
     }
-    .uns {
-        width: 66%;
-        margin-right: 51px;
+    .un {
+        width: 100%;
     }
-    .uns #yo2 {
-        font-size: 11px;
-        font-weight: 500;
+    .un img {
+        width: 34%;
+    }
+    .un #yo2 {
+        font-size: 14px;
+    }
+    .buy {
+        margin-left: 0;
+    }
+    #cl_name {
+        font-size: 13px;
     }
     .dis {
         color: #A7A9AC;
@@ -758,6 +817,11 @@
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
+    .container {
+        width: 90%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
     #price {
         background-color: black;
         color: #EF8D21;
@@ -776,25 +840,25 @@
         font-size: 7px;
         font-weight: bold;
     }
-    .uns #yo {
+    .un #yo {
         font-size: 10px;
         font-weight: 700;
     }
-    .uns {
+    .un {
         width: 128%;
         margin-right: 12px;
     }
-    .uns #yo {
+    .un #yo {
         font-size: 10px;
         font-weight: 700;
     }
-    .uns #yo2 {
+    .un #yo2 {
         font-size: 8px;
         font-weight: 500;
     }
     .buy {
-        margin-left: 4px;
-        width: 122px;
+        margin-left: 0;
+        width: 70px;
         text-align: center;
         margin-top: 0px;
     }

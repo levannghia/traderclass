@@ -18,4 +18,12 @@ class LogInto extends Controller
 
         return view('Sites::log_into.index', compact('row'));
     }
+    public function course_selection()
+    {
+        $row = json_decode(json_encode([
+            "title" => "Course Selection",
+        ]));
+
+        return view('Sites::course_selection.index', compact('row'));
+    }
 }
