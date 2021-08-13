@@ -20,7 +20,7 @@ class Authenticate extends Middleware
             }
             var_dump(Route::is());
             var_dump(Route::is('admin.*'));
-            return route('users.login');
+            return route('sites.home.index');
         }
         return route('login');
     }

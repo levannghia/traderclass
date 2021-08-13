@@ -8,7 +8,11 @@
                 <div class="avatar"></div>
                 <form action="">
                     <span>Email</span> <a href="" id="edit1">Edit</a>
-                    <input type="text" name="" id="email" size="44" placeholder="trongduytruong@gmail.com">
+                    @if (Auth::guard('web')->check())
+                    <input type="text" name="" id="email" size="44" value="{{Auth::user()->email}}">
+                    @else
+                    <input type="text" name="" id="email" size="44" placeholder="email@email.example.com">
+                    @endif
                     <span>Password</span> <a href="">Edit</a>
                     <input type="text" name="" id="password" size="44" placeholder="***************">
                     <input type="button" id="google" value="CONNECT WITH GOOGLE">

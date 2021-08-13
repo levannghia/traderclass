@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="mai">
                     <div class="logo">
-                        <a href="./index.html" title="">
+                        <a href="/" title="">
                             <!--img src="images/logo.svg" alt="logo" /-->
                             TraderClass
                         </a>
@@ -17,16 +17,16 @@
                                     All Categories <i class="bi bi-chevron-down"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
+                                    <a style="color: black;" class="dropdown-item" href="/my-course">My Course</a>
                                     <a style="color: black;" class="dropdown-item"
-                                        href="./Course Introduction.html">Course Introduction</a>
-                                    <a style="color: black;" class="dropdown-item" href="./All Class.html">All Class</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Contact.html">Contact</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Privacy.html">Course
+                                        href="/course-introduction">Course Introduction</a>
+                                    <a style="color: black;" class="dropdown-item" href="/all-class">All Class</a>
+                                    <a style="color: black;" class="dropdown-item" href="/contact">Contact</a>
+                                    <a style="color: black;" class="dropdown-item" href="/policy/privacy-policy.html">Course
                                         Introduction</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Terms.html">Privacy</a>
+                                    <a style="color: black;" class="dropdown-item" href="/policy/terms-of-service.html">Privacy</a>
                                     <a style="color: black;" class="dropdown-item"
-                                        href="./Return&Refund Policy.html">Return & Refund Policy</a>
+                                        href="/policy/return-and-refund-policy.html">Return & Refund Policy</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -42,7 +42,7 @@
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Blog <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Contact <i class="fas fa-chevron-right"
+                                    <a class="dropdown-item" href="/contact">Contact <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Custom <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
@@ -53,12 +53,12 @@
                                 </div>
                             </li>
                             <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="./Invite friends.html"> <img
+                                <a style="padding-top: 0px;" class="nav-link" href="/invite-friends"> <img
                                         class="friend" src="/public/sites/images/add-friend.png" width="16px" height="16px"
                                         style="margin-top: -4px;" alt=""> Invite friends </a>
                             </li>
                             <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="./Log into.html"> <i
+                                <a style="padding-top: 0px;" class="nav-link" href="/log-into"> <i
                                         class="fas fa-shopping-cart"></i> Access all</a>
                             </li>
                         </ul>
@@ -69,7 +69,7 @@
                             <img src="/public/sites/svg/avt.svg" alt="">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a style="color: black;" class="dropdown-item" href="./account.html">Account information</a>
+                            <a style="color: black;" class="dropdown-item" href="/account">Account information</a>
                             <a style="color: black;" class="dropdown-item" href="{{route('sites.account.logout')}}">Log out</a>
                         </div>
                         <!-- <div class="dropdown">
@@ -113,16 +113,16 @@
                                     All Categories <i class="bi bi-chevron-down"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
+                                    <a style="color: black;" class="dropdown-item" href="/my-course">My Course</a>
                                     <a style="color: black;" class="dropdown-item"
-                                        href="./Course Introduction.html">Course Introduction</a>
-                                    <a style="color: black;" class="dropdown-item" href="./All Class.html">All Class</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Contact.html">Contact</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Privacy.html">Course
+                                        href="/course-introduction">Course Introduction</a>
+                                    <a style="color: black;" class="dropdown-item" href="/all-class">All Class</a>
+                                    <a style="color: black;" class="dropdown-item" href="/contact">Contact</a>
+                                    <a style="color: black;" class="dropdown-item" href="/policy/privacy-policy.html">Course
                                         Introduction</a>
-                                    <a style="color: black;" class="dropdown-item" href="./Terms.html">Privacy</a>
+                                    <a style="color: black;" class="dropdown-item" href="/policy/terms-of-service.html">Privacy</a>
                                     <a style="color: black;" class="dropdown-item"
-                                        href="./Return&Refund Policy.html">Return & Refund Policy</a>
+                                        href="/policy/return-and-refund-policy.html">Return & Refund Policy</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -138,7 +138,7 @@
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Blog <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Contact <i class="fas fa-chevron-right"
+                                    <a class="dropdown-item" href="/contact">Contact <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Custom <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>

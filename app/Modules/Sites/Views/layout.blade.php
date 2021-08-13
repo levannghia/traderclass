@@ -21,7 +21,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css?v={{ time() }}" rel="stylesheet">
-    <link href="/public/sites/css/index.css?v=1" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v={{ time() }}" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
@@ -45,7 +45,7 @@
 
    
     
-    <script src="/public/sites/js/js.js"></script>
+    {{-- <script src="/public/sites/js/js.js"></script> --}}
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/teacher.js"></script>
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>

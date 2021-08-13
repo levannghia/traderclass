@@ -19,16 +19,19 @@
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.create_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;">Password</label>
-    <input type="text" class="signup-input">
+    <input type="password" name="password" class="signup-input">
     <div class="remember-box" style="display: flex;margin-left: 20px;align-items: center;">
         <input type="checkbox">
         <span class="checkmark"></span>
         <p style="font-size: 14px;text-align: left;width: 100%;">Keep me up to date on class events and new releases.</p>
     </div>
     <button class="btn-create">CREATE ACCOUNT</button>
+    </form>
     <div class="sign-in">
         <p>Already have an account? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign in.</a></p>
     </div>
@@ -45,11 +48,14 @@
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
+    <form action="<?php echo e(route('users.login_request')); ?>" method="post">
+        <?php echo csrf_field(); ?>
     <label class="signup-label" style="display: flex;margin-left: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;">Password</label>
-    <input type="text" class="signup-input">
+    <input type="password" name="password" class="signup-input">
     <button class="btn-create" style="margin-top: 30px;">LOG IN</button>
+    </form>
     <div class="sign-in">
         <p>Need an account? <a onclick="toggle()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign up.</a></p>
     </div>
@@ -120,10 +126,13 @@
 </div>
 <!-- -----------reset password----------------->
 <div class="reset-password">
+    <form action=" <?php echo e(route('users.forgot')); ?>" method="post">    
+    <?php echo csrf_field(); ?>
     <h1>Reset Password</h1>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
-    <input type="text" class="signup-input">
+    <input type="email" name="email" class="signup-input">
     <button class="btn-create">SEND EMAIL</button>
+    </form>
     <div class="sign-in">
         <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Log In.</a></p>
     </div>
