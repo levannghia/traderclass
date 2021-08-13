@@ -87,7 +87,7 @@ class Users extends Controller
             if ("status" == "success") {
                 return redirect()->route("sites.home.index");
             } else {
-                return redirect()->route("users.login");
+                return redirect()->route("sites.home.index");
             }
         } else {
             $user = new Users_Model;
@@ -102,7 +102,7 @@ class Users extends Controller
             if ("status" == "success") {
                 return redirect()->route("sites.home.index");
             } else {
-                return redirect()->route("users.login");
+                return redirect()->route("sites.home.index");
             }
         }
     }
@@ -174,7 +174,7 @@ class Users extends Controller
 
     public function forgotpassword()
     {
-        return View("Sites::users.forgotpassword");
+        return View("Sites::inc.popupAccount");
     }
     public function forgotpasswordrequest(Request $request)
     {
@@ -206,7 +206,7 @@ class Users extends Controller
     }
     public function updatepassword()
     {
-        return View("Sites::users.updatepassword");
+        return View("Sites::inc.popupAccount");
     }
 
     public function logout()
