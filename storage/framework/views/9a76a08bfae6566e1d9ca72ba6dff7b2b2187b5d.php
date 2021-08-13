@@ -21,11 +21,11 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
-    <link href="/public/sites/css/index.css?v=<?php echo e(time()); ?>" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v=1" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
-    <link rel="stylesheet" href="/public/sites/css/contact.css">
+    <link rel="stylesheet" href="/public/sites/css/contact.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/My Course.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/Invite friends.css?v=<?php echo e(time()); ?>">
     <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
@@ -57,7 +57,7 @@
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
     
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
