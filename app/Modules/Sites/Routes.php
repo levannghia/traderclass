@@ -68,8 +68,16 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //Route::get("/forgotpassword",["as" =>"user.forgot","uses" => "Users@forgotpassword"]);
     Route::post("/forgotpassword", ["as" => "users.forgot", "uses" => "Users@forgotpasswordrequest"]);
 
-    Route::get("/updatePassword",["as" =>"user.updatepassword","uses" => "Users@updatepassword"]);
-    Route::post("/updatePassword", ["as" => "users.updatepassword", "uses" => "Users@updatepassword_request"]);
+    //Route::get("/updatePassword",["as" =>"user.updatepassword","uses" => "Users@updatepassword"]);
+
+    //updatepassword
+    Route::post("/updatePassword", ["as" => "account.updatepassword", "uses" => "Account@updatepassword_request"]);
+    //update email
+    Route::post("/updateemail", ["as" => "account.updateemail", "uses" => "Account@updateEmail_request"]);
+    //verify email
+    Route::get("/updateEmail", ["as" => "account.updateemailverify", "uses" => "Account@UpdateEmail_accuracy"]);
+
+    Route::post("/updateinformaition", ["as" => "account.updateinformation", "uses" => "Account@UpdateInformation_request"]);
     // Route::group(['middleware' => 'auth:web'], function () {
     //     //Route::get("/", ["as" => "users.login", "uses" => "Users@login"]);
     //     Route::get("/", ["as" => "home.index", "uses" => "Home@index"]);
