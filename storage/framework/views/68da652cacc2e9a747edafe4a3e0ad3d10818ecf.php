@@ -1,8 +1,15 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
+
 <div class="mainss">
     <div class="container">
+    <?php if(session()->has('message')): ?>
+       <div class="alert alert-success">
+         <?php echo e(session()->get('message')); ?>
+
+       </div>
+       <?php endif; ?>  
         <div class="row">
             <div class="col-md-4 bg-light">
                 <div class="avatar"></div>
