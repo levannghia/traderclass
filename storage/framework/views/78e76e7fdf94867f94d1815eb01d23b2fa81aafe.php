@@ -11,7 +11,7 @@
             </tr>
             <tr class="title-table">
                 <th class="tb-left">YOU WILL HAVE</th>
-                <th class="tb-cen cen">Ho Ngoc Ha's Course</th>
+                <th class="tb-cen cen"><?php echo e($teacher->fullname); ?> Course</th>
                 <th class="tb-ri dif">One Year Unlimited Access</th>
             </tr>
             <tr class="body-table">
@@ -34,7 +34,7 @@
                 <td class="txt cen">
                     <p>2.000.000 ₫</p>
                     <h5>590.000 ₫</h5>
-                    <h4 class="cous"><a style="color: white;" href="<?php echo e(route('sites.logInto.courseSelection')); ?>">BUY COURSE</a></h4>
+                    <h4 class="cous"><a style="color: white;" href="<?php echo e(url('/log-into/course-selection/'.$teacher->id)); ?>">BUY COURSE</a></h4>
                 </td>
                 <td class="txt dif">
                     <p>4.000.000 ₫</p>

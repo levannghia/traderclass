@@ -12,8 +12,8 @@
                             <div class="un">
                                 <img src="/public/sites/images/ted-nguyen.png" alt="">
                                 <div id="yo2">
-                                    <p>Teacher Crypto Trader</p>
-                                    <p id="cl_name">Ted Nguyen</p>
+                                    <p><?php echo e($teacher->position); ?></p>
+                                    <p id="cl_name"><?php echo e($teacher->fullname); ?></p>
                                 </div>
                             </div>
                             <div class="buy">

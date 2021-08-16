@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="{{route('sites.register.index')}}" style="color: white;">
+                        <a href="{{url('/register/'.$teacher->id)}}" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -280,10 +280,10 @@
                 <p>Share this class with your friends</p>
             </div>
             <div id="share4">
-                <a href="https://www.facebook.com/"><img src="./images/icon-facebook.png" alt=""></a>
-                <a href="https://www.messenger.com/"><img src="./images/brand_facebook_messenger_icon_157342.png" alt=""></a>
-                <a href="https://twitter.com/?lang=vi"><img src="./images/free-twitter-logo-icon-2429-thumb.png" alt=""></a>
-                <a href="https://mail.google.com/mail/u/0/"><img src="./images/512px-Gmail_icon_(2020).svg.png" alt=""></a>
+                <a href="https://www.facebook.com/"><img src="/public/sites/images/icon-facebook.png" alt=""></a>
+                <a href="https://www.messenger.com/"><img src="/public/sites/images/brand_facebook_messenger_icon_157342.png" alt=""></a>
+                <a href="https://twitter.com/?lang=vi"><img src="/public/sites/images/free-twitter-logo-icon-2429-thumb.png" alt=""></a>
+                <a href="https://mail.google.com/mail/u/0/"><img src="/public/sites/images/512px-Gmail_icon_(2020).svg.png" alt=""></a>
             </div>
             <div class="static">
                 <input type="text" id="copyTarget" readonly="readonly" value="https://traderclass.vn/class/TedNguyen/"> <button id="copyButton"><i class="fas fa-copy">          Copy</i></button><br><br>
