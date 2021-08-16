@@ -36,6 +36,7 @@
                                 </a>
                                 <div class="dropdown-menu search" aria-labelledby="navbarDropdown">
                                     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                    <div id="countryList"><br>
                                     <a class="dropdown-item" href="#">About <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Base <i class="fas fa-chevron-right"

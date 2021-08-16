@@ -8,7 +8,6 @@
                 type: "POST",
                 data: "_token=" + _token + "&" + data_form,
                 beforeSend: function() {
-                    console.log("da gui post len")
                     $(".error_cate").hide();
                     $(".error_input").hide();
                     $(".error_agree").hide();

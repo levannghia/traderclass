@@ -35,21 +35,9 @@
                                     <i class="bi bi-search"></i> Search
                                 </a>
                                 <div class="dropdown-menu search" aria-labelledby="navbarDropdown">
-                                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                    <a class="dropdown-item" href="#">About <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Base <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Blog <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="/contact">Contact <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Custom <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Support <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
-                                    <a class="dropdown-item" href="#">Tools <i class="fas fa-chevron-right"
-                                            style="float: right;"></i></a>
+                                    <input type="text" name="country_name" id="country_name" class="form-control input-lg" placeholder="Enter Country Name" />
+                                    <div id="countryList"><br>
+                                    
                                 </div>
                             </li>
                             <li>
