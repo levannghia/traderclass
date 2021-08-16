@@ -132,7 +132,7 @@
     transition: all 0.2s ease;
 }
 
-.active,
+.actives,
 .dott:hover {
     background-color: #EF8D21;
 }
