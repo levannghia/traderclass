@@ -24,7 +24,7 @@ class Users extends Controller
         if (Auth::guard("web")->check()) {
             return redirect()->route("sites.home.index");
         }
-        return view("Sites::users.login");
+        return redirect()->route("sites.home.index");
     }
 
     public function login_request(Request $request)

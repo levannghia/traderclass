@@ -7,8 +7,8 @@
                         <h2>UPDATE ACCOUNT INFORMATION</h2>
                         <a onclick="toggle1()" style="cursor: pointer;">X</a>
                     </div>
-                    <form action="{{route('account.updateinformation')}}" method="post"  enctype="multipart/form-data">
-                        @csrf
+                    <form action="<?php echo e(route('account.updateinformation')); ?>" method="post"  enctype="multipart/form-data">
+                        <?php echo csrf_field(); ?>
                     <div class="image align-item-center">
                         <div class="square align-item-center">No pictures <br> yet</div>
                         <div class="text">
@@ -43,7 +43,7 @@
                         <h2>Update Email</h2>
                         <a onclick="toggle2()" style="cursor: pointer;">X</a>
                     </div>
-                    @if (count($errors) > 0)
+                    <?php if(count($errors) > 0): ?>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card">
@@ -51,17 +51,17 @@
                                                     <h5 class="card-title"><i class="fe-alert-triangle"></i> Đã xảy ra
                                                         lỗi</h5>
                                                     <ul style="margin: 0;padding: 0 15px;">
-                                                        @foreach ($errors->all() as $key => $value)
-                                                            <li class="card-text">{{ $value }}</li>
-                                                        @endforeach
+                                                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <li class="card-text"><?php echo e($value); ?></li>
+                                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                    @endif   
-                    <form action="{{route('account.updateemail')}}" method="post">
-                        @csrf
+                    <?php endif; ?>   
+                    <form action="<?php echo e(route('account.updateemail')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
                     <div class="list-input align-item-center">
                         <div class="input-group">
                             <label>current password</label>
@@ -88,7 +88,7 @@
                         <h2>Update Password</h2>
                         <a onclick="toggle3()" style="cursor: pointer;">X</a>
                     </div>
-                    @if (count($errors) > 0)
+                    <?php if(count($errors) > 0): ?>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="card">
@@ -96,17 +96,17 @@
                                                     <h5 class="card-title"><i class="fe-alert-triangle"></i> Đã xảy ra
                                                         lỗi</h5>
                                                     <ul style="margin: 0;padding: 0 15px;">
-                                                        @foreach ($errors->all() as $key => $value)
-                                                            <li class="card-text">{{ $value }}</li>
-                                                        @endforeach
+                                                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                            <li class="card-text"><?php echo e($value); ?></li>
+                                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                    @endif   
-                     <form action="{{route('account.updatepassword')}}" method="post">
-                         @csrf
+                    <?php endif; ?>   
+                     <form action="<?php echo e(route('account.updatepassword')); ?>" method="post">
+                         <?php echo csrf_field(); ?>
                     <div class="list-input align-item-center">
                       
                         <div class="input-group">
@@ -130,4 +130,4 @@
             </div>
         </div>
     </div>
-</div>
+</div><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/inc/popupAccount.blade.php ENDPATH**/ ?>

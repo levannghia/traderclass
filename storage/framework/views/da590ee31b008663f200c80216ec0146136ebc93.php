@@ -1,24 +1,25 @@
-@extends('Sites::allClass')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 
 <div class="mainss">
     <div class="container">
-    @if(session()->has('message'))
+    <?php if(session()->has('message')): ?>
        <div class="alert alert-success">
-         {{ session()->get('message') }}
+         <?php echo e(session()->get('message')); ?>
+
        </div>
-       @endif  
+       <?php endif; ?>  
         <div class="row">
             <div class="col-md-4 bg-light">
                 <div class="avatar"></div>
                 <form action="">
                     <span>Email</span> <a href="" id="edit1">Edit</a>
-                    @if (Auth::guard('web')->check())
-                    <input type="text" name="" id="email" size="44" value="{{Auth::user()->email}}">
-                    @else
+                    <?php if(Auth::guard('web')->check()): ?>
+                    <input type="text" name="" id="email" size="44" value="<?php echo e(Auth::user()->email); ?>">
+                    <?php else: ?>
                     <input type="text" name="" id="email" size="44" placeholder="email@email.example.com">
-                    @endif
+                    <?php endif; ?>
                     <span>Password</span> <a href="">Edit</a>
                     <input type="text" name="" id="password" size="44" placeholder="***************">
                     <input type="button" id="google" value="CONNECT WITH GOOGLE">
@@ -87,4 +88,5 @@
 
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::allClass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/account/index.blade.php ENDPATH**/ ?>
