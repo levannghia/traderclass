@@ -1,6 +1,6 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <table>
@@ -34,12 +34,12 @@
                 <td class="txt cen">
                     <p>2.000.000 ₫</p>
                     <h5>590.000 ₫</h5>
-                    <h4 class="cous"><a style="color: white;" href="{{route('sites.logInto.courseSelection')}}">BUY COURSE</a></h4>
+                    <h4 class="cous"><a style="color: white;" href="<?php echo e(route('sites.logInto.courseSelection')); ?>">BUY COURSE</a></h4>
                 </td>
                 <td class="txt dif">
                     <p>4.000.000 ₫</p>
                     <h5>990.000 ₫</h5>
-                    <h4 class="pac"><a style="color: white;" href="{{route('sites.logInto.index')}}">BUY ACCESS PACKAGE</a></h4>
+                    <h4 class="pac"><a style="color: white;" href="<?php echo e(route('sites.logInto.index')); ?>">BUY ACCESS PACKAGE</a></h4>
                 </td>
             </tr>
         </table>
@@ -54,4 +54,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/register/index.blade.php ENDPATH**/ ?>
