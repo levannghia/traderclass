@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/public/sites/css/style.css">
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public/sites/css/index2.css?v=1">
+    <link rel="stylesheet" href="/public/sites/css/index2.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/account.css?v={{ time() }}">
     <link rel="stylesheet" href="/public/sites/css/AllClass.css">
     <link rel="stylesheet" href="/public/sites/css/Course Introduction.css">

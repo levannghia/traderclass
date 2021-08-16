@@ -154,7 +154,7 @@
                                 <label class="contai">
                                         I agree to receive email updates
                                         <input type="checkbox">
-                                        <span class="checkmark"></span>
+                                        <span class="checkmarks"></span>
                                       </label>
                                 <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->

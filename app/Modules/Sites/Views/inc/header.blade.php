@@ -101,7 +101,7 @@
             <div class="container">
                 <div class="main">
                     <div class="logo">
-                        <a href="./index.html" title="">
+                        <a href="/" title="">
                             <!--img src="images/logo.svg" alt="logo" /-->
                             TraderClass
                         </a>
