@@ -1,6 +1,6 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <div class="row">
@@ -12,8 +12,8 @@
                             <div class="un">
                                 <img src="/public/sites/images/ted-nguyen.png" alt="">
                                 <div id="yo2">
-                                    <p>{{ $teacher->position }}</p>
-                                    <p id="cl_name">{{ $teacher->fullname }}</p>
+                                    <p><?php echo e($teacher->position); ?></p>
+                                    <p id="cl_name"><?php echo e($teacher->fullname); ?></p>
                                 </div>
                             </div>
                             <div class="buy">
@@ -372,4 +372,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/course_selection/index.blade.php ENDPATH**/ ?>

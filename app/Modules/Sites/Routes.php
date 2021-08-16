@@ -19,7 +19,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::post('/search/course', ["as" => "sites.search", "uses" => "SearchCourse@postSearchAjax"]);
 
     //Register
-    Route::get("/register", ["as" => "sites.register.index", "uses" => "Register@index"]);
+    Route::get("/register/{id}", ["as" => "sites.register.index", "uses" => "Register@index"]);
 
     Route::group(["prefix" => "policy"], function() {
         //Terms
@@ -51,10 +51,13 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
     });
 
+  
+
+
     //invite friends
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
-        Route::get("/course-selection", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
+        Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
     });
 
     //Contact

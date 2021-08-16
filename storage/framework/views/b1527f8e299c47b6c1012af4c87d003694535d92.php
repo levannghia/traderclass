@@ -1,24 +1,20 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="whitee">
                     <div class="pan">
-                        <p id="yo">Your order</p>
                         <div class="order">
-                            <div class="un">
-                                <img src="/public/sites/images/ted-nguyen.png" alt="">
-                                <div id="yo2">
-                                    <p>{{ $teacher->position }}</p>
-                                    <p id="cl_name">{{ $teacher->fullname }}</p>
-                                </div>
+                            <div class="uns">
+                                <p id="yo">Your order</p>
+                                <p id="yo2">Unlimited access all year All current and upcoming courses.</p>
                             </div>
                             <div class="buy">
-                                <p id="price">599.000 đ</p>
-                                <p id="pricee"><strike id="pre" style="color: #A7A9AC;">2.000.000 ₫</strike><br><span id="sav">Savings: 70%</span>
+                                <p id="price">990.000 đ</p>
+                                <p id="pricee"><strike id="pre" style="color: #A7A9AC;">4.000.000 ₫</strike><br><span id="sav">Savings: 75%</span>
 
                                 </p>
                             </div>
@@ -63,7 +59,7 @@
                                 <p>TOTAL</p>
                             </div>
                             <div id="se">
-                                <p>599.000 đ</p>
+                                <p>990.000 đ</p>
                             </div>
                         </div>
                     </div>
@@ -166,7 +162,7 @@
                             <div class="be">
                                 <p id="will">You will be redirected to CyberSource to complete your purchase</p>
                                 <p id="to">To ensure safety, your card information is encrypted and securely stored by CyberSource, the world's largest payment management company (under VISA organization) VietNam Master does not store your card directly.</p>
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/policy/terms-of-service.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -312,7 +308,7 @@
                                 </div>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -323,7 +319,7 @@
                                 <p>You will be redirected to Momo to complete your purchase</p>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -360,7 +356,7 @@
                                 </div>
                             </div>
                             <div class="be">
-                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
+                                <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21" href="/policy/privacy-policy.html">Privacy Policy</a></span> and <span><a href="/policy/terms-of-service.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                             </div>
                             <div class="pay">
                                 <div><button>PAYMENT</button></div>
@@ -372,4 +368,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/log_into/index.blade.php ENDPATH**/ ?>
