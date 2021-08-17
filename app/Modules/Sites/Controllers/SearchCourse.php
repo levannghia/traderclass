@@ -9,8 +9,13 @@ use App\Modules\Sites\Models\CourseCtagory_Model;
 use Illuminate\Support\Facades\DB;
 
 
-class Home extends Controller
+class SearchCourse extends Controller
 {
+    // public function getSearch()
+    // {
+    //     return view('Sites::my_course.searchajax');
+    // }
+
     function postSearchAjax(Request $request)
     {
         if ($request->get('query')) {

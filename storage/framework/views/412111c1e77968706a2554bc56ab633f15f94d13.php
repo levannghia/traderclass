@@ -1,9 +1,9 @@
-@extends('Sites::teacher')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="blacks" style="background: #000000;">
             <div class="container">
-                <p><span><a href="">/ &nbsp;  All Classes </a></span> <span><a href="">/ &nbsp;  Wellness</a></span> <span><a href="">/  &nbsp; {{ $teacher->fullname }}</a></span></p>
+                <p><span><a href="">/ &nbsp;  All Classes </a></span> <span><a href="">/ &nbsp;  Wellness</a></span> <span><a href="">/  &nbsp; <?php echo e($teacher->fullname); ?></a></span></p>
             </div>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="img">
             <img src="/public/sites/images/ted-nguyenn.png" width="100%" alt="">
             <div class="text-center">
-                <div style="display: grid;"><span id="a">{{ $teacher->fullname }}</span> <span id="b">-</span> <span id="c">{{ $teacher->position }}</span></div>
+                <div style="display: grid;"><span id="a"><?php echo e($teacher->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($teacher->position); ?></span></div>
                 <div class="info">
                     <div class="share">
                         <a href="#" onclick="lightbox_open('/public/sites/mp4/Teacher1.mp4');">
@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="{{url('/register/'.$teacher->id)}}" style="color: white;">
+                        <a href="<?php echo e(url('/register/'.$teacher->id)); ?>" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -125,15 +125,15 @@
             <div class="member" id="Related">
                 <p id="memb">Members who liked this class also liked</p>
                 <div class="row">
-                @foreach ($list_teacher as $value)
+                <?php $__currentLoopData = $list_teacher; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-2">
                         <a href="#">
-                            <img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
-                            <p id="name">{{$value->fullname}}</p>
-                            <p id="namee">{{$value->position}}</p>
+                            <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">
+                            <p id="name"><?php echo e($value->fullname); ?></p>
+                            <p id="namee"><?php echo e($value->position); ?></p>
                         </a>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
@@ -211,30 +211,31 @@
                         <p id="tt">Frequently asked questions</p>
                         <div id="wen">
                             <p id="gen">General</p>
-                            @foreach ($faq as $value)
-                            @if ($value->type == 0)
+                            <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($value->type == 0): ?>
                             <div id="wht">
-                                <p class="collapsible">{{$value->title}} <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
+                                <p class="collapsible"><?php echo e($value->title); ?> <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
                                 <div class="content">
-                                    <p>{!! $value->content !!}</p>
+                                    <p><?php echo $value->content; ?></p>
                                 </div>
                             </div>
-                            @endif
-                            @endforeach
+                            <?php endif; ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                         <div id="wen">
                             <p id="gen">Pricing & Payment</p>
-                            @foreach ($faq as $value)
-                            @if ($value->type == 1)
+                            <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($value->type == 1): ?>
                             <div id="wht">
-                                <p class="collapsible">{{$value->title}}
+                                <p class="collapsible"><?php echo e($value->title); ?>
+
                                     <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
                                 <div class="content">
-                                    <p>{!! $value->content !!}</p>
+                                    <p><?php echo $value->content; ?></p>
                                 </div>
                             </div>
-                            @endif
-                            @endforeach
+                            <?php endif; ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
                     <div id="pum">
@@ -291,4 +292,6 @@
         </div>
     </div>
     <div id="fade" onClick="lightbox_close();"></div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>

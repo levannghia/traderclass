@@ -1,8 +1,8 @@
-@extends('Dashboard::layout')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <form method="post">
-    @csrf
+    <?php echo csrf_field(); ?>
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
@@ -10,7 +10,7 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control border-white" name="search" value="{{Cookie::get('search_user')}}" placeholder="Tên người dùng...">
+                                <input type="text" class="form-control border-white" name="search" value="<?php echo e(Cookie::get('search_user')); ?>" placeholder="Tên người dùng...">
                                 <div class="input-group-append">
                                     <button type="submit" name="btn_search" class="input-group-text bg-blue border-blue text-white">
                                         <i class="fe-search"></i>
@@ -23,11 +23,11 @@
                         </a>
                     </div>
                 </div>
-                <h4 class="page-title">{{$row->title}}</h4>
+                <h4 class="page-title"><?php echo e($row->title); ?></h4>
             </div>
         </div>
     </div>
-    @include("Dashboard::inc.message")
+    <?php echo $__env->make("Dashboard::inc.message", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="row">
         <div class="col-md-12 mb-5">
             <div class="card-box">
@@ -49,54 +49,54 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($data as $value)
+                                        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
                                             <td class="table-user">
-                                                @if (@getimagesize('http://dashboard.traderclass.vn/public/upload/images/users/thumb/'.$value->photo))
-                                                <img src="/public/upload/images/users/thumb/{{$value->photo}}" class="rounded-circle"/>
-                                                @else
-                                                <img src="{{$value->photo}}" class="rounded-circle"/>
-                                                @endif
+                                                <?php if(@getimagesize('http://dashboard.traderclass.vn/public/upload/images/users/thumb/'.$value->photo)): ?>
+                                                <img src="/public/upload/images/users/thumb/<?php echo e($value->photo); ?>" class="rounded-circle"/>
+                                                <?php else: ?>
+                                                <img src="<?php echo e($value->photo); ?>" class="rounded-circle"/>
+                                                <?php endif; ?>
                                             </td>
-                                            <td>{{$value->fullname}}</td>
-                                            <td>{{$value->email}}</td>
-                                            @if ($value->gender)
+                                            <td><?php echo e($value->fullname); ?></td>
+                                            <td><?php echo e($value->email); ?></td>
+                                            <?php if($value->gender): ?>
                                             <td>Nam</td>
-                                            @elseif(!$value->gender)
+                                            <?php elseif(!$value->gender): ?>
                                             <td>Nữ</td>
-                                            @endif
+                                            <?php endif; ?>
                                             
-                                            <td>{{$value->phone}}</td>
-                                            <td>{{$value->address}}</td>
+                                            <td><?php echo e($value->phone); ?></td>
+                                            <td><?php echo e($value->address); ?></td>
                                         
                                             <td>
-                                                @if($value->status==1)
+                                                <?php if($value->status==1): ?>
                                                 <span class="badge bg-soft-success text-success shadow-none">Đã kích hoạt</span>
-                                                @elseif($value->status==2)
+                                                <?php elseif($value->status==2): ?>
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Khóa</span>
-                                                @elseif($value->status==0)
+                                                <?php elseif($value->status==0): ?>
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Chưa xác nhận</span>
-                                                @endif
+                                                <?php endif; ?>
                                              </td>
                                             <td>
                                                 <div class="dropdown">
                                                     <button type="button" class="btn btn-blue btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe-settings"></i></button>
                                                     <div class="dropdown-menu dropdown-menu-right"  x-placement="bottom-start" >
-                                                        {{-- <a class="dropdown-item" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}"><i class="fe-edit-2"></i> Chỉnh sửa</a> --}}
-                                                        @if($value->status==0)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/status/{{$value->id}}/2"><i class="fe-lock"></i> Khóa</a>
-                                                        <a class="dropdown-item text-success" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/status/{{$value->id}}/1"><i class="fe-check-circle"></i> kích hoạt</a>
-                                                        @elseif($value->status==1)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/status/{{$value->id}}/2"><i class="fe-lock"></i> Khóa</a>
-                                                        @elseif($value->status==2)
-                                                        <a class="dropdown-item text-success" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/status/{{$value->id}}/1"><i class="fe-check-circle"></i> Kích hoạt</a>
-                                                        @endif
+                                                        
+                                                        <?php if($value->status==0): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/2"><i class="fe-lock"></i> Khóa</a>
+                                                        <a class="dropdown-item text-success" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/1"><i class="fe-check-circle"></i> kích hoạt</a>
+                                                        <?php elseif($value->status==1): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/2"><i class="fe-lock"></i> Khóa</a>
+                                                        <?php elseif($value->status==2): ?>
+                                                        <a class="dropdown-item text-success" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/1"><i class="fe-check-circle"></i> Kích hoạt</a>
+                                                        <?php endif; ?>
                                                         <div class="dropdown-divider"></div>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
-                                        @endforeach
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -114,4 +114,5 @@
         </div>
     </div>
 </form>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/user/index.blade.php ENDPATH**/ ?>

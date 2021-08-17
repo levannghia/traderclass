@@ -1,4 +1,4 @@
-@if (Auth::check())
+<?php if(Auth::check()): ?>
     <div class="header">
         <div class="header_bottom">
             <div class="container">
@@ -74,7 +74,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a style="color: black;" class="dropdown-item" href="/account">Account information</a>
                             <a style="color: black;" class="dropdown-item"
-                                href="{{ route('sites.account.logout') }}">Log out</a>
+                                href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
                         </div>
                         <!-- <div class="dropdown">
                         <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./svg/avt.svg" alt=""></a>
@@ -98,7 +98,7 @@
             <p>Complete your payment for instant access!</p>
         </div>
     </div>
-@else
+<?php else: ?>
     <header>
         <div class="header_bottom">
             <div class="container">
@@ -138,7 +138,7 @@
                                 </a>
                                 <div class="dropdown-menu search" aria-labelledby="navbarDropdown">
                                     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                    {{-- <div id="countryList"><br> --}}
+                                    
                                     <a class="dropdown-item" href="#">About <i class="fas fa-chevron-right"
                                             style="float: right;"></i></a>
                                     <a class="dropdown-item" href="#">Base <i class="fas fa-chevron-right"
@@ -166,14 +166,7 @@
                             <li>
                                 <a href="#" title="log in" onclick="toggle()" class="text-uppercase">sign up</a>
                             </li>
-                            {{-- <li>
-                                <div class="form-group">
-                                    <input type="text" name="country_name" id="country_name"
-                                        class="form-control input-lg" placeholder="Enter Country Name" />
-                                    <div id="countryList"><br>
-                                    </div>
-                                </div>
-                            </li> --}}
+                            
                         </ul>
                     </div>
                     <a class="toggle" id="btn-toggle-sidebar">
@@ -187,7 +180,7 @@
             </div>
         </div>
     </header>
-@endif
+<?php endif; ?>
 
 <script>
     // search
@@ -199,7 +192,7 @@
             if (query != '') {
                 var _token = $('meta[name="csrf-token"]').attr('content');
                 $.ajax({
-                    url: "{{ route('sites.search') }}",
+                    url: "<?php echo e(route('sites.search')); ?>",
                     method: "POST",
                     data: {
                         query: query,
@@ -219,3 +212,4 @@
         });
     });
 </script>
+<?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/header.blade.php ENDPATH**/ ?>

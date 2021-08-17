@@ -325,3 +325,4 @@
     }
     
 </script>
+<?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/script.blade.php ENDPATH**/ ?>
