@@ -11,6 +11,7 @@ use App\Modules\Sites\Models\Users_Model;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class Account extends Controller
 {
@@ -126,18 +127,30 @@ class Account extends Controller
         $check = Users_Model::where('email',$user['email'])->first();
        
         if ($request->file('selectedFile')) {
-            //delete if exist
-            $image = str_replace("\\", "/", base_path()) . '/public\upload\images\users\thumb' . $check ->photo;
+            $image = str_replace("\\", "/", base_path()) . '/public/upload/images/users/large/' . $check->photo;
             if (file_exists($image)) {
                 File::delete($image);
             }
+            $image_thumb = str_replace("\\", "/", base_path()) . '/public/upload/images/users/thumb/' . $check->photo;
+            if (file_exists($image_thumb)) {
+                File::delete($image_thumb);
+            }
 
-            $get_file_name = $request->file('selectedFile')->getClientOriginalName();
-            $file_name = current(explode('.',$get_file_name));
-            $file_extension=$request->file('selectedFile')->getClientOriginalExtension();
-            $new_image = $file_name.'-'.time().'.'.$file_extension;
-            $request->file('selectedFile')->move('public/upload/images/photo', $new_image);
-            $check ->photo = $new_image;
+            $file = $request->selectedFile;
+            $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+             //$file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+
+            //resize file befor to upload large
+            if ($file->getClientOriginalExtension() != "svg") {
+                $image_resize = Image::make($file->getRealPath());
+
+                $image_resize->fit(100, 100);
+
+                $image_resize->save('public/upload/images/users/thumb/' . $file_name);
+            }
+
+            $file->move("public/upload/images/users/large", $file_name);
+            $check->photo = $file_name;
         }
        
          $check->fullname =  $information['name'] . ''.  $information['lastname'] ;

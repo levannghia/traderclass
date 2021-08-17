@@ -52,7 +52,7 @@
                                         @foreach($data as $value)
                                         <tr>
                                             <td class="table-user">
-                                                @if (@getimagesize('http://dashboard.traderclass.vn/public/upload/images/users/thumb/'.$value->photo))
+                                                @if (@getimagesize('http://traderclass.local/public/upload/images/users/thumb/'.$value->photo))
                                                 <img src="/public/upload/images/users/thumb/{{$value->photo}}" class="rounded-circle"/>
                                                 @else
                                                 <img src="{{$value->photo}}" class="rounded-circle"/>

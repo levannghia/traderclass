@@ -14,7 +14,7 @@
                         <div class="text">
                             <p>No pictures </p>
                             <input type="file" id="selectedFile" name="selectedFile"  style="display: none;" />
-                            <input type="file dk " name="selectedFile" id="upimg" value="Upload photos" onclick="document.getElementById('selectedFile').click();" />
+                            <input type="button" name="selectedFile" id="upimg" value="Upload photos" onclick="document.getElementById('selectedFile').click();" />
                         </div>
                     </div>
                     <div class="list-input align-item-center">

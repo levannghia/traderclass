@@ -53,8 +53,6 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     });
 
   
-
-
     //invite friends
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);

@@ -163,7 +163,7 @@ class Home extends Controller
             $file_extension=$request->file('BANNER_BOTTOM_IMAGE')->getClientOriginalExtension();
             $new_image = $file_name.'-'.time().'.'.$file_extension;
             $request->file('BANNER_BOTTOM_IMAGE')->move('public/upload/images/sites_home', $new_image);
-            $config_bottom_image ->value = $new_image;
+            $config_bottom_image->value = $new_image;
         }
 
         if ($config_title_bottom_class->save() && $config_title_bottom_review_class->save() && $config_title_bottom_lessons->save() &&$config_title_bottom_review_lesson->save() && $config_title_bottom_minutes->save() && $config_title_bottom_review_minute->save() && $config_title_bottom_1->save() && $config_title_bottom_2->save() && $config_title_bottom_3->save() && $config_title_bottom_4->save() && $config_bottom_image->save()) {
