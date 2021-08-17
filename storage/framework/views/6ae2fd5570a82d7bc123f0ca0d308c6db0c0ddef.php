@@ -27,9 +27,29 @@
                     <div class="list-input align-item-center">
                         <div class="input-group">
                             <label>Name <label class="important">*</label></label>
-                            <input type="text" name="name" value="<?php echo e($user->fullname); ?>">
+                            <input type="text" style="width: 100%;margin-top: -8px;" name="name" value="<?php echo e($user->fullname); ?>">
                         </div>
                        
+                    </div>
+                   
+                    <div class="input-group" style="margin-top: 10px;">
+                            <label style="text-align: left;width: 100%;margin-bottom: 0;font-size: 13px;margin-bottom: 7px;">Gender <label class="important">*</label></label>
+                            
+                            <select class="form-control" name="gender" id="">
+                                <?php if($user->gender == 1): ?>
+                                <option selected value="1">Nam</option>
+                                <option value="2">Nữ</option>
+                                <?php else: ?>
+                                <option  value="1">Nam</option>
+                                <option selected value="2">Nữ</option>
+                                <?php endif; ?>
+                            </select>
+                        </div>
+                    
+                    <div class="input-group phone" style="margin-top: 10px;">
+                        <label style="text-align: left;width: 100%;margin-bottom: 0;font-size: 13px;margin-bottom: 7px;">Phone<label
+                                class="important">*</label></label><br>
+                        <input type="text" style="width: 100%;margin-top: -8px;" name="phone"  value="<?php echo e($user->phone); ?>">
                     </div>
                     <div class="input-group address" style="margin-top: 10px;">
                         <label style="text-align: left;width: 100%;margin-bottom: 0;font-size: 13px;margin-bottom: 7px;">Address<label

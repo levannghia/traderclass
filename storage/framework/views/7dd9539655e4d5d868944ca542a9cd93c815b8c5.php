@@ -36,7 +36,7 @@
             var socialProvider = null;
 
             socialProvider = googleProvider;
-            //document.getElementById('social-login-form').action = googleCallbackLink;
+            document.getElementById('social-login-form').action = googleCallbackLink;
 
             firebase.auth().signInWithPopup(socialProvider).then(function(result) {
                 /** @type  {firebase.auth.OAuthCredential} */
@@ -56,7 +56,7 @@
 
                     document.getElementById('tokenId').value = result;
 
-                    //document.getElementById('social-login-form').submit();
+                    document.getElementById('social-login-form').submit();
                 });
             }).catch(function(error) {
                 // do error handling

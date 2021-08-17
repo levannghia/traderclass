@@ -154,6 +154,8 @@ class Account extends Controller
         }
        
          $check->fullname =  $information['name'] ;
+         $check->gender = $information['gender'] ;
+         $check->phone =$information['phone'] ;
          $check->address =  $information['address'];
          $check->update();
          return redirect()->back()->with('message', 'Cập nhập thông tin thành công');
