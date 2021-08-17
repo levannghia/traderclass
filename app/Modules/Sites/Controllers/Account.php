@@ -153,7 +153,7 @@ class Account extends Controller
             $check->photo = $file_name;
         }
        
-         $check->fullname =  $information['name'] . ''.  $information['lastname'] ;
+         $check->fullname =  $information['name'] ;
          $check->address =  $information['address'];
          $check->update();
          return redirect()->back()->with('message', 'Cập nhập thông tin thành công');
