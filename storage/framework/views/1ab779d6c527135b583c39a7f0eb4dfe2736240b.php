@@ -1,6 +1,6 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <p id="title">
@@ -145,4 +145,5 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/course_introduction/index.blade.php ENDPATH**/ ?>
