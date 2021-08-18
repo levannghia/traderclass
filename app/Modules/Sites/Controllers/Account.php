@@ -23,6 +23,7 @@ class Account extends Controller
         ]));
         return view('Sites::account.index',compact('row','user'));
     }
+
     public function UpdatePassword_request(Request $request)
     {
         $this->validate($request, [
@@ -107,6 +108,7 @@ class Account extends Controller
             return redirect()->back()->with('message', 'Mật khẩu hiện tại không đúng, Email Cập nhập thất bại');
         }
     }
+
     public function UpdateEmail_accuracy()
     {
         $email_new = $_GET['emailnew'];
@@ -120,6 +122,7 @@ class Account extends Controller
         return redirect()->route("sites.account.index");
 
     }
+    
     public function UpdateInformation_request(Request $request)
     {
         $information = $request->all();
