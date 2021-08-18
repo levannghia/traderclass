@@ -67,6 +67,7 @@
                         <h2>Update Email</h2>
                         <a onclick="toggle2()" style="cursor: pointer;">X</a>
                     </div>
+                    @if(session()->has('messageupdateemail'))
                     @if (count($errors) > 0)
                                     <div class="row">
                                         <div class="col-md-12">
@@ -83,7 +84,8 @@
                                             </div>
                                         </div>
                                     </div>
-                    @endif   
+                    @endif
+                    @endif     
                     <form action="{{route('account.updateemail')}}" method="post">
                         @csrf
                     <div class="list-input align-item-center">
@@ -112,6 +114,8 @@
                         <h2>Update Password</h2>
                         <a onclick="toggle3()" style="cursor: pointer;">X</a>
                     </div>
+                    @if(session()->has('messageupdatepassword'))
+                  
                     @if (count($errors) > 0)
                                     <div class="row">
                                         <div class="col-md-12">
@@ -129,6 +133,8 @@
                                         </div>
                                     </div>
                     @endif   
+                    @endif  
+                   
                      <form action="{{route('account.updatepassword')}}" method="post">
                          @csrf
                     <div class="list-input align-item-center">

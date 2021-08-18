@@ -11,7 +11,14 @@
        @endif  
         <div class="row">
             <div class="col-md-4 bg-light">
-                <div class="avatar"></div>
+                <div class="avatar">
+                    @if (@getimagesize($user->photo))
+                    <img src="{{$user->photo}}" width="100%" height="100%"   alt="">
+                    @else
+                           
+                    <img src="public/upload/images/users/thumb/{{$user->photo}}" width="100%" height="100%" alt="">
+                    @endif
+                </div>
                 <form action="">
                     <span>Email</span> <a href="" id="edit1">Edit</a>
                     @if (Auth::guard('web')->check())
