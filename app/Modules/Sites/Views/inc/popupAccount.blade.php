@@ -1,3 +1,4 @@
+@if (Auth::check())
 <div class="popup-account">
     <div class="row1 align-item-center">
         <div class="col1 align-item-center">
@@ -170,3 +171,5 @@
         </div>
     </div>
 </div>
+
+@endif

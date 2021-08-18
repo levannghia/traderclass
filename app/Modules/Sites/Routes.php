@@ -13,6 +13,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
     //Teachers
     Route::get("/teacher/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
+    Route::post("/subcribe-teacher", ["as" => "sites.teacher.subcribe", "uses" => "Teacher@postSubcribe"]);
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
 
     //Search

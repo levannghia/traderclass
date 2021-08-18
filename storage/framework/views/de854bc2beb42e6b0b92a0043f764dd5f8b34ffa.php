@@ -60,12 +60,14 @@
                                             </td>
                                             <td><?php echo e($value->fullname); ?></td>
                                             <td><?php echo e($value->email); ?></td>
-                                            <?php if($value->gender): ?>
+                                            <?php if($value->gender == 1): ?>
                                             <td>Nam</td>
-                                            <?php elseif(!$value->gender): ?>
+                                            <?php elseif($value->gender == 2): ?>
                                             <td>Nữ</td>
+                                            <?php else: ?>
+                                            <td>Không xác định</td>
                                             <?php endif; ?>
-                                            
+                                        
                                             <td><?php echo e($value->phone); ?></td>
                                             <td><?php echo e($value->address); ?></td>
                                         

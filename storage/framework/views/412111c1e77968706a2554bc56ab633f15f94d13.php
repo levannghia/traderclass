@@ -61,11 +61,11 @@
                 <div class="col-md-4">
                     <div class="all">
                         <div>
-                            <div class="pla" onclick="nextvideo('./mp4/Teacher1.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Trailer</div>
+                            <div class="pla" onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Trailer</div>
 
                         </div>
                         <div>
-                            <div class="pla" onclick="nextvideo('./mp4/Teacher2.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Sample</div>
+                            <div class="pla" onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Sample</div>
                         </div>
                     </div>
                     <div class="tit">
@@ -127,7 +127,7 @@
                 <div class="row">
                 <?php $__currentLoopData = $list_teacher; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-2">
-                        <a href="#">
+                        <a href="/teacher/<?php echo e($value->id); ?>">
                             <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">
                             <p id="name"><?php echo e($value->fullname); ?></p>
                             <p id="namee"><?php echo e($value->position); ?></p>
@@ -148,16 +148,19 @@
                     </div>
                     <div class="col-md-6">
                         <div>
-                            <form action="">
-                                <input type="email" name="" id="email" placeholder="&ensp;  Enter Email Address">
-                                <button type="submit" id="submit"><p>SUBMIT</p></button> <br>
+                            <form id="form_subcribe_teacher">
+                                <input type="hidden" name="course_category_id" value="<?php echo e($course->course_category_id); ?>">
+                                <input type="email" class="email_sub" name="email" placeholder="&ensp;  Enter Email Address">
+                                <button type="button" class="btn_subcribe_teacher" id="submit"><p>SUBMIT</p></button> <br>
+                                <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                                 <label class="contai">
                                         I agree to receive email updates
-                                        <input type="checkbox">
+                                        <input type="checkbox" name="agree_chk" required>
                                         <span class="checkmarks"></span>
                                       </label>
                                 <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                                <p class="error_agree mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                             </form>
                         </div>
                     </div>
@@ -271,7 +274,7 @@
     <div id="light">
         <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
         <video id="VisaChipCardVideo" controls>
-            <source src="./mp4/Teacher1.mp4" type="video/mp4">
+            <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
           </video>
     </div>
     <div id="share">

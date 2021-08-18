@@ -60,12 +60,14 @@
                                             </td>
                                             <td>{{$value->fullname}}</td>
                                             <td>{{$value->email}}</td>
-                                            @if ($value->gender)
+                                            @if ($value->gender == 1)
                                             <td>Nam</td>
-                                            @elseif(!$value->gender)
+                                            @elseif($value->gender == 2)
                                             <td>Nữ</td>
+                                            @else
+                                            <td>Không xác định</td>
                                             @endif
-                                            
+                                        
                                             <td>{{$value->phone}}</td>
                                             <td>{{$value->address}}</td>
                                         
