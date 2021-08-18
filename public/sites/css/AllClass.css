@@ -5,7 +5,7 @@
 }
 
 .main {
-    padding-top: 50px !important;
+    /* padding-top: 50px !important; */
 }
 
 .img img {
@@ -70,7 +70,6 @@
 
 .teacher .container .row .col-md-4 {
     padding-bottom: 30px;
-   
 }
 
 .button {

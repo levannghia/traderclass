@@ -164,8 +164,22 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("status/{id}/{status}", ["as" => "admin.course_category.status", "uses" => "CourseCategory@status"]);
             });
 
-              //subcribe
-              Route::group(["prefix" => "subcribe"], function() {
+             //Advertisement
+             Route::group(["prefix" => "advertisement"], function() {
+                Route::get("/", ["as" => "admin.advertisement", "uses" => "Advertisement@index"]);
+                Route::post("/", ["as" => "admin.advertisement", "uses" => "Advertisement@postIndex"]);
+                Route::get("add", ["as" => "admin.advertisement.add", "uses" => "Advertisement@add"]);
+                Route::post("add", ["as" => "admin.advertisement.postAdd", "uses" => "Advertisement@postAdd"]);
+                Route::get("edit/{id}", ["as" => "admin.advertisement.edit", "uses" => "Advertisement@edit"]);
+                Route::post("edit/{id}", ["as" => "admin.advertisement.postEdit", "uses" => "Advertisement@postEdit"]);
+                Route::get("/trash", ["as" => "admin.advertisement.trash", "uses" => "Advertisement@trash"]);
+                Route::get("/trash/delete/{id}", ["as" => "admin.advertisement.trash", "uses" => "Advertisement@trashDelete"]);
+                Route::get("delete/{id}", ["as" => "admin.advertisement.delete", "uses" => "Advertisement@delete"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.advertisement.status", "uses" => "Advertisement@status"]);
+            });
+
+            //subcribe
+            Route::group(["prefix" => "subcribe"], function() {
                 Route::get("/", ["as" => "admin.subcribe", "uses" => "Subcribe@index"]);
                 Route::post("/", ["as" => "admin.subcribe", "uses" => "Subcribe@postIndex"]);
             });

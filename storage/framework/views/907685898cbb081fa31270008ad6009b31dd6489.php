@@ -1,9 +1,9 @@
-@if (Gate::allows('view', 'Role'))
-@extends('Dashboard::layout')
-@section('title', $row->title)
-@section('content')
+<?php if(Gate::allows('view', 'Role')): ?>
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
     <form method="post">
-        @csrf
+        <?php echo csrf_field(); ?>
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
@@ -12,7 +12,7 @@
                             <div class="form-group">
                                 <div class="input-group input-group-sm">
                                     <input type="text" class="form-control border-white" name="search"
-                                        value="{{ Cookie::get('search_role') }}" placeholder="Vai trò...">
+                                        value="<?php echo e(Cookie::get('search_role')); ?>" placeholder="Vai trò...">
                                     <div class="input-group-append">
                                         <button type="submit" name="btn_search"
                                             class="input-group-text bg-blue border-blue text-white">
@@ -26,11 +26,11 @@
                             </a>
                         </div>
                     </div>
-                    <h4 class="page-title">{{ $row->title }}</h4>
+                    <h4 class="page-title"><?php echo e($row->title); ?></h4>
                 </div>
             </div>
         </div>
-        @include("Dashboard::inc.message")
+        <?php echo $__env->make("Dashboard::inc.message", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="row">
             <div class="col-md-12 mb-5">
                 <div class="card-box">
@@ -50,59 +50,41 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($list_permission as $value)
+                                            <?php $__currentLoopData = $list_permission; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <tr>
-                                                    <td>{{ $value->id }}</td>
-                                                    <td>{{ $value->name }}</td>
+                                                    <td><?php echo e($value->id); ?></td>
+                                                    <td><?php echo e($value->name); ?></td>
                                                     <td>
-                                                        @if($value->views==1)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/view/{{$value->id}}/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
-                                                        @elseif($value->views==0)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/view/{{$value->id}}/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
-                                                        @endif
+                                                        <?php if($value->views==1): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/view/<?php echo e($value->id); ?>/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
+                                                        <?php elseif($value->views==0): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/view/<?php echo e($value->id); ?>/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
+                                                        <?php endif; ?>
                                                      </td>
                                                      <td>
-                                                        @if($value->adds==1)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/add/{{$value->id}}/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
-                                                        @elseif($value->adds==0)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/add/{{$value->id}}/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
-                                                        @endif
+                                                        <?php if($value->adds==1): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/add/<?php echo e($value->id); ?>/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
+                                                        <?php elseif($value->adds==0): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/add/<?php echo e($value->id); ?>/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
+                                                        <?php endif; ?>
                                                      </td>
                                                      <td>
-                                                        @if($value->edits==1)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
-                                                        @elseif($value->edits==0)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
-                                                        @endif
+                                                        <?php if($value->edits==1): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
+                                                        <?php elseif($value->edits==0): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
+                                                        <?php endif; ?>
                                                      </td>
                                                      <td>
-                                                        @if($value->deletes==1)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/delete/{{$value->id}}/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
-                                                        @elseif($value->deletes==0)
-                                                        <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/delete/{{$value->id}}/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
-                                                        @endif
+                                                        <?php if($value->deletes==1): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/delete/<?php echo e($value->id); ?>/0"><span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span></a>
+                                                        <?php elseif($value->deletes==0): ?>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/delete/<?php echo e($value->id); ?>/1"><span class="badge bg-soft-danger text-danger shadow-none">Khóa</span></a>
+                                                        <?php endif; ?>
                                                      </td>
-                                                    {{-- <td>
-                                                        <div class="dropdown">
-                                                            <button type="button" class="btn btn-blue btn-xs"
-                                                                data-toggle="dropdown" aria-haspopup="true"
-                                                                aria-expanded="false"><i class="fe-settings"></i></button>
-                                                            <div class="dropdown-menu dropdown-menu-right"
-                                                                x-placement="bottom-start">
-                                                                <a class="dropdown-item"
-                                                                    href="/{{ Helper_Dashboard::get_patch() }}/{{ Helper_Dashboard::get_patch(2) }}/edit/{{ $value->id }}"><i
-                                                                        class="fe-edit-2"></i> Chỉnh sửa</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                @if (Gate::allows('delete', 'Admins'))
-                                                                    <a class="dropdown-item text-danger"
-                                                                        href='/{{ Helper_Dashboard::get_patch() }}/{{ Helper_Dashboard::get_patch(2) }}/delete/[{"id":{{ $value->id }}}]'><i
-                                                                            class="fe-trash-2"></i> Xóa</a>
-                                                                @endif
-                                                            </div>
-                                                        </div>
-                                                    </td> --}}
+                                                    
                                                 </tr>
-                                            @endforeach
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -126,13 +108,13 @@
                                                 class="fe-x"></i> Hủy bỏ</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item text-danger" delete-all="true"
-                                            url="/{{ Helper_Dashboard::get_patch(1) }}/{{ Helper_Dashboard::get_patch(2) }}/delete"
+                                            url="/<?php echo e(Helper_Dashboard::get_patch(1)); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/delete"
                                             href="#"><i class="fe-trash-2"></i> Xóa</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                {{-- <?php echo $data->render(); ?> --}}
+                                
                             </div>
                         </div>
                     </div>
@@ -140,19 +122,19 @@
             </div>
         </div>
     </form>
-    {{-- add role --}}
-    <form method="post" action="{{route('admin.rolePermission.postAdd',$data->id)}}">
-        @csrf
+    
+    <form method="post" action="<?php echo e(route('admin.rolePermission.postAdd',$data->id)); ?>">
+        <?php echo csrf_field(); ?>
         <div class="row">
             <div class="col-md-8">
                 <div class="card-box">
-                    <h4 class="header-title mb-3">{{$row->desc}}</h4>
+                    <h4 class="header-title mb-3"><?php echo e($row->desc); ?></h4>
                     <div class="form-group mb-2">
                         <label>Danh mục</label>
                         <select class="form-control form-control-sm" name="permission_id">
-                            @foreach ($permission as $item)
-                            <option value="{{$item->id}}">{{$item->name}}</option>
-                            @endforeach
+                            <?php $__currentLoopData = $permission; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($item->id); ?>"><?php echo e($item->name); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div>
                     <div class="form-group mb-2">
@@ -181,29 +163,29 @@
                     <div class="form-group mb-2">
                         <label>Xem</label>
                         <select class="form-control form-control-sm" name="views">
-                            <option value="1" {{(old('views')!="" && old('views')==1)? "selected" :"" }}>Kích hoạt</option>
-                            <option value="0" {{(old('views')!="" && old('views')==0)? "selected" :"" }}>Khóa</option>
+                            <option value="1" <?php echo e((old('views')!="" && old('views')==1)? "selected" :""); ?>>Kích hoạt</option>
+                            <option value="0" <?php echo e((old('views')!="" && old('views')==0)? "selected" :""); ?>>Khóa</option>
                         </select>
                     </div>
                     <div class="form-group mb-2">
                         <label>Thêm</label>
                         <select class="form-control form-control-sm" name="adds">
-                            <option value="1" {{(old('adds')!="" && old('adds')==1)? "selected" :"" }}>Kích hoạt</option>
-                            <option value="0" {{(old('adds')!="" && old('adds')==0)? "selected" :"" }}>Khóa</option>
+                            <option value="1" <?php echo e((old('adds')!="" && old('adds')==1)? "selected" :""); ?>>Kích hoạt</option>
+                            <option value="0" <?php echo e((old('adds')!="" && old('adds')==0)? "selected" :""); ?>>Khóa</option>
                         </select>
                     </div>
                     <div class="form-group mb-2">
                         <label>Sửa</label>
                         <select class="form-control form-control-sm" name="edits">
-                            <option value="1" {{(old('edits')!="" && old('edits')==1)? "selected" :"" }}>Kích hoạt</option>
-                            <option value="0" {{(old('edits')!="" && old('edits')==0)? "selected" :"" }}>Khóa</option>
+                            <option value="1" <?php echo e((old('edits')!="" && old('edits')==1)? "selected" :""); ?>>Kích hoạt</option>
+                            <option value="0" <?php echo e((old('edits')!="" && old('edits')==0)? "selected" :""); ?>>Khóa</option>
                         </select>
                     </div>
                     <div class="form-group mb-2">
                         <label>Xóa</label>
                         <select class="form-control form-control-sm" name="deletes">
-                            <option value="1" {{(old('deletes')!="" && old('deletes')==1)? "selected" :"" }}>Kích hoạt</option>
-                            <option value="0" {{(old('deletes')!="" && old('deletes')==0)? "selected" :"" }}>Khóa</option>
+                            <option value="1" <?php echo e((old('deletes')!="" && old('deletes')==1)? "selected" :""); ?>>Kích hoạt</option>
+                            <option value="0" <?php echo e((old('deletes')!="" && old('deletes')==0)? "selected" :""); ?>>Khóa</option>
                         </select>
                     </div>
                 </div>
@@ -216,5 +198,7 @@
             </button>
         </div>
     </form>
-@endsection
-@endif
+<?php $__env->stopSection(); ?>
+<?php endif; ?>
+
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/role_permission/roledetail.blade.php ENDPATH**/ ?>

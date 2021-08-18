@@ -52,10 +52,10 @@
                                         @foreach($data as $value)
                                         <tr>
                                             <td class="table-user">
-                                                @if (@getimagesize('http://traderclass.local/public/upload/images/users/thumb/'.$value->photo))
-                                                <img src="/public/upload/images/users/thumb/{{$value->photo}}" class="rounded-circle"/>
-                                                @else
+                                                @if (@getimagesize($value->photo))
                                                 <img src="{{$value->photo}}" class="rounded-circle"/>
+                                                @else
+                                                <img src="/public/upload/images/users/thumb/{{$value->photo}}" class="rounded-circle"/>
                                                 @endif
                                             </td>
                                             <td>{{$value->fullname}}</td>

@@ -118,6 +118,20 @@
                     </ul>
                 </li>
                 @endif
+                @if(Gate::allows('view', 'Advertisement'))
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class="fa fa-gift"></i>
+                        <span> Advertisement</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level nav collapse" aria-expanded="false" style="">
+                        <li class="">
+                            <a href="/dashboard/advertisement">Danh sách</a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
                 <li class="menu-title mt-2">Hệ thống</li>
                 @if(Gate::allows('view', 'Admins'))
                 <li>

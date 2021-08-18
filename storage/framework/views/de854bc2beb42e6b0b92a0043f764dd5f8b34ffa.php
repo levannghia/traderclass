@@ -52,10 +52,10 @@
                                         <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
                                             <td class="table-user">
-                                                <?php if(@getimagesize('http://dashboard.traderclass.vn/public/upload/images/users/thumb/'.$value->photo)): ?>
-                                                <img src="/public/upload/images/users/thumb/<?php echo e($value->photo); ?>" class="rounded-circle"/>
-                                                <?php else: ?>
+                                                <?php if(@getimagesize($value->photo)): ?>
                                                 <img src="<?php echo e($value->photo); ?>" class="rounded-circle"/>
+                                                <?php else: ?>
+                                                <img src="/public/upload/images/users/thumb/<?php echo e($value->photo); ?>" class="rounded-circle"/>
                                                 <?php endif; ?>
                                             </td>
                                             <td><?php echo e($value->fullname); ?></td>
