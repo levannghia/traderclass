@@ -24,7 +24,7 @@
     <label class="signup-label" style="display: flex;margin-left: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <label class="signup-label" style="display: flex;margin-left: 20px;">Password</label>
-    <input type="password" name="password" class="signup-input">
+    <input type="password" name="password" minlength="8" class="signup-input">
     <div class="remember-box" style="display: flex;margin-left: 20px;align-items: center;">
         <input type="checkbox">
         <span class="checkmark"></span>

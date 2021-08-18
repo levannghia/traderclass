@@ -26,6 +26,7 @@ class Account extends Controller
 
     public function UpdatePassword_request(Request $request)
     {
+        session()->flash('messageupdatepassword', 'validate');
         $this->validate($request, [
             "password_current" => "required",
 
@@ -39,6 +40,7 @@ class Account extends Controller
             "password_verify.same" => "Mật khẩu không khớp"
 
         ]);
+      
         $data = $request->all();
         $user = auth::user();
         $hashedPassword = $user->password;
@@ -58,6 +60,7 @@ class Account extends Controller
 
     public function UpdateEmail_request(Request $request)
     {
+        session()->flash('messageupdateemail', 'validate');
         $this->validate($request, [
             "password_current" => "required",
 
@@ -79,12 +82,12 @@ class Account extends Controller
 
             $checkEmail = Users_Model::where('email', $data['email_new'])->first();
             if ($checkEmail) {
-                session()->flash('message', 'Email đã tồn tại');
+               
                 return redirect()->back();
             } else {
                 $token_random = Str::random();
                 $titlename = "Update Email";
-                $link_updateEmail = url('/updateEmail?emailnew=' . $data['email_new'] . '&token=' . $token_random . '&emailcurrent=' . $user->email);
+                $link_updateEmail = url('/update-email?emailnew=' . $data['email_new'] . '&token=' . $token_random . '&emailcurrent=' . $user->email);
 
                 $data_new = array("fullname" => $user->fullname, "linkreset" => $link_updateEmail, 'email' => $data['email_new']);
     

@@ -59,7 +59,7 @@
                         <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
                     </div>
                     <div class="col-md-3" id="col-md-3">
-                        <button><p><a href="/register"><i class="bi bi-plus-lg"></i> &ensp;Take part in the course</p></a></button>
+                        <button><p><a href="/register/2"><i class="bi bi-plus-lg"></i> &ensp;Take part in the course</p></a></button>
                         <button id="but"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
                     </div>
                 </div>

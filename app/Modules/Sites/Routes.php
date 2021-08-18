@@ -81,7 +81,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //update email
     Route::post("/updateemail", ["as" => "account.updateemail", "uses" => "Account@updateEmail_request"]);
     //verify email
-    Route::get("/updateEmail", ["as" => "account.updateemailverify", "uses" => "Account@UpdateEmail_accuracy"]);
+    Route::get("/update-email", ["as" => "account.updateemailverify", "uses" => "Account@UpdateEmail_accuracy"]);
 
     Route::post("/updateinformaition", ["as" => "account.updateinformation", "uses" => "Account@UpdateInformation_request"]);
     // Route::group(['middleware' => 'auth:web'], function () {

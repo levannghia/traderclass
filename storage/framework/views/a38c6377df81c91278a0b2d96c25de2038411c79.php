@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/account.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/AllClass.css?v=<?php echo e(time()); ?>">
-    <link rel="stylesheet" href="/public/sites/css/Course Introduction.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Icon-->
     <title><?php echo $__env->yieldContent('title'); ?></title>

@@ -25,5 +25,4 @@ class Users_Model extends Authenticatable implements MustVerifyEmail
         'password',
         'remember_token',
     ];
-
 }

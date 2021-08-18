@@ -67,6 +67,7 @@
                         <h2>Update Email</h2>
                         <a onclick="toggle2()" style="cursor: pointer;">X</a>
                     </div>
+                    <?php if(session()->has('messageupdateemail')): ?>
                     <?php if(count($errors) > 0): ?>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -83,6 +84,7 @@
                                             </div>
                                         </div>
                                     </div>
+                    <?php endif; ?>
                     <?php endif; ?>   
                     <form action="<?php echo e(route('account.updateemail')); ?>" method="post">
                         <?php echo csrf_field(); ?>
@@ -112,6 +114,8 @@
                         <h2>Update Password</h2>
                         <a onclick="toggle3()" style="cursor: pointer;">X</a>
                     </div>
+                    <?php if(session()->has('messageupdatepassword')): ?>
+                  
                     <?php if(count($errors) > 0): ?>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -129,6 +133,8 @@
                                         </div>
                                     </div>
                     <?php endif; ?>   
+                    <?php endif; ?>  
+                   
                      <form action="<?php echo e(route('account.updatepassword')); ?>" method="post">
                          <?php echo csrf_field(); ?>
                     <div class="list-input align-item-center">

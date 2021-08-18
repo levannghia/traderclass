@@ -113,9 +113,9 @@ class Users extends Controller
 
         return View("Sites::users.register");
     }
+
     public function create_request(Request $request)
     {
-
         $titlename = "Đăng ký tài khoản";
 
         $validate = $this->validate($request, [
