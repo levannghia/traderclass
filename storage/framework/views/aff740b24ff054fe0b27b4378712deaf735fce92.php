@@ -10,7 +10,7 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control border-white" name="search" value="<?php echo e(Cookie::get('search_advertisement')); ?>" placeholder="Tên quảng cáo...">
+                                <input type="text" class="form-control border-white" name="search" value="<?php echo e(Cookie::get('search_teacher')); ?>" placeholder="Tên giáo viên...">
                                 <div class="input-group-append">
                                     <button type="submit" name="btn_search" class="input-group-text bg-blue border-blue text-white">
                                         <i class="fe-search"></i>
@@ -47,7 +47,8 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Hình ảnh</th>
-                                            <th>Tiêu đề</th>
+                                            <th>Tên</th>
+                                            <th>Chức vụ</th>
                                             <th>Trạng thái</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
@@ -59,8 +60,9 @@
                                         <?php if($value->status != 2): ?>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="<?php echo e($value->id); ?>" /></th>
-                                            <td class="table-user"><img src='/public/upload/images/advertisement/thumb/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
-                                            <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->title); ?>"><?php echo e($value->title); ?></a></td>
+                                            <td class="table-user"><img src='/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
+                                            <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->fullname); ?>"><?php echo e($value->fullname); ?></a></td>
+                                            <td><?php echo e($value->position); ?></td>
                                             <td>
                                                 <?php if($value->status): ?>
                                                 <span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span>
@@ -119,4 +121,4 @@
     </div>
 </form>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/advertisement/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/teacher/index.blade.php ENDPATH**/ ?>

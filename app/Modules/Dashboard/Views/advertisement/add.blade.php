@@ -9,12 +9,8 @@
             <div class="card-box">
                 <h4 class="header-title mb-3">{{$row->desc}}</h4>
                 <div class="form-group mb-2">
-                    <label for="title">Họ & tên</label>
-                    <input type="text"  name="fullname" value="{{ old('fullname') }}" class="form-control form-control-sm" placeholder="* Họ và tên">
-                </div>
-                <div class="form-group mb-2">
-                    <label for="title">Chức vụ</label>
-                    <input type="text"  name="position" value="{{ old('position') }}" class="form-control form-control-sm" placeholder="* Chức vụ">
+                    <label for="title">Tiêu đề</label>
+                    <input type="text"  name="title" value="{{ old('title') }}" class="form-control form-control-sm" placeholder="* Tiêu đề">
                 </div>
             </div>
         </div>
@@ -23,7 +19,7 @@
                 <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> Hình ảnh</h5>
                 <div class="form-group mb-2">
                     <?php
-                    $thumbsize = json_decode($settings["THUMB_SIZE_TEACHERS"]);
+                    $thumbsize = json_decode($settings["THUMB_SIZE_ADVERTISEMENT"]);
                     ?>
                     <label>Upload (jpg,png) [{{$thumbsize->width."x".$thumbsize->height}}px]</label>
                     <div class="input-group">

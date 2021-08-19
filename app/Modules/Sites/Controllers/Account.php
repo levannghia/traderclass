@@ -128,6 +128,7 @@ class Account extends Controller
     
     public function UpdateInformation_request(Request $request)
     {
+        $settings = config('global.settings');
         $information = $request->all();
         $user = auth::user();
         $check = Users_Model::where('email',$user['email'])->first();
@@ -144,14 +145,12 @@ class Account extends Controller
 
             $file = $request->selectedFile;
             $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
-             //$file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
 
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
                 $image_resize = Image::make($file->getRealPath());
-
-                $image_resize->fit(100, 100);
-
+                $thumb_size = json_decode($settings["THUMB_SIZE_USERS"]);
+                $image_resize->fit($thumb_size->width, $thumb_size->height);
                 $image_resize->save('public/upload/images/users/thumb/' . $file_name);
             }
 

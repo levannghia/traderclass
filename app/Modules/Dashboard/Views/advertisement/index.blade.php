@@ -59,8 +59,8 @@
                                         @if ($value->status != 2)
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="{{$value->id}}" /></th>
-                                            <td class="table-user"><img src='/public/upload/images/teachers/thumb/{{$value->photo}}' class="rounded-circle"/></td>
-                                            <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->fullname}}">{{$value->fullname}}</a></td>
+                                            <td class="table-user"><img src='/public/upload/images/advertisement/thumb/{{$value->photo}}' class="rounded-circle"/></td>
+                                            <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->title}}">{{$value->title}}</a></td>
                                             <td>
                                                 @if($value->status)
                                                 <span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span>
