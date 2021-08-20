@@ -15,17 +15,17 @@
     border-bottom: 2px solid #000000;
 }
 
-.uns {
+.un {
     width: 66%;
     margin-right: 66px;
 }
 
-.uns #yo {
+.un #yo {
     font-size: 20px;
     font-weight: 500;
 }
 
-.uns #yo2 {
+.un #yo2 {
     font-size: 16px;
     font-weight: 500;
 }
@@ -267,6 +267,30 @@
     padding: 8px;
 }
 
+.bankk .row .col-md-4 div i {
+    content: "\f00c";
+    position: absolute;
+    background-color: #21ef27;
+    width: 14%;
+    height: 33%;
+    right: 0;
+    top: 0;
+    border-radius: 14px;
+    font-family: "Font Awesome 5 pro";
+    font-weight: 900;
+    color: #fefffe;
+    display: none;
+}
+
+.tic {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 90% !important;
+    background-color: rgba(240, 255, 255, 0) !important;
+    display: none;
+}
+
 .ban p {
     font-size: 14px;
     font-weight: 400;
@@ -457,6 +481,14 @@
         border: 1px solid #ced4da;
         border-right: 0px;
     }
+    .bankk .row .col-md-4 div i {
+        width: 17%;
+        height: 32%;
+        font-size: 13px;
+    }
+    .tic {
+        padding: 0px !important;
+    }
 }
 
 
@@ -487,7 +519,7 @@
         width: 40%;
         margin-right: 14px;
     }
-    .uns #yo2 {
+    .un #yo2 {
         font-size: 13px;
         font-weight: 500;
     }
@@ -578,6 +610,14 @@
         border-radius: .25rem;
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
+    .bankk .row .col-md-4 div i {
+        width: 16%;
+        height: 25%;
+        font-size: 10px;
+    }
+    .tic {
+        width: 80% !important;
+    }
 }
 
 
@@ -641,6 +681,70 @@
         width: 40%;
         padding-bottom: -10px;
     }
+    .bankk .row .col-md-4 div i {
+        width: 6%;
+        height: 30%;
+        right: 30px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 42px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #is {
+        width: 62%;
+        display: flex;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 9px;
+    }
+    .suu label {
+        width: 30%;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 8%;
+        height: 32%;
+        right: 25px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 35px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .suu label {
+        width: 35%;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 6px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 7px;
+    }
+    #is {
+        width: 57%;
+        display: flex;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 9%;
+        height: 32%;
+        right: 22px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 35px;
+    }
 }
 
 
@@ -665,11 +769,11 @@
         font-size: 10px;
         font-weight: bold;
     }
-    .uns {
+    .un {
         width: 66%;
         margin-right: 51px;
     }
-    .uns #yo2 {
+    .un #yo2 {
         font-size: 11px;
         font-weight: 500;
     }
@@ -752,6 +856,16 @@
     .suu label {
         width: 45%;
     }
+    .bankk .row .col-md-4 div i {
+        width: 9%;
+        height: 32%;
+        right: 17px;
+        font-size: 14px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 24px;
+    }
 }
 
 
@@ -776,19 +890,19 @@
         font-size: 7px;
         font-weight: bold;
     }
-    .uns #yo {
+    .un #yo {
         font-size: 10px;
         font-weight: 700;
     }
-    .uns {
+    .un {
         width: 128%;
         margin-right: 12px;
     }
-    .uns #yo {
+    .un #yo {
         font-size: 10px;
         font-weight: 700;
     }
-    .uns #yo2 {
+    .un #yo2 {
         font-size: 8px;
         font-weight: 500;
     }
@@ -815,7 +929,7 @@
         font-size: 11px;
     }
     #is {
-        width: 45%;
+        width: 50%;
         display: flex;
     }
     #choo {
@@ -960,5 +1074,15 @@
     .suu label {
         width: 30%;
         height: 20px;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 13%;
+        height: 33%;
+        right: 13px;
+        font-size: 15px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 18px;
     }
 }

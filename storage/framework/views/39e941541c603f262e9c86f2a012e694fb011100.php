@@ -323,6 +323,8 @@
         dots[slideIndex - 1].className += " actives";
         dotts[slideIndex - 1].className += " actives";
     }
+
+    
     
 </script>
 <?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/script.blade.php ENDPATH**/ ?>

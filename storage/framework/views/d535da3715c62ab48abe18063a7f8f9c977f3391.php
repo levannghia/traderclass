@@ -16,13 +16,12 @@
         <div class="main_item">
             <div class="item-left">
                 <p class="title">
-
                     <span>today’s</span> the day.
                 </p>
                 <p class="desc"><?php echo e($config_title_banner_top_left->value); ?></p>
                 <div class="form_search">
                     <input type="text" value="" class="search_input" placeholder="Your email address" />
-                    <a href="#" class="btn btn sign_up" onclick="toggle()">SIGN UP</a>
+                    <a href="<?php echo e(route('sites.find-my-class.index')); ?>" class="btn btn sign_up">GET STARTED</a>
                     <label>
                         <input type="checkbox" value="0" />
                         <span>Keep me up to date on class events and new releases.</span>
@@ -32,29 +31,47 @@
             </div>
             <div class="item-right">
                 <div class="list_img">
-                    <img src="/public/sites/images/banner_home.jpg" alt="" />
+                    <video autoplay loop muted playsinline="playsinline" captions="Off">
+                        <source src="public/sites/mp4/TraderClass Online Classes.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
-    <section class="trader_teacher pt-100 pb-100">
+    <div class="trader_teacher2 pt-100 ">
         <div class="container">
-            <h2 class="title_main mb-5 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">New classes
-                added every month.</h2>
+            <h2 class="title_main mb-5 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">New classes added every month.</h2>
+            <div class="tile-image">
+                <img src="/public/sites/images/90h2bclxquk23n6jxmcp0v7ikg48.jpg" alt="">
+                <div class="text-name">
+                    <div class="neww">
+                        <button><p>New</p></button>
+                    </div>
+                    <div class="text"><span class="a">Jarratt Davis</span> <span class="b">-</span><span class="c">Teacher Forex Trader</span>
+                    </div>
+                    <div class="button">
+                        <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="trader_teacher pb-100">
+        <div class="container">
+            <h2 class="title_main mb-5 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">Trending</h2>
             <div class="owl-carousel owl-theme">
                 <?php $__currentLoopData = $teachers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="item">
-                        <?php if($value->type): ?>
-                            <p class="mark">New</p>
-                        <?php elseif(!$value->type): ?>
-
-                        <?php endif; ?>
-                        <div class="info">
-                            <p class="name"><?php echo e($value->fullname); ?></p>
-                            <p class="class_name"><?php echo e($value->position); ?></p>
-                        </div>
-                        <img src="<?php echo e('/public/upload/images/teachers/thumb/' . $value->photo); ?>" alt="" />
+                <div class="item">
+                    <?php if($value->type): ?>
+                    <p class="mark">New</p>
+                    <?php endif; ?>
+                    <div class="info">
+                        <p class="name"><?php echo e($value->fullname); ?></p>
+                        <p class="class_name"><?php echo e($value->position); ?></p>
+                        <button><a href="/teacher/<?php echo e($value->id); ?>"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
                     </div>
+                    <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="" />
+                </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
@@ -244,7 +261,7 @@
                 <div class="left_conent">
                     <p class="title"><?php echo e($config_title_banner_center_tuition->value); ?></p>
                     <p class="desc"><?php echo e($config_title_banner_bottom_center_payment->value); ?></p>
-                    <a href="#" class="btn btn_continute" title="Continute">CONTINUE</a>
+                    <a href="<?php echo e(route('sites.find-my-class.index')); ?>" class="btn btn_continute" title="Continute">CONTINUE</a>
                 </div>
                 <div class="right_content">
                     <img src="<?php echo e('/public/upload/images/sites_home/' . $config_banner_bottom_image->value); ?>" alt="" />
@@ -306,6 +323,17 @@
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     <p class="text-center error_cate mt-1" style="color:#EF8D21;display:none"></p>
+                </div>
+                <div class="row list_option mb-100">
+                    <div class="col-md"></div>
+                    <div class="col-md-4">
+                        <div class="next">
+                            <a href="">
+                                <button><i class="bi bi-arrow-right"></i> &nbsp; NEXT</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md"></div>
                 </div>
                 <div class="row subcribe mt-100">
                     <div class="col-md-6">

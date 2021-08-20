@@ -44,5 +44,5 @@ function up3() {
 }
 
 function classify() {
-    window.location.href = "MasterClass.html";
+    window.location.href = "/master-class";
 }

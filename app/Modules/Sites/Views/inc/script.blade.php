@@ -323,5 +323,7 @@
         dots[slideIndex - 1].className += " actives";
         dotts[slideIndex - 1].className += " actives";
     }
+
+    
     
 </script>

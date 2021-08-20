@@ -66,13 +66,16 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
         // Route::get("/{id}", ["as" => "sites.courseIntroduction.intruduction", "uses" => "CourseIntroduction@intruduction"]);
     });
-
+    //find-my-class
+    Route::get("/find-my-class", ["as" => "sites.find-my-class.index", "uses" => "FindMyClass@index"]);
+     //master-class
+     Route::get("/master-class", ["as" => "sites.master-class.index", "uses" => "MasterClass@index"]);
   
-    //invite friends
+    //log-into
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
         Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
-        Route::get("/payment-bank/{id}", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
+        Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_momo"]);
         Route::get("/payment-atm/{id}", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
         Route::get("/payment-momo/{id}", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
     });

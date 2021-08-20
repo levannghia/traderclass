@@ -1,12 +1,6 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
-<div class="blacks" style="background: #000000;">
-            <div class="container">
-                <p><span><a href="">/ &nbsp;  All Classes </a></span> <span><a href="">/ &nbsp;  Wellness</a></span> <span><a href="">/  &nbsp; <?php echo e($teacher->fullname); ?></a></span></p>
-            </div>
-        </div>
-    </div>
     <div class="main">
         <div class="img">
             <img src="/public/sites/images/ted-nguyenn.png" width="100%" alt="">
