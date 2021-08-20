@@ -1,0 +1,197 @@
+.fin {
+    background-color: black;
+    color: #d5d5d5;
+    border-radius: 15px;
+    margin-bottom: 26px;
+}
+
+.tick {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tick p {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tick i {
+    padding: 20px;
+    color: #00c14e;
+    display: none;
+}
+
+.teacherr {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.teacherr img {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.titt {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titt p {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.titt button p {
+    margin-bottom: 0px;
+    padding: 10px;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+}
+
+.titt button {
+    border: 0px;
+    border-radius: 5px;
+    background-color: #EF8D21;
+}
+
+#up {
+    background-color: #ffffff00;
+    height: 215px;
+    width: 350px;
+    position: absolute;
+    display: none;
+}
+
+#up2 {
+    background-color: #ffffff00;
+    height: 215px;
+    width: 350px;
+    position: absolute;
+    display: none;
+}
+
+#up3 {
+    background-color: #ffffff00;
+    height: 215px;
+    width: 350px;
+    position: absolute;
+    display: none;
+}
+
+
+/*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 1024px) {
+    #up {
+        height: 188px;
+        width: 292px;
+    }
+    #up2 {
+        height: 188px;
+        width: 292px;
+    }
+    #up3 {
+        height: 188px;
+        width: 292px;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+
+@media screen and (max-width: 768px) {
+    .tick p {
+        font-size: 15px;
+    }
+    .tick i {
+        padding: 16px;
+    }
+    .teacherr img {
+        width: 33%;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    #up {
+        height: 86%;
+        width: 88%;
+    }
+    #up2 {
+        height: 86%;
+        width: 88%;
+    }
+    #up3 {
+        height: 86%;
+        width: 88%;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    .tick p {
+        font-size: 23px;
+    }
+    .tick i {
+        padding: 25px;
+    }
+    .teacherr img {
+        border-radius: 20px;
+    }
+    #up {
+        height: 91%;
+        width: 94%;
+    }
+    #up2 {
+        height: 91%;
+        width: 94%;
+    }
+    #up3 {
+        height: 91%;
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #up {
+        height: 90%;
+        width: 93%;
+    }
+    #up2 {
+        height: 90%;
+        width: 93%;
+    }
+    #up3 {
+        height: 90%;
+        width: 93%;
+    }
+}
+
+@media screen and (max-width: 375px) {}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    .tick i {
+        padding: 22px;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    .tick p {
+        font-size: 14px;
+    }
+    .tick i {
+        padding: 15px;
+    }
+}

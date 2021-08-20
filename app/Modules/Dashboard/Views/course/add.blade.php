@@ -9,8 +9,45 @@
             <div class="card-box">
                 <h4 class="header-title mb-3">{{$row->desc}}</h4>
                 <div class="form-group mb-2">
-                    <label for="title">Tiêu đề</label>
-                    <input type="text"  name="title" value="{{ old('title') }}" class="form-control form-control-sm" placeholder="* tên lớp học">
+                    <label for="title">Tên khóa học</label>
+                    <input type="text"  name="name" value="{{ old('name') }}" class="form-control form-control-sm" placeholder="* Tên khóa học">
+                </div>
+                <div class="form-group mb-2">
+                    <label>Danh mục</label>
+                    <select class="form-control form-control-sm" name="course_category_id">
+                        @foreach ($list_category as $value)
+                        <option value="{{$value->id}}">{{$value->title}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label>Giảng viên</label>
+                    <select class="form-control form-control-sm" name="teacher_id">
+                        @foreach ($list_teacher as $value)
+                        <option value="{{$value->id}}">{{$value->fullname}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Link video youtube</label>
+                    <input type="text"  name="link_video" value="{{ old('link_video') }}" class="form-control form-control-sm" placeholder="* Link video">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-box">
+                <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> Hình ảnh</h5>
+                <div class="form-group mb-2">
+                    <?php
+                    $thumbsize = json_decode($settings["THUMB_SIZE_COURSE"]);
+                    ?>
+                    <label>Upload (jpg,png) [{{$thumbsize->width."x".$thumbsize->height}}px]</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input " name="photo" id="photo">
+                            <label class="custom-file-label" for="photo">Choose file</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group mb-0">
                     <label>Trạng thái</label>

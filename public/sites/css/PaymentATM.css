@@ -1,0 +1,209 @@
+header{
+    display: flex;
+}
+.logo{
+    background-image: url('../images/logoVNPAY.png');
+    width: 170px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.navbar-right{
+    padding-left: 79%;
+    margin: 22px 0px;
+}
+.main{
+    border: 1px solid #000;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main .col-md-6{
+    float: none;
+    margin: 0 auto;
+}
+.main h3{
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 5%;
+    padding: 0 26px;
+}
+.main .note{
+    margin-top: -1%;
+    font-weight: 500;
+    font-size: 17px;
+}
+.main h4{
+    font-weight: 700;
+    margin-top: -1%;
+}
+.tabs{
+    display: flex;
+    position: relative;
+}
+.button{
+    display: flex;
+    padding: 4% 0;
+    margin-bottom: 18px;
+}
+.button .tab-item{
+    padding: 20px 50px;
+    box-shadow: 0px 1px 0 0 #d6d5d5;
+    margin-left: 10%;
+}
+.tab-item:hover{
+    opacity: 1;
+}
+.tab-item.active{
+    opacity: 1;
+    background-color: #0094d9;
+    color: #fff;
+}
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+}
+.txt-note{
+    text-align: left;
+}
+.btn-next{
+    background-color: #0094d9;
+    border: 1px;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+}
+.or{
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+.or span{
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    top: -11px;
+    padding: 0 10px;
+}
+.btn-cancel{
+    background-color: #e1e7eb;
+    border: 1px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 6%;
+}
+footer{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.notification{
+    display: flex;
+    border: 1px solid;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#txt{
+    border: none;
+    width: 65%;
+}
+#txt:checked{
+    border: none;
+}
+.group i{
+    font-size: 25px;
+}
+.group img{
+    margin-left: 76px;
+}
+.fa-credit-card{
+    margin-right: 10px;
+}
+.fa-calendar{
+    margin-right: 15px;
+}
+.fa-calendar-alt{
+    margin-left: 115px;
+}
+.fa-user-alt{
+    margin-right: 11px;
+}
+.note-day{
+    text-align: left;
+    font-size: 11px;
+}
+
+
+/* responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {
+    .navbar-right{
+        margin-left: -4%;    
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .navbar-right{
+        margin-left: -14%;    
+    }
+    .button .tab-item{
+        padding: 0 8%;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .navbar-right{
+        margin-left: -30%;    
+    }
+}
+
+/* */
+@media screen and (max-width: 414px) {
+    .navbar-right{
+        margin-left: -38%;    
+    }
+}
+
+/* */
+@media screen and (max-width: 375px) {
+    .navbar-right{
+        margin-left: -45%;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {
+    .navbar-right{
+        margin-left: -58%;
+    }
+
+    .button  .tab-item{
+        padding: 0 15px;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {
+    .navbar-right{
+        margin-left: -75%;
+    }
+    .main h3{
+        font-size: 18px;
+        padding: 0 0;
+    }
+    .main h4{
+        font-size: 20px;
+    }
+    .button  .tab-item{
+        padding: 0 0;
+    }
+}

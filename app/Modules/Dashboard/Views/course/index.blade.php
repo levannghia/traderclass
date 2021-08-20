@@ -47,7 +47,8 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Tên khóa học</th>
-                                            <th>Lớp học</th>
+                                            <th>Danh mục</th>
+                                            <th>Tên giảng viên</th>
                                             <th>Trạng thái</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
@@ -61,6 +62,7 @@
                                             <th scope="row"><input type="checkbox" name="check[]" value="{{$value->id}}" /></th>
                                             <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->name}}">{{$value->name}}</a></td> 
                                             <td>{{$value->title}}</td>
+                                            <td>{{$value->fullname}}</td>
                                             <td>
                                                 @if($value->status)
                                                 <span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span>
