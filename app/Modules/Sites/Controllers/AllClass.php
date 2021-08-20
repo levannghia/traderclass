@@ -16,7 +16,7 @@ class AllClass extends Controller
     public function index()
     {
         $user = auth::user();
-        $all_class = DB::table('course')->select('teacher_id','fullname','name','course.status','course.created_at','course.updated_at','photo')->join('teachers', 'teachers.id', '=', 'course.teacher_id')->orderBy('course.id', 'desc')->get();
+        $all_class = DB::table('course')->select('teacher_id','fullname','name','course.status','course.created_at','course.updated_at','teachers.photo')->join('teachers', 'teachers.id', '=', 'course.teacher_id')->orderBy('course.id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "All class",
         ]));

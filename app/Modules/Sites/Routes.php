@@ -1,5 +1,7 @@
 <?php
 //Sites routes
+
+use Facade\FlareClient\View;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -69,6 +71,9 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
         Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
+        Route::get("/payment-bank/{id}", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
+        Route::get("/payment-atm/{id}", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
+        Route::get("/payment-momo/{id}", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
     });
 
     //Contact
@@ -91,5 +96,23 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //     Route::get("/", ["as" => "home.index", "uses" => "Home@index"]);
     // });
     //email-verification
+
    
+    Route::post("/register_request", ["as" => "users.create_request", "uses" => "Users@create_request"]);
+    Route::get("/registerpassword", ["as" => "users.register", "uses" => "Users@register_accuracy"]);
+
+
+    Route::post("/forgotpassword", ["as" => "users.forgot", "uses" => "Users@forgotpasswordrequest"]);
+
+
+    //updatepassword
+    Route::post("/updatePassword", ["as" => "account.updatepassword", "uses" => "Account@updatepassword_request"]);
+    //update email
+    Route::post("/updateemail", ["as" => "account.updateemail", "uses" => "Account@updateEmail_request"]);
+    //verify email
+    Route::get("/update-email", ["as" => "account.updateemailverify", "uses" => "Account@UpdateEmail_accuracy"]);
+
+    Route::post("/updateinformaition", ["as" => "account.updateinformation", "uses" => "Account@UpdateInformation_request"]);
+    
+
 });

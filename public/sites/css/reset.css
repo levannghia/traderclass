@@ -1,0 +1,237 @@
+label {
+    color: white;
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+#error {
+    font: 14px Helvetica, Arial, Sans-serif;
+    display: none;
+    width: 100%;
+    padding: 10px 0px 20px 0px;
+    color: #f00;
+    border-radius: 5px;
+}
+
+#error2 {
+    font: 14px Helvetica, Arial, Sans-serif;
+    display: none;
+    width: 100%;
+    padding: 0px 0px 20px 0px;
+    color: #f00;
+    border-radius: 5px;
+}
+
+#pas {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#pass {
+    font-size: 14px;
+}
+
+.titre {
+    text-align: center;
+    color: #EF8D21;
+    margin-bottom: 30px;
+}
+
+.titre p:nth-child(2) {
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 500;
+}
+
+.titre p {
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 700;
+}
+
+.titre h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#sub {
+    width: 100%;
+    padding: 6px;
+    background-color: #EF8D21;
+    border-radius: 5px;
+    border: 0px;
+    font-weight: bold;
+    font-family: revert;
+    color: white;
+}
+
+#ches {
+    margin: 15px 0 15px 0px;
+    color: white;
+    font-size: 11px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    margin-right: 15px;
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: #171921;
+}
+
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+    left: 7px;
+}
+
+#share {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 40%;
+    background: #FFF;
+    z-index: 1002;
+    overflow: visible;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#share2 {
+    padding: 50px;
+}
+
+#share3 {
+    font-size: 26px;
+    width: 100%;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #20f47d;
+    margin-bottom: 50px;
+}
+
+#share4 a {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+@media screen and (max-width: 768px) {
+    #share {
+        position: absolute;
+        top: 20%;
+        left: 23%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 54%;
+        background: #FFF;
+        z-index: 1002;
+        overflow: visible;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #share {
+        position: absolute;
+        top: 20%;
+        left: 17%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 66%;
+        background: #FFF;
+        z-index: 1002;
+        overflow: visible;
+        text-align: center;
+        border-radius: 5px;
+    }
+    #share2 {
+        padding: 36px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #share {
+        position: absolute;
+        top: 20%;
+        left: 14%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 72%;
+        background: #FFF;
+        z-index: 1002;
+        overflow: visible;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    #share3 {
+        font-size: 17px;
+        width: 100%;
+        font-weight: 600;
+        font-family: sans-serif;
+        color: #20f47d;
+        margin-bottom: 50px;
+    }
+    #share4 a {
+        color: black;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    #share2 {
+        padding: 20px;
+    }
+}

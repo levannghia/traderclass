@@ -6,16 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if(Auth::check()): ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <?php else: ?>
+    <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
+    <?php endif; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/style.css">
+    <link rel="stylesheet" href="/public/sites/css/style.css?v=<?php echo e(time()); ?>">
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/account.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/AllClass.css?v=<?php echo e(time()); ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="public/sites/js/js.js"></script>
     <!--Icon-->
     <title><?php echo $__env->yieldContent('title'); ?></title>
 </head>

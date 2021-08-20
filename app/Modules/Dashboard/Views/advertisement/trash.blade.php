@@ -24,8 +24,7 @@
                                     <thead>
                                         <tr>
                                             <th>Hình ảnh</th>
-                                            <th>Tên</th>
-                                            <th>Chức vụ</th>
+                                            <th>Tiêu đề</th>
                                             <th>Trạng thái</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
@@ -35,9 +34,8 @@
                                     <tbody>
                                         @foreach($data as $value)
                                         <tr>
-                                            <td class="table-user"><img src='/public/upload/images/teachers/large/{{$value->photo}}' class="rounded-circle"/></td>
-                                            <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->fullname}}">{{$value->fullname}}</a></td>
-                                            <td>{{$value->position}}</td>
+                                            <td class="table-user"><img src='/public/upload/images/advertisement/large/{{$value->photo}}' class="rounded-circle"/></td>
+                                            <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->title}}">{{$value->title}}</a></td>
                                             <td>
                                                 @if($value->status==2)
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Thùng rác</span>
