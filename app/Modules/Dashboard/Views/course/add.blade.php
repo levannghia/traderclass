@@ -29,8 +29,8 @@
                     </select>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="title">Link video youtube</label>
-                    <input type="text"  name="link_video" value="{{ old('link_video') }}" class="form-control form-control-sm" placeholder="* Link video">
+                    <label for="title">Id video youtube</label>
+                    <input type="text"  name="video_id" value="{{ old('video_id') }}" class="form-control form-control-sm" placeholder="* Link video">
                 </div>
             </div>
         </div>

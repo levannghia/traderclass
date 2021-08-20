@@ -3,7 +3,7 @@
 @section('content')
     <div class="main">
         <div class="img">
-            <img src="/public/sites/images/ted-nguyenn.png" width="100%" alt="">
+            <img src="/public/upload/images/course/thumb/{{$course->photo}}" width="100%" alt="">
             <div class="text-center">
                 <div style="display: grid;"><span id="a">{{ $teacher->fullname }}</span> <span id="b">-</span> <span id="c">{{ $teacher->position }}</span></div>
                 <div class="info">
@@ -40,10 +40,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="wrappe" onclick="playvideo()">
-                        <video class="video" controls>
-                        <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
-                      </video>
-                        <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div>
+                        {{-- <video src="" class="video"> --}}
+                            <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        {{-- </video> --}}
+                        {{-- <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div> --}}
                     </div>
                     <div class="in">
                         <p>From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength

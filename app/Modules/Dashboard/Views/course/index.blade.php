@@ -46,6 +46,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Hình ảnh</th>
                                             <th>Tên khóa học</th>
                                             <th>Danh mục</th>
                                             <th>Tên giảng viên</th>
@@ -60,6 +61,7 @@
                                         @if ($value->status != 2)
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="{{$value->id}}" /></th>
+                                            <td class="table-user"><img src='/public/upload/images/course/thumb/{{$value->photo}}' class="rounded-circle"/></td>
                                             <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->name}}">{{$value->name}}</a></td> 
                                             <td>{{$value->title}}</td>
                                             <td>{{$value->fullname}}</td>

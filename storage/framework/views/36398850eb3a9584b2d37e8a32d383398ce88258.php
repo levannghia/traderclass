@@ -11,31 +11,32 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="./Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="/course-introduction"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="./All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
                         </li>
                     </ul>
                 </div>
                 <div class="fsearch">
-
+                    
                     <input type="text" name="search" placeholder="Search.." id="fsearchh">
+                    
                     <button> 
                             <i class="bi bi-search"></i>
-                            </button>
-
+                    </button>
+                    <div id="countryList"></div>
                 </div>
                 <div class="cart">
-                    <a href="Log into.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/log-into"><i class="fas fa-shopping-cart"></i></a>
                 </div>
                 <div class="right_nav">
                     <a class="nav-link" style="padding-top: 0px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                         <img src="public/sites/svg/avt.svg" alt="">
                     </a>
                     <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown">
-                        <a style="color: black;" class="dropdown-item" href="./account.html">Account information</a>
-                        <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
+                        <a style="color: black;" class="dropdown-item" href="/account">Account information</a>
+                        <a style="color: black;" class="dropdown-item" href="/my-course">My Course</a>
                         <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
                     </div>
                     <!-- <div class="dropdown">
@@ -116,7 +117,7 @@
     // search
     $(document).ready(function() {
 
-        $('#country_name').keyup(function() {
+        $('#fsearchh').keyup(function() {
             var query = $(this).val();
             console.log("ngon");
             if (query != '') {
@@ -137,7 +138,7 @@
         });
 
         $(document).on('click', 'li', function() {
-            $('#country_name').val($(this).text());
+            $('#fsearchh').val($(this).text());
             $('#countryList').fadeOut();
         });
     });

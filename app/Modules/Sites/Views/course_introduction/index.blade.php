@@ -10,10 +10,11 @@
         <div class="row" id="row">
             <div class="col-md-8">
                 <div class="wrappe" onclick="playvideo()">
-                    <video class="video" controls>
+                    {{-- <video class="video" controls>
                     <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
-                  </video>
-                    <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div>
+                  </video> --}}
+                  <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {{-- <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div> --}}
                 </div>
             </div>
             <div class="col-md-4">
@@ -21,32 +22,25 @@
                     <a href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                         All field  &ensp; <i class="bi bi-chevron-down"></i>
                       </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu" id="dropdown-menu2" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">
+                            <p>Action</p>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <p>Another action</p>
+                        </a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#">
+                            <p>Something else here</p>
+                        </a>
                     </div>
                 </div>
                 <div class="im">
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
+                    @foreach ($list_course as $value)
+                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
+                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">{{$value->position}}</span> </p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
-                    </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
-                    </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
-                    </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
-                    </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')"><img src="/public/sites/images/Jarratt Davis.jpg" alt="">
-                        <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">Teacher Forex Trader</span> </p>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -54,13 +48,13 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-9">
-                        <p id="title">Ted Nguyen</p>
-                        <p style="font-size: 20px; color: white; font-weight: 100;">Teacher Crypto Trader</p>
+                        <p id="title">{{$course->fullname}}</p>
+                        <p style="font-size: 20px; color: white; font-weight: 100;">{{$course->position}}</p>
                         <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
                     </div>
                     <div class="col-md-3" id="col-md-3">
-                        <button><p><a href="/register/2"><i class="bi bi-plus-lg"></i> &ensp;Take part in the course</p></a></button>
-                        <button id="but"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                        <button><p> <a href="/public/sites/Register.html"><i class="bi bi-plus-lg"></i> &ensp;Take part in the course</a></p></button>
+                        <button id="but" onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
                     </div>
                 </div>
                 <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can

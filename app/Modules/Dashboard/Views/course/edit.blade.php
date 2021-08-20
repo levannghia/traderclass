@@ -9,31 +9,28 @@
             <div class="card-box">
                 <h4 class="header-title mb-3">{{$row->desc}}</h4>
                 <div class="form-group mb-2">
-                    <label for="title">Họ & tên</label>
-                    <input type="text" name="fullname" value="{{ old('fullname',$data->fullname) }}" class="form-control form-control-sm" placeholder="* Họ và tên">
+                    <label for="title">Tên khóa học</label>
+                    <input type="text" name="name" value="{{ old('name',$data->name) }}" class="form-control form-control-sm" placeholder="* Tên khóa học">
                 </div>
                 <div class="form-group mb-2">
-                    <label for="title">Email</label>
-                    <input type="email" name="email" value="{{ old('email',$data->email) }}" class="form-control form-control-sm" placeholder="* Email">
+                    <label for="title">Id video youtube</label>
+                    <input type="text" name="video_id" value="{{ old('video_id',$data->video_id) }}" class="form-control form-control-sm" placeholder="* Link video">
                 </div>
                 <div class="form-group mb-2">
-                    <label>Giới tính</label>
-                    <select class="form-control form-control-sm" name="gender">
-                        <option value="0" {{old('status',$data->status)==0 ? "selected" :"" }}>Nữ</option>
-                        <option value="1" {{old('status',$data->status)==1 ? "selected" :"" }}>Nam</option>
+                    <label>Danh mục</label>
+                    <select class="form-control form-control-sm" name="course_category_id">
+                        @foreach ($list_category as $value)
+                        <option value="{{$value->id}}" {{old('course_category_id',$value->id)==$data->course_category_id ? "selected" :"" }}>{{$value->title}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="title">Số điện thoại</label>
-                    <input type="text"  name="phone" value="{{ old('phone', $data->phone) }}" class="form-control form-control-sm" placeholder="* số điện thoại">
-                </div>
-                <div class="form-group mb-2">
-                    <label for="title">Địa chỉ</label>
-                    <input type="text"  name="address" value="{{ old('address', $data->address) }}" class="form-control form-control-sm" placeholder="* Địa chỉ">
-                </div>
-                <div class="form-group mb-2">
-                    <label for="title">Password reset 1-8</label>
-                    <input type="text"  name="password" value="12345678" class="form-control form-control-sm" placeholder="* password">
+                    <label>Giảng viên</label>
+                    <select class="form-control form-control-sm" name="teacher_id">
+                        @foreach ($list_teacher as $value)
+                        <option value="{{$value->id}}" {{old('teacher_id',$value->id)==$data->teacher_id ? "selected" :"" }}>{{$value->fullname}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
         </div>
@@ -42,12 +39,12 @@
                 <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> Hình ảnh</h5>
                 @if($data->photo!="")
                 <div class="form-group mb-2">
-                    <img src="/public/upload/images/admins/large/{{$data->photo}}" style="width: auto;max-width: 100%">
+                    <img src="/public/upload/images/course/large/{{$data->photo}}" style="width: auto;max-width: 100%">
                 </div>
                 @endif
                 <div class="form-group mb-2">
                     <?php
-                    $thumbsize = json_decode($settings["THUMB_SIZE_ADMIN"]);
+                    $thumbsize = json_decode($settings["THUMB_SIZE_COURSE"]);
                     ?>
                     <label>Upload (jpg,png) [{{$thumbsize->width."x".$thumbsize->height}}px]</label>
                     <div class="input-group">

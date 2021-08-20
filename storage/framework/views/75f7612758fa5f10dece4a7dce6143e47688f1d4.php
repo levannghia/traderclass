@@ -46,6 +46,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Hình ảnh</th>
                                             <th>Tên khóa học</th>
                                             <th>Danh mục</th>
                                             <th>Tên giảng viên</th>
@@ -60,6 +61,7 @@
                                         <?php if($value->status != 2): ?>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="<?php echo e($value->id); ?>" /></th>
+                                            <td class="table-user"><img src='/public/upload/images/course/thumb/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
                                             <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->name); ?>"><?php echo e($value->name); ?></a></td> 
                                             <td><?php echo e($value->title); ?></td>
                                             <td><?php echo e($value->fullname); ?></td>

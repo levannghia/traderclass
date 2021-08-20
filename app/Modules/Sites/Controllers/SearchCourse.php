@@ -26,7 +26,7 @@ class SearchCourse extends Controller
             $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
             foreach ($data as $row) {
                 $output .= '
-                <li><a href="data/' . $row->id . '">' . $row->name . '</a></li>
+                <li><a href="teacher/' . $row->id . '">' . $row->name . '</a></li>
                 
                 <p style="color:red; text-align:center">' . $row->fullname . '</p>
                 ';

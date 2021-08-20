@@ -137,6 +137,13 @@
             border-bottom: 1px solid #575656;
             padding-top: 10px;
         }
+        
+        .dropdown-divider {
+            height: 0;
+            margin: .5rem 0;
+            overflow: hidden;
+            border-top: 0px solid #e9ecef;
+        }
         /*Ipad ngang(1024 x 768)*/
         
         @media screen and (max-width: 1024px) {
@@ -202,6 +209,16 @@
                 height: 100%;
             }
         }
+        
+        @media screen and (max-width: 375px) {
+            .col-md-3 button p a {
+                font-size: 11px;
+            }
+        }
+        
+        .col-md-3 button p a {
+            font-size: 11px;
+        }
         /*Iphone(480 x 640)*/
         
         @media screen and (max-width: 320px) {
@@ -211,6 +228,9 @@
             }
             #row {
                 height: 490px;
+            }
+            .col-md-3 button p a {
+                font-size: 11px;
             }
         }
         /*Smart phone nhỏ*/
