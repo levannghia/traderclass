@@ -356,10 +356,6 @@ a:link {
     color: #f08e21;
 }
 
-.nav-links {
-    display: block;
-}
-
 .header .header_bottom .mai .right_nav {
     list-style: none;
     display: flex;

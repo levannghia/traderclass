@@ -1504,6 +1504,15 @@ video {
 
 /*Responsive*/
 
+@media screen and (max-width: 1500px) {
+    .trader_teacher .owl-carousel .item .info {
+        top: 76%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 485px;
+    }
+}
+
 @media (max-width: 768px) {
     .container,
     .container-sm {
@@ -1538,7 +1547,7 @@ video {
         margin-top: 30px;
     }
     .classes .list_category .right_content .tivi_show::before {
-        left: 6%;
+        left: 28%;
     }
     .device .info {
         flex-direction: column;
@@ -2067,9 +2076,15 @@ video {
         font-size: 18px;
         height: 25px;
     }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 12%;
+    }
 }
 
 @media screen and (max-width: 414px) {
+    .classes .list_category .right_content .tivi_show::before {
+        left: 5%;
+    }
     video {
         width: 380px;
         height: auto;

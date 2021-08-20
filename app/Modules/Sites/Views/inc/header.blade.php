@@ -5,16 +5,16 @@
             <div class="mai">
                 <div class="logo">
                     <a href="/" title="">
-                        <img src="/public/sites/images/logo.svg" alt="logo">
+                        TraderClass
                     </a>
                 </div>
                 <div class="menu">
                     <ul>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.courseIntroduction.index')}}"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="./Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.allClass.index')}}"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="./All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
                         </li>
                     </ul>
                 </div>
@@ -22,20 +22,20 @@
 
                     <input type="text" name="search" placeholder="Search.." id="fsearchh">
                     <button> 
-                        <i class="bi bi-search"></i>
-                    </button>
+                            <i class="bi bi-search"></i>
+                            </button>
 
                 </div>
                 <div class="cart">
-                    <a href="{{route('sites.logInto.index')}}"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="Log into.html"><i class="fas fa-shopping-cart"></i></a>
                 </div>
                 <div class="right_nav">
                     <a class="nav-link" style="padding-top: 0px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                        <img src="/public/sites/svg/avt.svg" alt="">
+                        <img src="public/sites/svg/avt.svg" alt="">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a style="color: black;" class="dropdown-item" href="{{route('sites.account.index')}}">Account information</a>
-                        <a style="color: black;" class="dropdown-item" href="{{route('sites.course.index')}}">My Course</a>
+                    <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown">
+                        <a style="color: black;" class="dropdown-item" href="./account.html">Account information</a>
+                        <a style="color: black;" class="dropdown-item" href="./My Course.html">My Course</a>
                         <a style="color: black;" class="dropdown-item" href="{{route('sites.account.logout')}}">Log out</a>
                     </div>
                     <!-- <div class="dropdown">
@@ -68,7 +68,7 @@
                 <div class="main">
                     <div class="logo">
                         <a href="/" title="">
-                            <img src="/public/sites/images/logo.svg" alt="logo">
+                            TraderClass
                         </a>
                     </div>
                     <div class="menu">

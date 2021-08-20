@@ -3,7 +3,7 @@
     <nav id="mobile-nav">
         <ul>
             <li class="nav-item">
-                <a href="/">Home</a>
+                <a href="./index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class=" dropdown-btn" href="#">
@@ -19,6 +19,7 @@
             </li>
             <li class="nav-item"><a href="./Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
             <li class="nav-item"><a href="./All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
+            <li class="nav-item"> <a href="Log into.html"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
             <li class="nav-item">
                 <a class=" dropdown-btn" href="#">
                     <img src="./images/avt.png" alt="">
@@ -26,7 +27,7 @@
                 <div class="dropdown-container" style="display: none;">
                     <a href="./account.html">Account information</a>
                     <a href="./My Course.html">My Course</a>
-                    <a href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
+                    <a href="#">Log out</a>
                 </div>
             </li>
         </ul>
