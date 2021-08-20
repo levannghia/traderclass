@@ -207,7 +207,7 @@ class Users extends Controller
     }
     public function updatepassword()
     {
-        return View("Sites::inc.popupAccount");
+        //return View("Sites::inc.popupAccount");
     }
 
     public function logout()
@@ -230,11 +230,11 @@ class Users extends Controller
             }
             $updatepassword = Users_Model::find($user_id);
             $updatepassword->password =  Hash::make($data['password']);
-            $updatepassword->forgotpassword_token =   $token_random;
+            $updatepassword->forgotpassword_token = $token_random;
             $updatepassword->save();
             return redirect()->route('users.login')->with('message', 'Mật khẩu đã được cập nhập, vui lòng đăng nhập lại');
         } else {
-            return redirect()->route('user.forgot')->with('message', 'Vui lòng nhập lại email vì link đã quá hạn');
+            return redirect()->route('user.forgot')->with('message', 'Link đã quá hạn');
         }
     }
 }

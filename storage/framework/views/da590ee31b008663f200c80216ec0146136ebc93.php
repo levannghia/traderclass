@@ -14,10 +14,10 @@
             <div class="col-md-4 bg-light">
                 <div class="avatar">
                     <?php if(@getimagesize($user->photo)): ?>
-                    <img src="<?php echo e($user->photo); ?>" width="100%" height="100%"   alt="">
-                    <?php else: ?>
-                           
-                    <img src="public/upload/images/users/thumb/<?php echo e($user->photo); ?>" width="100%" height="100%" alt="">
+                    <img src="<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
+                    <?php elseif($user->photo == NULL): ?>
+                    <?php else: ?>  
+                    <img src="public/upload/images/users/thumb/<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
                     <?php endif; ?>
                 </div>
                 <form action="">
