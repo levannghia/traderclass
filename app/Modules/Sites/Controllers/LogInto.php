@@ -28,4 +28,31 @@ class LogInto extends Controller
 
         return view('Sites::course_selection.index', compact('row','teacher'));
     }
+    public function payment_bank($id)
+    {
+        $teacher = Teachers_Model::find($id);
+        $row = json_decode(json_encode([
+            "title" => "Payment Bank",
+        ]));
+
+        return view('Sites::payment-bank.index', compact('row','teacher'));
+    }
+    public function payment_atm($id)
+    {
+        $teacher = Teachers_Model::find($id);
+        $row = json_decode(json_encode([
+            "title" => "Payment ATM",
+        ]));
+
+        return view('Sites::payment-atm', compact('row','teacher'));
+    }
+    public function payment_momo($id)
+    {
+        $teacher = Teachers_Model::find($id);
+        $row = json_decode(json_encode([
+            "title" => "Payment Momo",
+        ]));
+
+        return view('Sites::payment-momo', compact('row','teacher'));
+    }
 }

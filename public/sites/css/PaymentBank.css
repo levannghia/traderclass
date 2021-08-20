@@ -23,7 +23,7 @@
     color: #fff;
 }
 .info p{
-    color: #6c757d;
+    color: #6c757d !important;
 }
 .line-info{
     border: 1px solid #252323;

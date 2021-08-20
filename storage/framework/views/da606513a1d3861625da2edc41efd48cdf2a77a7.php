@@ -1,4 +1,4 @@
-@if (Auth::check())
+<?php if(Auth::check()): ?>
 <div class="header">
     <div class="header_bottom">
         <div class="container">
@@ -11,10 +11,10 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.courseIntroduction.index')}}"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="<?php echo e(route('sites.courseIntroduction.index')); ?>"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
                         </li>
                         <li>
-                            <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.allClass.index')}}"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                            <a style="padding-top: 0px;" class="nav-link" href="<?php echo e(route('sites.allClass.index')); ?>"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
                         </li>
                     </ul>
                 </div>
@@ -27,16 +27,16 @@
 
                 </div>
                 <div class="cart">
-                    <a href="{{route('sites.logInto.index')}}"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="<?php echo e(route('sites.logInto.index')); ?>"><i class="fas fa-shopping-cart"></i></a>
                 </div>
                 <div class="right_nav">
                     <a class="nav-link" style="padding-top: 0px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
                         <img src="/public/sites/svg/avt.svg" alt="">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a style="color: black;" class="dropdown-item" href="{{route('sites.account.index')}}">Account information</a>
-                        <a style="color: black;" class="dropdown-item" href="{{route('sites.course.index')}}">My Course</a>
-                        <a style="color: black;" class="dropdown-item" href="{{route('sites.account.logout')}}">Log out</a>
+                        <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.account.index')); ?>">Account information</a>
+                        <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.course.index')); ?>">My Course</a>
+                        <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
                     </div>
                     <!-- <div class="dropdown">
                         <a style="padding-top: 0px;" class="dropbtn" href="#"><img src="./svg/avt.svg" alt=""></a>
@@ -61,7 +61,7 @@
         <button onclick="clblack()">x</button>
     </div>
 </div>
-@else
+<?php else: ?>
     <header>
         <div class="header_bottom">
             <div class="container">
@@ -74,10 +74,10 @@
                     <div class="menu">
                         <ul>
                             <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.courseIntroduction.index')}}"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
+                                <a style="padding-top: 0px;" class="nav-link" href="<?php echo e(route('sites.courseIntroduction.index')); ?>"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
                             </li>
                             <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="{{route('sites.allClass.index')}}"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                                <a style="padding-top: 0px;" class="nav-link" href="<?php echo e(route('sites.allClass.index')); ?>"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
                             </li>
                         </ul>
                     </div>
@@ -110,7 +110,7 @@
             </div>
         </div>
     </header>
-@endif
+<?php endif; ?>
 
 <script>
     // search
@@ -122,7 +122,7 @@
             if (query != '') {
                 var _token = $('meta[name="csrf-token"]').attr('content');
                 $.ajax({
-                    url: "{{ route('sites.search') }}",
+                    url: "<?php echo e(route('sites.search')); ?>",
                     method: "POST",
                     data: {
                         query: query,
@@ -142,3 +142,4 @@
         });
     });
 </script>
+<?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/inc/header.blade.php ENDPATH**/ ?>

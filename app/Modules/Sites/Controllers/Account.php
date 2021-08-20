@@ -87,7 +87,7 @@ class Account extends Controller
             } else {
                 $token_random = Str::random();
                 $titlename = "Update Email";
-                $link_updateEmail = url('/update-email?emailnew=' . $data['email_new'] . '&token=' . $token_random . '&emailcurrent=' . $user->email);
+                $link_updateEmail = url('/account/update-email?emailnew=' . $data['email_new'] . '&token=' . $token_random . '&emailcurrent=' . $user->email);
 
                 $data_new = array("fullname" => $user->fullname, "linkreset" => $link_updateEmail, 'email' => $data['email_new']);
     
