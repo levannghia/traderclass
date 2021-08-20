@@ -14,7 +14,8 @@
     background-color: black;
 }
 
-.blacks p a {
+
+/* .black p a {
     color: #ffffff;
     text-align: left;
     margin-bottom: 0;
@@ -22,13 +23,13 @@
     margin-top: 10px;
 }
 
-.blacks p {
+.black p {
     color: #ffffff;
     text-align: left;
     margin-bottom: 0;
     padding: 15px;
     margin-top: 10px;
-}
+} */
 
 .header .header_bottom .main {
     display: flex;
@@ -281,7 +282,7 @@
     font-weight: 400;
 }
 
-.email_sub {
+#email {
     background-color: #111319;
     border: 1px solid #7B8197;
     border-radius: 10px;
@@ -325,7 +326,7 @@
     width: 0;
 }
 
-.checkmarks {
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -337,25 +338,25 @@
     border-radius: 5px;
 }
 
-.contai:hover input~.checkmarks {
+.contai:hover input~.checkmark {
     background-color: rgb(136, 135, 135);
 }
 
-.contai input:checked~.checkmarks {
+.contai input:checked~.checkmark {
     background-color: #111319;
 }
 
-.checkmarks:after {
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-.contai input:checked~.checkmarks:after {
+.contai input:checked~.checkmark:after {
     display: block;
 }
 
-.contai .checkmarks:after {
+.contai .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -435,6 +436,7 @@
 #pum .row .col-md-6 p {
     font-size: 15px;
     color: white;
+    width: 95%;
 }
 
 .upnext {
@@ -660,7 +662,7 @@
         width: 50px;
     }
     .text-center {
-        top: 108%;
+        top: 122%;
         left: 36%;
     }
     .img {
@@ -722,7 +724,7 @@
         color: white;
         height: 34px;
     }
-    .checkmarks {
+    .checkmark {
         position: absolute;
         top: 0;
         left: 0;
@@ -746,7 +748,7 @@
     .tee {
         margin-top: 10%;
     }
-    .blacks p {
+    .black p {
         padding: 10px;
         font-size: 12px;
     }
@@ -796,7 +798,7 @@
         margin-bottom: 62%;
     }
     .text-center {
-        top: 128%;
+        top: 150%;
         left: 32%;
     }
     .lin a {
@@ -828,7 +830,7 @@
     #wen {
         margin: 15px;
     }
-    .blacks p {
+    .black p {
         font-size: 10px;
     }
     #light {
@@ -844,12 +846,85 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+    #a {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .info {
+        padding: 15px 50px 20px 50px;
+    }
+    .text-center {
+        left: 30%;
+    }
+    #light {
+        top: 38%;
+        left: 78%;
+    }
+    #share {
+        left: 12%;
+        width: 76%;
+    }
+    #share {
+        left: 12%;
+        width: 76%;
+        top: 15%;
+    }
+    #share2 a img {
+        width: 20%;
+    }
+    #VisaChipCardVideo {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #c {
+        font-size: 9px;
+        font-weight: 500;
+    }
+    .info {
+        padding: 20px 50px 20px 50px;
+        padding-bottom: 0px;
+    }
+    .lin {
+        border-bottom: 2px solid #323741;
+        height: 44px;
+        margin-bottom: 55px;
+        margin-left: 4%;
+        width: 92%;
+    }
+    .text-center {
+        top: 162%;
+        left: 28%;
+    }
+    #VisaChipCardVideo {
+        width: 353px;
+    }
+    #light {
+        top: 38%;
+        left: 83%;
+    }
+    #share {
+        left: 14%;
+        width: 72%;
+        top: 10%;
+    }
+    #share2 a img {
+        width: 22%;
+    }
+}
+
 
 /*Iphone(480 x 640)*/
 
 @media screen and (max-width: 320px) {
     .text-center {
-        top: 165%;
+        top: 211%;
         left: 34%;
     }
     .path p {
@@ -884,6 +959,7 @@
         border-bottom: 2px solid #323741;
         height: 44px;
         width: 100%;
+        margin-left: 0;
     }
     .playpause img {
         transform: translate(0px, 207%);
@@ -945,7 +1021,7 @@
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
-    .blacks p {
+    .black p {
         font-size: 5px;
     }
     .path p {
@@ -975,7 +1051,7 @@
         padding-top: 17px;
     }
     .text-center {
-        top: 188%;
+        top: 260%;
         left: 33%;
     }
     .img {

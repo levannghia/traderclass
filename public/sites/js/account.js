@@ -1,6 +1,9 @@
 // Popup-account
-
 function toggle1() {
+    window.location.href = "Invite friends.html";
+}
+
+function toggle2() {
     const popup_account = document.querySelector('.popup-account');
     popup_account.classList.toggle('active');
 
@@ -8,7 +11,7 @@ function toggle1() {
     popup.classList.toggle('active');
 }
 
-function toggle2() {
+function toggle3() {
 
     const popup_account = document.querySelector('.popup-account');
     popup_account.classList.toggle('active');
@@ -17,7 +20,7 @@ function toggle2() {
     update_email.classList.toggle('active');
 }
 
-function toggle3() {
+function toggle4() {
     const popup_account = document.querySelector('.popup-account');
     popup_account.classList.toggle('active');
 

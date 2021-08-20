@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* mainss */
+/* main */
 
-.mainss {
+.main {
     background: #171921;
     padding-top: 30px;
     padding-bottom: 94px;
 }
 
-.mainss .avatar {
+.main .avatar {
     width: 100px;
     height: 100px;
     background: #C4C4C4;
@@ -17,13 +17,13 @@
     margin-top: 52px;
 }
 
-.mainss span {
+.main span {
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
 }
 
-.mainss a {
+.main a {
     position: absolute;
     right: 15px;
     font-weight: normal;
@@ -31,14 +31,14 @@
     line-height: 22px;
 }
 
-.mainss #email,
+.main #email,
 #password {
     margin-top: 10px;
     margin-bottom: 23px;
     width: 350px;
 }
 
-.mainss #google {
+.main #google {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
@@ -50,7 +50,7 @@
     border-radius: 5px;
 }
 
-.mainss #facebook {
+.main #facebook {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
@@ -65,12 +65,12 @@
 
 /* member */
 
-.mainss .col-md-7 {
+.main .col-md-7 {
     margin-left: 20px;
     background: #fff;
 }
 
-.mainss .member {
+.main .member {
     background: #FFFFFF;
     margin-bottom: 30px;
 }
@@ -132,7 +132,7 @@
     transition: all 0.2s ease;
 }
 
-.actives,
+.active,
 .dott:hover {
     background-color: #EF8D21;
 }
@@ -348,7 +348,7 @@ footer .copy {
 .btn-account input[type="button"] {
     background: #EF8D21;
     width: 100%;
-    margin-top: -27px;
+    margin-top: 0px;
     margin-bottom: 10px;
     padding: 0.5rem 3rem;
     color: #FFFFFF;
@@ -655,7 +655,7 @@ footer .copy {
         padding-right: 28%;
         margin-top: -3%;
     }
-    .mainss .col-md-7 {
+    .main .col-md-7 {
         min-width: 720px;
         left: -20px;
         top: 10px;
@@ -696,7 +696,7 @@ footer .copy {
     .member {
         max-width: 480px;
     }
-    .mainss .col-md-7 {
+    .main .col-md-7 {
         min-width: 480px;
         left: -20px;
         top: 10px;
@@ -759,8 +759,8 @@ footer .copy {
 /* iPhone X max-width 375px */
 
 @media screen and (max-width: 375px) {
-    .mainss span,
-    .mainss a,
+    .main span,
+    .main a,
     #email,
     #password,
     #google,
@@ -779,7 +779,7 @@ footer .copy {
     .tab-pane h6 {
         margin-left: 7%;
     }
-    .mainss .col-md-7 {
+    .main .col-md-7 {
         min-width: 375px;
     }
     .lbo {
@@ -797,12 +797,12 @@ footer .copy {
     body {
         max-width: 320px;
     }
-    .mainss .col-md-7 {
+    .main .col-md-7 {
         min-width: 320px;
         /* left: -20px;
         top: 10px; */
     }
-    .mainss span {
+    .main span {
         margin-left: -52px!important;
     }
     form a {
@@ -851,7 +851,7 @@ footer .copy {
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
-    .mainss span {
+    .main span {
         margin-left: -46px!important;
     }
     form a {
@@ -871,7 +871,7 @@ footer .copy {
         width: 170px !important;
         margin-left: -22px!important;
     }
-    .mainss .col-md-7 {
+    .main .col-md-7 {
         min-width: 240px;
         left: -20px;
         top: 10px;
