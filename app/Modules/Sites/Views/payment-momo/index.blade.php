@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Momo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/PaymentMomo.css">
-</head>
-<body>
-    <header>
-        <div class="container header">
-            <div class="tele">
-                <i class="fal fa-phone"></i>
-                <p>1900 54 54 41</p>
-            </div>
-            <div class="momo">
-                <i class="fal fa-envelope"></i>
-                <a href="">hotro@momo.vn</a>
-            </div>
-        </div>
-    </header>
-    <div class="main">
+@extends('Sites::payment_momo')
+@section('title', $row->title)
+@section('content')
+<div class="main">
         <div class="container">
             <div class="row content">
                 <div class="col-md-10">
@@ -71,9 +49,4 @@
             </div>
         </div>
     </div>
-    <footer>
-        <a href=""><img src="/public/sites/images/pci-footermomo.png" alt="" width="250" height="67"></a>
-        <p>© 2019 - Cổng thanh toán qua Ví điện tử <a class="ic-momo" href="">MoMo</a></p>
-    </footer>
-</body>
-</html>
+@endsection

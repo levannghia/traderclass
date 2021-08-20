@@ -5,7 +5,7 @@
             <div class="mai">
                 <div class="logo">
                     <a href="/" title="">
-                        <img src="/public/sites/images/logo.svg" alt="logo">
+                        TraderClass
                     </a>
                 </div>
                 <div class="menu">
@@ -22,8 +22,8 @@
 
                     <input type="text" name="search" placeholder="Search.." id="fsearchh">
                     <button> 
-                        <i class="bi bi-search"></i>
-                    </button>
+                            <i class="bi bi-search"></i>
+                            </button>
 
                 </div>
                 <div class="cart">
@@ -31,9 +31,9 @@
                 </div>
                 <div class="right_nav">
                     <a class="nav-link" style="padding-top: 0px;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
-                        <img src="/public/sites/svg/avt.svg" alt="">
+                        <img src="public/sites/svg/avt.svg" alt="">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown">
                         <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.account.index')); ?>">Account information</a>
                         <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.course.index')); ?>">My Course</a>
                         <a style="color: black;" class="dropdown-item" href="<?php echo e(route('sites.account.logout')); ?>">Log out</a>
@@ -68,7 +68,7 @@
                 <div class="main">
                     <div class="logo">
                         <a href="/" title="">
-                            <img src="/public/sites/images/logo.svg" alt="logo">
+                            TraderClass
                         </a>
                     </div>
                     <div class="menu">

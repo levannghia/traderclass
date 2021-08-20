@@ -27,3 +27,205 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     dotts[slideIndex - 1].className += " active";
 }
+
+function paymen(int) {
+    if (int == 4) {
+        window.location.href = "/log-into/payment-bank";
+        return;
+    }
+    if (int == 3) {
+        window.location.href = "Payment Momo.html";
+        return;
+    }
+    if (int == 2) {
+        window.location.href = "Payment ATM.html";
+        return;
+    }
+    if (int == 1) {
+        return;
+    }
+}
+
+var a = 1;
+
+function tick(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi").style.display = "block";
+        document.getElementById("tic").style.display = "block";
+    }
+}
+
+function tick2(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi2").style.display = "block";
+        document.getElementById("tic2").style.display = "block";
+    }
+}
+
+function tick3(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi3").style.display = "block";
+        document.getElementById("tic3").style.display = "block";
+    }
+}
+
+function tick4(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi4").style.display = "block";
+        document.getElementById("tic4").style.display = "block";
+    }
+}
+
+function tick5(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi5").style.display = "block";
+        document.getElementById("tic5").style.display = "block";
+    }
+}
+
+function tick6(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi6").style.display = "block";
+        document.getElementById("tic6").style.display = "block";
+    }
+}
+
+function tick7(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi7").style.display = "block";
+        document.getElementById("tic7").style.display = "block";
+    }
+}
+
+function tick8(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi8").style.display = "block";
+        document.getElementById("tic8").style.display = "block";
+    }
+}
+
+function tick9(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi9").style.display = "block";
+        document.getElementById("tic9").style.display = "block";
+    }
+}
+
+function tick10(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi10").style.display = "block";
+        document.getElementById("tic10").style.display = "block";
+    }
+}
+
+function tick11(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi11").style.display = "block";
+        document.getElementById("tic11").style.display = "block";
+    }
+}
+
+function tick12(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi12").style.display = "block";
+        document.getElementById("tic12").style.display = "block";
+    }
+}
+
+function tick13(int) {
+    if (int == a) {
+        a = 2;
+        document.getElementById("bi13").style.display = "block";
+        document.getElementById("tic13").style.display = "block";
+    }
+}
+
+function tic() {
+    document.getElementById("tic").style.display = "none";
+    document.getElementById("bi").style.display = "none";
+    a = 1;
+}
+
+function tic2() {
+    document.getElementById("tic2").style.display = "none";
+    document.getElementById("bi2").style.display = "none";
+    a = 1;
+}
+
+function tic3() {
+    document.getElementById("tic3").style.display = "none";
+    document.getElementById("bi3").style.display = "none";
+    a = 1;
+}
+
+function tic4() {
+    document.getElementById("tic4").style.display = "none";
+    document.getElementById("bi4").style.display = "none";
+    a = 1;
+}
+
+function tic5() {
+    document.getElementById("tic5").style.display = "none";
+    document.getElementById("bi5").style.display = "none";
+    a = 1;
+}
+
+function tic6() {
+    document.getElementById("tic6").style.display = "none";
+    document.getElementById("bi6").style.display = "none";
+    a = 1;
+}
+
+function tic7() {
+    document.getElementById("tic7").style.display = "none";
+    document.getElementById("bi7").style.display = "none";
+    a = 1;
+}
+
+function tic8() {
+    document.getElementById("tic8").style.display = "none";
+    document.getElementById("bi8").style.display = "none";
+    a = 1;
+}
+
+function tic9() {
+    document.getElementById("tic9").style.display = "none";
+    document.getElementById("bi9").style.display = "none";
+    a = 1;
+}
+
+function tic10() {
+    document.getElementById("tic10").style.display = "none";
+    document.getElementById("bi10").style.display = "none";
+    a = 1;
+}
+
+function tic11() {
+    document.getElementById("tic11").style.display = "none";
+    document.getElementById("bi11").style.display = "none";
+    a = 1;
+}
+
+function tic12() {
+    document.getElementById("tic12").style.display = "none";
+    document.getElementById("bi12").style.display = "none";
+    a = 1;
+}
+
+function tic13() {
+    document.getElementById("tic13").style.display = "none";
+    document.getElementById("bi13").style.display = "none";
+    a = 1;
+}

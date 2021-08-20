@@ -1,5 +1,5 @@
-@extends('Sites::layout')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
  <!-- BANNER -->
  <div class="banner">
         <div class="row" style="background: #000; margin-left: 0px; margin-right: 0px">
@@ -10,7 +10,7 @@
                         Classes for You
                     </h1>
                     <small style="margin-bottom: 24px">from 1 interest</small>
-                    <a href="{{route('sites.logInto.index')}}" style="margin-bottom: 16px">SIGN UP</a>
+                    <a href="<?php echo e(route('sites.logInto.index')); ?>" style="margin-bottom: 16px">SIGN UP</a>
                     <p style="color: #ffffff">
                         Starting at $15/month (billed annually)
                     </p>
@@ -49,7 +49,7 @@
                                 <div class="buttons">
                                     <a href="#" class="wellness" style="font-size: 20px">Wellness</a
                     >
-                    <a href="{{url('/register/{id}')}}" class="continue">SIGN UP</a>
+                    <a href="<?php echo e(url('/register/{id}')); ?>" class="continue">SIGN UP</a>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                 <div class="buttons">
                                     <a href="#" class="wellness" style="font-size: 20px">Wellness</a
                     >
-                    <a href="{{url('/register/{id}')}}"class="continue">SIGN UP</a>
+                    <a href="<?php echo e(url('/register/{id}')); ?>"class="continue">SIGN UP</a>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                                 <div class="buttons">
                                     <a href="#" class="wellness" style="font-size: 20px">Wellness</a
                     >
-                    <a href="{{url('/register/{id}')}}"class="continue">SIGN UP</a>
+                    <a href="<?php echo e(url('/register/{id}')); ?>"class="continue">SIGN UP</a>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                 <div class="buttons">
                                     <a href="#" class="wellness" style="font-size: 20px">Wellness</a
                     >
-                    <a href="{{url('/register/{id}')}}"class="continue">SIGN UP</a>
+                    <a href="<?php echo e(url('/register/{id}')); ?>"class="continue">SIGN UP</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                                 <div class="buttons">
                                     <a href="#" class="wellness" style="font-size: 20px">Wellness</a
                     >
-                    <a href="{{url('/register/{id}')}}"class="continue">SIGN UP</a>
+                    <a href="<?php echo e(url('/register/{id}')); ?>"class="continue">SIGN UP</a>
                                 </div>
                             </div>
                         </div>
@@ -284,4 +284,5 @@
         </div>
       </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/master_class/index.blade.php ENDPATH**/ ?>

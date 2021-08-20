@@ -5,27 +5,27 @@ function toggle1() {
 
 function toggle2() {
     const popup_account = document.querySelector('.popup-account');
-    popup_account.classList.toggle('active');
+    popup_account.classList.toggle('actives');
 
     const popup = document.querySelector('.popup');
-    popup.classList.toggle('active');
+    popup.classList.toggle('actives');
 }
 
 function toggle3() {
 
     const popup_account = document.querySelector('.popup-account');
-    popup_account.classList.toggle('active');
+    popup_account.classList.toggle('actives');
 
     const update_email = document.querySelector('.update-email');
-    update_email.classList.toggle('active');
+    update_email.classList.toggle('actives');
 }
 
 function toggle4() {
     const popup_account = document.querySelector('.popup-account');
-    popup_account.classList.toggle('active');
+    popup_account.classList.toggle('actives');
 
     const change_password = document.querySelector('.change-password');
-    change_password.classList.toggle('active');
+    change_password.classList.toggle('actives');
 }
 
 // const $ = document.querySelector.bind(document)
@@ -34,24 +34,24 @@ function toggle4() {
 // const tabs = $$('.tab-item')
 // const panes = $$('.tab-pane')
 
-// const tabActive = $('.tab-item.active')
+// const tabactives = $('.tab-item.actives')
 // const line = $('.tabs .line')
 
-// line.style.left = tabActive.offsetLeft + 'px'
-// line.style.width = tabActive.offsetWidth + 'px'
+// line.style.left = tabactives.offsetLeft + 'px'
+// line.style.width = tabactives.offsetWidth + 'px'
 
 // tabs.forEach((tab, index) => {
 //     const pane = panes[index]
 
 //     tab.onclick = function() {
-//         $('.tab-item.active').classList.remove('active')
-//         $('.tab-pane.active').classList.remove('active')
+//         $('.tab-item.actives').classList.remove('actives')
+//         $('.tab-pane.actives').classList.remove('actives')
 
 //         line.style.left = this.offsetLeft + 'px'
 //         line.style.width = this.offsetWidth + 'px'
 
-//         this.classList.add('active')
-//         pane.classList.add('active')
+//         this.classList.add('actives')
+//         pane.classList.add('actives')
 //     }
 // })
 
@@ -77,10 +77,10 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        dotts[i].className = dotts[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" actives", "");
+        dotts[i].className = dotts[i].className.replace(" actives", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    dotts[slideIndex - 1].className += " active";
+    dots[slideIndex - 1].className += " actives";
+    dotts[slideIndex - 1].className += " actives";
 }

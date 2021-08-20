@@ -19,7 +19,7 @@
                 <p class="desc">{{$config_title_banner_top_left->value}}</p>
                 <div class="form_search">
                     <input type="text" value="" class="search_input" placeholder="Your email address" />
-                    <a href="find-my-classes.html" class="btn btn sign_up">GET STARTED</a>
+                    <a href="{{route('sites.find-my-class.index')}}" class="btn btn sign_up">GET STARTED</a>
                     <label>
                         <input type="checkbox" value="0" />
                         <span>Keep me up to date on class events and new releases.</span>
@@ -259,7 +259,7 @@
                 <div class="left_conent">
                     <p class="title">{{ $config_title_banner_center_tuition->value }}</p>
                     <p class="desc">{{ $config_title_banner_bottom_center_payment->value }}</p>
-                    <a href="#" class="btn btn_continute" title="Continute">CONTINUE</a>
+                    <a href="{{route('sites.find-my-class.index')}}" class="btn btn_continute" title="Continute">CONTINUE</a>
                 </div>
                 <div class="right_content">
                     <img src="{{ '/public/upload/images/sites_home/' . $config_banner_bottom_image->value }}" alt="" />
