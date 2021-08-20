@@ -3,7 +3,7 @@
     <nav id="mobile-nav">
         <ul>
             <li class="nav-item">
-                <a href="/">Home</a>
+                <a href="./index.html">Home</a>
             </li>
             <li class="nav-item">
                 <a class=" dropdown-btn" href="#">
@@ -17,16 +17,17 @@
                     <a href="#">Teacher 4</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="{{route('sites.courseIntroduction.index')}}"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
-            <li class="nav-item"><a href="{{route('sites.allClass.index')}}"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
+            <li class="nav-item"><a href="./Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
+            <li class="nav-item"><a href="./All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
+            <li class="nav-item"> <a href="Log into.html"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
             <li class="nav-item">
                 <a class=" dropdown-btn" href="#">
                     <img src="./images/avt.png" alt="">
                 </a>
                 <div class="dropdown-container" style="display: none;">
-                    <a href="{{route('sites.account.index')}}">Account information</a>
-                    <a href="{{route('sites.course.index')}}">My Course</a>
-                    <a href="{{route('sites.account.logout')}}">Log out</a>
+                    <a href="./account.html">Account information</a>
+                    <a href="./My Course.html">My Course</a>
+                    <a href="#">Log out</a>
                 </div>
             </li>
         </ul>

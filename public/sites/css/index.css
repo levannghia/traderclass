@@ -32,6 +32,7 @@ header .header_bottom {
     height: 60px;
     display: flex;
     align-items: center;
+    margin-bottom: -30px;
 }
 
 header .header_bottom .main {
@@ -77,13 +78,18 @@ header .header_bottom .main .right_nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 70%;
+    width: 39%;
 }
 
 header .header_bottom .main .right_nav ul {
     list-style: none;
     display: flex;
     margin: 0;
+    padding-left: 0px;
+}
+
+.fsearch {
+    width: 68%;
 }
 
 header .header_bottom .main .right_nav ul li {
@@ -223,6 +229,10 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
 
 /*Teacher*/
 
+.trader_teacher {
+    padding-top: 65px;
+}
+
 .trader_teacher .owl-carousel .owl-nav,
 .client_say .slide .owl-carousel .owl-nav {
     position: absolute;
@@ -266,6 +276,22 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
 
 .trader_teacher .owl-carousel .item {
     position: relative;
+    overflow: hidden;
+}
+
+.trader_teacher .owl-carousel .item:hover .info {
+    top: 55%;
+}
+
+.trader_teacher .owl-carousel .item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to top, #171921 1%, transparent 60%, transparent)
 }
 
 .trader_teacher .owl-carousel .item .mark {
@@ -280,12 +306,14 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient( 180deg, rgba(50, 55, 65, 0) 0%, #171921 92.99%);
+    top: 73%;
+    /* background: linear-gradient( 180deg, rgba(50, 55, 65, 0) 0%, #171921 92.99%); */
     height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.8s;
 }
 
 .trader_teacher .owl-carousel .item .info .name {
@@ -352,7 +380,7 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
 .classes .list_category .right_content .tivi_show {
     border: 4px solid #323741;
     position: relative;
-    height: 480px;
+    height: 445px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -1335,7 +1363,7 @@ footer ul li a svg {
 }
 
 .sign-in {
-    margin-top: 20px;
+    margin-top: 30px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1353,10 +1381,139 @@ footer ul li a svg {
     font-size: 14px;
 }
 
+.tile-image {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.tile-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.tile-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to left, #171921 1%, transparent 50%, transparent);
+}
+
+.text-name {
+    color: white;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    text-align: center;
+    /* transform: translate(-28%, -56%); */
+}
+
+.text-name .text {
+    color: white;
+    display: grid;
+}
+
+.a {
+    font-size: 35px;
+    font-family: unset;
+    font-weight: bold;
+}
+
+.b {
+    font-size: 25px;
+}
+
+.c {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button button {
+    width: 70%;
+    background-color: white;
+    border: 0px;
+    border-radius: 7px;
+}
+
+.button p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: system-ui;
+}
+
+.neww p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-size: 15px;
+}
+
+.neww button {
+    width: 28%;
+    background-color: white;
+    border: 0px;
+    border-radius: 12px;
+    padding: 4px 17px;
+}
+
+.info button {
+    background-color: white;
+    border: 0px;
+    width: 70%;
+    border-radius: 7px;
+}
+
+.info button p {
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: system-ui;
+    color: black;
+}
+
+video {
+    width: 747px;
+    height: 417px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.next button {
+    width: 100%;
+    border: 1px solid #7B8197;
+    /* border: solid; */
+    background-color: #7B8197;
+    border-radius: 16px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 11px;
+    margin-top: 26px;
+}
+
 
 /*Responsive*/
 
-@media (max-width: 767.98px) {
+@media screen and (max-width: 1500px) {
+    .trader_teacher .owl-carousel .item .info {
+        top: 76%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 485px;
+    }
+}
+
+@media (max-width: 768px) {
     .container,
     .container-sm {
         max-width: 694px;
@@ -1384,13 +1541,13 @@ footer ul li a svg {
         flex-direction: column;
     }
     .classes .list_category .right_content .tivi_show {
-        height: 215px;
+        height: 403px;
     }
     .classes .list_category .right_content {
         margin-top: 30px;
     }
     .classes .list_category .right_content .tivi_show::before {
-        left: 6%;
+        left: 28%;
     }
     .device .info {
         flex-direction: column;
@@ -1427,6 +1584,56 @@ footer ul li a svg {
     .client_say .slide .owl-carousel .owl-nav .owl-next {
         right: 0px;
     }
+    header .header_bottom .main {
+        justify-content: space-between;
+    }
+    .container {
+        max-width: 90%;
+    }
+    .neww button {
+        width: 32%;
+    }
+    .a {
+        font-size: 22px;
+    }
+    .b {
+        font-size: 20px;
+    }
+    .c {
+        font-size: 10px;
+    }
+    .button p {
+        font-size: 12px;
+        margin: 5px 0 5px 0;
+    }
+    .neww p {
+        font-size: 11px;
+    }
+    .trader_teacher .owl-carousel .item .info .name {
+        font-size: 45px;
+    }
+    .trader_teacher .owl-carousel .item .class_name {
+        font-size: 20px;
+    }
+    .trader_teacher .owl-carousel .item .info .name::after {
+        margin: 20px auto 0;
+    }
+    .info button {
+        width: 45%;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 88% !important;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 75% !important;
+    }
+    .try_lession .list_option .item label span {
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .next button {
+        margin-top: 0px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1436,18 +1643,30 @@ footer ul li a svg {
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
-    .container {
+    /* .container {
         max-width: 100%;
-    }
+    } */
     header .header_bottom .main .right_nav {
-        width: 60%;
+        width: 40%;
     }
     header .header_bottom .main .logo {
-        max-width: 230px;
+        max-width: 23%;
+    }
+    .fsearch {
+        width: 40%;
+    }
+    header .header_bottom .main .menu {
+        width: 88%;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 66%;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 45%;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 769px) and (max-width: 991.98px) {
     .container {
         max-width: 100%;
     }
@@ -1503,7 +1722,7 @@ footer ul li a svg {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .classes .list_category .right_content .tivi_show {
-        height: 376px;
+        height: 340px;
     }
     .classes .list_category .right_content .tivi_show::before {
         left: 28%;
@@ -1816,6 +2035,115 @@ footer ul li a svg {
     .policy {
         top: 595px!important;
     }
+    video {
+        width: 460px;
+        height: auto;
+    }
+    .a {
+        font-size: 16px;
+    }
+    .c {
+        font-size: 8px;
+    }
+    .button p {
+        font-size: 10px;
+        margin: 3px 0 3px 0;
+    }
+    .text-name .text {
+        color: white;
+        margin: 10px 17px 10px 17px;
+    }
+    .neww button {
+        padding: 3px 13px;
+    }
+    .text-name {
+        top: 16%;
+        right: 0%;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 81% !important;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 65% !important;
+    }
+    .info button {
+        width: 50%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 250px;
+    }
+    .b {
+        font-size: 18px;
+        height: 25px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 12%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .classes .list_category .right_content .tivi_show::before {
+        left: 5%;
+    }
+    video {
+        width: 380px;
+        height: auto;
+    }
+    .a {
+        font-size: 14px;
+    }
+    .c {
+        font-size: 7px;
+    }
+    .neww p {
+        font-size: 10px;
+    }
+    .neww button {
+        padding: 3px 10px;
+    }
+    .text-name {
+        top: 10%;
+        right: 0%;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 78% !important;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 60% !important;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 215px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    video {
+        width: 355px;
+        height: auto;
+    }
+    .button p {
+        font-size: 8px;
+        margin: 3px 0 3px 0;
+    }
+    .text-name .text {
+        color: white;
+        margin: 5px 17px 5px 17px;
+    }
+    .trader_teacher .owl-carousel .item .info .name {
+        font-size: 40px;
+    }
+    .trader_teacher .owl-carousel .item .class_name {
+        font-size: 17px;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 75% !important;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 194px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 0%;
+    }
 }
 
 
@@ -1981,6 +2309,59 @@ footer ul li a svg {
     .policy {
         top: 638px!important;
     }
+    video {
+        width: 303px;
+        height: auto;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: -10%;
+    }
+    .a {
+        font-size: 12px;
+    }
+    .c {
+        font-size: 6px;
+    }
+    .neww p {
+        font-size: 8px;
+    }
+    .neww button {
+        padding: 3px 3px;
+    }
+    .button p {
+        font-size: 7px;
+        margin: 3px 0 3px 0;
+    }
+    .text-name .text {
+        color: white;
+        margin: 5px 17px 0px 17px;
+    }
+    .text-name {
+        top: 3%;
+        right: 0%;
+    }
+    .trader_teacher .owl-carousel .item .info .name {
+        font-size: 30px;
+    }
+    .trader_teacher .owl-carousel .item .class_name {
+        font-size: 13px;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 72% !important;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 55% !important;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 164px;
+    }
+    .try_lession .subcribe .btn_subcribe {
+        padding: 13px 24px;
+    }
+    .next button {
+        margin-top: 0px;
+        font-size: 15px;
+    }
 }
 
 
@@ -2098,5 +2479,69 @@ footer ul li a svg {
     }
     .sign-in {
         width: 210px;
+    }
+    video {
+        width: 230px;
+        height: auto;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 122px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        background-image: url(../images/aaddd.png);
+        left: 0;
+        width: 100%;
+    }
+    .trader_teacher .owl-carousel .item .info .name {
+        font-size: 25px;
+    }
+    .trader_teacher .owl-carousel .item .class_name {
+        font-size: 11px;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 63% !important;
+    }
+    .info button p {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .trader_teacher .owl-carousel .item .info .name::after {
+        margin: 5px auto 0;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 50% !important;
+    }
+    .neww p {
+        font-size: 6px;
+    }
+    .a {
+        font-size: 7px;
+    }
+    .c {
+        font-size: 4px;
+    }
+    .button p {
+        font-size: 4px;
+        margin: 2px 0 2px 0;
+    }
+    .logo img {
+        height: 36px;
+    }
+    .b {
+        font-size: 13px;
+        height: 16px;
+        margin-top: -4px;
+    }
+    .try_lession .subcribe .btn_subcribe {
+        padding: 13px 10px;
+    }
+}
+
+@media screen and (max-width: 240) {
+    .trader_teacher .owl-carousel .item .info {
+        top: 62% !important;
+    }
+    .trader_teacher .owl-carousel .item:hover .info {
+        top: 47% !important;
     }
 }

@@ -168,6 +168,7 @@
 
 .playpause img {
     transform: translate(0px, 220%);
+    /* transform: translate(-220px, 1660%); */
 }
 
 .im {
@@ -772,6 +773,7 @@
 
 @media screen and (max-width: 480px) {
     .playpause img {
+        /* transform: translate(0px, 1190%); */
         transform: translate(0px, 200%);
         width: 47px;
     }
