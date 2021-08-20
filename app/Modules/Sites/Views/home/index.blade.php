@@ -14,45 +14,62 @@
         <div class="main_item">
             <div class="item-left">
                 <p class="title">
-
                     <span>today’s</span> the day.
                 </p>
-                <p class="desc">{{ $config_title_banner_top_left->value }}</p>
+                <p class="desc">{{$config_title_banner_top_left->value}}</p>
                 <div class="form_search">
                     <input type="text" value="" class="search_input" placeholder="Your email address" />
-                    <a href="#" class="btn btn sign_up" onclick="toggle()">SIGN UP</a>
+                    <a href="find-my-classes.html" class="btn btn sign_up">GET STARTED</a>
                     <label>
                         <input type="checkbox" value="0" />
                         <span>Keep me up to date on class events and new releases.</span>
                     </label>
-                    <p class="pricing text-center">{{ $config_title_banner_top_tuition->value }}</p>
+                    <p class="pricing text-center">{{$config_title_banner_top_tuition->value}}</p>
                 </div>
             </div>
             <div class="item-right">
                 <div class="list_img">
-                    <img src="/public/sites/images/banner_home.jpg" alt="" />
+                    <video autoplay loop muted playsinline="playsinline" captions="Off">
+                        <source src="public/sites/mp4/TraderClass Online Classes.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
     </section>
-    <section class="trader_teacher pt-100 pb-100">
+    <div class="trader_teacher2 pt-100 ">
         <div class="container">
-            <h2 class="title_main mb-5 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">New classes
-                added every month.</h2>
+            <h2 class="title_main mb-5 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">New classes added every month.</h2>
+            <div class="tile-image">
+                <img src="/public/sites/images/90h2bclxquk23n6jxmcp0v7ikg48.jpg" alt="">
+                <div class="text-name">
+                    <div class="neww">
+                        <button><p>New</p></button>
+                    </div>
+                    <div class="text"><span class="a">Jarratt Davis</span> <span class="b">-</span><span class="c">Teacher Forex Trader</span>
+                    </div>
+                    <div class="button">
+                        <button><a href="Teacher.html"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="trader_teacher pb-100">
+        <div class="container">
+            <h2 class="title_main mb-5 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">Trending</h2>
             <div class="owl-carousel owl-theme">
                 @foreach ($teachers as $value)
-                    <div class="item">
-                        @if ($value->type)
-                            <p class="mark">New</p>
-                        @elseif (!$value->type)
-
-                        @endif
-                        <div class="info">
-                            <p class="name">{{ $value->fullname }}</p>
-                            <p class="class_name">{{ $value->position }}</p>
-                        </div>
-                        <img src="{{ '/public/upload/images/teachers/thumb/' . $value->photo }}" alt="" />
+                <div class="item">
+                    @if ($value->type)
+                    <p class="mark">New</p>
+                    @endif
+                    <div class="info">
+                        <p class="name">{{$value->fullname}}</p>
+                        <p class="class_name">{{$value->position}}</p>
+                        <button><a href="/teacher/{{$value->id}}"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
                     </div>
+                    <img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="" />
+                </div>
                 @endforeach
             </div>
         </div>
@@ -304,6 +321,17 @@
                         </div>
                     @endforeach
                     <p class="text-center error_cate mt-1" style="color:#EF8D21;display:none"></p>
+                </div>
+                <div class="row list_option mb-100">
+                    <div class="col-md"></div>
+                    <div class="col-md-4">
+                        <div class="next">
+                            <a href="">
+                                <button><i class="bi bi-arrow-right"></i> &nbsp; NEXT</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md"></div>
                 </div>
                 <div class="row subcribe mt-100">
                     <div class="col-md-6">

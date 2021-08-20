@@ -11,8 +11,6 @@
     <?php else: ?>
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
     <?php endif; ?>
-    
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="/public/sites/css/style.css?v=<?php echo e(time()); ?>">
