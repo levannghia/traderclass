@@ -37,10 +37,14 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
     <link rel="stylesheet" href="/public/sites/css/style.css">
+    <link href="/public/sites/css/reset.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <script src="/public/sites/js/js.js"></script>
+    <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css" rel="stylesheet">
     <link href="/public/sites/css/index.css" rel="stylesheet">
+    <script src="/public/sites/js/reset.js"></script>
+    
     
 </head>
 
