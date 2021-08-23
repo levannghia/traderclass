@@ -38,8 +38,8 @@
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <link href="/public/sites/css/index.css?v=<?php echo e(time()); ?>" rel="stylesheet">
-    <link href="/public/sites/css/reset.css?v=<?php echo e(time()); ?>" rel="stylesheet">
-    <link rel="stylesheet" href="/public/sites/css/PaymentBank.css">
+ 
+    
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
@@ -51,7 +51,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
-    <script src="/public/sites/js/reset.js"></script>
+    
     <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
 </head>
 

@@ -1,4 +1,4 @@
-@extends('Sites::layout')
+@extends('Sites::masterclass')
 @section('content')
 <div class="main">
     <div class="container">
