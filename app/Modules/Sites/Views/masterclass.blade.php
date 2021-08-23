@@ -26,6 +26,7 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:image:alt" content="">
+    <script src="/public/sites/js/findmyclass.js"></script>
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
     <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet">
@@ -34,6 +35,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
+    <link rel="stylesheet" href="/public/sites/css/style.css">
+    <script src="/public/sites/js/js.js"></script>
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css" rel="stylesheet">
     <link href="/public/sites/css/index.css" rel="stylesheet">
@@ -55,7 +59,7 @@
         <!-- CDN ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+        
         <script src="vendor/jquery.js"></script>
         <script src="dist/lity.js"></script>
         <script src="/public/sites/js/MasterClass.js"></script>
