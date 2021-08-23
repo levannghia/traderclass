@@ -626,6 +626,25 @@
         }
     }
     
+    @media screen and (max-width: 1920px) {
+        .text-center {
+            top: 94%;
+            left: 45%;
+        }
+    }
+    
+    @media screen and (max-width: 1540px) {
+        .text-center {
+            top: 94%;
+            left: 44%;
+        }
+        .img {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 13%;
+        }
+    }
+    
     @media screen and (max-width: 1440px) {
         .text-center {
             top: 80%;
