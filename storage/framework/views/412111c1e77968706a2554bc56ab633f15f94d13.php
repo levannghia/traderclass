@@ -149,7 +149,7 @@
                                 <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                                 <label class="contai">
                                     I agree to receive email updates
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="agree_chk">
                                     <span class="checkmarks"></span>
                                 </label>
                                 <!-- <input type="checkbox">

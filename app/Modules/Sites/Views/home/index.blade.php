@@ -246,7 +246,7 @@
                 </div>
                 <div class="right_content">
                     <div class="tivi_show">
-                        <img src="{{ '/public/upload/images/sites_home/' . $config_banner_center_image->value }}"
+                        <img src="{{ '/public/upload/images/sites_home/thumb/' . $config_banner_center_image->value }}"
                             alt="classes" />
                     </div>
                 </div>
@@ -262,7 +262,7 @@
                     <a href="{{route('sites.find-my-class.index')}}" class="btn btn_continute" title="Continute">CONTINUE</a>
                 </div>
                 <div class="right_content">
-                    <img src="{{ '/public/upload/images/sites_home/' . $config_banner_bottom_image->value }}" alt="" />
+                    <img src="{{ '/public/upload/images/sites_home/thumb/' . $config_banner_bottom_image->value }}" alt="" />
                 </div>
             </div>
         </div>

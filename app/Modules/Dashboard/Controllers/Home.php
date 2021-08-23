@@ -5,6 +5,8 @@ namespace App\Modules\Dashboard\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+use Intervention\Image\ImageManagerStatic as Image;
 use App\Modules\Dashboard\Models\Config_Model;
 use Illuminate\Support\Facades\Gate;
 use App\Modules\Dashboard\Rules\Permission;
@@ -81,19 +83,32 @@ class Home extends Controller
         $config_title_center_payment->value = $request->TITLE_BANNER_CENTER_PAYMENT_TIME;
 
         $config_center_image = Config_Model::find(49);
-        if ($request->file('BANNER_CENTER_IMAGE')) {
+
+        if ($request->hasFile('BANNER_CENTER_IMAGE')) {
             //delete if exist
-            $image = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/' . $config_center_image ->value;
+            $image = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/large/' . $config_center_image->value;
             if (file_exists($image)) {
                 File::delete($image);
             }
+            $image_thumb = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/thumb/' . $config_center_image->value;
+            if (file_exists($image_thumb)) {
+                File::delete($image_thumb);
+            }
 
-            $get_file_name = $request->file('BANNER_CENTER_IMAGE')->getClientOriginalName();
-            $file_name = current(explode('.',$get_file_name));
-            $file_extension=$request->file('BANNER_CENTER_IMAGE')->getClientOriginalExtension();
-            $new_image = $file_name.'-'.time().'.'.$file_extension;
-            $request->file('BANNER_CENTER_IMAGE')->move('public/upload/images/sites_home', $new_image);
-            $config_center_image ->value = $new_image;
+            $file = $request->BANNER_CENTER_IMAGE;
+            $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+
+            //resize file befor to upload large
+            if ($file->getClientOriginalExtension() != "svg") {
+                $image_resize = Image::make($file->getRealPath());
+
+                $image_resize->fit(790, 480);
+
+                $image_resize->save('public/upload/images/sites_home/thumb/' . $file_name);
+            }
+
+            $file->move("public/upload/images/sites_home/large", $file_name);
+            $config_center_image->value = $file_name;
         }
 
         if ($config_title_center_class->save() && $config_title_center_funtion_1->save() && $config_title_center_funtion_2->save() && $config_title_center_funtion_3->save() && $config_title_center_funtion_4->save() && $config_title_center_tuition->save() && $config_title_center_payment->save() && $config_center_image->save()) {
@@ -151,19 +166,32 @@ class Home extends Controller
         $config_title_bottom_4->value = $request->TITLE_BANNER_BOTTOM_4;
 
         $config_bottom_image = Config_Model::find(52);
-        if ($request->file('BANNER_BOTTOM_IMAGE')) {
+
+        if ($request->hasFile('BANNER_BOTTOM_IMAGE')) {
             //delete if exist
-            $image = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/' . $config_bottom_image->value;
+            $image = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/large/' . $config_bottom_image->value;
             if (file_exists($image)) {
                 File::delete($image);
             }
+            $image_thumb = str_replace("\\", "/", base_path()) . '/public/upload/images/sites_home/thumb/' . $config_bottom_image->value;
+            if (file_exists($image_thumb)) {
+                File::delete($image_thumb);
+            }
 
-            $get_file_name = $request->file('BANNER_BOTTOM_IMAGE')->getClientOriginalName();
-            $file_name = current(explode('.',$get_file_name));
-            $file_extension=$request->file('BANNER_BOTTOM_IMAGE')->getClientOriginalExtension();
-            $new_image = $file_name.'-'.time().'.'.$file_extension;
-            $request->file('BANNER_BOTTOM_IMAGE')->move('public/upload/images/sites_home', $new_image);
-            $config_bottom_image->value = $new_image;
+            $file = $request->BANNER_BOTTOM_IMAGE;
+            $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+
+            //resize file befor to upload large
+            if ($file->getClientOriginalExtension() != "svg") {
+                $image_resize = Image::make($file->getRealPath());
+
+                $image_resize->fit(790, 233);
+
+                $image_resize->save('public/upload/images/sites_home/thumb/' . $file_name);
+            }
+
+            $file->move("public/upload/images/sites_home/large", $file_name);
+            $config_bottom_image->value = $file_name;
         }
 
         if ($config_title_bottom_class->save() && $config_title_bottom_review_class->save() && $config_title_bottom_lessons->save() &&$config_title_bottom_review_lesson->save() && $config_title_bottom_minutes->save() && $config_title_bottom_review_minute->save() && $config_title_bottom_1->save() && $config_title_bottom_2->save() && $config_title_bottom_3->save() && $config_title_bottom_4->save() && $config_bottom_image->save()) {

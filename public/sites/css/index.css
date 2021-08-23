@@ -3,6 +3,11 @@ a:hover {
     color: #f08e21;
 }
 
+
+/* element.style {
+    display: none;
+} */
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -727,6 +732,7 @@ footer ul li a svg {
 .create-account.active {
     display: block;
     opacity: 1;
+    z-index: 9;
 }
 
 .create-account h1 {
@@ -859,7 +865,7 @@ footer ul li a svg {
 }
 
 .checkmark {
-    top: 388px!important;
+    top: 377px!important;
     border: 0.5px solid #323741;
     position: absolute;
     height: 25px;

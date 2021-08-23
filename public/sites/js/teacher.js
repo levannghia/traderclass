@@ -6,7 +6,7 @@ $(function() {
         var _token = $('meta[name="csrf-token"]').attr('content');
         var data_form = $("#form_subcribe_teacher").serialize();
         $.ajax({
-            url: "/subcribe",
+            url: "/subcribe-teacher",
             type: "POST",
             data: "_token=" + _token + "&" + data_form,
             beforeSend: function() {

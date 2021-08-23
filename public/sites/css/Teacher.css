@@ -641,7 +641,8 @@
         .img {
             position: relative;
             display: inline-block;
-            margin-bottom: 13%;
+            margin-bottom: 14%;
+            margin-top: 2%;
         }
     }
     

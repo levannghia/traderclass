@@ -22,7 +22,7 @@
                     <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> {{ $image->name }}</h5>
                     @if ($image->value != '')
                         <div class="form-group mb-2">
-                            <img src="/public/upload/images/sites_home/{{ $image->value }}"
+                            <img src="/public/upload/images/sites_home/large/{{ $image->value }}"
                                 style="width: auto;max-width: 100%">
                         </div>
                     @endif

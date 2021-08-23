@@ -23,15 +23,11 @@ class SearchCourse extends Controller
             $data = DB::table('course')->join('teachers', 'course.teacher_id', '=', 'teachers.id')
                 ->where('name', 'LIKE', "%{$query}%")->orWhere('fullname', 'LIKE', "%{$query}%")
                 ->get();
-            $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
+            // $output = '<ul class="dropdown-menu" style="display:block; position:relative">';
             foreach ($data as $row) {
-                $output .= '
-                <li><a href="teacher/' . $row->id . '">' . $row->name . '</a></li>
-                
-                <p style="color:red; text-align:center">' . $row->fullname . '</p>
-                ';
+                $output = '
+                <option value="'.$row->fullname.'">'.$row->name.'</option>';
             }
-            $output .= '</ul>';
             echo $output;
         }
     }
