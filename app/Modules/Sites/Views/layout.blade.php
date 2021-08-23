@@ -39,7 +39,7 @@
     <link href="/public/sites/css/style.css?v={{ time() }}" rel="stylesheet">
     <link href="/public/sites/css/index.css?v={{ time() }}" rel="stylesheet">
     <link href="/public/sites/css/reset.css?v={{ time() }}" rel="stylesheet">
-    <link rel="stylesheet" href="/public/sites/css/PaymentBank.css">
+    <!-- <link rel="stylesheet" href="/public/sites/css/PaymentBank.css"> -->
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
@@ -71,7 +71,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/teacher.js"></script>
-    <script src="/public/sites/js/MasterClass.js"></script>
+    <!-- <script src="/public/sites/js/MasterClass.js"></script> -->
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
