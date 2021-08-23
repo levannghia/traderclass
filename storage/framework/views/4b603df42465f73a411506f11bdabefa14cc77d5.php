@@ -285,4 +285,4 @@
       </div>
     </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Sites::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/master_class/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Sites::masterclass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/master_class/index.blade.php ENDPATH**/ ?>

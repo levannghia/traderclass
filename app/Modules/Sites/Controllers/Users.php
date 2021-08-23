@@ -190,7 +190,7 @@ class Users extends Controller
 
             //Send mail
             $email = $data['email'];
-            $link_resetpass = url('/updatePassword?email=' . $email . '&token=' . $token_random);
+            $link_resetpass = url('/update-password?email=' . $email . '&token=' . $token_random);
 
             $data = array("fullname" => $user->fullname, "linkreset" => $link_resetpass, 'email' => $data['email']);
 
@@ -207,7 +207,7 @@ class Users extends Controller
     }
     public function updatepassword()
     {
-        //return View("Sites::inc.popupAccount");
+        return View("Sites::resetpassword.index");
     }
 
     public function logout()
@@ -220,6 +220,7 @@ class Users extends Controller
 
     public function updatepassword_request(Request $request)
     {
+        
         $data = $request->all();
         $token_random = Str::random();
         $checkUser = Users_Model::where('email', $data['email'])->where('forgotpassword_token', $data['token'])->get();
@@ -229,12 +230,12 @@ class Users extends Controller
                 $user_id = $value->id;
             }
             $updatepassword = Users_Model::find($user_id);
-            $updatepassword->password =  Hash::make($data['password']);
+            $updatepassword->password =  Hash::make($data['pass-new']);
             $updatepassword->forgotpassword_token = $token_random;
             $updatepassword->save();
-            return redirect()->route('users.login')->with('message', 'Mật khẩu đã được cập nhập, vui lòng đăng nhập lại');
+            return redirect()->route('sites.home.index')->with('message', 'Mật khẩu đã được cập nhập, vui lòng đăng nhập lại');
         } else {
-            return redirect()->route('user.forgot')->with('message', 'Link đã quá hạn');
+            return redirect()->route('sites.home.index')->with('message', 'Link đã quá hạn');
         }
     }
 }

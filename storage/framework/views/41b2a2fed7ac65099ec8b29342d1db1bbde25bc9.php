@@ -76,4 +76,4 @@
         <p>© 2019 - Cổng thanh toán qua Ví điện tử <a class="ic-momo" href="">MoMo</a></p>
     </footer>
 </body>
-</html>
+</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/payment-momo/index.blade.php ENDPATH**/ ?>

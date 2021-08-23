@@ -95,4 +95,4 @@
     </script>
 </body>
 
-</html>
+</html><?php /**PATH C:\wamp64\traderclass\app\Modules/Sites/Views/payment-atm/index.blade.php ENDPATH**/ ?>

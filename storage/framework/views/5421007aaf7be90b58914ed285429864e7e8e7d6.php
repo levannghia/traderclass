@@ -3,7 +3,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="main">
         <div class="img">
-            <img src="/public/sites/images/ted-nguyenn.png" width="100%" alt="">
+            <img src="/public/upload/images/course/thumb/<?php echo e($course->photo); ?>" width="100%" alt="">
             <div class="text-center">
                 <div style="display: grid;"><span id="a"><?php echo e($teacher->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($teacher->position); ?></span></div>
                 <div class="info">
@@ -40,10 +40,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="wrappe" onclick="playvideo()">
-                        <video class="video" controls>
-                        <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
-                      </video>
-                        <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div>
+                        
+                            <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                        
                     </div>
                     <div class="in">
                         <p>From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength
@@ -144,14 +144,14 @@
                         <div>
                             <form id="form_subcribe_teacher">
                                 <input type="hidden" name="course_category_id" value="<?php echo e($course->course_category_id); ?>">
-                                <input type="email" class="email_sub" name="email" placeholder="&ensp;  Enter Email Address">
+                                <input type="email" class="email_sub" name="email" id="email" placeholder="&ensp;  Enter Email Address">
                                 <button type="button" class="btn_subcribe_teacher" id="submit"><p>SUBMIT</p></button> <br>
                                 <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                                 <label class="contai">
-                                        I agree to receive email updates
-                                        <input type="checkbox" name="agree_chk" required>
-                                        <span class="checkmarks"></span>
-                                      </label>
+                                    I agree to receive email updates
+                                    <input type="checkbox">
+                                    <span class="checkmarks"></span>
+                                </label>
                                 <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                                 <p class="error_agree mt-1 mb-0" style="color:#EF8D21;display:none"></p>

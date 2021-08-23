@@ -1,6 +1,6 @@
 // Popup-account
 function toggle1() {
-    window.location.href = "Invite friends.html";
+    window.location.href = "/invite-friends";
 }
 
 function toggle2() {

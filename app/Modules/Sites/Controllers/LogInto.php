@@ -44,7 +44,7 @@ class LogInto extends Controller
             "title" => "Payment ATM",
         ]));
 
-        return view('Sites::payment_atm', compact('row'));
+        return view('Sites::payment-atm.index', compact('row'));
     }
     public function payment_momo()
     {
@@ -53,6 +53,6 @@ class LogInto extends Controller
             "title" => "Payment Momo",
         ]));
 
-        return view('Sites::payment_momo', compact('row'));
+        return view('Sites::payment-momo.index', compact('row'));
     }
 }

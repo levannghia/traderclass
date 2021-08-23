@@ -43,5 +43,5 @@ function sen() {
 function bach() {
     document.getElementById("share").style.display = "none";
     document.getElementById('sen').submit();
-    window.location.href = "index.html";
+    window.location.href = "/";
 }
