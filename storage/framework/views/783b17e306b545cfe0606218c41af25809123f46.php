@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title><?php echo $__env->yieldContent('title'); ?></title>
-    <link rel="stylesheet" href="/public/sites/css/MasterClass.css" />
+    
     <link rel="SHORTCUT ICON" href="https://www.masterclass.com/webpack/_/mc-logo-937df31b02ee324a8e1fe1773969416e.svg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -15,7 +15,7 @@
     <!-- Frontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Lity -->
-    <link href="dist/lity.css" rel="stylesheet" />
+    <link href="/public/sites/dist/lity.css" rel="stylesheet" />
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
@@ -51,7 +51,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
-    <script src="/public/sites/js/findmyclass.js"></script>
     <script src="/public/sites/js/reset.js"></script>
     <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
 </head>
@@ -71,7 +70,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/teacher.js"></script>
-    <script src="/public/sites/js/MasterClass.js"></script>
+    <!-- <script src="/public/sites/js/MasterClass.js"></script> -->
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     

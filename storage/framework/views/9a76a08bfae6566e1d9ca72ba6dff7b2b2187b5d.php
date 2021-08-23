@@ -50,7 +50,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
     
-    
+    <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
 </head>
 
 <body>
@@ -67,16 +67,17 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
-    <script src="/public/sites/js/teacher.js?v=1"></script>
-    
-    
-    <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/public/sites/js/teacher.js"></script>
+    <!-- <script src="/public/sites/js/MasterClass.js"></script> -->
     <script src="/public/sites/js/popper.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     
-    <script src="/public/sites/vendor/jquery.js"></script>
+    <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>
     
+    <script src="/public/sites/vendor/jquery.js"></script>
+    <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="/public/sites/dist/lity.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
     </script>

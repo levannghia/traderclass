@@ -34,11 +34,11 @@ function paymen(int) {
         return;
     }
     if (int == 3) {
-        window.location.href = "Payment Momo.html";
+        window.location.href = "/log-into/payment-momo";
         return;
     }
     if (int == 2) {
-        window.location.href = "Payment ATM.html";
+        window.location.href = "/log-into/payment-atm";
         return;
     }
     if (int == 1) {

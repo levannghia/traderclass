@@ -75,9 +75,9 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
         Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
-        Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_momo"]);
-        Route::get("/payment-atm/{id}", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
-        Route::get("/payment-momo/{id}", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
+        Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
+        Route::get("/payment-atm", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
+        Route::get("/payment-momo", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
     });
 
     //Contact
@@ -92,6 +92,8 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/registerpassword", ["as" => "users.register", "uses" => "Users@register_accuracy"]);
 
     //forgotpassword
+    Route::get("/update-password", ["as" => "users.forgot", "uses" => "Users@updatepassword"]);
+    Route::post("/update-password", ["as" => "users.forgot", "uses" => "Users@updatepassword_request"]);
     Route::post("/forgotpassword", ["as" => "users.forgot", "uses" => "Users@forgotpasswordrequest"]);
 
     //Route::get("/updatePassword",["as" =>"user.updatepassword","uses" => "Users@updatepassword"]);
