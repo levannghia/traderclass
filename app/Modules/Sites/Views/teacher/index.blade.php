@@ -144,14 +144,14 @@
                         <div>
                             <form id="form_subcribe_teacher">
                                 <input type="hidden" name="course_category_id" value="{{$course->course_category_id}}">
-                                <input type="email" class="email_sub" name="email" placeholder="&ensp;  Enter Email Address">
+                                <input type="email" class="email_sub" name="email" id="email" placeholder="&ensp;  Enter Email Address">
                                 <button type="button" class="btn_subcribe_teacher" id="submit"><p>SUBMIT</p></button> <br>
                                 <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                                 <label class="contai">
-                                        I agree to receive email updates
-                                        <input type="checkbox" name="agree_chk" required>
-                                        <span class="checkmarks"></span>
-                                      </label>
+                                    I agree to receive email updates
+                                    <input type="checkbox">
+                                    <span class="checkmarks"></span>
+                                </label>
                                 <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                                 <p class="error_agree mt-1 mb-0" style="color:#EF8D21;display:none"></p>

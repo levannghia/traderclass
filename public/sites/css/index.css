@@ -130,7 +130,7 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
 /*banner home*/
 
 .banner_home {
-    background-image: url(../images/baner_bg.jpg);
+    /* background-image: url(../images/baner_bg.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,7 +145,7 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
     display: flex;
     margin-top: 30px;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .banner_home .main_item .item-left {
@@ -380,7 +380,7 @@ header .header_bottom .main .right_nav ul li .btn_signup:hover {
 .classes .list_category .right_content .tivi_show {
     border: 4px solid #323741;
     position: relative;
-    height: 445px;
+    /* height: 445px; */
     max-width: 800px;
     margin: 0 auto;
 }
@@ -700,7 +700,7 @@ footer ul li a svg {
 }
 
 .pt-100 {
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .pb-100 {
@@ -1479,8 +1479,7 @@ footer ul li a svg {
 }
 
 video {
-    width: 747px;
-    height: 417px;
+    width: auto;
 }
 
 .logo img {
@@ -1503,6 +1502,42 @@ video {
 
 
 /*Responsive*/
+
+@media screen and (max-width: 2650px) {
+    .banner_home .main_item .item-left {
+        width: 27%;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 76%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 485px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .trader_teacher .owl-carousel .item .info {
+        top: 76%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 485px;
+    }
+    .banner_home .main_item .item-left {
+        width: 50%;
+    }
+    video {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .trader_teacher .owl-carousel .item .info {
+        top: 74%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 446px;
+    }
+}
 
 @media (max-width: 768px) {
     .container,
@@ -1527,6 +1562,7 @@ video {
     }
     .banner_home .main_item .item-left {
         margin-bottom: 30px;
+        width: 100%;
     }
     .classes .list_category {
         flex-direction: column;
@@ -1538,7 +1574,7 @@ video {
         margin-top: 30px;
     }
     .classes .list_category .right_content .tivi_show::before {
-        left: 6%;
+        left: 28%;
     }
     .device .info {
         flex-direction: column;
@@ -1696,6 +1732,7 @@ video {
     }
     .banner_home .main_item .item-left {
         margin-bottom: 30px;
+        width: 100%;
     }
     .trader_teacher .owl-carousel .owl-nav .owl-prev,
     .client_say .slide .owl-carousel .owl-nav .owl-prev {
@@ -1730,11 +1767,7 @@ video {
     }
 }
 
-@media (min-width: 1400px) {
-    .banner_home .main_item .item-left {
-        width: 100%;
-    }
-}
+@media (min-width: 1400px) {}
 
 @media screen and (max-width:560px) {
     /* ---------create account--------- */
@@ -2027,7 +2060,7 @@ video {
         top: 595px!important;
     }
     video {
-        width: 460px;
+        width: 100%;
         height: auto;
     }
     .a {
@@ -2067,9 +2100,27 @@ video {
         font-size: 18px;
         height: 25px;
     }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 12%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .text-name {
+        top: 10%;
+    }
+    .classes .list_category .right_content .tivi_show {
+        height: 218px;
+    }
+    .classes .list_category .right_content .tivi_show::before {
+        left: 8%;
+    }
 }
 
 @media screen and (max-width: 414px) {
+    .classes .list_category .right_content .tivi_show::before {
+        left: 7%;
+    }
     video {
         width: 380px;
         height: auto;
@@ -2097,13 +2148,13 @@ video {
         top: 60% !important;
     }
     .classes .list_category .right_content .tivi_show {
-        height: 215px;
+        height: 212px;
     }
 }
 
 @media screen and (max-width: 375px) {
     video {
-        width: 355px;
+        width: 100%;
         height: auto;
     }
     .button p {
@@ -2124,7 +2175,7 @@ video {
         top: 75% !important;
     }
     .classes .list_category .right_content .tivi_show {
-        height: 194px;
+        height: 192px;
     }
     .classes .list_category .right_content .tivi_show::before {
         left: 0%;
@@ -2295,7 +2346,7 @@ video {
         top: 638px!important;
     }
     video {
-        width: 303px;
+        width: 100%;
         height: auto;
     }
     .classes .list_category .right_content .tivi_show::before {
@@ -2466,7 +2517,7 @@ video {
         width: 210px;
     }
     video {
-        width: 230px;
+        width: 100%;
         height: auto;
     }
     .classes .list_category .right_content .tivi_show {
@@ -2474,8 +2525,8 @@ video {
     }
     .classes .list_category .right_content .tivi_show::before {
         background-image: url(../images/aaddd.png);
-        left: 0;
-        width: 100%;
+        left: -3px;
+        width: 104%;
     }
     .trader_teacher .owl-carousel .item .info .name {
         font-size: 25px;
@@ -2520,9 +2571,16 @@ video {
     .try_lession .subcribe .btn_subcribe {
         padding: 13px 10px;
     }
+    .banner_home .main_item .item-left {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
-@media screen and (max-width: 240) {
+@media screen and (max-width: 240px) {
+    .classes .list_category .right_content .tivi_show {
+        height: 118px;
+    }
     .trader_teacher .owl-carousel .item .info {
         top: 62% !important;
     }

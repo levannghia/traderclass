@@ -1,21 +1,19 @@
-.path p {
-    margin-bottom: 0;
-    padding: 15px;
-    padding-left: 0px;
-    margin-top: 10px;
-    color: white;
-}
-
-.path p a {
-    color: white;
-}
-
-.path {
-    background-color: black;
-}
-
-
-/* .black p a {
+    .path p {
+        margin-bottom: 0;
+        padding: 15px;
+        padding-left: 0px;
+        margin-top: 10px;
+        color: white;
+    }
+    
+    .path p a {
+        color: white;
+    }
+    
+    .path {
+        background-color: black;
+    }
+    /* .black p a {
     color: #ffffff;
     text-align: left;
     margin-bottom: 0;
@@ -30,1082 +28,1098 @@
     padding: 15px;
     margin-top: 10px;
 } */
-
-.header .header_bottom .main {
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    padding-top: 50px;
-}
-
-.main {
-    padding-top: 0px;
-}
-
-.img {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 10%;
-}
-
-.img::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    background-image: linear-gradient(to top, #171921 1%, transparent 40%, transparent);
-}
-
-#a {
-    font-size: 60px;
-    font-weight: bold;
-}
-
-#c {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-#b {
-    font-size: 50px;
-    padding-top: -17px;
-    margin-bottom: -15px;
-    margin-top: -21px;
-}
-
-.text-center {
-    color: white;
-    position: absolute;
-    top: 82%;
-    left: 42%;
-    transform: translate(-28%, -56%);
-}
-
-.info {
-    padding: 50px;
-    padding-bottom: 20px;
-}
-
-.share {
-    display: inline-flex;
-}
-
-.share a {
-    margin: 20px;
-    font-weight: 500;
-}
-
-.share a img {
-    padding-bottom: 16px;
-    width: 20px;
-}
-
-.share a p {
-    color: white;
-}
-
-.continue #continue {
-    background-color: #EF8D21;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.continue #money {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.lin {
-    border-bottom: 2px solid #323741;
-    height: 44px;
-}
-
-.lin a {
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    color: white;
-    border-bottom: 2px solid #323741;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.lin a:hover {
-    border-bottom: 2px solid #ffffff;
-}
-
-.video {
-    width: 100%;
-}
-
-#row {
-    height: 460px;
-}
-
-.wrapper {
-    display: table;
-    width: auto;
-    position: relative;
-    width: 50%;
-}
-
-.playpause {
-    width: 100%;
-    height: 55%;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    text-align: center;
-}
-
-.playpause img {
-    transform: translate(0px, 220%);
-    /* transform: translate(-220px, 1660%); */
-}
-
-.im {
-    display: grid;
-    background-color: #191C21;
-    height: 280px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.im div {
-    border-bottom: 1px solid #575656;
-    display: flex;
-}
-
-.im p {
-    text-align: center;
-    margin-left: 15px;
-    margin-top: 15px;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.im div img {
-    width: 73.25px;
-    height: 97.7px;
-    margin-bottom: 12px;
-    margin-top: 11px;
-    margin-left: 11px;
-}
-
-.all div {
-    width: 100%;
-    margin-bottom: 3px;
-    background-color: #191C21;
-    border-radius: 3px;
-}
-
-.pla {
-    padding: 10px;
-}
-
-.all a {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.tit p {
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-.in {
-    color: white;
-    font-weight: 100;
-    font-size: 13px;
-}
-
-.member {
-    border-top: 1px solid #323741;
-    padding-top: 60px;
-    margin-top: 40px;
-}
-
-.member img {
-    width: 100%;
-    height: 294px;
-}
-
-.member #memb {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-#name {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 0px;
-    margin-top: 10px;
-}
-
-#namee {
-    margin-bottom: 0px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #A7A9AC
-}
-
-.member .col-md-2 {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-#try {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-#tryy {
-    font-size: 15px;
-    color: #C4C4C4;
-    font-weight: 400;
-}
-
-#email {
-    background-color: #111319;
-    border: 1px solid #7B8197;
-    border-radius: 10px;
-    height: 48px;
-    width: 340px;
-    color: white;
-}
-
-#submit {
-    background-color: #111319;
-    border: 1px solid #7B8197;
-    border-radius: 10px;
-    width: 184px;
-    height: 48;
-    color: white;
-    height: 48px;
-}
-
-#submit p {
-    margin-bottom: 0px;
-}
-
-.contai {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    padding-top: 14px;
-    color: #7B8197;
-    width: 220px;
-}
-
-.contai input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #111319;
-    border: 1px solid #7b8197;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.contai:hover input~.checkmark {
-    background-color: rgb(136, 135, 135);
-}
-
-.contai input:checked~.checkmark {
-    background-color: #111319;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.contai input:checked~.checkmark:after {
-    display: block;
-}
-
-.contai .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.try button {
-    width: 194px;
-    height: 48px;
-    background-color: #EF8D21;
-    border: 0px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 500;
-    margin-right: 5px;
-}
-
-.try {
-    background-color: #111319;
-    margin-top: 60px;
-    /* height: 302px; */
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-
-.tee {
-    margin-top: 15%;
-}
-
-.te {
-    margin-top: 15%;
-}
-
-.te p a {
-    color: #6E7387;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-#tt {
-    color: #EF8D21;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-#gen {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-#wht {
-    border: 1px solid #464A58;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-#wht p {
-    margin-bottom: 0px;
-    font-size: 15px;
-    font-weight: bold;
-    padding-left: 10px;
-}
-
-#pum {
-    margin-top: 90px;
-}
-
-#pum .row .col-md-6 p {
-    font-size: 15px;
-    color: white;
-    width: 95%;
-}
-
-.upnext {
-    display: flex;
-}
-
-.upnext a img {
-    width: 80px;
-}
-
-.upnext p {
-    margin-bottom: 0px;
-    color: white;
-}
-
-.upnext #ne,
-#tea {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-#ma {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.up {
-    padding-top: 8px;
-}
-
-#i {
-    color: white;
-    padding-top: 24px;
-}
-
-#wen {
-    margin-bottom: 50px;
-}
-
-.all {
-    color: white;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.content {
-    padding-top: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.content p {
-    font-size: 15px !important;
-    font-weight: 400 !important;
-    padding-top: 15px;
-}
-
-#fade {
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=80);
-}
-
-#light {
-    display: none;
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: -300px;
-    margin-top: -180px;
-    z-index: 1002;
-    overflow: visible;
-}
-
-#share {
-    display: none;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    max-width: 100%;
-    max-height: 100%;
-    width: 40%;
-    background: #FFF;
-    z-index: 1002;
-    overflow: visible;
-    text-align: center;
-    border-radius: 5px;
-}
-
-#share2 {
-    padding: 50px;
-}
-
-#share2 a img {
-    width: 12%;
-    padding: 10px;
-}
-
-#share3 {
-    font-size: 26px;
-    font-weight: 500;
-    width: 100%;
-    text-align: center;
-}
-
-#share4 {
-    height: 50px;
-}
-
-#share4 a {
-    height: 100%;
-}
-
-.static {
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    height: 50px;
-    margin-top: 10px;
-    display: flex;
-}
-
-.static input {
-    padding: 12px;
-    margin-bottom: 0px;
-    width: 82%;
-    text-align: initial;
-    border: 0px;
-    background-color: #f0f8ff00;
-}
-
-.static button {
-    float: right;
-    /* padding: 5px; */
-    color: #ef8d21;
-    border: 0px;
-    background-color: #f3f3f300;
-}
-
-#boxclose {
-    float: right;
-    cursor: pointer;
-    color: #fff;
-    border: 1px solid #AEAEAE;
-    border-radius: 3px;
-    background: #222222;
-    font-size: 31px;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 0px;
-    padding: 11px 3px;
-    position: absolute;
-    right: 2px;
-    top: 2px;
-    z-index: 1002;
-    opacity: 0.9;
-}
-
-.boxclose:before {
-    content: "×";
-}
-
-#fade:hover~#boxclose {
-    display: none;
-}
-
-.test:hover~.test2 {
-    display: none;
-}
-
-#VisaChipCardVideo {
-    width: 900px;
-}
-
-
-/*Ipad ngang(1024 x 768)*/
-
-@media screen and (max-width: 1024px) {
-    .img {
-        margin-bottom: 22%;
+    
+    .header .header_bottom .main {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+        padding-top: 50px;
     }
-    .im {
-        height: 210px;
-    }
-    #email {
-        width: 255px;
-    }
-    .te {
-        margin-top: 20%;
-    }
-    .text-center {
-        top: 94%;
-    }
-    .playpause img {
-        transform: translate(0px, 201%);
-        width: 62px;
-    }
-    #light {
-        top: 35%;
-        left: 35%;
-    }
-    #share2 a img {
-        width: 15%;
-    }
-}
-
-
-/*Ipad dọc(768 x 1024)*/
-
-@media screen and (max-width: 768px) {
-    .playpause img {
-        transform: translate(0px, 201%);
-        width: 50px;
-    }
-    .text-center {
-        top: 122%;
-        left: 36%;
-    }
-    .img {
-        margin-bottom: 38%;
-    }
-    .pla {
-        padding: 0px;
-        font-size: 12px;
-    }
-    .pla img {
-        width: 17px;
-    }
-    .all a {
-        color: white;
-        font-size: 12px;
-        font-weight: 500;
-    }
-    .im p {
-        text-align: center;
-        margin-left: 10px;
-        margin-top: 15px;
-        color: white;
-        font-size: 12px;
-        font-weight: 400;
-    }
-    .im {
-        height: 164px;
-    }
-    .upnext a img {
-        width: 45px;
-    }
-    .upnext #ne,
-    #tea {
-        font-size: 10px;
-        font-weight: 400;
-    }
-    #ma {
-        font-size: 10px;
-        font-weight: bold;
-    }
-    .up {
+    
+    .main {
         padding-top: 0px;
     }
-    #i {
-        color: white;
-        padding-top: 15px;
+    
+    .img {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10%;
     }
-    #email {
-        width: 210px;
-        height: 35px;
-        border-radius: 5px;
-    }
-    #submit {
-        background-color: #111319;
-        border: 1px solid #7B8197;
-        border-radius: 4px;
-        width: 100px;
-        height: 48;
-        color: white;
-        height: 34px;
-    }
-    .checkmark {
+    
+    .img::before {
+        content: '';
         position: absolute;
-        top: 0;
         left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: #111319;
-        border: 1px solid #7b8197;
-        margin-top: 10px;
-        border-radius: 3px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-image: linear-gradient(to top, #171921 1%, transparent 40%, transparent);
     }
-    .try button {
-        width: 138px;
-        height: 38px;
-        background-color: #EF8D21;
-        border: 0px;
-        border-radius: 5px;
-        color: white;
-        font-weight: 500;
-        margin-right: 5px;
-    }
-    .tee {
-        margin-top: 10%;
-    }
-    .black p {
-        padding: 10px;
-        font-size: 12px;
-    }
-    #share2 {
-        padding: 30px;
-    }
-    #share2 a img {
-        width: 18%;
-    }
-    #light {
-        top: 40%;
-        left: 50%;
-    }
-    #VisaChipCardVideo {
-        width: 600px;
-    }
-}
-
-
-/*Tablet nhỏ(480 x 640)*/
-
-@media screen and (max-width: 480px) {
-    .playpause img {
-        /* transform: translate(0px, 1190%); */
-        transform: translate(0px, 200%);
-        width: 47px;
-    }
+    
     #a {
-        font-size: 30px;
+        font-size: 60px;
         font-weight: bold;
     }
+    
     #c {
-        font-size: 10px;
+        font-size: 20px;
         font-weight: 500;
     }
+    
     #b {
-        font-size: 30px;
+        font-size: 50px;
         padding-top: -17px;
         margin-bottom: -15px;
         margin-top: -21px;
     }
+    
+    .text-center {
+        color: white;
+        position: absolute;
+        top: 82%;
+        left: 42%;
+        transform: translate(-28%, -56%);
+    }
+    
+    .info {
+        padding: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .share {
+        display: inline-flex;
+    }
+    
     .share a {
         margin: 20px;
         font-weight: 500;
+    }
+    
+    .share a img {
+        padding-bottom: 16px;
+        width: 20px;
+    }
+    
+    .share a p {
+        color: white;
+    }
+    
+    .continue #continue {
+        background-color: #EF8D21;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
         font-size: 14px;
     }
-    .img {
-        margin-bottom: 62%;
+    
+    .continue #money {
+        font-size: 13px;
+        font-weight: 600;
     }
-    .text-center {
-        top: 150%;
-        left: 32%;
+    
+    .lin {
+        border-bottom: 2px solid #323741;
+        height: 44px;
     }
+    
     .lin a {
         padding: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
         color: white;
         border-bottom: 2px solid #323741;
         font-size: 15px;
         font-weight: 600;
     }
+    
+    .lin a:hover {
+        border-bottom: 2px solid #ffffff;
+    }
+    
+    .video {
+        width: 100%;
+    }
+    
+    #row {
+        height: 460px;
+    }
+    
+    .wrapper {
+        display: table;
+        width: auto;
+        position: relative;
+        width: 50%;
+    }
+    
+    .playpause {
+        width: 100%;
+        height: 55%;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+        text-align: center;
+    }
+    
     .playpause img {
-        transform: translate(0px, 126%);
+        transform: translate(0px, 220%);
     }
-    #up {
-        margin-right: 47%;
+    
+    .im {
+        display: grid;
+        background-color: #191C21;
+        height: 280px;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
+    
+    .im div {
+        border-bottom: 1px solid #575656;
+        display: flex;
+    }
+    
+    .im p {
+        text-align: center;
+        margin-left: 15px;
+        margin-top: 15px;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .im div img {
+        width: 73.25px;
+        height: 97.7px;
+        margin-bottom: 12px;
+        margin-top: 11px;
+        margin-left: 11px;
+    }
+    
+    .all div {
+        width: 100%;
+        margin-bottom: 3px;
+        background-color: #191C21;
+        border-radius: 3px;
+    }
+    
+    .pla {
+        padding: 10px;
+    }
+    
+    .all a {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .tit p {
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    
+    .in {
+        color: white;
+        font-weight: 100;
+        font-size: 13px;
+    }
+    
+    .member {
+        border-top: 1px solid #323741;
+        padding-top: 60px;
+        margin-top: 40px;
+    }
+    
+    .member img {
+        width: 100%;
+        height: 294px;
+    }
+    
+    .member #memb {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    
+    #name {
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    
+    #namee {
+        margin-bottom: 0px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #A7A9AC
+    }
+    
     .member .col-md-2 {
         padding-left: 8px;
         padding-right: 8px;
-        text-align: center;
-        margin-bottom: 10px;
     }
-    .member img {
-        width: 60%;
-        height: 345px;
-        margin-bottom: 10p;
-    }
-    #wen {
-        margin: 15px;
-    }
-    .black p {
-        font-size: 10px;
-    }
-    #light {
-        top: 60%;
-        left: 71%;
-    }
-    #VisaChipCardVideo {
-        width: 400px;
-    }
-    #share {
-        left: 20%;
-        width: 62%;
-    }
-}
-
-@media screen and (max-width: 414px) {
-    #a {
-        font-size: 25px;
-        font-weight: bold;
-    }
-    .info {
-        padding: 15px 50px 20px 50px;
-    }
-    .text-center {
-        left: 30%;
-    }
-    #light {
-        top: 38%;
-        left: 78%;
-    }
-    #share {
-        left: 12%;
-        width: 76%;
-    }
-    #share {
-        left: 12%;
-        width: 76%;
-        top: 15%;
-    }
-    #share2 a img {
-        width: 20%;
-    }
-    #VisaChipCardVideo {
-        width: 370px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    #a {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    #c {
-        font-size: 9px;
-        font-weight: 500;
-    }
-    .info {
-        padding: 20px 50px 20px 50px;
-        padding-bottom: 0px;
-    }
-    .lin {
-        border-bottom: 2px solid #323741;
-        height: 44px;
-        margin-bottom: 55px;
-        margin-left: 4%;
-        width: 92%;
-    }
-    .text-center {
-        top: 162%;
-        left: 28%;
-    }
-    #VisaChipCardVideo {
-        width: 353px;
-    }
-    #light {
-        top: 38%;
-        left: 83%;
-    }
-    #share {
-        left: 14%;
-        width: 72%;
-        top: 10%;
-    }
-    #share2 a img {
-        width: 22%;
-    }
-}
-
-
-/*Iphone(480 x 640)*/
-
-@media screen and (max-width: 320px) {
-    .text-center {
-        top: 211%;
-        left: 34%;
-    }
-    .path p {
-        margin-bottom: 0;
-        padding: 15px;
-        padding-left: 0px;
-        margin-top: 10px;
+    
+    #try {
         color: white;
-        font-size: 13px;
-    }
-    #a {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
     }
-    #c {
-        font-size: 7px;
-        font-weight: 500;
+    
+    #tryy {
+        font-size: 15px;
+        color: #C4C4C4;
+        font-weight: 400;
     }
-    .img {
-        margin-bottom: 95%;
-    }
-    .lin a {
-        padding: 21px;
-        padding-left: 18px;
-        padding-right: 18px;
-        color: white;
-        border-bottom: 2px solid #323741;
-        font-size: 11px;
-        font-weight: 600;
-    }
-    .lin {
-        border-bottom: 2px solid #323741;
-        height: 44px;
-        width: 100%;
-        margin-left: 0;
-    }
-    .playpause img {
-        transform: translate(0px, 207%);
-        width: 29px;
-    }
-    .member img {
-        width: 75%;
-        height: 292px;
-    }
+    
     #email {
-        width: 210px;
-        height: 35px;
-        border-radius: 5px;
-        margin-bottom: 10px;
+        background-color: #111319;
+        border: 1px solid #7B8197;
+        border-radius: 10px;
+        height: 48px;
+        width: 340px;
+        color: white;
     }
+    
+    #submit {
+        background-color: #111319;
+        border: 1px solid #7B8197;
+        border-radius: 10px;
+        width: 184px;
+        height: 48;
+        color: white;
+        height: 48px;
+    }
+    
+    #submit p {
+        margin-bottom: 0px;
+    }
+    
+    .contai {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        padding-top: 14px;
+        color: #7B8197;
+        width: 220px;
+    }
+    
+    .contai input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    .checkmarks {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #111319;
+        border: 1px solid #7b8197;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    
+    .contai:hover input~.checkmarks {
+        background-color: rgb(136, 135, 135);
+    }
+    
+    .contai input:checked~.checkmarks {
+        background-color: #111319;
+    }
+    
+    .checkmarks:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    .contai input:checked~.checkmarks:after {
+        display: block;
+    }
+    
+    .contai .checkmarks:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
     .try button {
-        width: 138px;
-        height: 38px;
+        width: 194px;
+        height: 48px;
         background-color: #EF8D21;
         border: 0px;
         border-radius: 5px;
         color: white;
         font-weight: 500;
         margin-right: 5px;
-        margin-bottom: 10px;
     }
-    .info {
-        padding: 30px 0 30px 0px;
+    
+    .try {
+        background-color: #111319;
+        margin-top: 60px;
+        /* height: 302px; */
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
-    .share a {
-        font-size: 10px;
+    
+    .tee {
+        margin-top: 15%;
     }
-    #myInput {
-        font-size: 12px;
+    
+    .te {
+        margin-top: 15%;
     }
-    #light {
-        top: 60%;
-        left: 105%;
+    
+    .te p a {
+        color: #6E7387;
+        font-size: 14px;
+        font-weight: 500;
     }
-    #VisaChipCardVideo {
-        width: 250px;
+    
+    #tt {
+        color: #EF8D21;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 50px;
     }
-    #share3 {
-        font-size: 20px;
-    }
-    #share {
-        left: 12%;
-        width: 75%;
-    }
-    #share2 a img {
-        width: 22%;
-    }
-    .static {
-        font-size: 13px;
-    }
-}
-
-
-/*Smart phone nhỏ*/
-
-@media screen and (max-width: 240px) {
-    .black p {
-        font-size: 5px;
-    }
-    .path p {
-        margin-bottom: 0;
-        padding: 15px;
-        padding-left: 0px;
-        margin-top: 10px;
-        color: white;
-        font-size: 10px;
-    }
-    #a {
+    
+    #gen {
         font-size: 15px;
         font-weight: bold;
     }
-    #c {
-        font-size: 5px;
-        font-weight: 500;
+    
+    #wht {
+        border: 1px solid #464A58;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
     }
-    .share a {
-        margin: 20px;
-        font-weight: 500;
-        font-size: 7px;
+    
+    #wht p {
+        margin-bottom: 0px;
+        font-size: 15px;
+        font-weight: bold;
+        padding-left: 10px;
     }
-    .info {
-        padding: 0px;
-        padding-bottom: 20px;
-        padding-top: 17px;
+    
+    #pum {
+        margin-top: 90px;
     }
-    .text-center {
-        top: 260%;
-        left: 33%;
-    }
-    .img {
-        margin-bottom: 122%;
-    }
-    .lin a {
-        padding: 22px;
-        padding-left: 15px;
-        padding-right: 15px;
+    
+    #pum .row .col-md-6 p {
+        font-size: 15px;
         color: white;
-        border-bottom: 2px solid #323741;
-        font-size: 8px;
-        font-weight: 600;
+        width: 95%;
     }
-    .lin {
-        border-bottom: 3px solid #323741;
-        height: 44px;
-        width: 94%;
+    
+    .upnext {
+        display: flex;
     }
-    .playpause img {
-        transform: translate(0px, 168%);
-        width: 25px;
+    
+    .upnext a img {
+        width: 80px;
     }
-    #gen {
+    
+    .upnext p {
+        margin-bottom: 0px;
+        color: white;
+    }
+    
+    .upnext #ne,
+    #tea {
         font-size: 13px;
+        font-weight: 400;
+    }
+    
+    #ma {
+        font-size: 14px;
         font-weight: bold;
     }
-    .member img {
-        width: 75%;
-        height: 250px;
+    
+    .up {
+        padding-top: 8px;
     }
+    
+    #i {
+        color: white;
+        padding-top: 24px;
+    }
+    
+    #wen {
+        margin-bottom: 50px;
+    }
+    
+    .all {
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .content {
+        padding-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    
+    .content p {
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        padding-top: 15px;
+    }
+    
+    #fade {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=80);
+    }
+    
     #light {
-        top: 60%;
-        left: 133%;
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: -300px;
+        margin-top: -180px;
+        z-index: 1002;
+        overflow: visible;
     }
-    #VisaChipCardVideo {
-        width: 200px;
-    }
+    
     #share {
-        left: 10%;
-        width: 80%;
+        display: none;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        max-width: 100%;
+        max-height: 100%;
+        width: 40%;
+        background: #FFF;
+        z-index: 1002;
+        overflow: visible;
+        text-align: center;
+        border-radius: 5px;
     }
-    #share3 {
-        font-size: 16px;
+    
+    #share2 {
+        padding: 50px;
     }
+    
     #share2 a img {
-        width: 20%;
-        padding: 2px;
+        width: 12%;
+        padding: 10px;
     }
+    
+    #share3 {
+        font-size: 26px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #share4 {
+        height: 50px;
+    }
+    
+    #share4 a {
+        height: 100%;
+    }
+    
     .static {
-        font-size: 10px;
-        margin-top: 0px;
-        height: 35px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        height: 50px;
+        margin-top: 10px;
+        display: flex;
     }
-}
+    
+    .static input {
+        padding: 12px;
+        margin-bottom: 0px;
+        width: 82%;
+        text-align: initial;
+        border: 0px;
+        background-color: #f0f8ff00;
+    }
+    
+    .static button {
+        float: right;
+        /* padding: 5px; */
+        color: #ef8d21;
+        border: 0px;
+        background-color: #f3f3f300;
+    }
+    
+    #boxclose {
+        float: right;
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #AEAEAE;
+        border-radius: 3px;
+        background: #222222;
+        font-size: 31px;
+        font-weight: bold;
+        display: inline-block;
+        line-height: 0px;
+        padding: 11px 3px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        z-index: 1002;
+        opacity: 0.9;
+    }
+    
+    .boxclose:before {
+        content: "×";
+    }
+    
+    #fade:hover~#boxclose {
+        display: none;
+    }
+    
+    .test:hover~.test2 {
+        display: none;
+    }
+    
+    #VisaChipCardVideo {
+        width: 900px;
+    }
+    
+    @media screen and (max-width: 2650px) {
+        .text-center {
+            top: 94%;
+            left: 48%;
+        }
+    }
+    
+    @media screen and (max-width: 1440px) {
+        .text-center {
+            top: 80%;
+            left: 44%;
+        }
+    }
+    
+    @media screen and (max-width: 1366px) {}
+    /*Ipad ngang(1024 x 768)*/
+    
+    @media screen and (max-width: 1024px) {
+        .img {
+            margin-bottom: 22%;
+        }
+        .im {
+            height: 210px;
+        }
+        #email {
+            width: 255px;
+        }
+        .te {
+            margin-top: 20%;
+        }
+        .text-center {
+            top: 94%;
+            left: 40%;
+        }
+        .playpause img {
+            transform: translate(0px, 201%);
+            width: 62px;
+        }
+        #light {
+            top: 35%;
+            left: 35%;
+        }
+        #share2 a img {
+            width: 15%;
+        }
+    }
+    /*Ipad dọc(768 x 1024)*/
+    
+    @media screen and (max-width: 768px) {
+        .playpause img {
+            transform: translate(0px, 201%);
+            width: 50px;
+        }
+        .text-center {
+            top: 115%;
+            left: 37%;
+        }
+        .img {
+            margin-bottom: 38%;
+        }
+        .pla {
+            padding: 0px;
+            font-size: 12px;
+        }
+        .pla img {
+            width: 17px;
+        }
+        .all a {
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .im p {
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 15px;
+            color: white;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .im {
+            height: 164px;
+        }
+        .upnext a img {
+            width: 45px;
+        }
+        .upnext #ne,
+        #tea {
+            font-size: 10px;
+            font-weight: 400;
+        }
+        #ma {
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .up {
+            padding-top: 0px;
+        }
+        #i {
+            color: white;
+            padding-top: 15px;
+        }
+        #email {
+            width: 210px;
+            height: 35px;
+            border-radius: 5px;
+        }
+        #submit {
+            background-color: #111319;
+            border: 1px solid #7B8197;
+            border-radius: 4px;
+            width: 100px;
+            height: 48;
+            color: white;
+            height: 34px;
+        }
+        .checkmarks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #111319;
+            border: 1px solid #7b8197;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        .try button {
+            width: 138px;
+            height: 38px;
+            background-color: #EF8D21;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+        .tee {
+            margin-top: 10%;
+        }
+        .black p {
+            padding: 10px;
+            font-size: 12px;
+        }
+        #share2 {
+            padding: 30px;
+        }
+        #share2 a img {
+            width: 18%;
+        }
+        #light {
+            top: 40%;
+            left: 50%;
+        }
+        #VisaChipCardVideo {
+            width: 600px;
+        }
+    }
+    /*Tablet nhỏ(480 x 640)*/
+    
+    @media screen and (max-width: 480px) {
+        .playpause img {
+            transform: translate(0px, 200%);
+            width: 47px;
+        }
+        #a {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #c {
+            font-size: 10px;
+            font-weight: 500;
+        }
+        #b {
+            font-size: 30px;
+            padding-top: -17px;
+            margin-bottom: -15px;
+            margin-top: -21px;
+        }
+        .share a {
+            margin: 20px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .img {
+            margin-bottom: 62%;
+        }
+        .text-center {
+            top: 150%;
+            left: 32%;
+        }
+        .lin a {
+            padding: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: white;
+            border-bottom: 2px solid #323741;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .playpause img {
+            transform: translate(0px, 126%);
+        }
+        #up {
+            margin-right: 47%;
+        }
+        .member .col-md-2 {
+            padding-left: 8px;
+            padding-right: 8px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .member img {
+            width: 60%;
+            height: 345px;
+            margin-bottom: 10p;
+        }
+        #wen {
+            margin: 15px;
+        }
+        .black p {
+            font-size: 10px;
+        }
+        #light {
+            top: 60%;
+            left: 71%;
+        }
+        #VisaChipCardVideo {
+            width: 400px;
+        }
+        #share {
+            left: 20%;
+            width: 62%;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        .text-center {
+            top: 135%;
+            left: 31%;
+        }
+        .info {
+            padding: 19px 50px 0 50px;
+            padding-bottom: 20px;
+        }
+    }
+    
+    @media screen and (max-width: 414px) {
+        #a {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .info {
+            padding: 15px 50px 20px 50px;
+        }
+        .text-center {
+            left: 30%;
+        }
+        #light {
+            top: 38%;
+            left: 78%;
+        }
+        #share {
+            left: 12%;
+            width: 76%;
+        }
+        #share {
+            left: 12%;
+            width: 76%;
+            top: 15%;
+        }
+        #share2 a img {
+            width: 20%;
+        }
+        #VisaChipCardVideo {
+            width: 370px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        #a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #c {
+            font-size: 9px;
+            font-weight: 500;
+        }
+        .info {
+            padding: 20px 50px 20px 50px;
+            padding-bottom: 0px;
+        }
+        .lin {
+            border-bottom: 2px solid #323741;
+            height: 44px;
+            margin-bottom: 55px;
+            margin-left: 4%;
+            width: 92%;
+        }
+        .text-center {
+            top: 162%;
+            left: 28%;
+        }
+        #VisaChipCardVideo {
+            width: 353px;
+        }
+        #light {
+            top: 38%;
+            left: 83%;
+        }
+        #share {
+            left: 14%;
+            width: 72%;
+            top: 10%;
+        }
+        #share2 a img {
+            width: 22%;
+        }
+    }
+    /*Iphone(480 x 640)*/
+    
+    @media screen and (max-width: 320px) {
+        .text-center {
+            top: 211%;
+            left: 34%;
+        }
+        .path p {
+            margin-bottom: 0;
+            padding: 15px;
+            padding-left: 0px;
+            margin-top: 10px;
+            color: white;
+            font-size: 13px;
+        }
+        #a {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #c {
+            font-size: 7px;
+            font-weight: 500;
+        }
+        .img {
+            margin-bottom: 95%;
+        }
+        .lin a {
+            padding: 21px;
+            padding-left: 18px;
+            padding-right: 18px;
+            color: white;
+            border-bottom: 2px solid #323741;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .lin {
+            border-bottom: 2px solid #323741;
+            height: 44px;
+            width: 100%;
+            margin-left: 0;
+        }
+        .playpause img {
+            transform: translate(0px, 207%);
+            width: 29px;
+        }
+        .member img {
+            width: 75%;
+            height: 292px;
+        }
+        #email {
+            width: 210px;
+            height: 35px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .try button {
+            width: 138px;
+            height: 38px;
+            background-color: #EF8D21;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            font-weight: 500;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        .info {
+            padding: 30px 0 30px 0px;
+        }
+        .share a {
+            font-size: 10px;
+        }
+        #myInput {
+            font-size: 12px;
+        }
+        #light {
+            top: 60%;
+            left: 105%;
+        }
+        #VisaChipCardVideo {
+            width: 250px;
+        }
+        #share3 {
+            font-size: 20px;
+        }
+        #share {
+            left: 12%;
+            width: 75%;
+        }
+        #share2 a img {
+            width: 22%;
+        }
+        .static {
+            font-size: 13px;
+        }
+    }
+    /*Smart phone nhỏ*/
+    
+    @media screen and (max-width: 240px) {
+        .black p {
+            font-size: 5px;
+        }
+        .path p {
+            margin-bottom: 0;
+            padding: 15px;
+            padding-left: 0px;
+            margin-top: 10px;
+            color: white;
+            font-size: 10px;
+        }
+        #a {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #c {
+            font-size: 5px;
+            font-weight: 500;
+        }
+        .share a {
+            margin: 20px;
+            font-weight: 500;
+            font-size: 7px;
+        }
+        .info {
+            padding: 0px;
+            padding-bottom: 20px;
+            padding-top: 17px;
+        }
+        .text-center {
+            top: 260%;
+            left: 33%;
+        }
+        .img {
+            margin-bottom: 122%;
+        }
+        .lin a {
+            padding: 22px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            border-bottom: 2px solid #323741;
+            font-size: 8px;
+            font-weight: 600;
+        }
+        .lin {
+            border-bottom: 3px solid #323741;
+            height: 44px;
+            width: 94%;
+        }
+        .playpause img {
+            transform: translate(0px, 168%);
+            width: 25px;
+        }
+        #gen {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .member img {
+            width: 75%;
+            height: 250px;
+        }
+        #light {
+            top: 60%;
+            left: 133%;
+        }
+        #VisaChipCardVideo {
+            width: 200px;
+        }
+        #share {
+            left: 10%;
+            width: 80%;
+        }
+        #share3 {
+            font-size: 16px;
+        }
+        #share2 a img {
+            width: 20%;
+            padding: 2px;
+        }
+        .static {
+            font-size: 10px;
+            margin-top: 0px;
+            height: 35px;
+        }
+    }
