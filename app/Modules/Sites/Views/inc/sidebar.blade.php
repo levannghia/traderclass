@@ -3,7 +3,7 @@
     <nav id="mobile-nav">
         <ul>
             <li class="nav-item">
-                <a href="./index.html">Home</a>
+                <a href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class=" dropdown-btn" href="#">
@@ -17,17 +17,17 @@
                     <a href="#">Teacher 4</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="./Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
-            <li class="nav-item"><a href="./All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
-            <li class="nav-item"> <a href="Log into.html"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
+            <li class="nav-item"><a href="/course-introduction"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
+            <li class="nav-item"><a href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
+            <li class="nav-item"> <a href="/log-into"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
             <li class="nav-item">
-                <a class=" dropdown-btn" href="#">
-                    <img src="./images/avt.png" alt="">
+                <a class="dropdown-btn" href="#">
+                    <img src="/public/sites/images/avt.png" alt="">
                 </a>
                 <div class="dropdown-container" style="display: none;">
-                    <a href="./account.html">Account information</a>
-                    <a href="./My Course.html">My Course</a>
-                    <a href="#">Log out</a>
+                    <a href="/account">Account information</a>
+                    <a href="/my-course">My Course</a>
+                    <a href="{{ route('sites.account.logout') }}">Log out</a>
                 </div>
             </li>
         </ul>
@@ -53,13 +53,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="Course Introduction.html"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
+                <a href="/course-introduction"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
             </li>
             <li class="nav-item">
-                <a href="All Class.html"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                <a href="/all-classư"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
             </li>
             <li class="nav-item">
-                <a href="#" onclick="toggle()">Sign In</a>
+                <a href="#" onclick="sign_in()">Sign In</a>
             </li>
             <li class="nav-item">
                 <a href="#" onclick="toggle()">Sign Up</a>

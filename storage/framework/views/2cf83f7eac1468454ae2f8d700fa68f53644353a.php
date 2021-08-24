@@ -7,8 +7,8 @@
             <div class="col-md"></div>
             <div class="col-md-6">
                 <div class="cen">
-                    <img src="public/sites/images/image.png" alt="" srcset="" width="50%">
-                    <div class="invite_mail">
+                    <img src="/public/sites/images/image.png" alt="" srcset="" width="50%">
+                    <div class="mail">
                         <div class="fri">
                             <p>Invite your friends to join TraderClass.</p>
                         </div>
@@ -27,17 +27,16 @@
                         </div>
                         <div class="lin">
                             <div class="static">
-                                <h5>https://traderclass.vn/ <i class="fas fa-copy">          Copy</i></h5>
-
+                                <input class="inputs" type="text" id="copyTarget" readonly="readonly" value="https://traderclass.vn"> <button id="copyButton"><i class="fas fa-copy">          Copy</i></button><br><br>
                             </div>
                             <p>
-                                <a href="#"><img src="public/sites/svg/icons8-facebook.svg" alt=""></a>
+                                <a href="#"><img src="/public/sites/svg/icons8-facebook.svg" alt=""></a>
                             </p>
                             <p>
-                                <a href="#"><img src="public/sites/svg/messenger.svg" alt="" width="25px" height="25px"></a>
+                                <a href="#"><img src="/public/sites/svg/messenger.svg" alt="" width="25px" height="25px"></a>
                             </p>
                             <p>
-                                <a href="#"><img src="public/sites/svg/zalo.svg" alt="" width="25px" height="25px"></a>
+                                <a href="#"><img src="/public/sites/svg/zalo.svg" alt="" width="25px" height="25px"></a>
                             </p>
                         </div>
                     </div>

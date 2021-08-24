@@ -9,7 +9,7 @@
         <p style="color: white;">View offers and select courses of interest.</p>
         <div class="row" id="row">
             <div class="col-md-8">
-                <div class="wrappe" onclick="playvideo()">
+                <div class="youtube wrappe" onclick="playvideo()">
                     {{-- <video class="video" controls>
                     <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
                   </video> --}}

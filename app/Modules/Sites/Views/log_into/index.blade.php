@@ -8,7 +8,7 @@
                     <div class="whitee">
                         <div class="pan">
                             <div class="order">
-                                <div class="un">
+                                <div class="uns">
                                     <p id="yo">Your order</p>
                                     <p id="yo2">Unlimited access all year All current and upcoming courses.</p>
                                 </div>

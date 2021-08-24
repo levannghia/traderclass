@@ -1,31 +1,30 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
-
-        <div class="mains">
+    <div class="mains">
         <div class="container">
-        <?php if(session()->has('message')): ?>
-       <div class="alert alert-success">
-         <?php echo e(session()->get('message')); ?>
+            <?php if(session()->has('message')): ?>
+                <div class="alert alert-success">
+                    <?php echo e(session()->get('message')); ?>
 
-       </div>
-       <?php endif; ?>  
+                </div>
+            <?php endif; ?>
             <div class="row">
                 <div class="col-md-4 bg-light">
                     <div class="avatar">
-                    <?php if(@getimagesize($user->photo)): ?>
-                    <img src="<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
-                    <?php elseif($user->photo == NULL): ?>
-                    <?php else: ?>  
-                    <img src="public/upload/images/users/thumb/<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
-                    <?php endif; ?>
+                        <?php if(@getimagesize($user->photo)): ?>
+                            <img src="<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
+                        <?php elseif($user->photo == NULL): ?>
+                        <?php else: ?>
+                            <img src="public/upload/images/users/thumb/<?php echo e($user->photo); ?>" class="rounded-circle" alt="">
+                        <?php endif; ?>
                     </div>
                     <form action="">
                         <span>Email</span> <a href="" id="edit1">Edit</a>
                         <?php if(Auth::guard('web')->check()): ?>
-                        <input type="text" name="" id="email" size="44" value="<?php echo e(Auth::user()->email); ?>">
+                            <input type="text" name="" id="email" size="44" value="<?php echo e(Auth::user()->email); ?>">
                         <?php else: ?>
-                        <input type="text" name="" id="email" size="44" placeholder="email@email.example.com">
+                            <input type="text" name="" id="email" size="44" placeholder="email@email.example.com">
                         <?php endif; ?>
                         <span>Password</span> <a href="">Edit</a>
                         <input type="text" name="" id="password" size="44" placeholder="***************">
@@ -105,4 +104,5 @@
         </div>
     </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('Sites::allClass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/account/index.blade.php ENDPATH**/ ?>

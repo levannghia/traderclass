@@ -9,7 +9,7 @@
         <p style="color: white;">View offers and select courses of interest.</p>
         <div class="row" id="row">
             <div class="col-md-8">
-                <div class="wrappe" onclick="playvideo()">
+                <div class="youtube wrappe" onclick="playvideo()">
                     
                   <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     

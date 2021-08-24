@@ -36,8 +36,6 @@
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <link href="/public/sites/css/index.css?v=<?php echo e(time()); ?>" rel="stylesheet">
- 
-    
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">

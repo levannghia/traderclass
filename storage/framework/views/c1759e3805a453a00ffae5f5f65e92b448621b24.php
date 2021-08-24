@@ -22,8 +22,6 @@
                     <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> <?php echo e($video->name); ?></h5>
                     <?php if($video->value != ''): ?>
                         <div class="form-group mb-2">
-                            
-                            
                             <video style="width: auto;max-width: 100%" controls>
                                 <source src="/public/upload/videos/home_sites/<?php echo e($video->value); ?>" type="video/mp4">
                             </video>

@@ -1,3 +1,10 @@
+.mains {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #171921;
+}
+
 .cen {
     position: initial;
 }
@@ -13,7 +20,7 @@
     margin-top: 5%;
 }
 
-.invite_mail p {
+.mail p {
     color: white;
 }
 
@@ -24,29 +31,34 @@
     height: 40px;
     border-radius: 5px;
     color: white;
+    padding: 12px;
 }
 
 .static {
     background-color: #5a5a5a;
+    margin-top: 10px;
+    display: flex;
     height: 40px;
     width: 70%;
     border-radius: 5px;
     color: white;
 }
 
-.static h5 {
+.static input {
+    padding: 12px;
     margin-bottom: 0px;
-    padding-left: 15px;
-    font-size: 15px;
-    font-weight: 400;
-    padding-top: 10px;
+    width: 82%;
+    text-align: initial;
+    border: 0px;
+    background-color: #f0f8ff00;
 }
 
-.static h5 i {
-    margin-left: 80%;
-    color: #EF8D21;
-    font-weight: 600 !important;
-    transform: translate(10px, -17px);
+.static button {
+    float: right;
+    /* padding: 5px; */
+    color: #ef8d21;
+    border: 0px;
+    background-color: #f3f3f300;
 }
 
 .lin {
@@ -59,7 +71,7 @@
     padding-top: 5px;
 }
 
-.invite_mail button {
+.mail button {
     background-color: #EF8D21;
     border: 7px solid #EF8D21;
     border-radius: 5px;
@@ -74,14 +86,13 @@
 /*Ipad ngang(1024 x 768)*/
 
 @media screen and (max-width: 1024px) {
-    .static h5 i {
-        margin-left: 78%;
-        margin-bottom: 0px;
-        color: #EF8D21;
-        font-weight: 600 !important;
-        transform: translate(0, -110%);
+    .static {
+        width: 65%;
     }
-    inputs {
+    .static input {
+        width: 77%;
+    }
+    .inputs {
         width: 65%;
     }
     .mains {
@@ -99,10 +110,7 @@
     .cen img {
         width: 100%;
     }
-    .static h5 {
-        font-size: 13px;
-    }
-    .invite_mail button {
+    .mail button {
         color: white;
         font-size: 10px;
         margin-bottom: 0px;
@@ -110,11 +118,14 @@
     .na {
         display: flex;
     }
-    .static h5 i {
-        margin-left: 74%;
-    }
-    inputs {
+    .inputs {
         width: 68%;
+    }
+    .static {
+        width: 72%;
+    }
+    .static input {
+        width: 70%;
     }
 }
 
@@ -134,13 +145,45 @@
         margin-bottom: -5px;
     }
     .static {
-        width: 72%;
+        width: 77%;
     }
-    inputs {
+    .static input {
+        width: 77%;
+    }
+    .inputs {
         width: 73%;
     }
     .mains {
         padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .mail button {
+        color: white;
+        font-size: 8px;
+    }
+    .static {
+        width: 95%;
+    }
+    .static input {
+        width: 73%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .mail button {
+        color: white;
+        font-size: 8px;
+        width: 30%;
+    }
+    .static {
+        width: 84%;
+    }
+    .static input {
+        width: 68%;
+        padding: 0px 0px 0px 12px;
+        font-size: 13px;
     }
 }
 
@@ -149,15 +192,18 @@
 
 @media screen and (max-width: 320px) {
     .static {
-        width: 103%;
+        width: 84%;
     }
-    .static h5 {
-        font-size: 11px;
-        padding-right: 5px;
-        padding-top: 13px;
+    .static button {
+        font-size: 12px;
     }
-    .invite_mail button {
+    .mail button {
         font-size: 8px;
+        width: 36%;
+    }
+    .static input {
+        width: 66%;
+        font-size: 13px;
     }
 }
 
@@ -165,6 +211,9 @@
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
+    .inputs {
+        font-size: 12px;
+    }
     .lin p {
         padding-left: 10px;
         margin-bottom: 0px;
@@ -175,16 +224,19 @@
     .lin a img {
         width: 175%;
     }
-    .static h5 {
-        font-size: 7px;
-        padding-right: 5px;
-    }
-    .invite_mail p,
+    .mail p,
     .fri p {
         color: white;
         font-size: 15px;
     }
     #re {
         font-size: 12px;
+    }
+    .static button {
+        font-size: 8px;
+    }
+    .static input {
+        width: 66%;
+        font-size: 10px;
     }
 }
