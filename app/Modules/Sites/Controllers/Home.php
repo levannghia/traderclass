@@ -35,6 +35,7 @@ class Home extends Controller
 
         $config_title_banner_top_left = Config_Model::find(42);
         $config_title_banner_top_tuition = Config_Model::find(43);
+        $config_banner_top_video = Config_Model::find(65);
         $config_title_banner_center_class = Config_Model::find(44);
         $config_title_banner_center_funtion_1 = Config_Model::find(45);
         $config_title_banner_center_funtion_2 = Config_Model::find(46);
@@ -73,6 +74,7 @@ class Home extends Controller
             "config_apple_store_link",
             "config_title_banner_top_left",
             "config_title_banner_top_tuition",
+            "config_banner_top_video",
             "config_title_banner_center_class",
             "config_title_banner_center_funtion_1",
             "config_title_banner_center_funtion_2",

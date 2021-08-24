@@ -1549,12 +1549,15 @@ video {
     }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1367px) {
     .trader_teacher .owl-carousel .item .info {
         top: 74%;
     }
     .classes .list_category .right_content .tivi_show {
         height: 446px;
+    }
+    .trader_teacher .owl-carousel .item .info {
+        top: 73%;
     }
 }
 

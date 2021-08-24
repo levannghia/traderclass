@@ -1,7 +1,7 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <?php echo $__env->make('Dashboard::inc.formheader', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <?php echo $__env->make('Dashboard::inc.message', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="row">
@@ -15,6 +15,28 @@
                             class="form-control form-control-sm" placeholder="* <?php echo e($value->name); ?>">
                     </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-box">
+                    <h5 class="header-title text-uppercase bg-light p-2 mb-2"><i class="fe-image mr-1"></i> <?php echo e($video->name); ?></h5>
+                    <?php if($video->value != ''): ?>
+                        <div class="form-group mb-2">
+                            
+                            
+                            <video style="width: auto;max-width: 100%" controls>
+                                <source src="/public/upload/videos/home_sites/<?php echo e($video->value); ?>" type="video/mp4">
+                            </video>
+                        </div>
+                    <?php endif; ?>
+                    <div class="form-group mb-2">
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input " name="<?php echo e($video->name); ?>" id="photo">
+                                <label class="custom-file-label" for="photo">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

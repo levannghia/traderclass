@@ -32,7 +32,7 @@
             <div class="item-right">
                 <div class="list_img">
                     <video autoplay loop muted playsinline="playsinline" captions="Off">
-                        <source src="public/sites/mp4/TraderClass Online Classes.mp4" type="video/mp4">
+                        <source src="public/upload/videos/home_sites/<?php echo e($config_banner_top_video->value); ?>" type="video/mp4">
                     </video>
                 </div>
             </div>

@@ -20,11 +20,12 @@ class Home extends Controller
     {
 
         $data = DB::table('config')->whereIn('id', [42,43])->get();
+        $video = Config_Model::find(65);
         $row = json_decode(json_encode([
             "title" => "Home - section 1",
             "desc" => "Setting"
         ]));
-        return view("Dashboard::home.section1", compact("row", "data"));
+        return view("Dashboard::home.section1", compact("row", "data","video"));
     }
 
     public function postSection1(Request $request)
@@ -32,13 +33,31 @@ class Home extends Controller
         if (!Gate::allows('edit', explode("\\", get_class())[4])) {
             abort(403);
         }
+        //mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts
+        $this->validate($request, ["BANNER_TOP_VIDEO" => "mimes:mp4|max:100040|required"], ["BANNER_TOP_VIDEO.required"=>"Vui lòng chọn video", "BANNER_TOP_VIDEO.max"=>"video có dung lượng quá lớn","BANNER_TOP_VIDEO.mimes"=>"Vui lòng chọn file có đuôi là *.mp4"]);
         $config_title_banner_top_left = Config_Model::find(42);
         $config_title_banner_top_left->value = $request->TITLE_BANNER_TOP_LEFT;
 
         $config_title_tuition = Config_Model::find(43);
         $config_title_tuition->value = $request->TITLE_BANNER_TOP_TUITION;
 
-        if ($config_title_banner_top_left->save() && $config_title_tuition->save()) {
+        $config_banner_top_video = Config_Model::find(65);
+
+        if ($request->hasFile('BANNER_TOP_VIDEO')) {
+            //delete if exist
+            $video = str_replace("\\", "/", base_path()) . '/public/upload/videos/home_sites/' . $config_banner_top_video->value;
+            if (file_exists($video)) {
+                File::delete($video);
+            }
+            
+            $file = $request->BANNER_TOP_VIDEO;
+            $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            $file->move("public/upload/videos/home_sites", $file_name);
+            $config_banner_top_video->value = $file_name;
+
+        }
+
+        if ($config_title_banner_top_left->save() && $config_title_tuition->save() && $config_banner_top_video->save()) {
             return back()->with(["type" => "success", "flash_message" => "Cập nhật thành công!"]);
         } else {
             return back()->withInput()->with(["type" => "danger", "flash_message" => "Đã xảy ra lỗi, vui lòng thử lại."]);

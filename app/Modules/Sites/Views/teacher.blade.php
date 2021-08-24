@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="/public/sites/css/style.css?v={{time()}}">
-    <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
-    <link href="/public/sites/css/animate.css" rel="stylesheet">
+    <link href="/public/sites/css/menu-mobile.css?v={{time()}}" rel="stylesheet">
+    <link href="/public/sites/css/animate.css?v={{time()}}" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/index2.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/Teacher.css?v={{time()}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="wrappe" onclick="playvideo()">
+                    <div class="youtube wrappe" onclick="playvideo()">
                         {{-- <video src="" class="video"> --}}
                             <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         {{-- </video> --}}

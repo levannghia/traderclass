@@ -1506,7 +1506,7 @@ video {
 
 /*Responsive*/
 
-@media screen and (max-width: 2650px) {
+@media screen and (max-width: 2651px) {
     .banner_home .main_item .item-left {
         width: 27%;
     }
@@ -1515,6 +1515,9 @@ video {
     }
     .classes .list_category .right_content .tivi_show {
         height: 485px;
+    }
+    header .header_bottom {
+        margin-bottom: 0px;
     }
 }
 
@@ -1551,12 +1554,15 @@ video {
     }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1367px) {
     .trader_teacher .owl-carousel .item .info {
         top: 74%;
     }
     .classes .list_category .right_content .tivi_show {
         height: 446px;
+    }
+    header .header_bottom .main .right_nav ul li a {
+        font-size: 14px;
     }
 }
 
