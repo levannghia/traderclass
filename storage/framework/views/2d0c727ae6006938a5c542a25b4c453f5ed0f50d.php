@@ -1,6 +1,6 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
         <div class="container">
             <p id="title">
@@ -18,7 +18,7 @@
                 </div> -->
                     <div class="youtube wrappe" onclick="playvideo()">
                        
-                         <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                      
                     </div>
                 </div>
@@ -41,11 +41,11 @@
                         </div>
                     </div>
                     <div class="im">
-                    @foreach ($list_course as $value)
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
-                            <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;">{{$value->position}}</span> </p>
+                    <?php $__currentLoopData = $list_course; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">
+                            <p><span style="font-size: 15px; font-weight: bold; color: white;">Jarratt Davis</span> <br><span style="font-size: 12px; color: #A7A9AC;"><?php echo e($value->position); ?></span> </p>
                         </div>
-                    @endforeach
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         
                     </div>
                 </div>
@@ -54,8 +54,8 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-9">
-                            <p id="title">{{$course->fullname}}</p>
-                            <p style="font-size: 20px; color: white; font-weight: 100;">{{$course->position}}</p>
+                            <p id="title"><?php echo e($course->fullname); ?></p>
+                            <p style="font-size: 20px; color: white; font-weight: 100;"><?php echo e($course->position); ?></p>
                             <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
                         </div>
                         <div class="col-md-3" id="col-md-3">
@@ -147,4 +147,5 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\traderclass\app\Modules/Sites/Views/course_introduction/index.blade.php ENDPATH**/ ?>

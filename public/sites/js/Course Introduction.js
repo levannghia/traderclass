@@ -1,11 +1,14 @@
-$('video').parent().click(function() {
-    if ($(this).children(".video").get(0).paused) {
-        $(this).children(".video").get(0).play();
-        $(this).children(".playpause").fadeOut();
-    } else {
-        $(this).children(".playpause").fadeIn();
-    }
-});
+// $('video').parent().click(function() {
+//     if ($(this).children(".video").get(0).paused) {
+//         $(this).children(".video").get(0).play();
+//         $(this).children(".playpause").fadeOut();
+//         console.log("Play")
+//     } else {
+//         $(this).children(".video").get(0).paused;
+//         $(this).children(".playpause").fadeIn();
+//         console.log("Pause")
+//     }
+// });
 
 function nextvideo(name) {
     var videoFile = name;
