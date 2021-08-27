@@ -155,7 +155,7 @@
     
     .playpause {
         width: 100%;
-        height: 55%;
+        height: 66%;
         position: absolute;
         left: 0%;
         right: 0%;
@@ -490,7 +490,9 @@
     .content p {
         font-size: 15px !important;
         font-weight: 400 !important;
-        padding-top: 15px;
+        margin-top: 10px;
+        padding: 5px 15px 15px 15px;
+        border-top: 1px solid #464A58;
     }
     
     #fade {
@@ -509,8 +511,8 @@
     
     #light {
         display: none;
-        position: absolute;
-        top: 30%;
+        position: fixed;
+        top: 35%;
         left: 40%;
         max-width: 100%;
         max-height: 100%;
@@ -522,7 +524,7 @@
     
     #share {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 20%;
         left: 30%;
         max-width: 100%;
@@ -533,6 +535,10 @@
         overflow: visible;
         text-align: center;
         border-radius: 5px;
+    }
+    
+    #share #boxclose {
+        color: black;
     }
     
     #share2 {
@@ -588,9 +594,9 @@
         float: right;
         cursor: pointer;
         color: #fff;
-        border: 1px solid #AEAEAE;
+        /* border: 1px solid #AEAEAE; */
         border-radius: 3px;
-        background: #222222;
+        /* background: #222222; */
         font-size: 31px;
         font-weight: bold;
         display: inline-block;
@@ -616,13 +622,56 @@
     }
     
     #VisaChipCardVideo {
-        width: 900px;
+        width: 100%;
     }
     
-    @media screen and (max-width: 2650px) {
+    .offvideo {
+        position: absolute;
+        background-color: #66339900;
+        width: 96%;
+        height: 76%;
+        top: 0;
+        display: none;
+    }
+    
+    @media screen and (max-width: 2560px) {
         .text-center {
             top: 94%;
             left: 48%;
+        }
+        #light {
+            top: 25%;
+            left: 27%;
+            width: 70%;
+            height: 100%;
+        }
+        #boxclose {
+            font-size: 65px;
+        }
+        #share {
+            border-radius: 15px;
+        }
+        .static {
+            border-radius: 10px;
+            height: 70px;
+            margin-top: 0px;
+        }
+        .static input {
+            font-size: 26px;
+            padding-left: 20px;
+        }
+        .static button {
+            font-size: 25px;
+        }
+        #share3 {
+            font-size: 40px;
+        }
+        #share2 a img {
+            width: 8%;
+            padding: 10px;
+        }
+        #share4 {
+            height: 110px;
         }
     }
     
@@ -631,18 +680,54 @@
             top: 94%;
             left: 45%;
         }
+        #light {
+            top: 30%;
+            left: 31%;
+        }
+        #boxclose {
+            font-size: 45px;
+        }
+        #share2 a img {
+            width: 11%;
+            padding: 10px;
+        }
+        #share4 {
+            height: 100px;
+        }
     }
     
-    @media screen and (max-width: 1540px) {
+    @media screen and (max-width: 1536px) {
         .text-center {
             top: 94%;
             left: 44%;
+        }
+        #boxclose {
+            font-size: 40px;
+        }
+        #share2 a img {
+            width: 12%;
+            padding: 10px;
         }
         .img {
             position: relative;
             display: inline-block;
             margin-bottom: 13%;
-            margin-top: 0%;
+        }
+        #light {
+            left: 35%;
+        }
+        #share3 {
+            font-size: 30px;
+        }
+        #share4 {
+            height: 84px;
+        }
+        .static input {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        .static button {
+            font-size: 20px;
         }
     }
     
@@ -651,9 +736,32 @@
             top: 80%;
             left: 44%;
         }
+        #light {
+            left: 36%;
+        }
+        #share3 {
+            font-size: 28px;
+        }
+        .static {
+            height: 56px;
+            border-radius: 5px;
+        }
     }
     
-    @media screen and (max-width: 1366px) {}
+    @media screen and (max-width: 1366px) {
+        #light {
+            left: 37%;
+        }
+        #share4 {
+            height: 72px;
+        }
+        .static input {
+            font-size: 17px;
+        }
+        .static button {
+            font-size: 17px;
+        }
+    }
     /*Ipad ngang(1024 x 768)*/
     
     @media screen and (max-width: 1024px) {
@@ -678,11 +786,28 @@
             width: 62px;
         }
         #light {
-            top: 35%;
             left: 35%;
         }
         #share2 a img {
-            width: 15%;
+            width: 16%;
+        }
+        #share4 {
+            height: 63px;
+        }
+        .static button {
+            font-size: 12px;
+        }
+        .static input {
+            font-size: 14px;
+        }
+        .static {
+            height: 50px;
+        }
+        #light {
+            left: 44%;
+        }
+        #share3 {
+            font-size: 20px;
         }
     }
     /*Ipad dọc(768 x 1024)*/
@@ -791,10 +916,25 @@
         }
         #light {
             top: 40%;
-            left: 50%;
+            left: 54%;
         }
-        #VisaChipCardVideo {
+        #share3 {
+            font-size: 16px;
+        }
+        .static {
+            height: 40px;
+        }
+        .static button {
+            font-size: 9px;
+        }
+        .static input {
+            font-size: 12px;
+        }
+        /* #VisaChipCardVideo {
             width: 600px;
+        } */
+        .offvideo {
+            height: 61%;
         }
     }
     /*Tablet nhỏ(480 x 640)*/
@@ -864,11 +1004,11 @@
         }
         #light {
             top: 60%;
-            left: 71%;
+            left: 78%;
         }
-        #VisaChipCardVideo {
+        /* #VisaChipCardVideo {
             width: 400px;
-        }
+        } */
         #share {
             left: 20%;
             width: 62%;
@@ -884,6 +1024,10 @@
             padding: 19px 50px 0 50px;
             padding-bottom: 20px;
         }
+        #light {
+            top: 60%;
+            left: 85%;
+        }
     }
     
     @media screen and (max-width: 414px) {
@@ -898,8 +1042,8 @@
             left: 30%;
         }
         #light {
-            top: 38%;
-            left: 78%;
+            top: 60%;
+            left: 88%;
         }
         #share {
             left: 12%;
@@ -913,9 +1057,9 @@
         #share2 a img {
             width: 20%;
         }
-        #VisaChipCardVideo {
+        /* #VisaChipCardVideo {
             width: 370px;
-        }
+        } */
     }
     
     @media screen and (max-width: 375px) {
@@ -942,12 +1086,12 @@
             top: 162%;
             left: 28%;
         }
-        #VisaChipCardVideo {
+        /* #VisaChipCardVideo {
             width: 353px;
-        }
+        } */
         #light {
-            top: 38%;
-            left: 83%;
+            top: 60%;
+            left: 95%;
         }
         #share {
             left: 14%;
@@ -1035,11 +1179,11 @@
         }
         #light {
             top: 60%;
-            left: 105%;
+            left: 109%;
         }
-        #VisaChipCardVideo {
+        /* #VisaChipCardVideo {
             width: 250px;
-        }
+        } */
         #share3 {
             font-size: 20px;
         }
@@ -1121,11 +1265,11 @@
         }
         #light {
             top: 60%;
-            left: 133%;
+            left: 139%;
         }
-        #VisaChipCardVideo {
+        /* #VisaChipCardVideo {
             width: 200px;
-        }
+        } */
         #share {
             left: 10%;
             width: 80%;

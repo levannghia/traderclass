@@ -1,5 +1,5 @@
-@extends('Sites::findmyclass')
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <div class="titt">
@@ -56,4 +56,5 @@
     </div>
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::findmyclass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\traderclass\app\Modules/Sites/Views/find_my_class/index.blade.php ENDPATH**/ ?>

@@ -737,7 +737,6 @@ footer ul li a svg {
 .create-account.active {
     display: block;
     opacity: 1;
-    z-index: 9;
 }
 
 .create-account h1 {
@@ -1520,7 +1519,7 @@ video {
 
 /*Responsive*/
 
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 2561px) {
     .banner_home .main_item .item-left {
         width: 27%;
     }
@@ -1539,7 +1538,7 @@ video {
     }
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1921px) {
     .banner_home .main_item .item-left {
         width: 33%;
     }
@@ -1548,7 +1547,7 @@ video {
     }
 }
 
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1537px) {
     .banner_home .main_item .item-left {
         width: 50%;
     }
@@ -1560,7 +1559,7 @@ video {
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1441px) {
     .trader_teacher .owl-carousel .item .info {
         top: 76%;
     }
@@ -1575,7 +1574,7 @@ video {
     }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1367px) {
     .trader_teacher .owl-carousel .item .info {
         top: 74%;
     }

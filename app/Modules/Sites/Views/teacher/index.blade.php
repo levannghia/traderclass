@@ -148,10 +148,10 @@
                                 <button type="button" class="btn_subcribe_teacher" id="submit"><p>SUBMIT</p></button> <br>
                                 <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
                                 <label class="contai">
-                                    I agree to receive email updates
-                                    <input type="checkbox" name="agree_chk">
-                                    <span class="checkmarks"></span>
-                                </label>
+                                        I agree to receive email updates
+                                        <input type="checkbox" name="agree_chk">
+                                        <span class="checkmarks"></span>
+                                      </label>
                                 <!-- <input type="checkbox">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
                                 <p class="error_agree mt-1 mb-0" style="color:#EF8D21;display:none"></p>

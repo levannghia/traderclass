@@ -128,9 +128,16 @@
         }
         
         .imt {
+            position: absolute;
+            width: 100%;
+        }
+        
+        .commet {
+            position: relative;
             overflow-x: hidden;
             overflow-y: auto;
-            height: 35%;
+            height: 49%;
+            margin-bottom: 70%;
         }
         
         .imt .com {
@@ -144,6 +151,15 @@
             overflow: hidden;
             border-top: 0px solid #e9ecef;
         }
+        
+        .offvideo {
+            position: absolute;
+            background-color: #66339900;
+            width: 96%;
+            height: 76%;
+            top: 0;
+            display: none;
+        }
         /*Ipad ngang(1024 x 768)*/
         
         @media screen and (max-width: 1024px) {
@@ -155,6 +171,12 @@
             }
             .playpause img {
                 transform: translate(0px, 200%);
+            }
+            .offvideo {
+                position: absolute;
+                background-color: #66339900;
+                width: 96%;
+                height: 45%;
             }
         }
         /*Ipad dọc(768 x 1024)*/
@@ -171,7 +193,8 @@
                 height: 32%;
             }
             .playpause img {
-                transform: translate(0px, 135%);
+                transform: translate(0px, 201%);
+                width: 50px;
             }
             .playpause {
                 height: 38%;
@@ -191,6 +214,21 @@
             .col-md-3 button p {
                 font-size: 11px;
             }
+            .commet {
+                height: 50%;
+                margin-bottom: 90%;
+            }
+            #google {
+                width: 36px;
+                height: 35px;
+            }
+            #google p {
+                text-align: center;
+                padding-top: 6px;
+            }
+            #commet {
+                font-size: 13px;
+            }
         }
         /*Tablet nhỏ(480 x 640)*/
         
@@ -208,11 +246,32 @@
             .playpause {
                 height: 100%;
             }
+            .playpause img {
+                transform: translate(0px, 174%);
+            }
+            .commet {
+                height: 45%;
+                margin-bottom: 130%
+            }
+        }
+        
+        @media screen and(max-width: 425px) {
+            .commet {
+                height: 40%;
+                margin-bottom: 100%;
+            }
         }
         
         @media screen and (max-width: 375px) {
             .col-md-3 button p a {
                 font-size: 11px;
+            }
+            .playpause img {
+                transform: translate(0px, 130%);
+            }
+            .commet {
+                height: 40%;
+                margin-bottom: 100%;
             }
         }
         
@@ -223,8 +282,8 @@
         
         @media screen and (max-width: 320px) {
             .playpause img {
-                transform: translate(0px, 170%);
-                width: 36px;
+                transform: translate(0px, 207%);
+                width: 29px;
             }
             #row {
                 height: 490px;
@@ -232,12 +291,21 @@
             .col-md-3 button p a {
                 font-size: 11px;
             }
+            .commet {
+                height: 30%;
+                margin-bottom: 100%;
+            }
+            
         }
         /*Smart phone nhỏ*/
         
         @media screen and (max-width: 240px) {
             .playpause img {
-                transform: translate(0px, 123%);
-                width: 36px;
+                transform: translate(0px, 168%);
+                width: 25px;
+            }
+            .commet {
+                height: 30%;
+                margin-bottom: 133%;
             }
         }

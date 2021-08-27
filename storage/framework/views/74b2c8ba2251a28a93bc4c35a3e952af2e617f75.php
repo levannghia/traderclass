@@ -291,4 +291,4 @@
     <div id="fade" onClick="lightbox_close();"></div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>
