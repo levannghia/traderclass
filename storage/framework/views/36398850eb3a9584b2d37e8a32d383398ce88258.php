@@ -121,6 +121,7 @@
                 </div>
             </div>
         </div>
+        
     </header>
 <?php endif; ?>
 

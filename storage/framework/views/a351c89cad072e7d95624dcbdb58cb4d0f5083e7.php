@@ -35,7 +35,7 @@
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-   
+    
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/loginto.js?v=<?php echo e(time()); ?>"></script>
     <script src="/public/sites/js/teacher.js"></script>

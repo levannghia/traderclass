@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Facades\DB;
+?>
 @extends('Dashboard::layout')
 @section('title', $row->title)
 @section('content')
@@ -27,8 +30,8 @@
                                             <th>Tên</th>
                                             <th>email</th>
                                             <th>Giới tính</th>
-                                            <th>Phone</th>
-                                            <th>Địa chỉ</th>
+                                            <th>Tên khóa học</th>
+                                            <th>Tên giáo viên</th>   
                                             <th>Trạng thái</th>
                                             <th>Tools</th>
                                         </tr>
@@ -46,8 +49,12 @@
                                             @else
                                             <td>Không xác định</td>
                                             @endif
-                                            <td>{{$value->phone}}</td>
-                                            <td>{{$value->address}}</td>
+                                            <td>{{$value->name}}</td>
+                                            @php
+                                                $teacher_name = DB::table('course')->select('teachers.fullname')->join('teachers','teachers.id', '=', 'course.teacher_id')->where('course.teacher_id',$value->teacher_id)->first();
+                                                // <td>$value->teacher_id</td>
+                                                echo '<td>'.$teacher_name->fullname.'</td>';
+                                            @endphp
                                             <td>
                                                 @if($value->status==2)
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Thùng rác</span>

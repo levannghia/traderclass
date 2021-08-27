@@ -50,4 +50,4 @@
 </body>
 
 </html>
-<?php /**PATH C:\wamp64\traderclass\app\Modules/Dashboard/Views/403/index.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/403/index.blade.php ENDPATH**/ ?>

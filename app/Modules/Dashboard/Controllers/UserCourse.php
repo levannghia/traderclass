@@ -4,6 +4,7 @@ namespace App\Modules\Dashboard\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use App\Modules\Dashboard\Models\Admins_Model;
 use App\Modules\Dashboard\Models\Users_Model;
@@ -16,6 +17,9 @@ class UserCourse extends Controller
 {
 
     public function index($id = 0) {
+        if (!Gate::allows('view', explode("\\", get_class())[4])) {
+            abort(403);
+        }
         $settings = config('global.settings');
         $data = null;
         if (Cookie::get('search_user_course') == "") {
@@ -36,14 +40,14 @@ class UserCourse extends Controller
     public function postIndex($id = 0, Request $request) {
         if (isset($_POST["btn_search"])) {
             Cookie::queue("search_user_course", $request->search, 60);
-            return redirect()->route("admin.class")->with(["type" => "success", "flash_message" => "Tìm kiếm : " . $request->search]);
+            return redirect()->back()->with(["type" => "success", "flash_message" => "Tìm kiếm : " . $request->search]);
         }
     }
 
     public function delete($id = "") {
-        // if (!Gate::allows('delete', explode("\\", get_class())[4])) {
-        //     abort(403);
-        // }
+        if (!Gate::allows('delete', explode("\\", get_class())[4])) {
+            abort(403);
+        }
         $list_id = json_decode($id);
         if (!isset($list_id[0]->id)) {
             return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu để xóa."]);
@@ -77,10 +81,10 @@ class UserCourse extends Controller
     }
 
     public function trash() {
-        // if (!Gate::allows('delete', explode("\\", get_class())[4])) {
-        //     abort(403);
-        // }
-        $data = DB::table('user_course')->select('course.name','user_course.id','users.fullname','email','gender','users.photo','users.phone','users.address','users.status')->join('course','course.id','=','user_course.course_id')->join('users','users.id','=','user_course.user_id')->where('user_course.status',2)->orderBy('users.id', 'desc')->paginate(15);
+        if (!Gate::allows('delete', explode("\\", get_class())[4])) {
+            abort(403);
+        }
+        $data = DB::table('user_course')->select('course.teacher_id','course.name','user_course.id','users.fullname','email','gender','users.photo','users.phone','course.name','user_course.status')->join('course','course.id','=','user_course.course_id')->join('users','users.id','=','user_course.user_id')->where('user_course.status',2)->orderBy('users.id', 'desc')->paginate(15);
         //$data = UserCourse_Model::where("status", 2)->orderBy('id', 'desc')->paginate(15);
         $data->setPath('trash');
         $row = json_decode(json_encode([
@@ -95,7 +99,7 @@ class UserCourse extends Controller
         //xoa mot
         if (count($list_id) == 1) {
            
-            $slide = Admins_Model::find($list_id[0]->id);
+            $slide = UserCourse_Model::find($list_id[0]->id);
             if ($slide->delete()) {
                 return back()->with(["type" => "success", "flash_message" => "Xóa thành công!"]);
             } else {

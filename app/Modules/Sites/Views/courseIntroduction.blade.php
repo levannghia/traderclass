@@ -35,7 +35,7 @@
     @yield('content')
 
     @include('Sites::inc.footer')
-   
+    {{-- @include('Sites::inc.login') --}}
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/loginto.js?v={{time()}}"></script>
     <script src="/public/sites/js/teacher.js"></script>

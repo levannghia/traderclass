@@ -158,6 +158,7 @@
                     <div class="form-group mb-2">
                         <label>Class Name</label>
                         <select class="form-control form-control-sm" name="class_name">
+                            <option value="UserCourse">UserCourse</option>
                             <option value="Advertisement">Advertisement</option>
                             <option value="Privacy">Policy</option>
                             <option value="Home">Home</option>

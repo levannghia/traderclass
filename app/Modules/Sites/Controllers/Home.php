@@ -19,10 +19,6 @@ use Carbon\Carbon;
 class Home extends Controller
 {
 
-    public function __construct()
-    {
-    }
-
     public function index()
     {
         $config_link_youtube = Config_Model::find(6);

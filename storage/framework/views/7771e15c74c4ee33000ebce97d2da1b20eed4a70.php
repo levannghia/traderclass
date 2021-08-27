@@ -1,3 +1,4 @@
+
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
 <div class="row">
@@ -23,39 +24,45 @@
                                     <thead>
                                         <tr>
                                             <th>Hình ảnh</th>
-                                            <th>Tiêu đề</th>
-                                            <th>Link</th>
+                                            <th>Tên</th>
+                                            <th>email</th>
+                                            <th>Giới tính</th>
+                                            <th>Phone</th>
+                                            <th>Địa chỉ</th>
                                             <th>Trạng thái</th>
-                                            <th>Created</th>
-                                            <th>Updated</th>
                                             <th>Tools</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <td class="table-user"><img src='/public/upload/images/blog/large/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
-                                            <td><a href="/<?php echo e(Helper_backend::get_patch()); ?>/<?php echo e(Helper_backend::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->title); ?>"><?php echo e($value->title); ?></a></td>
-                                            <td><?php echo e($value->alias); ?></td>
+                                            <td class="table-user"><img src='/public/upload/images/admins/large/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
+                                            <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->fullname); ?>"><?php echo e($value->fullname); ?></a></td>
+                                            <td><?php echo e($value->email); ?></td>
+                                            <?php if($value->gender): ?>
+                                            <td>Nam</td>
+                                            <?php elseif(!$value->gender): ?>
+                                            <td>Nữ</td>
+                                            <?php endif; ?>
+                                            <td><?php echo e($value->phone); ?></td>
+                                            <td><?php echo e($value->address); ?></td>
                                             <td>
                                                 <?php if($value->status==2): ?>
                                                 <span class="badge bg-soft-danger text-danger shadow-none">Thùng rác</span>
                                                 <?php endif; ?>
                                             </td>
-                                            <td><?php echo e($value->created_at); ?></td>
-                                            <td><?php echo e($value->updated_at); ?></td>
                                             <td>
                                                 <div class="dropdown">
                                                     <button type="button" class="btn btn-blue btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe-settings"></i> <i class="mdi mdi-chevron-down"></i></button>
                                                     <div class="dropdown-menu dropdown-menu-right"  x-placement="bottom-start" >
-                                                        <a class="dropdown-item" href="/<?php echo e(Helper_backend::get_patch()); ?>/<?php echo e(Helper_backend::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>"><i class="fe-edit-2"></i> Chỉnh sửa</a>
+                                                        <a class="dropdown-item" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>"><i class="fe-edit-2"></i> Chỉnh sửa</a>
                                                         <?php if($value->status==1): ?>
-                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_backend::get_patch()); ?>/<?php echo e(Helper_backend::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/0"><i class="fe-lock"></i> Khóa</a>
+                                                        <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/0"><i class="fe-lock"></i> Khóa</a>
                                                         <?php elseif($value->status==0 || $value->status==2): ?>
-                                                        <a class="dropdown-item text-success" href="/<?php echo e(Helper_backend::get_patch()); ?>/<?php echo e(Helper_backend::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/1"><i class="fe-check-circle"></i> Khôi phục</a>
+                                                        <a class="dropdown-item text-success" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/1"><i class="fe-check-circle"></i> Khôi phục</a>
                                                         <?php endif; ?>
                                                         <div class="dropdown-divider"></div>
-                                                        <a class="dropdown-item text-danger" href='/<?php echo e(Helper_backend::get_patch()); ?>/<?php echo e(Helper_backend::get_patch(2)); ?>/trash/delete/[{"id":<?php echo e($value->id); ?>}]'><i class="fe-trash-2"></i> Xóa</a>
+                                                        <a class="dropdown-item text-danger" href='/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/trash/delete/[{"id":<?php echo e($value->id); ?>}]'><i class="fe-trash-2"></i> Xóa</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -81,4 +88,4 @@
     </div>
 </form>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules\Dashboard\Views\blog\trash.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/admin/trash.blade.php ENDPATH**/ ?>

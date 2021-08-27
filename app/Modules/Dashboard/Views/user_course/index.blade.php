@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/trash" class="btn btn-blue btn-sm ml-2">
+                        <a href="/{{Helper_Dashboard::get_patch()}}/Class/trash" class="btn btn-blue btn-sm ml-2">
                             <i class="fe-trash"></i>
                         </a>
                         <a href="javascript: window.location.reload();" class="btn btn-blue btn-sm ml-2">

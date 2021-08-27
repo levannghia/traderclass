@@ -250,3 +250,20 @@ function reset_password() {
     reset_password.classList.toggle('active');
     log_in.classList.remove('active');
 }
+
+function close_popup() {
+    var header = document.querySelector('header');
+    var banner = document.querySelector('.banner_home');
+    var create_account = document.querySelector('.create-account');
+    var sidebar = document.querySelector('#sidebar');
+    var log_in = document.querySelector('.log-in');
+    var reset_password = document.querySelector('.reset-password');
+
+    header.classList.remove('active');
+    banner.classList.remove('active');
+    create_account.classList.remove('active');
+    log_in.classList.remove('active');
+    reset_password.classList.remove('active');
+    sidebar.style.display = "none";
+    closeSidebar();
+}

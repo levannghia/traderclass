@@ -76,10 +76,10 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 // Route::post("edit/{id}", ["as" => "admin.users.postEdit", "uses" => "Users@postEdit"]);
                 Route::get("status/{id}/{status}", ["as" => "admin.teacher.status", "uses" => "UserCourse@status"]);
                 Route::get("delete/{id}", ["as" => "admin.class.delete", "uses" => "UserCourse@delete"]);
-                Route::get("trash", ["as" => "admin.class.trash", "uses" => "Teachers@index"]);
-                Route::get("trash/delete/{id}", ["as" => "admin.class.trash", "uses" => "UserCourse@trashDelete"]);
+                Route::get("trash2", ["as" => "admin.class.trash", "uses" => "Users@index"]);
+                Route::get("trash/delete/{id}", ["as" => "admin.class.trash", "uses" => "UserCourse@trashDelete"]);  
             });
-
+            Route::get("Class/trash", ["as" => "admin.class.trash", "uses" => "UserCourse@trash"]);
 
             //RolePermission
             Route::group(["prefix" => "role-permission"], function() {

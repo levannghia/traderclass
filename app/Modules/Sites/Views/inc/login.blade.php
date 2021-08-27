@@ -15,6 +15,7 @@
 <!-- -------------create account--------------- -->
 <div class="create-account">
     <h1>Create Account</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
@@ -44,6 +45,7 @@
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
     <h1>Log In</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
@@ -128,6 +130,7 @@
     <form action=" {{route('users.forgot')}}" method="post">    
     @csrf
     <h1>Reset Password</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <button class="btn-create">SEND EMAIL</button>
