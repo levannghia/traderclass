@@ -65,6 +65,22 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::post("edit/{id}", ["as" => "admin.role.postEdit", "uses" => "Role@postEdit"]);
             });
 
+
+             //userCourse
+             Route::group(["prefix" => "class"], function() {
+                Route::get("/{id}", ["as" => "admin.class", "uses" => "UserCourse@index"]);
+                Route::post("/{id}", ["as" => "admin.class", "uses" => "UserCourse@postIndex"]);
+                // Route::get("add", ["as" => "admin.getAdd", "uses" => "Users@add"]);
+                // Route::post("add", ["as" => "admin.postAdd", "uses" => "Users@postAdd"]);
+                // Route::get("edit", ["as" => "admin.users.Edit", "uses" => "Users@edit"]);
+                // Route::post("edit/{id}", ["as" => "admin.users.postEdit", "uses" => "Users@postEdit"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.teacher.status", "uses" => "UserCourse@status"]);
+                Route::get("delete/{id}", ["as" => "admin.class.delete", "uses" => "UserCourse@delete"]);
+                Route::get("trash", ["as" => "admin.class.trash", "uses" => "Teachers@index"]);
+                Route::get("trash/delete/{id}", ["as" => "admin.class.trash", "uses" => "UserCourse@trashDelete"]);
+            });
+
+
             //RolePermission
             Route::group(["prefix" => "role-permission"], function() {
                 Route::get("/{id}", ["as" => "admin.rolePermission", "uses" => "RolePermission@index"]);
@@ -91,6 +107,8 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("status/{id}/{status}", ["as" => "admin.teacher.status", "uses" => "Teachers@status"]);
                 Route::get("/trash", ["as" => "admin.teacher.trash", "uses" => "Teachers@trash"]);
                 Route::get("/trash/delete/{id}", ["as" => "admin.teacher.trash", "uses" => "Teachers@trashDelete"]);
+                Route::get("/course/delete/{id}", ["as" => "admin.course.delete", "uses" => "Teachers@courseDelete"]);
+                Route::get("/course/status/{id}/{status}", ["as" => "admin.course.status", "uses" => "Teachers@courseStatus"]);
             });
 
             //testimonials

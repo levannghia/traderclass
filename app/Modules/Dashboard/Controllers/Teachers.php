@@ -11,16 +11,11 @@ use Illuminate\Support\Facades\Gate;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Modules\Dashboard\Rules\Permission;
 use Illuminate\Support\Facades\Auth;
+use App\Modules\Dashboard\Models\Course_Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
 
 class Teachers extends Controller{
-
-    public function __construct()
-    {
-        //$className = explode("\\", get_class())[4];
-       
-    }
 
     public function index(){
         $data = null;
@@ -101,11 +96,12 @@ class Teachers extends Controller{
         $settings = config('global.settings');
         // $list_category = BlogCategory_Model::whereIn("status", [0, 1])->orderBy('id', 'desc')->get();
         $data = Teachers_Model::find($id);
+        $list_course = DB::table('course')->select('name','title','course.id','course.status','course.photo','course.created_at','course.updated_at')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->where('course.teacher_id',$id)->get();
         $row = json_decode(json_encode([
             "title" => "Teacher - Cập nhật",
             "desc" => "Cập nhật",
         ]));
-        return view("Dashboard::teacher.edit", compact("row", "data", "settings"));
+        return view("Dashboard::teacher.edit", compact("row", "data", "settings","list_course"));
     }
 
     public function postEdit(Request $request, $id = 0) {
@@ -229,4 +225,43 @@ class Teachers extends Controller{
             }
         }
     }
+
+    public function courseDelete($id = "") {
+        if (!Gate::allows('delete', explode("\\", get_class())[4])) {
+            abort(403);
+        }
+        $list_id = json_decode($id);
+        //var_dump($list_id);
+        //die();
+        if (!isset($list_id[0]->id)) {
+            return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu để xóa."]);
+        }
+        if (count($list_id) == 1 && isset($list_id[0]->id)) {
+            $course = Course_Model::find($list_id[0]->id);
+            $course->status = 2; //2 is trash
+            if ($course->save()) {
+                return redirect()->back()->with(["type" => "success", "flash_message" => "Đã di chuyển vào thùng rác!"]);
+            } else {
+                return back()->withInput()->with(["type" => "danger", "flash_message" => "Đã xảy ra lỗi, vui lòng thử lại."]);
+            }
+        } else {
+            foreach ($list_id as $key => $value) {
+                $course = Course_Model::find($value->id);
+                $course->status = 2; //2 is trash
+                $course->save();
+            }
+            return redirect()->back()->with(["type" => "success", "flash_message" => "Đã di chuyển vào thùng rác!"]);
+        }
+    }
+
+    public function courseStatus($id = 0, $status = 0) {
+        $course = Course_Model::find($id);
+        $course->status = $status;
+        if ($course->save()) {
+            return redirect()->back()->with(["type" => "success", "flash_message" => "Cập nhật thành công!"]);
+        } else {
+            return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu nào được cập nhật"]);
+        }
+    }
+
 }

@@ -5,7 +5,7 @@
         <div class="img">
             <img src="/public/upload/images/course/thumb/<?php echo e($course->photo); ?>" width="100%" alt="">
             <div class="text-center">
-                <div style="display: grid;"><span id="a"><?php echo e($teacher->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($teacher->position); ?></span></div>
+                <div style="display: grid;"><span id="a"><?php echo e($course->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($course->position); ?></span></div>
                 <div class="info">
                     <div class="share">
                         <a href="#" onclick="lightbox_open('/public/sites/mp4/Teacher1.mp4');">
@@ -22,7 +22,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="<?php echo e(url('/register/'.$teacher->id)); ?>" style="color: white;">
+                        <a href="<?php echo e(url('/register/'.$course->id)); ?>" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -41,7 +41,7 @@
                 <div class="col-md-8">
                     <div class="youtube wrappe" onclick="playvideo()">
                         
-                            <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         
                         
                     </div>
@@ -119,7 +119,7 @@
             <div class="member" id="Related">
                 <p id="memb">Members who liked this class also liked</p>
                 <div class="row">
-                <?php $__currentLoopData = $list_teacher; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $list_course; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-2">
                         <a href="/teacher/<?php echo e($value->id); ?>">
                             <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">

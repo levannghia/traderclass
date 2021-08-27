@@ -16,14 +16,13 @@ class Teacher extends Controller
 {
     public function index($id)
     {
-        $list_teacher = Teachers_Model::orderBy('id', 'desc')->limit(6)->get();
-        $teacher = Teachers_Model::find($id);
-        $course = DB::table('course')->where('teacher_id',$id)->first();
+        $list_course = DB::table('course')->select('teachers.fullname', 'teachers.position','course.id', 'teachers.photo','course.course_category_id','course.name')->join('teachers','teachers.id','=','course.teacher_id')->whereIn('course.status',[0,1])->limit(6)->get();
+        $course = DB::table('course')->select('teachers.fullname', 'teachers.position','teachers.id', 'course.photo','course.course_category_id','course.video_id','course.created_at','course.updated_at','course.name')->join('teachers','teachers.id','=','course.teacher_id')->where('course.id',$id)->first();
         $faq = Faq_Model::orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
-            "title" => $teacher->fullname,
+            "title" => $course->fullname,
         ]));
-        return view('Sites::teacher.index',compact('row','teacher','list_teacher','faq','course'));
+        return view('Sites::teacher.index',compact('row', 'list_course','faq','course'));
     }
 
     public function postSubcribe(Request $request)

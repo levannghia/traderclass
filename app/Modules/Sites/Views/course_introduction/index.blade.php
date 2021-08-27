@@ -13,7 +13,7 @@
                     {{-- <video class="video" controls>
                     <source src="/public/sites/mp4/Teacher1.mp4" type="video/mp4">
                   </video> --}}
-                  <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     {{-- <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div> --}}
                 </div>
             </div>

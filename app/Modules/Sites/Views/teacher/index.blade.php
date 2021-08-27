@@ -5,7 +5,7 @@
         <div class="img">
             <img src="/public/upload/images/course/thumb/{{$course->photo}}" width="100%" alt="">
             <div class="text-center">
-                <div style="display: grid;"><span id="a">{{ $teacher->fullname }}</span> <span id="b">-</span> <span id="c">{{ $teacher->position }}</span></div>
+                <div style="display: grid;"><span id="a">{{ $course->fullname }}</span> <span id="b">-</span> <span id="c">{{ $course->position }}</span></div>
                 <div class="info">
                     <div class="share">
                         <a href="#" onclick="lightbox_open('/public/sites/mp4/Teacher1.mp4');">
@@ -22,7 +22,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="{{url('/register/'.$teacher->id)}}" style="color: white;">
+                        <a href="{{url('/register/'.$course->id)}}" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -41,7 +41,7 @@
                 <div class="col-md-8">
                     <div class="youtube wrappe" onclick="playvideo()">
                         {{-- <video src="" class="video"> --}}
-                            <iframe class="video" width="730" height="400" src="http://www.youtube.com/embed/{{$course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/{{ $course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         {{-- </video> --}}
                         {{-- <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div> --}}
                     </div>
@@ -119,7 +119,7 @@
             <div class="member" id="Related">
                 <p id="memb">Members who liked this class also liked</p>
                 <div class="row">
-                @foreach ($list_teacher as $value)
+                @foreach ($list_course as $value)
                     <div class="col-md-2">
                         <a href="/teacher/{{$value->id}}">
                             <img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
