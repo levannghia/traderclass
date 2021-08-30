@@ -43,7 +43,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css" rel="stylesheet">
-    <link href="/public/sites/css/index2.css?v={{time()}}" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v={{time()}}" rel="stylesheet">
   
     <script src="/public/sites/js/reset.js"></script>
     
