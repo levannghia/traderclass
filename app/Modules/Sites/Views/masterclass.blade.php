@@ -37,7 +37,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     
     <link rel="stylesheet" href="/public/sites/css/style.css">
-    <link rel="stylesheet" href="/public/sites/css/MasterClass.css" />
+    <link rel="stylesheet" href="/public/sites/css/MasterClass.css?v={{ time() }}" />
     <link href="/public/sites/css/reset.css?v={{ time() }}" rel="stylesheet">
     <script src="/public/sites/js/js.js"></script>
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">

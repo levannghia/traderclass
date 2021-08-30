@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Facades\DB;
+?>
 
 <?php $__env->startSection('content'); ?>
     <section class="banner_home">
@@ -68,7 +71,10 @@
                     <div class="info">
                         <p class="name"><?php echo e($value->fullname); ?></p>
                         <p class="class_name"><?php echo e($value->position); ?></p>
-                        <button><a href="/teacher/<?php echo e($value->id); ?>"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
+                        <?php
+                            $course_id = DB::table('course')->select('course.id')->join('teachers','teachers.id','=','course.teacher_id')->where('teachers.id',$value->id)->first();
+                        ?>
+                        <button><a href="/teacher/<?php echo e($course_id->id); ?>"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
                     </div>
                     <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="" />
                 </div>

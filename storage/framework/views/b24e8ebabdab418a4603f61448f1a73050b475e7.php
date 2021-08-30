@@ -12,7 +12,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
-    <link href="/public/sites/css/index2.css" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/findmyclass.js"></script>
@@ -28,6 +28,7 @@
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
     <?php echo $__env->make('Sites::inc.login', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <script src="/public/sites/js/teacher.js"></script>
@@ -36,7 +37,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="/public/sites/js/wow.min.js" type="text/javascript"></script>
     <script src="/public/sites/vendor/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="/public/sites/js/app.js?v=1" type="text/javascript"></script>
+    
+    <?php echo $__env->make('Sites::inc.script', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 </html><?php /**PATH C:\wamp64\www\traderclass\app\Modules/Sites/Views/findmyclass.blade.php ENDPATH**/ ?>
