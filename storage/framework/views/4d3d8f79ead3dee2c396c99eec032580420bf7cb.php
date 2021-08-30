@@ -43,7 +43,11 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css" rel="stylesheet">
+    <?php if(Auth::check()): ?>
+    <link href="/public/sites/css/index3.css?v=<?php echo e(time()); ?>" rel="stylesheet">
+    <?php else: ?>
     <link href="/public/sites/css/index.css?v=<?php echo e(time()); ?>" rel="stylesheet">
+    <?php endif; ?>
   
     <script src="/public/sites/js/reset.js"></script>
     
@@ -58,8 +62,12 @@
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php if(!Auth::check()): ?>
     <?php echo $__env->make('Sites::inc.login', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php endif; ?>
    
+  
+ 
         <!-- CDN ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
