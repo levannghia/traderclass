@@ -998,6 +998,7 @@ footer ul li a svg {
     font-weight: 500;
     font-style: normal;
     font-size: 12px;
+    color: #000000;
 }
 
 .signup-input {
@@ -1534,7 +1535,7 @@ video {
     }
     .fsearch {
         margin-left: 20px;
-        margin-right: 0px;
+        margin-right: 20px;
     }
     header .header_bottom {
         margin-bottom: 0px;

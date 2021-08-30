@@ -5,7 +5,16 @@
     box-sizing: border-box;
 }
 
-body,
+.banner,
+a {
+    color: white!important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none!important;
+}
+.explore,
 a {
     color: white!important;
     font-family: 'Poppins', sans-serif;

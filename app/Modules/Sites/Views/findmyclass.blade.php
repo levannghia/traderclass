@@ -12,7 +12,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
-    <link href="/public/sites/css/index2.css?v={{time()}}" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v={{time()}}" rel="stylesheet">
     
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/findmyclass.js"></script>

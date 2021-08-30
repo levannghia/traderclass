@@ -33,7 +33,7 @@
     <button class="btn-create">CREATE ACCOUNT</button>
     </form>
     <div class="sign-in">
-        <p>Already have an account? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign in.</a></p>
+        <p>Already have an account? <a onclick="sign_in()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Sign in.</a></p>
     </div>
     <div class="text" style="margin-top: 20px!important;">
         <p>By logging in, you agree to our <br>
@@ -58,10 +58,10 @@
     <button class="btn-create" style="margin-top: 30px;">LOG IN</button>
     </form>
     <div class="sign-in">
-        <p>Need an account? <a onclick="toggle()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign up.</a></p>
+        <p>Need an account? <a onclick="toggle()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Sign up.</a></p>
     </div>
     <div class="text" style="margin-top: 30px!important;">
-        <a onclick="reset_password()" style="cursor: pointer;text-decoration: underline;">
+        <a onclick="reset_password()" style="cursor: pointer ;text-decoration: underline !important;">
             <p style="color: #A7A9AC;">Forgot your password?</p>
         </a>
     </div>
@@ -136,7 +136,7 @@
     <button class="btn-create">SEND EMAIL</button>
     </form>
     <div class="sign-in">
-        <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Log In.</a></p>
+        <p>Remember your password? <a onclick="sign_in()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Log In.</a></p>
     </div>
 </div>
 </html>

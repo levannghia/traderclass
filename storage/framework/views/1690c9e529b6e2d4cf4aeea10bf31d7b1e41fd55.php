@@ -16,6 +16,7 @@
 <!-- -------------create account--------------- -->
 <div class="create-account">
     <h1>Create Account</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
@@ -33,7 +34,7 @@
     <button class="btn-create">CREATE ACCOUNT</button>
     </form>
     <div class="sign-in">
-        <p>Already have an account? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign in.</a></p>
+        <p>Already have an account? <a onclick="sign_in()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Sign in.</a></p>
     </div>
     <div class="text" style="margin-top: 20px!important;">
         <p>By logging in, you agree to our <br>
@@ -45,6 +46,7 @@
 <!-- -----------------log-in-------------------- -->
 <div class="log-in">
     <h1>Log In</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <button class="btn-google"><a onclick="loginGoogle()">SIGN UP WITH GOOGLE</a></button>
     <button class="btn-facebook"><a onclick="loginFacebook()">SIGN UP WITH FACEBOOK</a></button>
     <div class="signup-or"><span style="font-size: 11px;">OR</span></div>
@@ -57,10 +59,10 @@
     <button class="btn-create" style="margin-top: 30px;">LOG IN</button>
     </form>
     <div class="sign-in">
-        <p>Need an account? <a onclick="toggle()" style="color: #000000;cursor: pointer;text-decoration: underline;">Sign up.</a></p>
+        <p>Need an account? <a onclick="toggle()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Sign up.</a></p>
     </div>
     <div class="text" style="margin-top: 30px!important;">
-        <a onclick="reset_password()" style="cursor: pointer;text-decoration: underline;">
+        <a onclick="reset_password()" style="cursor: pointer ;text-decoration: underline !important;">
             <p style="color: #A7A9AC;">Forgot your password?</p>
         </a>
     </div>
@@ -129,12 +131,13 @@
     <form action=" <?php echo e(route('users.forgot')); ?>" method="post">    
     <?php echo csrf_field(); ?>
     <h1>Reset Password</h1>
+    <i class="fas fa-times close-popup" onclick="close_popup()"></i>
     <label class="signup-label" style="display: flex;margin-left: 20px;margin-top: 20px;">Email</label>
     <input type="email" name="email" class="signup-input">
     <button class="btn-create">SEND EMAIL</button>
     </form>
     <div class="sign-in">
-        <p>Remember your password? <a onclick="sign_in()" style="color: #000000;cursor: pointer;text-decoration: underline;">Log In.</a></p>
+        <p>Remember your password? <a onclick="sign_in()" style="color: #000000 !important;cursor: pointer;text-decoration: underline !important;">Log In.</a></p>
     </div>
 </div>
 </html>

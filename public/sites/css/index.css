@@ -6,7 +6,7 @@ a:hover {
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    background-color: #171921;
+    background-color: #171921 ;
 }
 
 body.active~.create-account.active {
@@ -1534,7 +1534,7 @@ video {
     }
     .fsearch {
         margin-left: 20px;
-        margin-right: 0px;
+        margin-right: 20px;
     }
 }
 
