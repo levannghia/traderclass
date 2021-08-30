@@ -12,7 +12,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <?php if(!Auth::check()): ?>
-    <link href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>" rel="stylesheet">
+    <link href="/public/sites/css/index3.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <?php endif; ?>
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
     <script src="/public/sites/js/js.js"></script>

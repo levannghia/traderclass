@@ -869,7 +869,7 @@ footer ul li a svg {
 }
 
 .checkmark {
-    top: 377px!important;
+    top: 394px!important;
     border: 0.5px solid #323741;
     position: absolute;
     height: 25px;
@@ -1545,6 +1545,9 @@ video {
     video {
         width: 100%;
     }
+    header .header_bottom .main .right_nav {
+        width: 41%;
+    }
 }
 
 @media screen and (max-width: 1537px) {
@@ -1555,7 +1558,7 @@ video {
         width: 100%;
     }
     header .header_bottom .main .right_nav {
-        width: 31%;
+        width: 41%;
     }
 }
 

@@ -16,7 +16,7 @@
     <!-- Frontawesome -->
    
     <!-- Lity -->
-    <link href="dist/lity.css" rel="stylesheet" />
+    <link href="/public/sites/dist/lity.css" rel="stylesheet" />
 
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
@@ -37,7 +37,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     
     <link rel="stylesheet" href="/public/sites/css/style.css">
-    <link rel="stylesheet" href="/public/sites/css/MasterClass.css" />
+    <link rel="stylesheet" href="/public/sites/css/MasterClass.css?v=<?php echo e(time()); ?>" />
     <link href="/public/sites/css/reset.css?v=<?php echo e(time()); ?>" rel="stylesheet">
     <script src="/public/sites/js/js.js"></script>
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
@@ -72,8 +72,8 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         
-        <script src="vendor/jquery.js"></script>
-        <script src="dist/lity.js"></script>
+        <script src="/public/sites/vendor/jquery.js"></script>
+        <script src="/public/sites/dist/lity.js"></script>
         <script src="/public/sites/js/MasterClass.js"></script>
         <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
         <script src="/public/sites/js/bootstrap.min.js" type="text/javascript"></script>

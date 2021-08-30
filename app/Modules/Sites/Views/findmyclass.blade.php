@@ -12,7 +12,7 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     @if (!Auth::check())
-    <link href="/public/sites/css/index2.css?v={{time()}}" rel="stylesheet">
+    <link href="/public/sites/css/index3.css?v={{time()}}" rel="stylesheet">
     @endif
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
     <script src="/public/sites/js/js.js"></script>
