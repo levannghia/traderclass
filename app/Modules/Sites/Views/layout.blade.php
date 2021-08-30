@@ -25,19 +25,23 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:image:alt" content="">
-    {{-- @if (Auth::check())
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    @else --}}
+    <link href="/public/sites/css/style.css?v={{ time() }}" rel="stylesheet">
+    @if (Auth::check())
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
-    {{-- @endif --}}
+    <link href="/public/sites/css/index3.css?v={{ time() }}" rel="stylesheet">
+    @else
+    <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/sites/css/index.css?v={{ time() }}" rel="stylesheet">
+    @endif
     <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="/public/sites/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
-    <link href="/public/sites/css/style.css?v={{ time() }}" rel="stylesheet">
-    <link href="/public/sites/css/index.css?v={{ time() }}" rel="stylesheet">
+    
+   
     <link rel="stylesheet" href="/public/sites/css/terms.css">
     <link rel="stylesheet" href="/public/sites/css/privacy.css">
     <link rel="stylesheet" href="/public/sites/css/Return&RefundPolicy.css">
