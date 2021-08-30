@@ -46,7 +46,6 @@
     margin-left: 4px;
     width: 122px;
     text-align: center;
-    margin-top: 12px;
 }
 
 #price {
@@ -430,10 +429,159 @@
     width: 30%;
 }
 
+.bankk .row .col-md-4 div i {
+    content: "\f00c";
+    position: absolute;
+    background-color: #21ef27;
+    width: 14%;
+    height: 33%;
+    right: 0;
+    top: 0;
+    border-radius: 14px;
+    font-family: "Font Awesome 5 pro";
+    font-weight: 900;
+    color: #fefffe;
+    display: none;
+}
+
+.tic {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 90% !important;
+    background-color: rgba(240, 255, 255, 0) !important;
+    display: none;
+}
+
+#choo p {
+    margin-bottom: 0;
+    color: #EF8D21;
+    font-weight: 500;
+}
+
+#choo button {
+    background-color: white;
+    border: 0;
+}
+
+#promo {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 40%;
+    background: #FFF;
+    z-index: 1002;
+    overflow: visible;
+    border-radius: 5px;
+}
+
+#promo2 {
+    padding: 20px;
+}
+
+#promo4 input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #a8a6a6;
+    border-radius: 3px;
+    margin-bottom: 14px;
+    padding: 10px;
+}
+
+#promo5 {
+    display: grid;
+}
+
+#promo5 button {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #c1bebe;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#promo5 button:hover {
+    background-color: #EF8D21;
+    border: 1px solid #EF8D21;
+}
+
+#promo6 {
+    float: right;
+    margin: 40px 0 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#promo6 button {
+    width: 14%;
+    height: 35px;
+}
+
+#back {
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+#save {
+    color: black;
+    background-color: #EF8D21;
+    border: 0;
+    border-radius: 3px;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+#boxclose {
+    float: right;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 3px;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+}
+
+.boxclose:before {
+    content: "×";
+}
+
+#fade:hover~#boxclose {
+    display: none;
+}
+
 
 /*Ipad ngang(1024 x 768)*/
 
 @media screen and (max-width: 1024px) {
+    #is {
+        width: 63%;
+    }
     .unn {
         width: 40%;
         margin-right: 12px;
@@ -485,6 +633,14 @@
     #sav {
         font-size: 14px;
     }
+    .bankk .row .col-md-4 div i {
+        width: 17%;
+        height: 32%;
+        font-size: 13px;
+    }
+    .tic {
+        padding: 0px !important;
+    }
 }
 
 
@@ -498,10 +654,10 @@
         font-size: 14px;
     }
     .un img {
-        width: 40%;
+        width: 35%;
     }
     .buy {
-        width: 90px;
+        width: 80px;
     }
     #price {
         font-size: 12px;
@@ -522,8 +678,12 @@
         margin-right: 14px;
     }
     .un #yo2 {
-        font-size: 13px;
-        font-weight: 500;
+        font-size: 11px;
+        font-weight: 700;
+    }
+    #cl_name {
+        font-weight: 400;
+        font-size: 12px;
     }
     #pre {
         color: #A7A9AC;
@@ -531,7 +691,7 @@
         font-weight: bold;
     }
     #is {
-        width: 55%;
+        width: 51%;
         display: flex;
     }
     .bue p {
@@ -565,7 +725,7 @@
     }
     #sav {
         color: red;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: bold;
     }
     #choo {
@@ -605,6 +765,18 @@
         border-radius: .25rem;
         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
+    .bankk .row .col-md-4 div i {
+        width: 16%;
+        height: 25%;
+        font-size: 10px;
+    }
+    .tic {
+        width: 80% !important;
+    }
+    #promo {
+        left: 20%;
+        width: 60%;
+    }
 }
 
 
@@ -632,7 +804,7 @@
         font-size: 12px;
     }
     #is {
-        width: 68%;
+        width: 66%;
         display: flex;
         font-size: 16px;
     }
@@ -689,6 +861,98 @@
         width: 40%;
         padding-bottom: -10px;
     }
+    .buy {
+        width: 95px;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 6%;
+        height: 30%;
+        right: 30px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 42px;
+    }
+    #promo {
+        left: 15%;
+        width: 70%;
+    }
+    #promo6 button {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .un #yo2,
+    #price {
+        font-size: 14px;
+    }
+    #cl_name {
+        font-size: 12px;
+    }
+    #pre,
+    #sav {
+        font-size: 11px;
+    }
+    #is {
+        width: 59%;
+        display: flex;
+        font-size: 16px;
+    }
+    .buyy p {
+        background-color: #EF8D21;
+        padding: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+    .suu img {
+        width: 48%;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 8%;
+        height: 32%;
+        right: 25px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 35px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .un #yo2,
+    #price {
+        font-size: 12px;
+    }
+    #is {
+        width: 53%;
+    }
+    .buyy p {
+        font-size: 7px;
+    }
+    .suu img {
+        width: 38%;
+    }
+    .suu label {
+        width: 35%;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 9%;
+        height: 32%;
+        right: 22px;
+        font-size: 16px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 35px;
+    }
+    #promo6 button {
+        width: 23%;
+    }
 }
 
 
@@ -724,10 +988,11 @@
         width: 34%;
     }
     .un #yo2 {
-        font-size: 14px;
+        font-size: 13px;
     }
     .buy {
-        margin-left: 0;
+        width: 95px;
+        margin-left: 0px;
     }
     #cl_name {
         font-size: 13px;
@@ -751,7 +1016,7 @@
         font-size: 11px;
     }
     #is {
-        width: 50%;
+        width: 46%;
         display: flex;
     }
     #choo {
@@ -811,12 +1076,34 @@
     .suu label {
         width: 45%;
     }
+    .bankk .row .col-md-4 div i {
+        width: 9%;
+        height: 32%;
+        right: 17px;
+        font-size: 14px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 24px;
+    }
+    #promo6 button {
+        width: 30%;
+    }
 }
 
 
 /*Smart phone nhỏ*/
 
 @media screen and (max-width: 240px) {
+    #promo6 button {
+        width: 40%;
+    }
+    #promo2 {
+        padding: 15px;
+    }
+    #choo {
+        margin-top: -5px;
+    }
     .container {
         width: 90%;
         padding-right: 10px;
@@ -832,12 +1119,12 @@
         border-top-right-radius: 3px;
     }
     #pre {
-        font-size: 8px;
+        font-size: 10px;
         font-weight: bold;
     }
     #sav {
         color: red;
-        font-size: 7px;
+        font-size: 10px;
         font-weight: bold;
     }
     .un #yo {
@@ -854,7 +1141,10 @@
     }
     .un #yo2 {
         font-size: 8px;
-        font-weight: 500;
+        font-weight: 700;
+    }
+    #cl_name {
+        font-size: 10px;
     }
     .buy {
         margin-left: 0;
@@ -879,12 +1169,12 @@
         font-size: 11px;
     }
     #is {
-        width: 45%;
+        width: 40%;
         display: flex;
     }
     #choo {
         font-size: 8px;
-        padding-top: 2px;
+        padding-top: 6px;
         font-weight: 700;
     }
     .pann button {
@@ -904,18 +1194,11 @@
         border-radius: 5px;
         margin-right: 5px;
         width: 50%;
-        font-size: 8px;
+        font-size: 7px;
     }
     .unn #yo {
-        font-size: 9px;
+        font-size: 8px;
         font-weight: 700;
-    }
-    .buyy p {
-        background-color: #EF8D21;
-        padding: 4px;
-        border-radius: 5px;
-        margin-right: 5px;
-        font-size: 4px;
     }
     .buyy p {
         background-color: #EF8D21;
@@ -923,7 +1206,7 @@
         padding-top: 3px;
         border-radius: 2px;
         margin-right: 1px;
-        font-size: 6px;
+        font-size: 5px;
     }
     .pan {
         padding: 20px;
@@ -958,7 +1241,7 @@
         padding-top: 15px;
     }
     .suu img {
-        width: 50%;
+        width: 40%;
     }
     .bankk {
         background-color: #F2F2F2;
@@ -1024,5 +1307,15 @@
     .suu label {
         width: 30%;
         height: 20px;
+    }
+    .bankk .row .col-md-4 div i {
+        width: 13%;
+        height: 33%;
+        right: 13px;
+        font-size: 15px;
+    }
+    .tic {
+        width: 77% !important;
+        left: 18px;
     }
 }

@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/sites/css/style.css?v={{time()}}">
     @if (Auth::check())
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     @else
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/sites/css/index2.css?v={{time()}}">
     @endif
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/style.css?v={{time()}}">
-    <link rel="stylesheet" href="/public/sites/css/index2.css?v={{time()}}">
+    
+    
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/Course Introduction.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/Log into.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/register.css?v={{time()}}">
-    <link rel="stylesheet" href="/public/sites/css/Course selection.css">
+    <link rel="stylesheet" href="/public/sites/css/Course selection.css?v={{time()}}">
+    <link rel="stylesheet" href="/public/sites/css/ecash.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
     <!--Icon-->
@@ -36,6 +39,7 @@
 
     @include('Sites::inc.footer')
     {{-- @include('Sites::inc.login') --}}
+    <script src="/public/sites/js/ecash.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/loginto.js?v={{time()}}"></script>
     <script src="/public/sites/js/teacher.js"></script>

@@ -1,0 +1,210 @@
+.ecash{
+    margin-top: 15px;
+}
+.logo-ecash{
+    background: #d6d6d6;
+    text-align: center;
+    padding-top: 5px;
+    width: 140px;
+    height: 65px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* modal boxes */
+.li-pa{
+    border: 1px solid #b7b5b5;
+    margin-bottom: 5px;
+}
+.lef-details{
+    font-weight: 500;
+}
+.price-details{
+    display: flex;
+}
+.price{
+    padding: 0 5px;
+    color: #04B034;
+}
+.name-money{
+    font-weight: 500;
+    text-align: center;
+}
+.send-below{
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.address-details{
+    font-weight: 500;
+}
+.arcode{
+  margin-bottom: 0%;
+  padding: 1% 2%;
+}
+#ic-copy{
+  margin-top: 2%;
+  margin-left: 14%;
+  margin-right: 2%;
+  cursor: pointer;
+}
+.link-code{
+    display: flex;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-bottom: 5%;
+}
+.link-code img{
+  margin-top: 2px;
+}
+#pay-send{
+  background-color: #1E4695;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1% 37%;
+}
+
+/* modal */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 1000;
+    overflow: auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+.popup-content{
+    position: relative;
+    background: #fff;
+    width: 33%;
+    max-height: 75%;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    top: 23%;
+}
+.popup-close{
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+.popup-close:hover, .popup-close:focus{
+    color: #00000080;
+}
+
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {
+    .logo-ecash{
+        max-width: 130px;
+        height: 80px;
+    }
+    .popup-content{
+        top: 5%;
+        width: 45%;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .logo-ecash{
+        width: 87px;
+        margin-left: -20%;
+    }
+    .popup-content{
+        min-width: 58%;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .logo-ecash{
+        margin-left: 0;
+        min-width: 100%;
+    }
+    .popup-content{
+        width: 80%;
+    }
+    .arcode{
+        font-size: 12px;
+    }
+    #ic-copy{
+        margin-left: 18%;
+    }
+    #pay-send{
+        padding: 5px 110px;
+    }
+}
+
+/* */
+@media screen and (max-width: 414px) {
+    #ic-copy{
+        margin-left: 12px;
+    }
+    #pay-send{
+        padding: 2% 31%;
+    }
+}
+
+/* */
+@media screen and (max-width: 375px) {
+    .link-code{
+        margin-left: -15px;
+        width: 114%;
+    }
+    #pay-send{
+        padding: 2% 29%;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {
+    .popup-content{
+        max-height: 80%;
+    }
+    .arcode{
+        font-size: 10px;
+        margin: auto 0;
+    }
+    #ic-copy{
+        margin-left: 0;
+    }
+    #pay-send{
+        padding: 1% 23%;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {
+    .popup-content{
+        min-width: 82%;
+        max-height: 105%;    
+    }
+    .popup-content h5{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .link-code{
+        display: block;
+        text-align: center;
+        width: 130%;
+        margin-left: -20px;
+    }
+    #pay-send{
+        padding: 0 12%;
+    }
+}

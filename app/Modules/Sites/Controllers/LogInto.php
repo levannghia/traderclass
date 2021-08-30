@@ -44,7 +44,7 @@ class LogInto extends Controller
             "title" => "Payment ATM",
         ]));
 
-        return view('Sites::payment-atm.index', compact('row'));
+        return view('Sites::payment_atm.index', compact('row'));
     }
     public function payment_momo()
     {
@@ -53,6 +53,15 @@ class LogInto extends Controller
             "title" => "Payment Momo",
         ]));
 
-        return view('Sites::payment-momo.index', compact('row'));
+        return view('Sites::payment_momo.index', compact('row'));
+    }
+    public function payment_ecash()
+    {
+        //$teacher = Teachers_Model::find($id);
+        $row = json_decode(json_encode([
+            "title" => "Payment Ecash",
+        ]));
+
+        return view('Sites::payment_ecash.index', compact('row'));
     }
 }

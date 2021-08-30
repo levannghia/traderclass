@@ -60,7 +60,9 @@
     @yield('content')
 
     @include('Sites::inc.footer')
-    @include('Sites::inc.login')
+    @if (!Auth::check())
+        @include('Sites::inc.login')
+    @endif
 
     
     <!-- CDN ionicons -->

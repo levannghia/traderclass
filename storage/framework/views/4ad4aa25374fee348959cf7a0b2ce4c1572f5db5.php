@@ -1,20 +1,24 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
 <div class="main">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="whitee">
                     <div class="pan">
+                        <p id="yo">Your order</p>
                         <div class="order">
-                            <div class="uns">
-                                <p id="yo">Your order</p>
-                                <p id="yos2">Unlimited access all year All current and upcoming courses.</p>
+                            <div class="un">
+                                <img src="/public/sites/images/Teacher1.jpg" alt="">
+                                <div id="yo2">
+                                    <p>Teacher Crypto Trader</p>
+                                    <p id="cl_name">Ted Nguyen</p>
+                                </div>
                             </div>
                             <div class="buy">
-                                <p id="price">990.000 đ</p>
-                                <p id="pricee"><strike id="pre" style="color: #A7A9AC;">4.000.000 ₫</strike><br><span id="sav">Savings: 75%</span>
+                                <p id="price">599.000 đ</p>
+                                <p id="pricee"><strike id="pre" style="color: #A7A9AC;">2.000.000 ₫</strike><br><span id="sav">Savings: 70%</span>
 
                                 </p>
                             </div>
@@ -60,7 +64,7 @@
                                 <p>TOTAL</p>
                             </div>
                             <div id="se">
-                                <p>990.000 đ</p>
+                                <p>599.000 đ</p>
                             </div>
                         </div>
                     </div>
@@ -718,4 +722,5 @@
     </div>
 </div>
 <div id="fade" onclick="promo_close()"></div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/course_selection/index.blade.php ENDPATH**/ ?>

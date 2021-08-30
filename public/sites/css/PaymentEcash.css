@@ -1,0 +1,270 @@
+.header{
+    display: flex;
+    background-color: #0B7ABF;
+    margin-top: 4%;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.cart{
+    padding-left: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+.reply{
+    display: flex;
+    margin-left: 55%;
+    cursor: pointer;
+}
+.reply i{
+    color: #fff;
+    margin-right: 5px;
+}
+.reply a{
+    color: #fff;
+    margin-left: 5px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-top: 6px;
+    text-decoration: none;
+}
+.content-left, .content-right{
+    border: 1px solid #A0A1A3;
+    border-radius: 5px;
+    padding: 15px;
+}
+.main{
+    margin-top: 15px;
+}
+.rate{
+    display: flex;
+    padding-bottom: 15px;
+}
+#star{
+    color: #FAB318;
+}
+#star-none{
+    color: #A7A9AC;
+}
+.li{
+    border: 1px solid #A0A1A3;
+}
+.center{
+    padding-top: 15px;
+}
+.number, .name, .status, .method, .topic{
+    display: flex;
+}
+.order, .guest, .state, .me1, .lesson{
+    width: 150px;
+}
+.usernumber, .username{
+    font-weight: 700;
+}
+.orderstate{
+    color: #ED3033;
+}
+.detail{
+    font-weight: 700;
+}
+.me2{
+    margin-left: 15px;
+}
+.bottom{
+    padding-top: 15px;
+}
+.qrcode{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.txt{
+    font-size: 14px;
+}
+.txt.time{
+    margin-bottom: 5px;
+}
+.priceName{
+    font-weight: 700;
+    font-size: 16px;
+}
+.pri{
+    display: flex;
+    background: #E4E4E4;
+    border-radius: 5px;
+}
+.txt2{
+    margin-bottom: 0;
+    padding: 5px 15px;
+}
+#ic-copy{
+    height: 20px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+.txtpri{
+    margin-right: 75%;
+}
+.txtlink{
+    margin-right: 21%;
+}
+.wallet{
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.total-price{
+    color: #fff;
+    background: #5BBE00;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/*  */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {
+    .order, .guest, .state, .me1{
+        width: 110px;
+    }
+    .txtpri{
+        margin-right: 71%;
+    }
+    .txtlink{
+        margin-right: 20px;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .reply{
+        margin-left: 36%;
+    }
+    .order, .guest, .state, .me1 {
+        width: 90px;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .usernumber, .username{
+        font-size: 14px;
+    }
+    .me2{
+        margin-left: -10%;
+        font-size: 15px;
+        margin-top: -2px;
+    }
+    .topic, .title2, .title3{
+        font-size: 14px;
+    }
+    .txt2{
+        font-size: 14px;
+    }
+    .wal-link{
+        display: block;
+    }
+    .txtpri{
+        margin-right: 62%;
+    }
+    .txtlink{
+        padding-left: 3px;
+    }
+    .wal-link i{
+        margin-left: 48%;
+    }
+}
+
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .reply{
+        margin-left: 5%;
+    }
+    .order, .guest, .state, .me1, .lesson{
+        width: 140px;
+    }
+    .me2{
+        margin-left: 0;
+    }
+    .content-right{
+        margin-top: 15px;
+    }
+    .wal-link{
+        display: flex;
+    }
+    .txtlink{
+        padding-left: 15px;
+    }
+    .wal-link i{
+        margin-left: 27%;
+    }
+    .txtpri{
+        margin-right: 78%;
+    }
+}
+
+/* */
+@media screen and (max-width: 414px) {
+    .cart{
+        font-size: 20px;
+    }
+    .reply{
+        margin-right: 0;
+    }
+    .txtpri{
+        margin-right: 72%;
+    }
+    .wal-link i{
+        margin-left: 10%;
+    }
+}
+
+/* */
+@media screen and (max-width: 375px) {
+    .cart{
+        font-size: 18px;
+    }
+    .reply{
+        margin-left: 6px;
+    }
+    .reply a{
+        padding-top: 1px;
+    }
+    .wal-link i{
+        margin-left: 2%;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {
+    .txtlink{
+        padding-left: 5px;
+    }
+    .txtpri{
+        margin-right: 68%;
+    }
+    .wal-link i{
+        margin-left: -11%;
+    }
+}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {
+    .txtpri{
+        margin-right: 50%;
+    }
+    .wal-link{
+        display: block;
+        margin-left: -10px;
+        width: 111%;
+    }
+    .txtlink{
+        padding-left: 7px;
+        font-size: 70%
+    }
+    .wal-link i{
+        margin-left: 48%;
+    }
+    .total-price h4{
+        font-size: 16px;
+    }
+}

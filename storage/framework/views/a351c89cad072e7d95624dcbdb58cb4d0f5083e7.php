@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/sites/css/style.css?v=<?php echo e(time()); ?>">
     <?php if(Auth::check()): ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <?php else: ?>
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>">
     <?php endif; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/style.css?v=<?php echo e(time()); ?>">
-    <link rel="stylesheet" href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>">
+    
+    
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/Course Introduction.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/Log into.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/register.css?v=<?php echo e(time()); ?>">
-    <link rel="stylesheet" href="/public/sites/css/Course selection.css">
+    <link rel="stylesheet" href="/public/sites/css/Course selection.css?v=<?php echo e(time()); ?>">
+    <link rel="stylesheet" href="/public/sites/css/ecash.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
     <!--Icon-->
@@ -36,6 +39,7 @@
 
     <?php echo $__env->make('Sites::inc.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
+    <script src="/public/sites/js/ecash.js"></script>
     <script src="/public/sites/js/Course Introduction.js"></script>
     <script src="/public/sites/js/loginto.js?v=<?php echo e(time()); ?>"></script>
     <script src="/public/sites/js/teacher.js"></script>
