@@ -1,6 +1,7 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
+<?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="mains">
         <div class="container">
             <?php if(session()->has('message')): ?>
@@ -105,4 +106,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('Sites::allClass', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/account/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Sites::account', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/account/index.blade.php ENDPATH**/ ?>

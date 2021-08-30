@@ -63,11 +63,9 @@
                 </div>
             </div>
         </div>
-        <div class="black" id="black">
-            <p>GET 75% DISCOUNT FOR THE ENTIRE COURSE. DURATION 31/8.</p>
-            <button onclick="clblack()">x</button>
-        </div>
+        
     </div>
+    
 <?php else: ?>
     <header>
         <div class="header_bottom">
@@ -121,8 +119,9 @@
                 </div>
             </div>
         </div>
-        
+       
     </header>
+   
 <?php endif; ?>
 
 <script>
@@ -149,10 +148,10 @@
             }
         });
 
-        // $(document).on('click', 'li', function() {
-        //     $('#fsearchh').val($(this).text());
-        //     $('#brows').fadeOut();
-        // });
+        $(document).on('click', 'option', function() {
+            $('#fsearchh').val($(this).text());
+            $('#brows').fadeOut();
+        });
     });
 </script>
 <?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/header.blade.php ENDPATH**/ ?>

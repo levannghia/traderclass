@@ -1,6 +1,7 @@
 @extends('Sites::allClass')
 @section('title', $row->title)
 @section('content')
+@include('Sites::inc.maketting')
 <div class="main">
     <div class="intro">
         <p style="font-size: 18px;">Start your first course</p>

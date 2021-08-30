@@ -66,11 +66,9 @@
                 </div>
             </div>
         </div>
-        <div class="black" id="black">
-            <p>GET 75% DISCOUNT FOR THE ENTIRE COURSE. DURATION 31/8.</p>
-            <button onclick="clblack()">x</button>
-        </div>
+        
     </div>
+    
 @else
     <header>
         <div class="header_bottom">
@@ -127,11 +125,9 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="black" id="black">
-            <p>GET 75% DISCOUNT FOR THE ENTIRE COURSE. DURATION 31/8.</p>
-            <button onclick="clblack()">x</button>
-        </div> --}}
+       
     </header>
+   
 @endif
 
 <script>
@@ -158,9 +154,9 @@
             }
         });
 
-        // $(document).on('click', 'li', function() {
-        //     $('#fsearchh').val($(this).text());
-        //     $('#brows').fadeOut();
-        // });
+        $(document).on('click', 'option', function() {
+            $('#fsearchh').val($(this).text());
+            $('#brows').fadeOut();
+        });
     });
 </script>

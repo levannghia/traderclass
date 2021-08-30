@@ -1,6 +1,7 @@
 @extends('Sites::layout')
 @section('title', $row->title)
 @section('content')
+@include('Sites::inc.maketting')
 <div class="main">
     <div class="container">
         <p id="title">My Course</p>

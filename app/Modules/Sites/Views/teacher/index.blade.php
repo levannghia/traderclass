@@ -1,6 +1,7 @@
 @extends('Sites::teacher')
 @section('title', $row->title)
 @section('content')
+@include('Sites::inc.maketting')
     <div class="main">
         <div class="img">
             <img src="/public/upload/images/course/thumb/{{$course->photo}}" width="100%" alt="">
