@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/style.css">
+    <link rel="stylesheet" href="/public/sites/css/style.css?v={{time()}}">
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
+    @if (!Auth::check())
+    <link href="/public/sites/css/index2.css?v={{time()}}" rel="stylesheet">
+    @endif
     <link rel="stylesheet" href="/public/sites/css/findmyclass.css">
-    <link href="/public/sites/css/index.css?v={{time()}}" rel="stylesheet">
-    
     <script src="/public/sites/js/js.js"></script>
     <script src="/public/sites/js/findmyclass.js"></script>
     <!--Icon-->
@@ -29,7 +30,9 @@
 
     @include('Sites::inc.footer')
 
+    @if (!Auth::check())
     @include('Sites::inc.login')
+    @endif
 
     <script src="/public/sites/js/teacher.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

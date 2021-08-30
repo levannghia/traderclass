@@ -37,13 +37,17 @@
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     
     <link rel="stylesheet" href="/public/sites/css/style.css">
-    <link rel="stylesheet" href="/public/sites/css/MasterClass.css?v={{ time() }}" />
+    <link rel="stylesheet" href="/public/sites/css/MasterClass.css" />
     <link href="/public/sites/css/reset.css?v={{ time() }}" rel="stylesheet">
     <script src="/public/sites/js/js.js"></script>
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
     <link href="/public/sites/css/style.css" rel="stylesheet">
-    <link href="/public/sites/css/index.css?v={{time()}}" rel="stylesheet">
+    @if (Auth::check())
+    <link href="/public/sites/css/index3.css?v={{ time() }}" rel="stylesheet">
+    @else
+    <link href="/public/sites/css/index.css?v={{ time() }}" rel="stylesheet">
+    @endif
   
     <script src="/public/sites/js/reset.js"></script>
     
@@ -58,8 +62,12 @@
     @yield('content')
 
     @include('Sites::inc.footer')
+    @if (!Auth::check())
     @include('Sites::inc.login')
+    @endif
    
+  
+ 
         <!-- CDN ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
