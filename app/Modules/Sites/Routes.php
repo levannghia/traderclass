@@ -35,6 +35,16 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/return-and-refund-policy.html", ["as" => "sites.policy.index", "uses" => "Policy@refundPolicy"]);
     });
 
+    Route::group(["prefix" => "api"], function() {
+        
+        Route::get("/", ["as" => "sites.crypto.index", "uses" => "PaymentCrypto@index"]);
+        
+        Route::get("/test", ["as" => "sites.crypto.process", "uses" => "PaymentCrypto@process"]);
+        
+        Route::post("/add", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
+        Route::get("/update/{id}", ["as" => "sites.crypto.getUpdate", "uses" => "PaymentCrypto@getUpdate"]);
+    });
+
     //Account
     Route::group(["prefix" => "account",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.account.index", "uses" => "Account@index"]);
