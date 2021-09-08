@@ -26,7 +26,7 @@ class Teachers extends Controller{
             // if cookie is existed
             $data = Teachers_Model::where("fullname", "like", '%' . Cookie::get('search_teacher') . '%')->orderBy('id', 'desc')->paginate(15);
         }
-        $data->setPath('teachers');
+        $data->setPath('teacher');
         $row = json_decode(json_encode([
             "title" => "Teacher - Danh sách",
         ]));

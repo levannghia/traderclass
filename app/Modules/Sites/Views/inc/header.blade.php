@@ -14,10 +14,6 @@
                                 <a style="padding-top: 0px;" class="nav-link" href="/all-class"><i
                                         class="fas fa-users-class"></i>&nbsp; All Class</a>
                             </li>
-                            <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="/course-introduction"><i
-                                        class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
-                            </li>   
                         </ul>
                     </div>
                     <div class="fsearch">
@@ -86,11 +82,6 @@
                                     href="{{ route('sites.allClass.index') }}"><i class="fas fa-users-class"></i>&nbsp;
                                     All Class</a>
                             </li>
-                            <li>
-                                <a style="padding-top: 0px;" class="nav-link"
-                                    href="{{ route('sites.courseIntroduction.index') }}"><i
-                                        class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
-                            </li>  
                         </ul>
                     </div>
                     <div class="fsearch">

@@ -10,6 +10,7 @@
     <?php if(Auth::check()): ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <?php else: ?>
+    
     <link href="/public/sites/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/sites/css/index2.css?v=<?php echo e(time()); ?>">
     <?php endif; ?>

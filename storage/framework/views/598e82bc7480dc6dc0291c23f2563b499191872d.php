@@ -168,7 +168,7 @@
                     </a>
                 </li>
                 <?php endif; ?>
-                <?php if(Gate::allows('view', 'Course')): ?>
+                <?php if(Gate::allows('view', 'Home')): ?>
                 <li>
                     <a href="javascript: void(0);">
                         <i class="fe-home"></i>

@@ -168,7 +168,7 @@
                     </a>
                 </li>
                 @endif
-                @if(Gate::allows('view', 'Course'))
+                @if(Gate::allows('view', 'Home'))
                 <li>
                     <a href="javascript: void(0);">
                         <i class="fe-home"></i>

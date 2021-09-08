@@ -19,11 +19,11 @@
     
     <link href="/public/sites/css/menu-mobile.css" rel="stylesheet">
     <link href="/public/sites/css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="/public/sites/css/Course Introduction.css?v={{time()}}">
+    <link rel="stylesheet" href="/public/sites/css/Detailed course.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/Log into.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/register.css?v={{time()}}">
     <link rel="stylesheet" href="/public/sites/css/Course selection.css?v={{time()}}">
-    <link rel="stylesheet" href="/public/sites/css/ecash.css">
+    <link rel="stylesheet" href="/public/sites/css/ecash.css?v={{time()}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
     <!--Icon-->

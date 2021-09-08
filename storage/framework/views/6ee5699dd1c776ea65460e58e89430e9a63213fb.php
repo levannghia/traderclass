@@ -1,8 +1,8 @@
-@extends('Dashboard::layout')
-@section('title', $row->title)
-@section('content')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
     <form method="post">
-        @csrf
+        <?php echo csrf_field(); ?>
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
@@ -11,7 +11,7 @@
                             <div class="form-group">
                                 <div class="input-group input-group-sm">
                                     <input type="text" class="form-control border-white" name="search"
-                                        value="{{ Cookie::get('search_subcribe') }}" placeholder="email người dùng...">
+                                        value="<?php echo e(Cookie::get('search_subcribe')); ?>" placeholder="email người dùng...">
                                     <div class="input-group-append">
                                         <button type="submit" name="btn_search"
                                             class="input-group-text bg-blue border-blue text-white">
@@ -25,7 +25,7 @@
                             </a>
                         </div>
                     </div>
-                    <h4 class="page-title">{{ $row->title }}</h4>
+                    <h4 class="page-title"><?php echo e($row->title); ?></h4>
                 </div>
             </div>
         </div>
@@ -46,8 +46,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($data as $value)
-                                                @php
+                                            <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php
                                                     $explode_id = array_map('intval', explode(',', $value->course_category_id));
                                                     $course_category = DB::table('course_category')
                                                         ->whereIn('id', $explode_id)
@@ -62,8 +62,8 @@
                                                     echo '<td>' . $value->created_at . '</td>';
                                                     echo '<td>' . $value->updated_at . '</td>';
                                                     echo '</tr>';
-                                                @endphp
-                                            @endforeach
+                                                ?>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -81,4 +81,6 @@
             </div>
         </div>
     </form>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/subcribe/index.blade.php ENDPATH**/ ?>

@@ -30,8 +30,8 @@
         
         .im {
             display: grid;
-            background-color: #101214;
-            height: 49%;
+            background-color: #191C21;
+            height: 57%;
             overflow-x: hidden;
             overflow-y: auto;
         }
@@ -42,9 +42,11 @@
         }
         
         .im p {
+            color: white;
+            font-weight: 600;
             text-align: center;
             margin-left: 20px;
-            margin-top: 35px;
+            margin-top: 12px;
         }
         
         .im div img {
@@ -164,7 +166,10 @@
         
         @media screen and (max-width: 1024px) {
             .im {
-                height: 40%;
+                height: 49%;
+            }
+            .im p {
+                font-size: 14px;
             }
             .playpause {
                 height: 45%;
@@ -229,10 +234,17 @@
             #commet {
                 font-size: 13px;
             }
+            .im p {
+                font-size: 12px;
+                margin-left: 10px;
+            }
         }
         /*Tablet nhỏ(480 x 640)*/
         
         @media screen and (max-width: 480px) {
+            .im p {
+                font-size: 14px;
+            }
             .im {
                 height: 40%;
             }
@@ -251,7 +263,7 @@
             }
             .commet {
                 height: 45%;
-                margin-bottom: 130%
+                margin-bottom: 90%
             }
         }
         
@@ -295,7 +307,6 @@
                 height: 30%;
                 margin-bottom: 100%;
             }
-            
         }
         /*Smart phone nhỏ*/
         

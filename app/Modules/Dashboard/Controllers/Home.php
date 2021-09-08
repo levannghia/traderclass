@@ -34,7 +34,7 @@ class Home extends Controller
             abort(403);
         }
         //mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts
-        $this->validate($request, ["BANNER_TOP_VIDEO" => "mimes:mp4|max:100040|required"], ["BANNER_TOP_VIDEO.required"=>"Vui lòng chọn video", "BANNER_TOP_VIDEO.max"=>"video có dung lượng quá lớn","BANNER_TOP_VIDEO.mimes"=>"Vui lòng chọn file có đuôi là *.mp4"]);
+        $this->validate($request, ["BANNER_TOP_VIDEO" => "mimes:mp4|max:100040"], [ "BANNER_TOP_VIDEO.max"=>"video có dung lượng quá lớn","BANNER_TOP_VIDEO.mimes"=>"Vui lòng chọn file có đuôi là *.mp4"]);
         $config_title_banner_top_left = Config_Model::find(42);
         $config_title_banner_top_left->value = $request->TITLE_BANNER_TOP_LEFT;
 

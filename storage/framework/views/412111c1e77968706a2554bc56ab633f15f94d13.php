@@ -46,13 +46,22 @@
                         
                         
                     </div>
-                    <div class="in">
-                        <p>From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength
-                            can help you see what’s possible for yourself—and see it through. Learn how to identify your dreams and apply the principles of endurance, power, and strength to help you reach your goals.
-                        </p>
-                        <p>11 video lessons (1h 15m)</p>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p id="title">Ted Nguyen</p>
+                            <p style="font-size: 20px; color: white; font-weight: 100;">Teacher Crypto Trader</p>
+                            <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
+                        </div>
+                        <div class="col-md-3" id="col-md-3">
+                            <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
+                            <button id="but" onclick="nextvideo('./mp4/Teacher2.mp4')"><p><img width="12px" style="margin-bottom: 3px;"  src="./images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                        </div>
                     </div>
+                    <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
+                        help you see what’s possible for yourself—and see it through. Learn how to identify your dreams and apply the principles of endurance, power, and strength to help you reach your goals.
+                    </p>
                 </div>
+                
                 <div class="col-md-4">
                     <div class="all">
                         <div>
@@ -114,6 +123,87 @@
                             </a>
                         </div>
                         <div id="i"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p id="title" style="padding-top: 30px;">Rate and comment</p>
+                    <div class="commet">
+                        <div class="imt">
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class MyAccount extends Controller{
 
-    public function __construct()
-    {
-       
-    }
 
     public function index(){
         

@@ -20,7 +20,7 @@ class Policy extends Controller{
             // if cookie is existed
             $data = Policy_Model::where("title", "like", '%' . Cookie::get('search_privacy') . '%')->orderBy('id', 'desc')->paginate(15);
         }
-        $data->setPath('privacy');
+        $data->setPath('p0licy');
         $row = json_decode(json_encode([
             "title" => "Policy - Danh sách",
         ]));

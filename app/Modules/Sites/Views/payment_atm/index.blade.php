@@ -44,7 +44,7 @@
                                 <div class="notification number-card">
                                     <div class="group"><i class="fal fa-credit-card"></i></div>
                                     <input type="text" name="" id="txt" placeholder="Số thẻ" maxlength="25">
-                                    <div class="group"><img src="images/vietcombank_icon.png" alt="" width="60" height="36"></div>
+                                    <div class="group"><img src="/public/sites/images/vietcombank_icon.png" alt="" width="60" height="36"></div>
                                 </div>
                                 <div class="notification calendar-day">
                                     <div class="group"><i class="fal fa-calendar"></i></div>

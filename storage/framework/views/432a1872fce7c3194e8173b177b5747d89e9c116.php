@@ -402,10 +402,15 @@
                             <div class="ecash">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup1">
-                                            <img src="/public/sites/images/ecash1.png" alt="">
-                                            <p>Bitcoin (BTC)</p>
-                                        </div>
+                                        <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                <form action="<?php echo e(route('sites.logInto.paymenteacsh')); ?>" method="POST">
+                                                    <?php echo csrf_field(); ?>
+                                                    <button type="submit" class="logo-ecash" data-popup-target="popup1">
+                                                        <img src="/public/sites/images/ecash1.png" alt="">
+                                                        <p>Bitcoin (BTC)</p>
+                                                    </button>
+                                                </form>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup1">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -426,15 +431,17 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/log-into/payment-ecash" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup2">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup2"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup2">
                                             <img src="/public/sites/images/ecash2.png" width="26" height="26" alt="">
                                             <p>Ethereum (ETH)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup2">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -455,15 +462,17 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup3">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup3"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup3">
                                             <img src="/public/sites/images/ecash3.png" width="26" height="26" alt="">
                                             <p>Cardano (ADA)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup3">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -484,17 +493,19 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup4">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup4"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup4">
                                             <img src="/public/sites/images/ecash4.png" width="26" height="26" alt="">
                                             <p>Binance Coin (BNB)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup4">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -515,15 +526,17 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup5">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup5"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup5">
                                             <img src="/public/sites/images/ecash5.png" width="26" height="26" alt="">
                                             <p>Tether (USDT)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup5">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -544,15 +557,17 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup6">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup6"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup6">
                                             <img src="/public/sites/images/ecash6.png" width="26" height="26" alt="">
                                             <p>XRP (XRP)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup6">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -573,17 +588,19 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup7">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup7"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup7">
                                             <img src="/public/sites/images/ecash7.png" width="26" height="26" alt="">
                                             <p>USD Coin (USDC)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup7">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -592,7 +609,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6 lef-details">Payment Amount</div>
                                                     <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash7.png" width="20" height="20" alt="">
+                                                        <img src="images/ecash7.png" width="20" height="20" alt="">
                                                         <p class="price">26.33</p>
                                                         <p class="name-money">USD Coin (USDC)</p>
                                                     </div>
@@ -602,17 +619,19 @@
                                                 <div class="link-code">
                                                     <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                     <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
+                                                    <img src="images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup8">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup8"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup8">
                                             <img src="/public/sites/images/ecash8.png" width="26" height="26" alt="">
                                             <p>Polkadot (DOT)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup8">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -621,7 +640,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6 lef-details">Payment Amount</div>
                                                     <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash8.png" width="20" height="20" alt="">
+                                                        <img src="images/ecash8.png" width="20" height="20" alt="">
                                                         <p class="price">1.015</p>
                                                         <p class="name-money">Polkadot (DOT)</p>
                                                     </div>
@@ -633,15 +652,17 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup9">
+                                        <!-- <div class="logo-ecash" data-popup-target="popup9"> -->
+                                        <button type="submit" class="logo-ecash" data-popup-target="popup9">
                                             <img src="/public/sites/images/ecash9.png" width="26" height="26" alt="">
                                             <p>Solana (SOL)</p>
-                                        </div>
+                                        </button>
+                                        <!-- </div> -->
                                         <div class="popup" id="popup9">
                                             <div class="popup-content">
                                                 <span class="popup-close">&times;</span>
@@ -662,7 +683,7 @@
                                                     <i class="fal fa-copy" id="ic-copy"></i>
                                                     <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
                                                 </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
+                                                <a href="/public/sites/Payment Ecash.html" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
                                     </div>
@@ -680,6 +701,7 @@
 
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

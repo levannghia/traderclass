@@ -46,11 +46,13 @@
 .text-center {
     position: absolute;
     top: 97%;
-    left: 35%;
-    transform: translate(-27%, -60%);
+    left: 50%;
+    transform: translate(-50%, -60%);
     color: white;
     transition-duration: 0.8s;
     text-align: center!important;
+    width: 100%;
+    padding: 0 20px 0 20px;
 }
 
 .a {
@@ -76,8 +78,7 @@
     background-color: white;
     border: 1px solid #EF8D21;
     border-radius: 7px;
-    width: 118%;
-    margin-left: -8%;
+    width: 100%;
     margin-top: 25px;
 }
 
@@ -101,6 +102,16 @@ button p i {
 
 
 /*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 2561px) {}
+
+@media screen and (max-width: 1921px) {}
+
+@media screen and (max-width: 1537px) {}
+
+@media screen and (max-width: 1441px) {}
+
+@media screen and (max-width: 1367px) {}
 
 @media screen and (max-width: 1024px) {
     .a {
@@ -130,13 +141,49 @@ button p i {
 
 /*Tablet nhỏ(480 x 640)*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 481px) {
     .a {
         font-weight: bold;
-        font-size: 48px;
+        font-size: 38px;
     }
     .c {
         font-size: 24px;
+        font-weight: 500;
+    }
+    .img {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .a {
+        font-weight: bold;
+        font-size: 34px;
+    }
+    .c {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .a {
+        font-weight: bold;
+        font-size: 36px;
+    }
+    .c {
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .a {
+        font-weight: bold;
+        font-size: 36px;
+    }
+    .c {
+        font-size: 18px;
         font-weight: 500;
     }
 }
@@ -144,7 +191,7 @@ button p i {
 
 /*Iphone(480 x 640)*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     .a {
         font-weight: bold;
         font-size: 30px;
@@ -158,13 +205,13 @@ button p i {
 
 /*Smart phone nhỏ*/
 
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 241px) {
     .a {
         font-weight: bold;
-        font-size: 23px;
+        font-size: 20px;
     }
     .c {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
     }
 }

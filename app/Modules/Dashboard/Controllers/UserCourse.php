@@ -30,7 +30,7 @@ class UserCourse extends Controller
             $data = DB::table('user_course')->select('course.name','user_course.id','users.fullname','email','gender','users.photo','users.phone','users.address','users.status')->join('course','course.id','=','user_course.course_id')->join('users','users.id','=','user_course.user_id')->where("fullname", "like", '%' . Cookie::get('search_user_course') . '%')->where('course.id',$id)->where('user_course.status',1)->orderBy('users.id', 'desc')->paginate(15);
         }
         $course = Course_Model::find($id);
-        $data->setPath('user_course');
+        $data->setPath('class');
         $row = json_decode(json_encode([
             "title" => "Danh sách lớp " . $course->name,
         ]));
