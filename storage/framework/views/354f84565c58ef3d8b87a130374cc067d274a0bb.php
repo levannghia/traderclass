@@ -7,13 +7,19 @@
     <title>payment Crypto</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="<?php echo e(route('sites.crypto.postAdd')); ?>" method="post">
+        <?php echo csrf_field(); ?>
         <input type="email" name="email" id="" placeholder="email..."> <br>
-        <select name="type">
-            <option value="0">Nữ</option>
-            <option value="1">Nam</option>
-        </select>
-        <input type="text" name="email" id="" name="currency" placeholder="USD..."> <br>
+        <select name="symbol">
+            <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php if($value['symbol'] == 'BTCUSDT'): ?>
+                <option value="BTCUSDT">Bitcoin</option>
+                <?php elseif($value['symbol'] == 'ETHUSDT'): ?>
+                <option value="ETHUSDT">Ethereum</option>
+                <?php endif; ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </select> <br>
+        <input type="text" id="" name="currency" placeholder="USD..."> <br>
         <button type="submit">submit</button>
     </form>
 </body>

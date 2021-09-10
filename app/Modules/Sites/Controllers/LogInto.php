@@ -8,15 +8,17 @@ use App\Modules\Dashboard\Controllers\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Teachers_Model;
+use App\Modules\Sites\Models\Crypto_Model;
 
 class LogInto extends Controller
 {
     public function index()
     {
+        $crypto = Crypto_Model::orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Log Into",
         ]));
-        return view('Sites::log_into.index', compact('row'));
+        return view('Sites::log_into.index', compact('row', 'crypto'));
     }
 
     public function course_selection($id)

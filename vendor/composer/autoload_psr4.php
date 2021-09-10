@@ -89,6 +89,7 @@ return array(
     'Database\\Factories\\' => array($baseDir . '/database/factories'),
     'Cron\\' => array($vendorDir . '/dragonmantank/cron-expression/src/Cron'),
     'Codenixsv\\CoinGeckoApi\\' => array($vendorDir . '/codenix-sv/coingecko-api/src'),
+    'CodeItNow\\' => array($vendorDir . '/codeitnowin/barcode/CodeItNow'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'CKSource\\CKFinder\\' => array($vendorDir . '/ckfinder/ckfinder-laravel-package/_connector'),
     'CKSource\\CKFinderBridge\\' => array($vendorDir . '/ckfinder/ckfinder-laravel-package/src'),

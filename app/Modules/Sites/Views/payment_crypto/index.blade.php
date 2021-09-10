@@ -10,14 +10,14 @@
     <form action="{{route('sites.crypto.postAdd')}}" method="post">
         @csrf
         <input type="email" name="email" id="" placeholder="email..."> <br>
-        <select name="type">
-            @php
-                $i = 0;
-            @endphp
-            @foreach ($data as $value)
-                <option value="{{$i++}}">{{$value['name'] . " (".$value['symbol'] .")" }}</option>
+        <select name="symbol">
+            @foreach ($data as $key => $value)
+                @if ($value['symbol'] == 'BTCUSDT')
+                <option value="BTCUSDT">Bitcoin</option>
+                @elseif ($value['symbol'] == 'ETHUSDT')
+                <option value="ETHUSDT">Ethereum</option>
+                @endif
             @endforeach
-            
         </select> <br>
         <input type="text" id="" name="currency" placeholder="USD..."> <br>
         <button type="submit">submit</button>

@@ -19,8 +19,8 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
 
     //Search
-    // Route::post('/process', ["as" => "sites.process","uses" => "SearchCourse@process"]);
-    // Route::get('/index', ["uses" => "SearchCourse@getIndex"]);
+    Route::post('/process', ["as" => "sites.process","uses" => "SearchCourse@process"]);
+    Route::get('/index', ["uses" => "SearchCourse@getIndex"]);
     Route::post('/search/course', ["as" => "sites.search", "uses" => "SearchCourse@postSearchAjax"]);
 
     //Register

@@ -15,10 +15,10 @@ class SearchCourse extends Controller
         require "init.php";
         $result ="";
         $USD = $request->USD;
-        //$Email = $request->email;
-        $Email = Auth::user()->email;
+        $Email = $request->email;
+        // $Email = Auth::user()->email;
 
-        $scurrency = "VND";
+        $scurrency = "USD";
         $rcurrency = "BTC";
         $bacsiInfor = $coin->GetBasicProfile();
         $username = $bacsiInfor['result']['public_name'];
@@ -28,7 +28,7 @@ class SearchCourse extends Controller
             'currency2' => $rcurrency,
             'buyer_email' => $Email,
             'item' => "Test Thanh Toan",
-            'address' => "",
+            'address' => "18mUEvqTAK7d8zqbpqUFgPweMS13fdxxnm",
             'ipn_url' => "traderclass.vn/webhook.php"
         ];
 

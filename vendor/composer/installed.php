@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '55366b8e7bb2271014a8d34be03ab1af470bf3e6',
+    'reference' => '8f1e07499b4910b768961934a79abdc52d5a2eb0',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -46,6 +46,15 @@
       array (
       ),
       'reference' => '714afc01c36a17ad46fca43c288353b66cd3d1e1',
+    ),
+    'codeitnowin/barcode' => 
+    array (
+      'pretty_version' => '3.0.6',
+      'version' => '3.0.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '68e6f0f9eac16a20e20ed0e8258d4d9765800878',
     ),
     'codenix-sv/coingecko-api' => 
     array (
@@ -481,7 +490,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '55366b8e7bb2271014a8d34be03ab1af470bf3e6',
+      'reference' => '8f1e07499b4910b768961934a79abdc52d5a2eb0',
     ),
     'laravel/sail' => 
     array (
