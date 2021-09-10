@@ -41,7 +41,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         
         Route::get("/test", ["as" => "sites.crypto.process", "uses" => "PaymentCrypto@process"]);
         
-        Route::post("/add", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
+        Route::post("/add-payment-crypto", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
         Route::get("/update/{id}", ["as" => "sites.crypto.getUpdate", "uses" => "PaymentCrypto@getUpdate"]);
     });
 

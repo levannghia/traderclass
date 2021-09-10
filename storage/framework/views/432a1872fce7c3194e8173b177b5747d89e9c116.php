@@ -420,14 +420,14 @@
                                                 <div class="col-md-6 lef-details">Payment Amount</div>
                                                 <div class="col-md-6 price-details">
                                                     <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
-                                                    <p class="price">0.089'</p>
-                                                    <p class="name-money">Bitcoin (BTC)</p>
+                                                    <p class="price"></p>
+                                                    <p class="name-money" style="text-transform: capitalize;"></p>
                                                 </div>
                                             </div>
                                             <p class="send-below">Send the indicated amount to the address below:</p>
                                             <p class="address-details">address</p>
                                             <div class="link-code">
-                                                <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                                                <p class="arcode"></p>
                                                 <i class="fal fa-copy" id="ic-copy"></i>
                                                 <img src="" width="26" height="26" alt="">
                                             </div>
@@ -493,17 +493,29 @@ $(document).ready(function() {
     $("[data-id-crypto]").click(function(){
         var _token = $('meta[name="csrf-token"]').attr('content');
         let id_crypto = $(this).attr("data-id-crypto");
-        console.log(id_crypto)
-        $.ajax({
-                url: "<?php echo e(route('sites.crypto.postAdd',id_crypto)); ?>",
+        
+        // setInterval(function(){
+            $.ajax({
+                url: "/api/add-payment-crypto",
                 type: "POST",
-                data: "_token=" + _token + "&" + id_crypto,
-               
-                success: function(data) {
-                    console.log(data)
-                    $('#popup').html(data);
+                data:
+                {
+                    _token: _token,
+                    id_crypto: id_crypto,
                 },
+                success: function(data) {
+                    console.log(data);
+                    
+                    //$('.popup').html(data);
+                    //let dataResut = JSON.parse(data);
+                    //console.log(dataResut)
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $(".price").html(data.amount);
+                    $(".arcode").html(data.address);
+                    $(".link-code img").attr("src",data.image_qr);
+                }
             });
+        // },10000);
     });
 });
 </script>

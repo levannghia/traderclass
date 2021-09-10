@@ -19,9 +19,9 @@ class PaymentCrypto extends Controller
         // $data = $client->coins()->getMarkets('usd');
         $url = 'https://api.binance.com/api/v3/ticker/price';
         $api =  file_get_contents($url);
-        $data = json_decode($api,true);
+        $data = json_decode($api, true);
         // echo $data[0]['price'];
-        return view('Sites::payment_crypto.index',compact('data'));
+        return view('Sites::payment_crypto.index', compact('data'));
     }
     public function process()
     {
@@ -38,36 +38,30 @@ class PaymentCrypto extends Controller
 
     public function postAdd(Request $request)
     {
-        //$wallet = DB::table('cryptocurrency_wallet')->get();
         $crypto = new PaymentCrypto_Model();
-        if(isset($_POST["id_crypto"])){
-            $crypto_id = Crypto_Model::find($_POST["id_crypto"]);
-        }
+        $crypto_id = Crypto_Model::find($request->id_crypto);
         
-        $url = 'https://api.binance.com/api/v3/ticker/price?symbol='.$_POST["symbol_crypto"];
+        $url = 'https://api.binance.com/api/v3/ticker/price?symbol=' . $crypto_id->symbol;
         $api =  file_get_contents($url);
-        $data = json_decode($api,true);
-        // $client = new CoinGeckoClient();
-        // $data = $client->coins()->getMarkets('usd');
-        $crypto->crypto_id = $crypto_id->id;
-        $crypto->symbol = $request->symbol;
-        if($_POST["symbol_crypto"] == 'BTCUSDT'){
+        $data = json_decode($api, true);
+
+        $crypto->id_crypto = $crypto_id->id;
+        $crypto->symbol = $crypto_id->symbol;
+        if ($crypto_id->symbol == 'BTCUSDT') {
             $crypto->cryptocurrency_name = 'bitcoin';
             $crypto->address = '18mUEvqTAK7d8zqbpqUFgPweMS13fdxxnm';
-        }elseif($_POST["symbol_crypto"] == 'ETHUSDT'){
+        } elseif ($crypto_id->symbol == 'ETHUSDT') {
             $crypto->cryptocurrency_name = 'ethereum';
             $crypto->address = '0xa17d23d3d376266053fba25a01f3481a19a2bae2';
         }
-        // $crypto->cryptocurrency_name = $data[$request->type]['name'];
-        //$crypto->email = $request->email;
         $crypto->currency = 60;
         $crypto->status = 0;
-        $crypto->amount = $crypto->currency / $data['price'];
+        $crypto->amount = round($crypto->currency / $data['price'],4);
 
         //QR code
         $qrCode = new QrCode();
         $qrCode
-            ->setText($crypto->cryptocurrency_name . ':'.$crypto->address.'?amount='.$crypto->amount / $data['price'])
+            ->setText($crypto->cryptocurrency_name . ':' . $crypto->address . '?amount=' . round($crypto->currency / $data['price'],4))
             ->setSize(300)
             ->setPadding(10)
             ->setErrorCorrection('high')
@@ -79,8 +73,8 @@ class PaymentCrypto extends Controller
 
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         $crypto->save();
-        //return response()->json($crypto, 200);
-        return redirect()->route('sites.crypto.getUpdate', $crypto->id);
+        return response()->json($crypto, 200);
+        //return redirect()->route('sites.crypto.getUpdate', $crypto->id);
     }
 
     public function getUpdate($id)
@@ -88,24 +82,24 @@ class PaymentCrypto extends Controller
         $crypto = PaymentCrypto_Model::find($id);
         // $client = new CoinGeckoClient();
         // $data = $client->coins()->getMarkets('usd');
-        $url = 'https://api.binance.com/api/v3/ticker/price?symbol='.$crypto->symbol;
+        $url = 'https://api.binance.com/api/v3/ticker/price?symbol=' . $crypto->symbol;
         $api =  file_get_contents($url);
-        $data = json_decode($api,true);
-        $crypto->status = 0;
-        $crypto->amount = $crypto->currency / $data['price'];
-         //QR code
-         $qrCode = new QrCode();
-         $qrCode
-             ->setText($crypto->cryptocurrency_name . ':'.$crypto->address.'?amount='.$crypto->currency / $data['price'])
-             ->setSize(300)
-             ->setPadding(10)
-             ->setErrorCorrection('high')
-             ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
-             ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
-             ->setLabel('Scan Qr Code')
-             ->setLabelFontSize(16)
-             ->setImageType(QrCode::IMAGE_TYPE_PNG);
-             
+        $data = json_decode($api, true);
+        $crypto->status = 1;
+        $crypto->amount = round($crypto->currency / $data['price'],4);
+        //QR code
+        $qrCode = new QrCode();
+        $qrCode
+            ->setText($crypto->cryptocurrency_name . ':' . $crypto->address . '?amount=' . round($crypto->currency / $data['price'],4))
+            ->setSize(300)
+            ->setPadding(10)
+            ->setErrorCorrection('high')
+            ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
+            ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
+            ->setLabel('Scan Qr Code')
+            ->setLabelFontSize(16)
+            ->setImageType(QrCode::IMAGE_TYPE_PNG);
+
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         // $response = $client->getLastResponse();
         // $headers = $response->getHeaders();

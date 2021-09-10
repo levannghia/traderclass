@@ -405,7 +405,7 @@
                                     <div class="col-md-4">
                                         <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                             <button type="submit" name="btn_crypto" class="logo-ecash" data-popup-target="popup_crypto" data-id-crypto="{{$value->id}}">
-                                                <img src="/public/sites/images/{{$value->image}}" alt="" data-symbol-crypto="{{$value->symbol}}">
+                                                <img src="/public/sites/images/{{$value->image}}" alt="">
                                                 <p>{{$value->name . '(' . $value->symbol . ')'}}</p>
                                             </button>
                                         <!-- </div> -->
@@ -420,14 +420,14 @@
                                                 <div class="col-md-6 lef-details">Payment Amount</div>
                                                 <div class="col-md-6 price-details">
                                                     <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
-                                                    <p class="price">0.089'</p>
-                                                    <p class="name-money">Bitcoin (BTC)</p>
+                                                    <p class="price"></p>
+                                                    <p class="name-money" style="text-transform: capitalize;"></p>
                                                 </div>
                                             </div>
                                             <p class="send-below">Send the indicated amount to the address below:</p>
                                             <p class="address-details">address</p>
                                             <div class="link-code">
-                                                <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                                                <p class="arcode"></p>
                                                 <i class="fal fa-copy" id="ic-copy"></i>
                                                 <img src="" width="26" height="26" alt="">
                                             </div>
@@ -493,22 +493,29 @@ $(document).ready(function() {
     $("[data-id-crypto]").click(function(){
         var _token = $('meta[name="csrf-token"]').attr('content');
         let id_crypto = $(this).attr("data-id-crypto");
-        let symbol_crypto = $(this).attr("data-symbol-crypto");//data-symbol-crypto
-        console.log(id_crypto)
-        $.ajax({
-                url: "{{ route('sites.crypto.postAdd') }}",
+        
+        // setInterval(function(){
+            $.ajax({
+                url: "/api/add-payment-crypto",
                 type: "POST",
                 data:
                 {
-                    symbol_crypto:symbol_crypto,
+                    _token: _token,
                     id_crypto: id_crypto,
-                } 
-               
-                success: function(data) {
-                    console.log(data)
-                    $('#popup').html(data);
                 },
+                success: function(data) {
+                    console.log(data);
+                    
+                    //$('.popup').html(data);
+                    //let dataResut = JSON.parse(data);
+                    //console.log(dataResut)
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $(".price").html(data.amount);
+                    $(".arcode").html(data.address);
+                    $(".link-code img").attr("src",data.image_qr);
+                }
             });
+        // },10000);
     });
 });
 </script>
