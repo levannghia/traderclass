@@ -111,6 +111,23 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("/course/status/{id}/{status}", ["as" => "admin.course.status", "uses" => "Teachers@courseStatus"]);
             });
 
+            //CryptocurrencyWallet
+            Route::group(["prefix" => "cryptocurrency-wallet"], function() {
+                Route::get("/", ["as" => "admin.wallet", "uses" => "CryptocurrencyWallet@index"]);
+                Route::post("/", ["as" => "admin.wallet", "uses" => "CryptocurrencyWallet@postIndex"]);
+                Route::get("add", ["as" => "admin.wallet.getAdd", "uses" => "CryptocurrencyWallet@add"]);
+                Route::post("add", ["as" => "admin.wallet.postAdd", "uses" => "CryptocurrencyWallet@postAdd"]);
+                Route::get("edit/{id}", ["as" => "admin.wallet.edit", "uses" => "CryptocurrencyWallet@edit"]);
+                Route::post("edit/{id}", ["as" => "admin.wallet.postEdit", "uses" => "CryptocurrencyWallet@postEdit"]);
+                Route::get("delete/{id}", ["as" => "admin.wallet.delete", "uses" => "CryptocurrencyWallet@delete"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.wallet.status", "uses" => "CryptocurrencyWallet@status"]);
+                Route::get("/trash", ["as" => "admin.wallet.trash", "uses" => "CryptocurrencyWallet@trash"]);
+                Route::get("/trash/delete/{id}", ["as" => "admin.wallet.trash", "uses" => "CryptocurrencyWallet@trashDelete"]);
+                Route::get("/course/delete/{id}", ["as" => "admin.wallet.delete", "uses" => "CryptocurrencyWallet@courseDelete"]);
+                Route::get("/course/status/{id}/{status}", ["as" => "admin.wallet.status", "uses" => "CryptocurrencyWallet@courseStatus"]);
+            });
+
+
             //testimonials
             Route::group(["prefix" => "testimonials"], function() {
                 Route::get("/", ["as" => "admin.testimonials", "uses" => "Testimonials@index"]);

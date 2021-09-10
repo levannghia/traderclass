@@ -21,7 +21,7 @@ class Subcribe extends Controller{
             // if cookie is existed
             $data =DB::table('subcribe')->where("email", "like", '%' . Cookie::get('search_subcribe') . '%')->orderBy('id', 'desc')->paginate(15);
         }
-        $data->setPath('Subcribe');
+        $data->setPath('subcribe');
         $row = json_decode(json_encode([
             "title" => "Subcribe - Danh sách",
         ]));

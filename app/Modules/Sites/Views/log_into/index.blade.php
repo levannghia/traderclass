@@ -1,6 +1,7 @@
 @extends('Sites::courseIntroduction')
 @section('title', $row->title)
 @section('content')
+@include('Sites::inc.maketting')
 <div class="main">
     <div class="container">
         <div class="row">
@@ -398,287 +399,62 @@
                         </div>
                         <!-- e-cash new -->
                         <div class="mySlides">
-                            <div class="ecash">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup1">
-                                            <img src="/public/sites/images/ecash1.png" alt="">
-                                            <p>Bitcoin (BTC)</p>
-                                        </div>
-                                        <div class="popup" id="popup1">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
-                                                        <p class="price">26.33</p>
-                                                        <p class="name-money">Bitcoin (BTC)</p>
+                        <div class="ecash">
+                                    <div class="row">
+                                    @foreach($crypto as $value)
+                                        <div class="col-md-4">
+                                            <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                    <button type="submit" class="logo-ecash" data-popup-target="popup1">
+                                                    <img src="/public/sites/images/{{$value->image}}" alt="">
+                                                    <p>{{$value->name . '('. $value->symbol .')'}}</p></button>
+                                            <!-- </div> -->
+                                            <div class="popup" id="popup1">
+                                                <div class="popup-content">
+                                                    <span class="popup-close">&times;</span>
+                                                    <h5>PAYMENT</h5>
+                                                    <div class="li-pa"></div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 lef-details">Payment Amount</div>
+                                                        <div class="col-md-6 price-details">
+                                                            <img src="/public/sites/images/{{$value->image}}" width="20" height="20" alt="">
+                                                            <p class="price">26.33</p>
+                                                            <p class="name-money">{{$value->name . '('. $value->symbol .')'}}</p>
+                                                        </div>
                                                     </div>
+                                                    <p class="send-below">Send the indicated amount to the address below:</p>
+                                                    <p class="address-details">Address</p>
+                                                    <div class="link-code">
+                                                        <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                                                        <i class="fal fa-copy" id="ic-copy"></i>
+                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                        <div class="cl-popup" onclick="clPopup()"><img src="images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup"><img src="images/qr-code-ecash.png" alt=""></span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
                                                 </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
                                             </div>
                                         </div>
+                                    @endforeach
+                                        
+                                     
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup2">
-                                            <img src="/public/sites/images/ecash2.png" width="26" height="26" alt="">
-                                            <p>Ethereum (ETH)</p>
-                                        </div>
-                                        <div class="popup" id="popup2">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash2.png" width="20" height="20" alt="">
-                                                        <p class="price">0.01</p>
-                                                        <p class="name-money">Ethereum (ETH)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
+                                    
+                                    
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup3">
-                                            <img src="/public/sites/images/ecash3.png" width="26" height="26" alt="">
-                                            <p>Cardano (ADA)</p>
-                                        </div>
-                                        <div class="popup" id="popup3">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash3.png" width="20" height="20" alt="">
-                                                        <p class="price">9.25</p>
-                                                        <p class="name-money">Cardano (ADA)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup4">
-                                            <img src="/public/sites/images/ecash4.png" width="26" height="26" alt="">
-                                            <p>Binance Coin (BNB)</p>
-                                        </div>
-                                        <div class="popup" id="popup4">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash4.png" width="20" height="20" alt="">
-                                                        <p class="price">0.05</p>
-                                                        <p class="name-money">Binance Coin (BNB)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup5">
-                                            <img src="/public/sites/images/ecash5.png" width="26" height="26" alt="">
-                                            <p>Tether (USDT)</p>
-                                        </div>
-                                        <div class="popup" id="popup5">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash5.png" width="20" height="20" alt="">
-                                                        <p class="price">26.32</p>
-                                                        <p class="name-money">Tether (USDT)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup6">
-                                            <img src="/public/sites/images/ecash6.png" width="26" height="26" alt="">
-                                            <p>XRP (XRP)</p>
-                                        </div>
-                                        <div class="popup" id="popup6">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash6.png" width="20" height="20" alt="">
-                                                        <p class="price">23.00</p>
-                                                        <p class="name-money">XRP (XRP)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup7">
-                                            <img src="/public/sites/images/ecash7.png" width="26" height="26" alt="">
-                                            <p>USD Coin (USDC)</p>
-                                        </div>
-                                        <div class="popup" id="popup7">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash7.png" width="20" height="20" alt="">
-                                                        <p class="price">26.33</p>
-                                                        <p class="name-money">USD Coin (USDC)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup8">
-                                            <img src="/public/sites/images/ecash8.png" width="26" height="26" alt="">
-                                            <p>Polkadot (DOT)</p>
-                                        </div>
-                                        <div class="popup" id="popup8">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash8.png" width="20" height="20" alt="">
-                                                        <p class="price">1.015</p>
-                                                        <p class="name-money">Polkadot (DOT)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="logo-ecash" data-popup-target="popup9">
-                                            <img src="/public/sites/images/ecash9.png" width="26" height="26" alt="">
-                                            <p>Solana (SOL)</p>
-                                        </div>
-                                        <div class="popup" id="popup9">
-                                            <div class="popup-content">
-                                                <span class="popup-close">&times;</span>
-                                                <h5>PAYMENT</h5>
-                                                <div class="li-pa"></div>
-                                                <div class="row">
-                                                    <div class="col-md-6 lef-details">Payment Amount</div>
-                                                    <div class="col-md-6 price-details">
-                                                        <img src="/public/sites/images/ecash9.png" width="20" height="20" alt="">
-                                                        <p class="price">0.321</p>
-                                                        <p class="name-money">Solana (SOL)</p>
-                                                    </div>
-                                                </div>
-                                                <p class="send-below">Send the indicated amount to the address below:</p>
-                                                <p class="address-details">Address</p>
-                                                <div class="link-code">
-                                                    <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                    <i class="fal fa-copy" id="ic-copy"></i>
-                                                    <img src="/public/sites/images/qr-code.png" width="26" height="26" alt="">
-                                                </div>
-                                                <a href="/payment-ecash" id="pay-send">Payment send</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                </div>
 
-                            </div>
+                                </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -695,22 +471,7 @@
         <div id="promo4">
             <input type="text" name="" id="" placeholder="Enter promo code">
         </div>
-        <div id="promo5">
-            <div class="row">
-                <div class="col-md-6">
-                    <button>Promo code 5%</button>
-                    <button>Promo code 10%</button>
-                    <button>Promo code 2%</button>
-                    <button>Promo code 15%</button>
-                </div>
-                <div class="col-md-6">
-                    <button>Promo code 20%</button>
-                    <button>Promo code 30%</button>
-                    <button>Promo code 25%</button>
-                    <button>Promo code 40%</button>
-                </div>
-            </div>
-        </div>
+        
         <div id="promo6">
             <button id="back" onclick="promo_close()">Back</button>
             <button id="save" onclick="promo_close()">Save</button>
@@ -718,4 +479,28 @@
     </div>
 </div>
 <div id="fade" onclick="promo_close()"></div>
+<script>
+$(document).ready(function() {
+    $("[data-id-crypto]").click(function(){
+        var _token = $('meta[name="csrf-token"]').attr('content');
+        let id_crypto = $(this).attr("data-id-crypto");
+        let symbol_crypto = $(this).attr("data-symbol-crypto");//data-symbol-crypto
+        console.log(id_crypto)
+        $.ajax({
+                url: "{{ route('sites.crypto.postAdd') }}",
+                type: "POST",
+                data:
+                {
+                    symbol_crypto:symbol_crypto,
+                    id_crypto: id_crypto,
+                } 
+               
+                success: function(data) {
+                    console.log(data)
+                    $('#popup').html(data);
+                },
+            });
+    });
+});
+</script>
 @endsection

@@ -8,17 +8,19 @@ use App\Modules\Dashboard\Controllers\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Modules\Sites\Models\Teachers_Model;
+use App\Modules\Sites\Models\Crypto_Model;
 
 class LogInto extends Controller
 {
     public function index()
     {
+        $crypto = Crypto_Model::orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Log Into",
         ]));
-
-        return view('Sites::log_into.index', compact('row'));
+        return view('Sites::log_into.index', compact('row', 'crypto'));
     }
+
     public function course_selection($id)
     {
         $teacher = Teachers_Model::find($id);
@@ -57,11 +59,39 @@ class LogInto extends Controller
     }
     public function payment_ecash()
     {
+        require "init.php";
+        //$USD = $request->USD;
+        $email = Auth::user()->email;
+
+        $scurrency = "VND";
+        $rcurrency = "BTC";
+        $bacsiInfor = $coin->GetBasicProfile();
+        $username = $bacsiInfor['result']['public_name'];
+        $mang = [
+            'amount' => 990000,
+            'currency1' => $scurrency,
+            'currency2' => $rcurrency,
+            'buyer_email' => $email,
+            'item' => "Test Thanh Toan",
+            'address' => "",
+            'ipn_url' => "traderclass.vn/webhook.php"
+        ];
+
+        $result = $coin->CreateTransaction($mang);
+        //var_dump($result);
+
+        if($result['error'] == "ok"){
+
+        }
+        else{
+            print 'Error: '. $result['error'] . "\n";
+            die();
+        }
         //$teacher = Teachers_Model::find($id);
         $row = json_decode(json_encode([
             "title" => "Payment Ecash",
         ]));
 
-        return view('Sites::payment_ecash.index', compact('row'));
+        return view('Sites::payment_ecash.index', compact('row','result','rcurrency','scurrency'));
     }
 }

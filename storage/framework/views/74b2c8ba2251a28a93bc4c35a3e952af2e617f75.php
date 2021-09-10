@@ -1,6 +1,7 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
+<?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="main">
         <div class="img">
             <img src="/public/upload/images/course/thumb/<?php echo e($course->photo); ?>" width="100%" alt="">
@@ -45,58 +46,67 @@
                         
                         
                     </div>
-                    <div class="in">
-                        <p>From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength
-                            can help you see what’s possible for yourself—and see it through. Learn how to identify your dreams and apply the principles of endurance, power, and strength to help you reach your goals.
-                        </p>
-                        <p>11 video lessons (1h 15m)</p>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p id="title">Ted Nguyen</p>
+                            <p style="font-size: 20px; color: white; font-weight: 100;">Teacher Crypto Trader</p>
+                            <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
+                        </div>
+                        <div class="col-md-3" id="col-md-3">
+                            <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
+                            <button id="but" onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="./images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                        </div>
                     </div>
+                    <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
+                        help you see what’s possible for yourself—and see it through. Learn how to identify your dreams and apply the principles of endurance, power, and strength to help you reach your goals.
+                    </p>
                 </div>
+                
                 <div class="col-md-4">
                     <div class="all">
                         <div>
-                            <div class="pla" onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Trailer</div>
+                            <div class="pla" onclick="nvideo('/public/sites/mp4/Teacher1.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Trailer</div>
 
                         </div>
                         <div>
-                            <div class="pla" onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Sample</div>
+                            <div class="pla" onclick="nvideo('/public/sites/mp4/Teacher2.mp4')"><img style="margin-right: 5px;" src="/public/sites/images/play.png" alt="">Class Sample</div>
                         </div>
                     </div>
                     <div class="tit">
                         <p>Browse Lesson Plan</p>
                     </div>
                     <div class="im">
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(0)">
                             <p>1. Meet Your Instructor: Robin Arzón</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo(1)">
                             <p>2. Hustle and Grit</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(2)">
                             <p>3. Overcoming Mental Blocks</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo(3)">
                             <p>4. Know Your Worth</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(4)">
                             <p>5. Food as Fuel</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo(5)">
                             <p>6. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(6)">
                             <p>7. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo(7)">
                             <p>8. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(8)">
                             <p>9. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                        <div onclick="nextvideo(9)">
                             <p>10. The Joy Metric</p>
                         </div>
-                        <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                        <div onclick="nextvideo(10)">
                             <p>11. The Joy Metric</p>
                         </div>
                     </div>
@@ -113,6 +123,87 @@
                             </a>
                         </div>
                         <div id="i"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p id="title" style="padding-top: 30px;">Rate and comment</p>
+                    <div class="commet">
+                        <div class="imt">
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                            <div class="com">
+                                <div class="date">
+                                    <div id="google">
+                                        <p>M</p>
+                                    </div>
+                                    <p id="date"><span>Jarratt Davis</span> </p>
+                                </div>
+                                <div class="str">
+                                    <p style="color: #EF8D21; padding-left: 7%;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></p>
+                                    <p id="commet" style="color: white;">Thank you for sharing your knowledge and experience</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

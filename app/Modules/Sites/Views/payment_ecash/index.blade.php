@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/public/sites/css/PaymentEcash.css">
+    <link rel="stylesheet" href="/public/sites/css/PaymentEcash.css?v={{time()}}">
     <title>E-Cash</title>
 </head>
 <body>
@@ -75,21 +75,21 @@
                     <div class="content-right">
                         <h5 class="top ri">Payment</h5>
                         <div class="li"></div>
-                        <img src="/public/sites/images/qr-code-ecash.png" width="140" height="140" alt="" class="qrcode">
-                        <p class="txt time">This payment will expire in 00:30:59</p>
+                        <img src="{{$result['result']['qrcode_url']}}" width="140" height="140" alt="" class="qrcode">
+                        <p class="txt time">This payment will expire in {{$result['result']['timeout']}}</p>
                         <p class="txt below">Send the indicated amount to the address below:</p>
-                        <p class="priceName">Bitcoin (BTC) amount</p>
+                        <p class="priceName">Bitcoin ({{$rcurrency}}) amount</p>
                         <div class="pri">
-                            <p class="txt2 txtpri">26.33</p>
+                            <p class="txt2 txtpri">{{$result['result']['amount']}} {{$rcurrency}}</p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <p class="wallet">Wallet address</p>
                         <div class="pri wal-link">
-                            <p class="txt2 txtlink">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                            <p class="txt2 txtlink">{{$result['result']['address']}}</p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <div class="total-price">
-                            <h4>Total Price: $26.33</h4>
+                            <h4>Total Price: 990000 {{$scurrency}}</h4>
                         </div>
                     </div>
                 </div>

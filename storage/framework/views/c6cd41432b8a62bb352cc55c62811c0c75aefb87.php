@@ -1,6 +1,7 @@
 
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
+<?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <div class="main">
     <div class="intro">
         <p style="font-size: 18px;">Start your first course</p>
@@ -15,7 +16,7 @@
                     <div class="img">
                         <img src="<?php echo e('/public/upload/images/teachers/thumb/'.'all_class'.$value->photo); ?>" alt="">
                         <div class="text-center">
-                            <div class="font" style="color: white;"><span class="a"><?php echo e($value->fullname); ?></span> <br> <span class="b">-</span> <br><span class="c"><?php echo e($value->name); ?></span>
+                            <div class="font" style="color: white;"><span class="a"><?php echo e($value->fullname); ?></span> <br> <span class="b">-</span> <br><span class="c"><?php echo e($value->position); ?></span>
                             </div>
                             <div class="button">
                                 <button><a href="<?php echo e(url('/teacher/'.$value->id)); ?>"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>

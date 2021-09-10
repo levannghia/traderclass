@@ -206,11 +206,7 @@ function body() {
     document.getElementById('1').style.borderBottom = "2px solid #ffffff";
 }
 
-function nextvideo(name) {
-    var videoFile = name;
-    $('.wrappe video source').attr('src', videoFile);
-    $(".wrappe video")[0].load();
-}
+
 
 function off() {
     document.getElementById("video").pause();
@@ -222,4 +218,39 @@ function on() {
     document.getElementById("video").play();
     document.getElementById("playpause").style.display = "none";
     document.getElementById("offvideo").style.display = "block";
+}
+var vids = [
+    "/public/sites/mp4/Teacher1.mp4",
+    "/public/sites/mp4/Teacher2.mp4",
+    "/public/sites/mp4/TraderClass Online Classes.mp4",
+    "/public/sites/mp4/Teacher1.mp4",
+    "/public/sites/mp4/Teacher2.mp4",
+    "/public/sites/mp4/TraderClass Online Classes.mp4",
+    "/public/sites/mp4/Teacher1.mp4",
+    "/public/sites/mp4/Teacher2.mp4",
+    "/public/sites/mp4/TraderClass Online Classes.mp4",
+    "/public/sites/mp4/Teacher1.mp4"
+];
+var o = 0;
+
+function nextv() {
+    if (o >= vids.length) {
+        alert('too far!');
+        return;
+    }
+    o++;
+    document.getElementById("video").src = vids[o];
+    console.log(o)
+};
+
+function nextvideo(mum) {
+    document.getElementById("video").src = vids[mum];
+    o = mum;
+    console.log(o);
+}
+
+function nvideo(name) {
+    var videoFile = name;
+    $('.wrappe video source').attr('src', videoFile);
+    $(".wrappe video")[0].load();
 }

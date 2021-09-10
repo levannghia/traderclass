@@ -198,7 +198,7 @@ class Course extends Controller{
         $data = DB::table('course')->select('course.id','name','title','course.status','course.created_at','course.updated_at','teachers.fullname','course.photo')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->where('course.status',2)->orderBy('course.id', 'desc')->paginate(15);
         $data->setPath('trash');
         $row = json_decode(json_encode([
-            "title" => "Thùng rác - Admin",
+            "title" => "Thùng rác - Course",
         ]));
         return view("Dashboard::course.trash", compact("row", "data"));
     }

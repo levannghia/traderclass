@@ -19,7 +19,8 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
 
     //Search
-    // Route::get('/search', ["uses" => "SearchCourse@getSearch"]);
+    Route::post('/process', ["as" => "sites.process","uses" => "SearchCourse@process"]);
+    Route::get('/index', ["uses" => "SearchCourse@getIndex"]);
     Route::post('/search/course', ["as" => "sites.search", "uses" => "SearchCourse@postSearchAjax"]);
 
     //Register
@@ -32,6 +33,16 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/privacy-policy.html", ["as" => "sites.privacy.index", "uses" => "Policy@privacy"]);
         //Refund Policy
         Route::get("/return-and-refund-policy.html", ["as" => "sites.policy.index", "uses" => "Policy@refundPolicy"]);
+    });
+
+    Route::group(["prefix" => "api"], function() {
+        
+        Route::get("/", ["as" => "sites.crypto.index", "uses" => "PaymentCrypto@index"]);
+        
+        Route::get("/test", ["as" => "sites.crypto.process", "uses" => "PaymentCrypto@process"]);
+        
+        Route::post("/add", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
+        Route::get("/update/{id}", ["as" => "sites.crypto.getUpdate", "uses" => "PaymentCrypto@getUpdate"]);
     });
 
     //Account
@@ -61,9 +72,9 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.course.index", "uses" => "MyCourse@index"]);
     });
 
-    // //course Introduction
-    Route::group(["prefix" => "course-introduction",'middleware' => 'auth:web'], function() {
-        Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseIntroduction@index"]);
+    // //course Detail
+    Route::group(["prefix" => "course-detail",'middleware' => 'auth:web'], function() {
+        Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseDetail@index"]);
         // Route::get("/{id}", ["as" => "sites.courseIntroduction.intruduction", "uses" => "CourseIntroduction@intruduction"]);
     });
     //find-my-class
@@ -74,11 +85,12 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //log-into
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
+        // Route::post("/ecash-bitcoin", ["as" => "sites.logInto.index", "uses" => "LogInto@ecash_bitcoin"]);
         Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
         Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
         Route::get("/payment-atm", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
         Route::get("/payment-momo", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
-        Route::get("/payment-ecash", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
+        Route::post("/payment-ecash", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
     });
 
     //Contact

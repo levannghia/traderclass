@@ -74,7 +74,7 @@ use Illuminate\Support\Facades\DB;
                         <?php
                             $course_id = DB::table('course')->select('course.id')->join('teachers','teachers.id','=','course.teacher_id')->where('teachers.id',$value->id)->first();
                         ?>
-                        <button><a href="/teacher/<?php echo e($course_id->id); ?>"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
+                        <button><a href="/teacher/<?php echo e($value->id); ?>"><p><i class="bi bi-play-fill"></i>&nbsp; Watch now</p></a></button>
                     </div>
                     <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="" />
                 </div>

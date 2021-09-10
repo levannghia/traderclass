@@ -1,6 +1,7 @@
 @extends('Sites::account')
 @section('title', $row->title)
 @section('content')
+@include('Sites::inc.maketting')
     <div class="mains">
         <div class="container">
             @if (session()->has('message'))

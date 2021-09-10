@@ -17,7 +17,6 @@
                     <a href="#">Teacher 4</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="/course-introduction"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a></li>
             <li class="nav-item"><a href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
             <li class="nav-item"> <a href="/log-into"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
             <li class="nav-item">
@@ -53,10 +52,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="/course-introduction"><i class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
-            </li>
-            <li class="nav-item">
-                <a href="/all-classư"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
+                <a href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
             </li>
             <li class="nav-item">
                 <a href="#" onclick="sign_in()">Sign In</a>

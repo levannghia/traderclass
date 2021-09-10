@@ -32,7 +32,7 @@ class Admins extends Controller{
             // if cookie is existed
             $data = DB::table('admins')->select('admins.id','name','email','fullname','photo','gender','phone','address','status')->join('admins_role', 'admins.id', '=', 'admins_role.admins_id')->join('role', 'admins_role.role_id', '=', 'role.id')->where("fullname", "like", '%' . Cookie::get('search_admin') . '%')->orderBy('admins.id', 'desc')->paginate(15);
         }
-        $data->setPath('admins');
+        $data->setPath('admin');
         $row = json_decode(json_encode([
             "title" => "Admin - Danh sách",
         ]));

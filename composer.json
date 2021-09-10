@@ -7,6 +7,8 @@
     "require": {
         "php": "^7.3|^8.0",
         "ckfinder/ckfinder-laravel-package": "v3.5.1.7",
+        "codeitnowin/barcode": "^3.0",
+        "codenix-sv/coingecko-api": "^1.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.3",

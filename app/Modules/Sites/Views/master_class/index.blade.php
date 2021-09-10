@@ -1,5 +1,6 @@
 @extends('Sites::masterclass')
 @section('content')
+@include('Sites::inc.maketting')
  <!-- BANNER -->
  <div class="banner">
         <div class="row" style="background: #000; margin-left: 0px; margin-right: 0px">

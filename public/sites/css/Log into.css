@@ -480,26 +480,11 @@
     padding: 10px;
 }
 
-#promo5 {
-    display: grid;
-}
 
-#promo5 button {
-    width: 100%;
-    background-color: white;
-    border: 1px solid #c1bebe;
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-#promo5 button:hover {
-    background-color: #EF8D21;
-    border: 1px solid #EF8D21;
-}
 
 #promo6 {
     float: right;
-    margin: 40px 0 20px 0;
+    margin: 20px 0 20px 0;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -507,7 +492,7 @@
 
 #promo6 button {
     width: 14%;
-    height: 35px;
+    height: 36px;
 }
 
 #back {

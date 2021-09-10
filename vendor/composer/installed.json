@@ -263,6 +263,119 @@
             "install-path": "../ckfinder/ckfinder-laravel-package"
         },
         {
+            "name": "codeitnowin/barcode",
+            "version": "3.0.6",
+            "version_normalized": "3.0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeitnowin/barcode-generator.git",
+                "reference": "68e6f0f9eac16a20e20ed0e8258d4d9765800878"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeitnowin/barcode-generator/zipball/68e6f0f9eac16a20e20ed0e8258d4d9765800878",
+                "reference": "68e6f0f9eac16a20e20ed0e8258d4d9765800878",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.3.2"
+            },
+            "time": "2021-08-20T15:46:10+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "CodeItNow\\": "CodeItNow/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akhtar Khan",
+                    "email": "er.akhtarkhan@gmail.com"
+                }
+            ],
+            "description": "Barcode & Qr Code generator library by http://www.codeitnow.in. You can use it with Custom PHP application or any PHP Framework such as Laravel, Cakephp, Yii, Codeigneter etc.",
+            "homepage": "http://www.codeitnow.in",
+            "keywords": [
+                "Symfony2",
+                "barcode",
+                "cakephp",
+                "code",
+                "generator",
+                "laravel",
+                "qr",
+                "qrcode",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/codeitnowin/barcode-generator/issues",
+                "source": "https://github.com/codeitnowin/barcode-generator/tree/v3.0.6"
+            },
+            "install-path": "../codeitnowin/barcode"
+        },
+        {
+            "name": "codenix-sv/coingecko-api",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codenix-sv/coingecko-api.git",
+                "reference": "6946e36d8f5e989658405f9e0fb90b7a53c8b561"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codenix-sv/coingecko-api/zipball/6946e36d8f5e989658405f9e0fb90b7a53c8b561",
+                "reference": "6946e36d8f5e989658405f9e0fb90b7a53c8b561",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "~6.0|^7.0.1",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0"
+            },
+            "time": "2021-07-24T16:33:27+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Codenixsv\\CoinGeckoApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Volodymyr Svyryd",
+                    "email": "codenix.sv@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP REST API client for coingecko.com",
+            "homepage": "https://github.com/codenix-sv/coingecko-api",
+            "keywords": [
+                "api",
+                "client",
+                "coingecko.com",
+                "php",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/codenix-sv/coingecko-api/issues?state=open",
+                "source": "https://github.com/codenix-sv/coingecko-api"
+            },
+            "install-path": "../codenix-sv/coingecko-api"
+        },
+        {
             "name": "doctrine/inflector",
             "version": "2.0.3",
             "version_normalized": "2.0.3.0",

@@ -30,7 +30,7 @@ class CourseCategory extends Controller{
             // if cookie is existed
             $data = CourseCategory_Model::where("title", "like", '%' . Cookie::get('search_course_category') . '%')->orderBy('id', 'desc')->paginate(15);
         }
-        $data->setPath('course_category');
+        $data->setPath('course-category');
         $row = json_decode(json_encode([
             "title" => "Course Categories - Danh sách",
         ]));

@@ -232,7 +232,7 @@
     .member {
         border-top: 1px solid #323741;
         padding-top: 60px;
-        margin-top: 40px;
+        margin-top: 80px;
     }
     
     .member img {
@@ -324,7 +324,7 @@
         width: 0;
     }
     
-    .checkmarks {
+    .checkmark {
         position: absolute;
         top: 0;
         left: 0;
@@ -336,25 +336,25 @@
         border-radius: 5px;
     }
     
-    .contai:hover input~.checkmarks {
+    .contai:hover input~.checkmark {
         background-color: rgb(136, 135, 135);
     }
     
-    .contai input:checked~.checkmarks {
+    .contai input:checked~.checkmark {
         background-color: #111319;
     }
     
-    .checkmarks:after {
+    .checkmark:after {
         content: "";
         position: absolute;
         display: none;
     }
     
-    .contai input:checked~.checkmarks:after {
+    .contai input:checked~.checkmark:after {
         display: block;
     }
     
-    .contai .checkmarks:after {
+    .contai .checkmark:after {
         left: 9px;
         top: 5px;
         width: 5px;
@@ -634,6 +634,84 @@
         display: none;
     }
     
+    .col-md-3 button {
+        background-color: #EF8D21;
+        margin-bottom: 5px;
+        border: 0px;
+        height: 30px;
+        border-radius: 3px;
+        width: 100%;
+    }
+    
+    .col-md-3 button p {
+        font-size: 13px;
+        margin-bottom: 0px;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .col-md-3 button p a {
+        font-size: 13px;
+        color: white;
+    }
+    
+    .commet {
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 87%;
+        margin-bottom: 55%;
+    }
+    
+    .imt {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .imt .com {
+        border-bottom: 1px solid #575656;
+        padding-top: 10px;
+    }
+    
+    .date {
+        display: flex;
+    }
+    
+    .str {
+        margin-top: 12px;
+    }
+    
+    #google {
+        width: 46px;
+        height: 45px;
+        border-radius: 50px;
+        background-color: #0085f8;
+    }
+    
+    #google p {
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    #date {
+        margin-bottom: 0px;
+        height: 25px;
+        padding-top: 10px;
+        padding-left: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    #but {
+        background-color: #171921;
+        border: 2px solid;
+    }
+    
+    .wrappe {
+        margin-bottom: 20px;
+    }
+    
     @media screen and (max-width: 2560px) {
         .text-center {
             top: 94%;
@@ -673,6 +751,9 @@
         #share4 {
             height: 110px;
         }
+        .img {
+            margin-bottom: 8%;
+        }
     }
     
     @media screen and (max-width: 1920px) {
@@ -694,6 +775,9 @@
         #share4 {
             height: 100px;
         }
+        .img {
+            margin-bottom: 11%;
+        }
     }
     
     @media screen and (max-width: 1536px) {
@@ -707,11 +791,6 @@
         #share2 a img {
             width: 12%;
             padding: 10px;
-        }
-        .img {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 13%;
         }
         #light {
             left: 35%;
@@ -729,6 +808,9 @@
         .static button {
             font-size: 20px;
         }
+        .img {
+            margin-bottom: 14%;
+        }
     }
     
     @media screen and (max-width: 1440px) {
@@ -745,6 +827,9 @@
         .static {
             height: 56px;
             border-radius: 5px;
+        }
+        .img {
+            margin-bottom: 10%;
         }
     }
     
@@ -765,9 +850,6 @@
     /*Ipad ngang(1024 x 768)*/
     
     @media screen and (max-width: 1024px) {
-        .img {
-            margin-bottom: 22%;
-        }
         .im {
             height: 210px;
         }
@@ -809,10 +891,22 @@
         #share3 {
             font-size: 20px;
         }
+        .col-md-3 button p a {
+            font-size: 11px;
+        }
+        .col-md-3 button p {
+            font-size: 12px;
+        }
+        .img {
+            margin-bottom: 22%;
+        }
     }
     /*Ipad dọc(768 x 1024)*/
     
     @media screen and (max-width: 768px) {
+        .img {
+            margin-bottom: 38%;
+        }
         .playpause img {
             transform: translate(0px, 201%);
             width: 50px;
@@ -820,9 +914,6 @@
         .text-center {
             top: 115%;
             left: 37%;
-        }
-        .img {
-            margin-bottom: 38%;
         }
         .pla {
             padding: 0px;
@@ -880,7 +971,7 @@
             color: white;
             height: 34px;
         }
-        .checkmarks {
+        .checkmark {
             position: absolute;
             top: 0;
             left: 0;
@@ -936,10 +1027,31 @@
         .offvideo {
             height: 61%;
         }
+        .col-md-9 {
+            flex: 0 0 67%;
+            max-width: 67%;
+        }
+        #col-md-3 {
+            flex: 0 0 33%;
+            max-width: 33%;
+        }
+        .commet {
+            height: 125%;
+        }
+        .member {
+            margin-top: 35%;
+        }
     }
     /*Tablet nhỏ(480 x 640)*/
     
     @media screen and (max-width: 480px) {
+        .try {
+            margin-top: 35px;
+            padding-top: 50px;
+        }
+        .img {
+            margin-bottom: 64%;
+        }
         .playpause img {
             transform: translate(0px, 200%);
             width: 47px;
@@ -963,9 +1075,6 @@
             font-weight: 500;
             font-size: 14px;
         }
-        .img {
-            margin-bottom: 62%;
-        }
         .text-center {
             top: 150%;
             left: 32%;
@@ -983,7 +1092,8 @@
             transform: translate(0px, 126%);
         }
         #up {
-            margin-right: 47%;
+            /* margin-right: 47%; */
+            width: 100%;
         }
         .member .col-md-2 {
             padding-left: 8px;
@@ -992,9 +1102,9 @@
             margin-bottom: 10px;
         }
         .member img {
-            width: 60%;
-            height: 345px;
-            margin-bottom: 10p;
+            width: 80%;
+            height: auto;
+            margin-bottom: 10px;
         }
         #wen {
             margin: 15px;
@@ -1013,6 +1123,12 @@
             left: 20%;
             width: 62%;
         }
+        .all {
+            margin-top: 2%;
+        }
+        .member {
+            margin-top: 53%;
+        }
     }
     
     @media screen and (max-width: 425px) {
@@ -1027,6 +1143,17 @@
         #light {
             top: 60%;
             left: 85%;
+        }
+        #col-md-3 {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .col-md-9 {
+            flex: 0 0 80%;
+            max-width: 70%;
+        }
+        .all {
+            margin-top: 3%;
         }
     }
     
@@ -1060,6 +1187,10 @@
         /* #VisaChipCardVideo {
             width: 370px;
         } */
+        #col-md-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
     }
     
     @media screen and (max-width: 375px) {
@@ -1101,10 +1232,19 @@
         #share2 a img {
             width: 22%;
         }
+        .commet {
+            height: 155%;
+        }
+        .member {
+            margin-top: 80%;
+        }
     }
     /*Iphone(480 x 640)*/
     
     @media screen and (max-width: 320px) {
+        .img {
+            margin-bottom: 99%;
+        }
         .text-center {
             top: 211%;
             left: 34%;
@@ -1125,9 +1265,6 @@
             font-size: 7px;
             font-weight: 500;
         }
-        .img {
-            margin-bottom: 95%;
-        }
         .lin a {
             padding: 21px;
             padding-left: 18px;
@@ -1146,10 +1283,6 @@
         .playpause img {
             transform: translate(0px, 207%);
             width: 29px;
-        }
-        .member img {
-            width: 75%;
-            height: 292px;
         }
         #email {
             width: 210px;
@@ -1197,10 +1330,25 @@
         .static {
             font-size: 13px;
         }
+        .commet {
+            height: 140%;
+        }
+        .member {
+            margin-top: 106%;
+        }
     }
     /*Smart phone nhỏ*/
     
     @media screen and (max-width: 240px) {
+        .commet {
+            height: 125%;
+        }
+        .member {
+            margin-top: 110%;
+        }
+        .img {
+            margin-bottom: 125%;
+        }
         .black p {
             font-size: 5px;
         }
@@ -1234,9 +1382,6 @@
             top: 260%;
             left: 33%;
         }
-        .img {
-            margin-bottom: 122%;
-        }
         .lin a {
             padding: 22px;
             padding-left: 15px;
@@ -1258,10 +1403,6 @@
         #gen {
             font-size: 13px;
             font-weight: bold;
-        }
-        .member img {
-            width: 75%;
-            height: 250px;
         }
         #light {
             top: 60%;
@@ -1285,5 +1426,9 @@
             font-size: 10px;
             margin-top: 0px;
             height: 35px;
+        }
+        #col-md-3 {
+            flex: 0 0 70%;
+            max-width: 70%;
         }
     }

@@ -29,7 +29,6 @@
                 </div>
             </div>
         </div>
-        @include("Dashboard::inc.formheader")
         <div class="row">
             <div class="col-md-12 mb-5">
                 <div class="card-box">

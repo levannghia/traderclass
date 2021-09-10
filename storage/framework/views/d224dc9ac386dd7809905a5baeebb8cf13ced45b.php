@@ -14,10 +14,6 @@
                                 <a style="padding-top: 0px;" class="nav-link" href="/all-class"><i
                                         class="fas fa-users-class"></i>&nbsp; All Class</a>
                             </li>
-                            <li>
-                                <a style="padding-top: 0px;" class="nav-link" href="/course-introduction"><i
-                                        class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
-                            </li>   
                         </ul>
                     </div>
                     <div class="fsearch">
@@ -63,11 +59,9 @@
                 </div>
             </div>
         </div>
-        <div class="black" id="black">
-            <p>GET 75% DISCOUNT FOR THE ENTIRE COURSE. DURATION 31/8.</p>
-            <button onclick="clblack()">x</button>
-        </div>
+        
     </div>
+    
 <?php else: ?>
     <header>
         <div class="header_bottom">
@@ -85,11 +79,6 @@
                                     href="<?php echo e(route('sites.allClass.index')); ?>"><i class="fas fa-users-class"></i>&nbsp;
                                     All Class</a>
                             </li>
-                            <li>
-                                <a style="padding-top: 0px;" class="nav-link"
-                                    href="<?php echo e(route('sites.courseIntroduction.index')); ?>"><i
-                                        class="fas fa-presentation"></i>&nbsp; Course Introduction</a>
-                            </li>  
                         </ul>
                     </div>
                     <div class="fsearch">
@@ -121,8 +110,9 @@
                 </div>
             </div>
         </div>
-        
+       
     </header>
+   
 <?php endif; ?>
 
 <script>
@@ -149,10 +139,10 @@
             }
         });
 
-        // $(document).on('click', 'li', function() {
-        //     $('#fsearchh').val($(this).text());
-        //     $('#brows').fadeOut();
-        // });
+        $(document).on('click', 'option', function() {
+            $('#fsearchh').val($(this).text());
+            $('#brows').fadeOut();
+        });
     });
 </script>
 <?php /**PATH C:\wamp64\www\traderclass\app\Modules/Sites/Views/inc/header.blade.php ENDPATH**/ ?>

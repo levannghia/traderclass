@@ -147,6 +147,20 @@
                     </ul>
                 </li>
                 @endif
+                @if(Gate::allows('view', 'CryptocurrencyWallet'))
+                <li>
+                    <a href="javascript: void(0);">
+                        <i class="fa fa-briefcase"></i>
+                        <span> Cryptocurrency wallet</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="nav-second-level nav collapse" aria-expanded="false" style="">
+                        <li class="">
+                            <a href="/dashboard/cryptocurrency-wallet">Danh sách</a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
                 @if(Gate::allows('view', 'Role'))
                 <li>
                     <a href="javascript: void(0);">
@@ -168,7 +182,7 @@
                     </a>
                 </li>
                 @endif
-                @if(Gate::allows('view', 'Course'))
+                @if(Gate::allows('view', 'Home'))
                 <li>
                     <a href="javascript: void(0);">
                         <i class="fe-home"></i>
