@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="form-group mb-2">
-                    <label for="title">Id video youtube</label>
+                    <label for="title">Id video(trailer) youtube</label>
                     <input type="text"  name="video_id" value="{{ old('video_id') }}" class="form-control form-control-sm" placeholder="* Link video">
                 </div>
             </div>

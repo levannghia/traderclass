@@ -37,7 +37,7 @@ class UserCourse extends Controller
         return view("Dashboard::user_course.index", compact("row", "settings", "data"));
     }
 
-    public function postIndex($id = 0, Request $request) {
+    public function postIndex(Request $request) {
         if (isset($_POST["btn_search"])) {
             Cookie::queue("search_user_course", $request->search, 60);
             return redirect()->back()->with(["type" => "success", "flash_message" => "Tìm kiếm : " . $request->search]);

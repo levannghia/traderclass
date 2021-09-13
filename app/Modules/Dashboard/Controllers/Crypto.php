@@ -34,7 +34,7 @@ class Crypto extends Controller{
             "title" => "Cryptocurrency wallet - Danh sách",
         ]));
 
-        return view("Dashboard::cryptocurrency_wallet.index", compact("row", "data"));
+        return view("Dashboard::crypto.index", compact("row", "data"));
     }
 
     public function postIndex(Request $request) {
@@ -53,7 +53,7 @@ class Crypto extends Controller{
             "title" => "Cryptocurrency wallet - Thêm",
             "desc" => "Thêm mới",
         ]));
-        return view("Dashboard::cryptocurrency_wallet.add", compact("row", "settings"));
+        return view("Dashboard::crypto.add", compact("row", "settings"));
     }
 
     public function postAdd(Request $request){
@@ -78,7 +78,7 @@ class Crypto extends Controller{
             "title" => "Course Categories - Cập nhật",
             "desc" => "Cập nhật",
         ]));
-        return view("Dashboard::cryptocurrency_wallet.edit", compact("row", "data"));
+        return view("Dashboard::crypto.edit", compact("row", "data"));
     }
 
     public function postEdit(Request $request, $id = 0) {
@@ -139,7 +139,7 @@ class Crypto extends Controller{
         $row = json_decode(json_encode([
             "title" => "Thùng rác - Cryptocurrency Wallet",
         ]));
-        return view("Dashboard::cryptocurrency_wallet.trash", compact("row", "data"));
+        return view("Dashboard::crypto.trash", compact("row", "data"));
     }
 
     public function trashDelete($id = "") {

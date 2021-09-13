@@ -79,6 +79,7 @@
                                                     <button type="button" class="btn btn-blue btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe-settings"></i></button>
                                                     <div class="dropdown-menu dropdown-menu-right"  x-placement="bottom-start" >
                                                         <a class="dropdown-item" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}"><i class="fe-edit-2"></i> Chỉnh sửa</a>
+                                                        <a class="dropdown-item" href="/{{Helper_Dashboard::get_patch()}}/video-course/{{$value->id}}"><i class="fa fa-eye"></i> Xem list Video</a>
                                                         @if($value->status==1)
                                                         <a class="dropdown-item text-danger" href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/status/{{$value->id}}/0"><i class="fe-lock"></i> Khóa</a>
                                                         @elseif($value->status==0)
