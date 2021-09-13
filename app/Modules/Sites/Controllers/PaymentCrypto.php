@@ -46,6 +46,7 @@ class PaymentCrypto extends Controller
         $data = json_decode($api, true);
 
         $crypto->id_crypto = $crypto_id->id;
+        //$crypto->image_crypto = $crypto_id->image;
         $crypto->symbol = $crypto_id->symbol;
         if ($crypto_id->symbol == 'BTCUSDT') {
             $crypto->cryptocurrency_name = 'bitcoin';
@@ -73,8 +74,8 @@ class PaymentCrypto extends Controller
 
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         $crypto->save();
-        return response()->json($crypto, 200);
-        //return redirect()->route('sites.crypto.getUpdate', $crypto->id);
+        //return response()->json($crypto, 200);
+        return redirect()->route('sites.crypto.getUpdate', $crypto->id);
     }
 
     public function getUpdate($id)
@@ -106,5 +107,6 @@ class PaymentCrypto extends Controller
         $crypto->save();
         header("Refresh:10");
         return response()->json($crypto, 200);
+        
     }
 }

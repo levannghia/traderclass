@@ -184,6 +184,20 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("status/{id}/{status}", ["as" => "admin.course.status", "uses" => "Course@status"]);
             });
 
+             //video course
+             Route::group(["prefix" => "video-course"], function() {
+                Route::get("/", ["as" => "admin.video_course", "uses" => "VideoCourse@index"]);
+                Route::post("/", ["as" => "admin.video_course", "uses" => "VideoCourse@postIndex"]);
+                Route::get("add", ["as" => "admin.video_course.add", "uses" => "VideoCourse@add"]);
+                Route::post("add", ["as" => "admin.video_course.postAdd", "uses" => "VideoCourse@postAdd"]);
+                Route::get("edit/{id}", ["as" => "admin.video_course.edit", "uses" => "VideoCourse@edit"]);
+                Route::post("edit/{id}", ["as" => "admin.video_course.postEdit", "uses" => "VideoCourse@postEdit"]);
+                Route::get("/trash", ["as" => "admin.video_course.trash", "uses" => "VideoCourse@trash"]);
+                Route::get("/trash/delete/{id}", ["as" => "admin.video_course.trash", "uses" => "VideoCourse@trashDelete"]);
+                Route::get("delete/{id}", ["as" => "admin.video_course.delete", "uses" => "VideoCourse@delete"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.video_course.status", "uses" => "VideoCourse@status"]);
+            });
+
 
             //course category
             Route::group(["prefix" => "course-category"], function() {
