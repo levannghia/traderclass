@@ -10,7 +10,7 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control border-white" name="search" value="{{Cookie::get('search_cryptocurrency_wallet')}}" placeholder="Tên ví...">
+                                <input type="text" class="form-control border-white" name="search" value="{{Cookie::get('search_crypto')}}" placeholder="crypto name...">
                                 <div class="input-group-append">
                                     <button type="submit" name="btn_search" class="input-group-text bg-blue border-blue text-white">
                                         <i class="fe-search"></i>

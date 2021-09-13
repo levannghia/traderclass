@@ -3,7 +3,7 @@
 namespace App\Modules\Dashboard\Controllers;
 
 use Illuminate\Http\Request;
-use App\Modules\Dashboard\Models\CryptocurrencyWallet_Model;
+use App\Modules\Dashboard\Models\Crypto_Model;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
 
-class CryptocurrencyWallet extends Controller{
+class Crypto extends Controller{
 
     public function __construct()
     {
@@ -22,12 +22,12 @@ class CryptocurrencyWallet extends Controller{
 
     public function index(){
         $data = null;
-        if (Cookie::get('search_cryptocurrency_wallet') == "") {
+        if (Cookie::get('search_crypto') == "") {
             // if cookie not existed
-            $data = CryptocurrencyWallet_Model::orderBy('id', 'desc')->paginate(15);
+            $data = Crypto_Model::orderBy('id', 'desc')->paginate(15);
         } else {
             // if cookie is existed
-            $data = CryptocurrencyWallet_Model::where("name", "like", '%' . Cookie::get('search_cryptocurrency_wallet') . '%')->orderBy('id', 'desc')->paginate(15);
+            $data = Crypto_Model::where("name", "like", '%' . Cookie::get('search_crypto') . '%')->orderBy('id', 'desc')->paginate(15);
         }
         $data->setPath('cryptocurrency-wallet');
         $row = json_decode(json_encode([
@@ -39,7 +39,7 @@ class CryptocurrencyWallet extends Controller{
 
     public function postIndex(Request $request) {
         if (isset($_POST["btn_search"])) {
-            Cookie::queue("search_cryptocurrency_wallet", $request->search, 60);
+            Cookie::queue("search_crypto", $request->search, 60);
             return redirect()->route("admin.wallet")->with(["type" => "success", "flash_message" => "Tìm kiếm : " . $request->search]);
         }
     }
@@ -58,7 +58,7 @@ class CryptocurrencyWallet extends Controller{
 
     public function postAdd(Request $request){
         $this->validate($request, ["name" => "required","address" => "required"], ["name.required" => "Vui lòng nhập tiêu đề","address.required" => "Vui lòng nhập địa chỉ ví"]);
-        $cryptocurrency_wallet = new CryptocurrencyWallet_Model;
+        $cryptocurrency_wallet = new Crypto_Model;
         $cryptocurrency_wallet->name = $request->name;
         $cryptocurrency_wallet->address = $request->address;
         $cryptocurrency_wallet->status = $request->status;
@@ -73,7 +73,7 @@ class CryptocurrencyWallet extends Controller{
         if (!Gate::allows('edit', explode("\\", get_class())[4])) {
             abort(403);
         }
-        $data = CryptocurrencyWallet_Model::find($id);
+        $data = Crypto_Model::find($id);
         $row = json_decode(json_encode([
             "title" => "Course Categories - Cập nhật",
             "desc" => "Cập nhật",
@@ -83,7 +83,7 @@ class CryptocurrencyWallet extends Controller{
 
     public function postEdit(Request $request, $id = 0) {
         $this->validate($request, ["name" => "required","address" => "required"], ["name.required" => "Vui lòng nhập tiêu đề","address.required" => "Vui lòng nhập địa chỉ ví"]);
-        $cryptocurrency_wallet = CryptocurrencyWallet_Model::find($id);
+        $cryptocurrency_wallet = Crypto_Model::find($id);
         $cryptocurrency_wallet->name = $request->name;
         $cryptocurrency_wallet->address = $request->address;
         $cryptocurrency_wallet->status = $request->status;
@@ -103,7 +103,7 @@ class CryptocurrencyWallet extends Controller{
             return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu để xóa."]);
         }
         if (count($list_id) == 1 && isset($list_id[0]->id)) {
-            $cryptocurrency_wallet = CryptocurrencyWallet_Model::find($list_id[0]->id);
+            $cryptocurrency_wallet = Crypto_Model::find($list_id[0]->id);
             $cryptocurrency_wallet->status = 2; //2 is trash
             if ($cryptocurrency_wallet->save()) {
                 return redirect()->route("admin.wallet")->with(["type" => "success", "flash_message" => "Đã di chuyển vào thùng rác!"]);
@@ -112,7 +112,7 @@ class CryptocurrencyWallet extends Controller{
             }
         } else {
             foreach ($list_id as $key => $value) {
-                $cryptocurrency_wallet = CryptocurrencyWallet_Model::find($value->id);
+                $cryptocurrency_wallet = Crypto_Model::find($value->id);
                 $cryptocurrency_wallet->status = 2; //2 is trash
                 $cryptocurrency_wallet->save();
             }
@@ -121,7 +121,7 @@ class CryptocurrencyWallet extends Controller{
     }
 
     public function status($id = 0, $status = 0) {
-        $cryptocurrency_wallet = CryptocurrencyWallet_Model::find($id);
+        $cryptocurrency_wallet = Crypto_Model::find($id);
         $cryptocurrency_wallet -> status = $status;
         if ($cryptocurrency_wallet->save()) {
             return redirect()->route("admin.wallet")->with(["type" => "success", "flash_message" => "Cập nhật thành công!"]);
@@ -134,7 +134,7 @@ class CryptocurrencyWallet extends Controller{
         if (!Gate::allows('delete', explode("\\", get_class())[4])) {
             abort(403);
         }
-        $data = CryptocurrencyWallet_Model::where("status", 2)->orderBy('id', 'desc')->paginate(15);
+        $data = Crypto_Model::where("status", 2)->orderBy('id', 'desc')->paginate(15);
         $data->setPath('trash');
         $row = json_decode(json_encode([
             "title" => "Thùng rác - Cryptocurrency Wallet",
@@ -147,8 +147,8 @@ class CryptocurrencyWallet extends Controller{
         $list_id = json_decode($id);
         //xoa mot
         if (count($list_id) == 1) {
-            $data = CryptocurrencyWallet_Model::where("id", $list_id[0]->id)->first();
-            $slide = CryptocurrencyWallet_Model::find($list_id[0]->id);
+            $data = Crypto_Model::where("id", $list_id[0]->id)->first();
+            $slide = Crypto_Model::find($list_id[0]->id);
             if ($slide->delete()) {
                 return back()->with(["type" => "success", "flash_message" => "Xóa thành công!"]);
             } else {

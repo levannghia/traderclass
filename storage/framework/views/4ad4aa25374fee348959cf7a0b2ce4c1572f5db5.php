@@ -1,7 +1,7 @@
-@extends('Sites::courseIntroduction')
-@section('title', $row->title)
-@section('content')
-    @include('Sites::inc.maketting')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
+    <?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="main">
         <div class="container">
             <div class="row">
@@ -573,4 +573,6 @@
         </div>
     </div>
     <div id="fade" onclick="promo_close()"></div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Sites::courseIntroduction', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/course_selection/index.blade.php ENDPATH**/ ?>

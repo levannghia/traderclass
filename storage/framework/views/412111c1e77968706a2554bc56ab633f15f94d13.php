@@ -1,12 +1,12 @@
-@extends('Sites::teacher')
-@section('title', $row->title)
-@section('content')
-@include('Sites::inc.maketting')
+
+<?php $__env->startSection('title', $row->title); ?>
+<?php $__env->startSection('content'); ?>
+<?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="main">
         <div class="img">
-            <img src="/public/upload/images/course/thumb/{{$course->photo}}" width="100%" alt="">
+            <img src="/public/upload/images/course/thumb/<?php echo e($course->photo); ?>" width="100%" alt="">
             <div class="text-center">
-                <div style="display: grid;"><span id="a">{{ $course->fullname }}</span> <span id="b">-</span> <span id="c">{{ $course->position }}</span></div>
+                <div style="display: grid;"><span id="a"><?php echo e($course->fullname); ?></span> <span id="b">-</span> <span id="c"><?php echo e($course->position); ?></span></div>
                 <div class="info">
                     <div class="share">
                         <a href="#" onclick="lightbox_open('/public/sites/mp4/Teacher1.mp4');">
@@ -23,7 +23,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="{{url('/register/'.$course->id)}}" style="color: white;">
+                        <a href="<?php echo e(url('/register/'.$course->id)); ?>" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -41,10 +41,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="youtube wrappe" onclick="playvideo()">
-                        {{-- <video src="" class="video"> --}}
-                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/{{ $course->video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        {{-- </video> --}}
-                        {{-- <div class="playpause"><img src="/public/sites/images/media_play_pause_resume.png" alt=""></div> --}}
+                        
+                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-9">
@@ -210,15 +210,15 @@
             <div class="member" id="Related">
                 <p id="memb">Members who liked this class also liked</p>
                 <div class="row">
-                @foreach ($list_course as $value)
+                <?php $__currentLoopData = $list_course; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-2">
-                        <a href="/teacher/{{$value->id}}">
-                            <img src="/public/upload/images/teachers/thumb/{{$value->photo}}" alt="">
-                            <p id="name">{{$value->fullname}}</p>
-                            <p id="namee">{{$value->position}}</p>
+                        <a href="/teacher/<?php echo e($value->id); ?>">
+                            <img src="/public/upload/images/teachers/thumb/<?php echo e($value->photo); ?>" alt="">
+                            <p id="name"><?php echo e($value->fullname); ?></p>
+                            <p id="namee"><?php echo e($value->position); ?></p>
                         </a>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
         </div>
@@ -234,7 +234,7 @@
                     <div class="col-md-6">
                         <div>
                             <form id="form_subcribe_teacher">
-                                <input type="hidden" name="course_category_id" value="{{$course->course_category_id}}">
+                                <input type="hidden" name="course_category_id" value="<?php echo e($course->course_category_id); ?>">
                                 <input type="email" class="email_sub" name="email" id="email" placeholder="&ensp;  Enter Email Address">
                                 <button type="button" class="btn_subcribe_teacher" id="submit"><p>SUBMIT</p></button> <br>
                                 <p class="error_input mt-1 mb-0" style="color:#EF8D21;display:none"></p>
@@ -299,30 +299,31 @@
                         <p id="tt">Frequently asked questions</p>
                         <div id="wen">
                             <p id="gen">General</p>
-                            @foreach ($faq as $value)
-                            @if ($value->type == 0)
+                            <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($value->type == 0): ?>
                             <div id="wht">
-                                <p class="collapsible">{{$value->title}} <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
+                                <p class="collapsible"><?php echo e($value->title); ?> <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
                                 <div class="content">
-                                    <p>{!! $value->content !!}</p>
+                                    <p><?php echo $value->content; ?></p>
                                 </div>
                             </div>
-                            @endif
-                            @endforeach
+                            <?php endif; ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                         <div id="wen">
                             <p id="gen">Pricing & Payment</p>
-                            @foreach ($faq as $value)
-                            @if ($value->type == 1)
+                            <?php $__currentLoopData = $faq; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($value->type == 1): ?>
                             <div id="wht">
-                                <p class="collapsible">{{$value->title}}
+                                <p class="collapsible"><?php echo e($value->title); ?>
+
                                     <span style="float: right;"><i class="fas fa-chevron-down"></i></span></p>
                                 <div class="content">
-                                    <p>{!! $value->content !!}</p>
+                                    <p><?php echo $value->content; ?></p>
                                 </div>
                             </div>
-                            @endif
-                            @endforeach
+                            <?php endif; ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                     </div>
                     <div id="pum">
@@ -379,4 +380,6 @@
         </div>
     </div>
     <div id="fade" onClick="lightbox_close();"></div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Sites::teacher', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Sites/Views/teacher/index.blade.php ENDPATH**/ ?>

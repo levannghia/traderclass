@@ -37,40 +37,40 @@
                     </div>
                 </div>
                 <div class="im">
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(0)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(1)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(2)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(3)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(4)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(5)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(6)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(7)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(8)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(9)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')">
+                    <div onclick="nextvideo(10)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
-                    <div onclick="nextvideo('/public/sites/mp4/Teacher1.mp4')">
+                    <div onclick="nextvideo(11)">
                         <p>1. Meet Your Instructor: Robin Arzón</p>
                     </div>
                 </div>
@@ -85,9 +85,41 @@
                         <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
                     </div>
                     <div class="col-md-3" id="col-md-3">
-                        <button onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                        <button onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
                         <!-- <button id="but" onclick="nextvideo('/public/sites/mp4/Teacher2.mp4')"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button> -->
                     </div>
+                    <script>
+                                var vids = [
+                                    "/public/sites/mp4/Teacher1.mp4",
+                                    "/public/sites/mp4/Teacher2.mp4",
+                                    "/public/sites/mp4/TraderClass Online Classes.mp4",
+                                    "/public/sites/mp4/Teacher1.mp4",
+                                    "/public/sites/mp4/Teacher2.mp4",
+                                    "/public/sites/mp4/TraderClass Online Classes.mp4",
+                                    "/public/sites/mp4/Teacher1.mp4",
+                                    "/public/sites/mp4/Teacher2.mp4",
+                                    "/public/sites/mp4/TraderClass Online Classes.mp4",
+                                    "/public/sites/mp4/Teacher1.mp4"
+                                ];
+                                var o = 0;
+
+                                function nextv() {
+                                    if (o >= vids.length) {
+                                        alert('too far!');
+                                        return;
+                                    }
+                                    o++;
+                                    document.getElementById("video").src = vids[o];
+                                    console.log(o)
+                                };
+
+                                function nvideo(name) {
+                                    var videoFile = name;
+                                    $('.wrappe video source').attr('src', videoFile);
+                                    $(".wrappe video")[0].load();
+                                }
+                    </script>
+
                 </div>
                 <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
                     help you see what’s possible for yourself—and see it through. Learn how to identify your dreams and apply the principles of endurance, power, and strength to help you reach your goals.

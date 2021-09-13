@@ -147,16 +147,16 @@
                     </ul>
                 </li>
                 @endif
-                @if(Gate::allows('view', 'CryptocurrencyWallet'))
+                @if(Gate::allows('view', 'Crypto'))
                 <li>
                     <a href="javascript: void(0);">
                         <i class="fa fa-briefcase"></i>
-                        <span> Cryptocurrency wallet</span>
+                        <span> Crypto </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="nav-second-level nav collapse" aria-expanded="false" style="">
                         <li class="">
-                            <a href="/dashboard/cryptocurrency-wallet">Danh sách</a>
+                            <a href="/dashboard/crypto">Danh sách</a>
                         </li>
                     </ul>
                 </li>

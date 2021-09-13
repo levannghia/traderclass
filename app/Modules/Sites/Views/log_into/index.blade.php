@@ -399,54 +399,57 @@
                         </div>
                         <!-- e-cash new -->
                         <div class="mySlides">
-                            <div class="ecash">
-                                <div class="row">
-                                    @foreach ($crypto as $value)
-                                    <div class="col-md-4">
-                                        <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
-                                            <button type="submit" name="btn_crypto" class="logo-ecash" data-popup-target="popup_crypto" data-id-crypto="{{$value->id}}">
-                                                <img src="/public/sites/images/{{$value->image}}" alt="">
-                                                <p>{{$value->name . '(' . $value->symbol . ')'}}</p>
-                                            </button>
-                                        <!-- </div> -->
-                                    </div>
+                        <div class="ecash">
+                                    <div class="row">
+                                    @foreach($crypto as $value)
+                                        <div class="col-md-4">
+                                            <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                    <button type="submit" class="logo-ecash" data-popup-target="popup-crypto" data-id-crypto="{{$value->id}}">
+                                                    <img src="/public/sites/images/{{$value->image}}" alt="">
+                                                    <p>{{$value->name . '('. $value->symbol .')'}}</p></button>
+                                            <!-- </div> -->
+                                        </div>
                                     @endforeach
-                                    <div class="popup" id="popup_crypto">
-                                        <div class="popup-content" id="bitcoin">
-                                            <span class="popup-close">&times;</span>
-                                            <h5>PAYMENT</h5>
-                                            <div class="li-pa"></div>
-                                            <div class="row">
-                                                <div class="col-md-6 lef-details">Payment Amount</div>
-                                                <div class="col-md-6 price-details">
-                                                    <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
-                                                    <p class="price"></p>
-                                                    <p class="name-money" style="text-transform: capitalize;"></p>
+                                            <div class="popup" id="popup-crypto">
+                                                <div class="popup-content">
+                                                    <span class="popup-close">&times;</span>
+                                                    <h5>PAYMENT</h5>
+                                                    <div class="li-pa"></div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 lef-details">Payment Amount</div>
+                                                        <div class="col-md-6 price-details">
+                                                            <img src="/public/sites/images/{{$value->image}}" width="20" height="20" alt="">
+                                                            <p class="price">26.33</p>
+                                                            <p class="name-money" style="text-transform: capitalize;">Bitcoin</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="send-below">Send the indicated amount to the address below:</p>
+                                                    <p class="address-details">Address</p>
+                                                    <div class="link-code">
+                                                        <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                                                        <i class="fal fa-copy" id="ic-copy"></i>
+                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
+                                                        </div>
+                                                    </div>
+                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
                                                 </div>
                                             </div>
-                                            <p class="send-below">Send the indicated amount to the address below:</p>
-                                            <p class="address-details">address</p>
-                                            <div class="link-code">
-                                                <p class="arcode"></p>
-                                                <i class="fal fa-copy" id="ic-copy"></i>
-                                                <img src="" width="26" height="26" alt="">
-                                            </div>
-                                            <a href="/log-into/payment-ecash" id="pay-send">Payment send</a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4"></div>
-                                </div>
 
-                            </div>
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                    </div>
+
+                                </div>
                         </div>
                     </div>
                     </div>
@@ -465,22 +468,7 @@
         <div id="promo4">
             <input type="text" name="" id="" placeholder="Enter promo code">
         </div>
-        <div id="promo5">
-            <div class="row">
-                <div class="col-md-6">
-                    <button>Promo code 5%</button>
-                    <button>Promo code 10%</button>
-                    <button>Promo code 2%</button>
-                    <button>Promo code 15%</button>
-                </div>
-                <div class="col-md-6">
-                    <button>Promo code 20%</button>
-                    <button>Promo code 30%</button>
-                    <button>Promo code 25%</button>
-                    <button>Promo code 40%</button>
-                </div>
-            </div>
-        </div>
+        
         <div id="promo6">
             <button id="back" onclick="promo_close()">Back</button>
             <button id="save" onclick="promo_close()">Save</button>
@@ -512,7 +500,7 @@ $(document).ready(function() {
                     $(".name-money").html(data.cryptocurrency_name);
                     $(".price").html(data.amount);
                     $(".arcode").html(data.address);
-                    $(".link-code img").attr("src",data.image_qr);
+                    $(".cl-popup img").attr("src",data.image_qr);
                 }
             });
         // },10000);

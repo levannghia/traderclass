@@ -49,11 +49,11 @@ class PaymentCrypto extends Controller
         $crypto->symbol = $crypto_id->symbol;
         if ($crypto_id->symbol == 'BTCUSDT') {
             $crypto->cryptocurrency_name = 'bitcoin';
-            $crypto->address = '18mUEvqTAK7d8zqbpqUFgPweMS13fdxxnm';
+            
         } elseif ($crypto_id->symbol == 'ETHUSDT') {
             $crypto->cryptocurrency_name = 'ethereum';
-            $crypto->address = '0xa17d23d3d376266053fba25a01f3481a19a2bae2';
         }
+        $crypto->address = $crypto_id->address;
         $crypto->currency = 60;
         $crypto->status = 0;
         $crypto->amount = round($crypto->currency / $data['price'],4);
