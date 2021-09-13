@@ -31,3 +31,41 @@ function togglePopup(popupId) {
         document.body.style.overflow = "hidden";
     }
 }
+
+// When the user clicks on div, open the popup
+function clPopup() {
+    const popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+function clPopup2() {
+    const popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");
+}
+function clPopup3() {
+    const popup = document.getElementById("myPopup3");
+    popup.classList.toggle("show");
+}
+function clPopup4() {
+    const popup = document.getElementById("myPopup4");
+    popup.classList.toggle("show");
+}
+function clPopup5() {
+    const popup = document.getElementById("myPopup5");
+    popup.classList.toggle("show");
+}
+function clPopup6() {
+    const popup = document.getElementById("myPopup6");
+    popup.classList.toggle("show");
+}
+function clPopup7() {
+    const popup = document.getElementById("myPopup7");
+    popup.classList.toggle("show");
+}
+function clPopup8() {
+    const popup = document.getElementById("myPopup8");
+    popup.classList.toggle("show");
+}
+function clPopup9() {
+    const popup = document.getElementById("myPopup9");
+    popup.classList.toggle("show");
+}

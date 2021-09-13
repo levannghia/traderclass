@@ -27,7 +27,10 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     dotts[slideIndex - 1].className += " active";
 }
-
+function choose() {
+    document.getElementById("promo").style.display = "block";
+    document.getElementById("fade").style.display = "block";
+}
 function paymen(int) {
     if (int == 4) {
         window.location.href = "/log-into/payment-bank";

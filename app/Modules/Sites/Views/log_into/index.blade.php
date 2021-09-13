@@ -404,13 +404,13 @@
                                     @foreach($crypto as $value)
                                         <div class="col-md-4">
                                             <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
-                                                    <button type="submit" class="logo-ecash" data-popup-target="popup-crypto" data-id-crypto="{{$value->id}}">
+                                                    <button type="submit" class="logo-ecash" data-popup-target="popup1">
                                                     <img src="/public/sites/images/{{$value->image}}" alt="">
                                                     <p>{{$value->name . '('. $value->symbol .')'}}</p></button>
                                             <!-- </div> -->
-                                        </div>
-                                    @endforeach
-                                            <div class="popup" id="popup-crypto">
+                                            </div>
+                                            @endforeach
+                                            <div class="popup" id="popup1">
                                                 <div class="popup-content">
                                                     <span class="popup-close">&times;</span>
                                                     <h5>PAYMENT</h5>
@@ -429,16 +429,18 @@
                                                         <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" style="width: 26px;" alt="">
+                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">
                                                             <span class="cl-popup-img" id="myPopup"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
                                                         </div>
                                                     </div>
-                                                    <a href="./Payment Ecash" id="pay-send">Payment send</a>
+                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
                                                 </div>
                                             </div>
-                                            
                                         </div>
+                                 
 
+                                    </div>
+                                   
                                     <div class="row">
                                         <div class="col-md-4"></div>
                                         <div class="col-md-4"></div>
@@ -451,7 +453,6 @@
                                     </div>
 
                                 </div>
-                        </div>
                     </div>
                     </div>
                 </div>

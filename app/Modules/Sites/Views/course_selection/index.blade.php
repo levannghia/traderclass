@@ -457,8 +457,8 @@
                                                         <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup()"><img src="images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup"><img src="images/qr-code-ecash.png" alt=""></span>
+                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
                                                         </div>
                                                     </div>
                                                     <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
@@ -491,8 +491,8 @@
                                                         <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup2()"><img src="images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup2"><img src="images/qr-code-ecash.png" alt=""></span>
+                                                        <div class="cl-popup" onclick="clPopup2()"><img src="/public/sites/images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup2"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
                                                         </div>
                                                     </div>
                                                     <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
@@ -525,8 +525,8 @@
                                                         <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup3()"><img src="images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup3"><img src="images/qr-code-ecash.png" alt=""></span>
+                                                        <div class="cl-popup" onclick="clPopup3()"><img src="/public/sites/images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup3"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
                                                         </div>
                                                     </div>
                                                     <a href="./Payment Ecash.html" id="pay-send">Payment send</a>

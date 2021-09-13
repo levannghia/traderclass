@@ -408,6 +408,8 @@
                                                     <img src="/public/sites/images/<?php echo e($value->image); ?>" alt="">
                                                     <p><?php echo e($value->name . '('. $value->symbol .')'); ?></p></button>
                                             <!-- </div> -->
+                                            </div>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                             <div class="popup" id="popup1">
                                                 <div class="popup-content">
                                                     <span class="popup-close">&times;</span>
@@ -416,9 +418,9 @@
                                                     <div class="row">
                                                         <div class="col-md-6 lef-details">Payment Amount</div>
                                                         <div class="col-md-6 price-details">
-                                                            <img src="/public/sites/images/<?php echo e($value->image); ?>" width="20" height="20" alt="">
+                                                            <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
                                                             <p class="price">26.33</p>
-                                                            <p class="name-money"><?php echo e($value->name . '('. $value->symbol .')'); ?></p>
+                                                            <p class="name-money" style="text-transform: capitalize;">Bitcoin (BTC)</p>
                                                         </div>
                                                     </div>
                                                     <p class="send-below">Send the indicated amount to the address below:</p>
@@ -427,20 +429,18 @@
                                                         <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup()"><img src="images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup"><img src="images/qr-code-ecash.png" alt=""></span>
+                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">
+                                                            <span class="cl-popup-img" id="myPopup"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
                                                         </div>
                                                     </div>
                                                     <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        
-                                     
+                                 
+
                                     </div>
-                                    
-                                    
+                                   
                                     <div class="row">
                                         <div class="col-md-4"></div>
                                         <div class="col-md-4"></div>
@@ -453,7 +453,6 @@
                                     </div>
 
                                 </div>
-                        </div>
                     </div>
                     </div>
                 </div>
@@ -484,22 +483,29 @@ $(document).ready(function() {
     $("[data-id-crypto]").click(function(){
         var _token = $('meta[name="csrf-token"]').attr('content');
         let id_crypto = $(this).attr("data-id-crypto");
-        let symbol_crypto = $(this).attr("data-symbol-crypto");//data-symbol-crypto
-        console.log(id_crypto)
-        $.ajax({
-                url: "<?php echo e(route('sites.crypto.postAdd')); ?>",
+        
+        // setInterval(function(){
+            $.ajax({
+                url: "/api/add-payment-crypto",
                 type: "POST",
                 data:
                 {
-                    symbol_crypto:symbol_crypto,
+                    _token: _token,
                     id_crypto: id_crypto,
-                } 
-               
-                success: function(data) {
-                    console.log(data)
-                    $('#popup').html(data);
                 },
+                success: function(data) {
+                    console.log(data);
+                    
+                    //$('.popup').html(data);
+                    //let dataResut = JSON.parse(data);
+                    //console.log(dataResut)
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $(".price").html(data.amount);
+                    $(".arcode").html(data.address);
+                    $(".cl-popup img").attr("src",data.image_qr);
+                }
             });
+        // },10000);
     });
 });
 </script>
