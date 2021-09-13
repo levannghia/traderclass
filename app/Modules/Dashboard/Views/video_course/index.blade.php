@@ -10,7 +10,7 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control border-white" name="search" value="{{Cookie::get('search_course')}}" placeholder="Tên khóa học...">
+                                <input type="text" class="form-control border-white" name="search" value="{{Cookie::get('search_video_course')}}" placeholder="Tên khóa học...">
                                 <div class="input-group-append">
                                     <button type="submit" name="btn_search" class="input-group-text bg-blue border-blue text-white">
                                         <i class="fe-search"></i>
@@ -18,13 +18,13 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/trash" class="btn btn-blue btn-sm ml-2">
+                        <a href="/{{Helper_Dashboard::get_patch()}}/video-courses/trash" class="btn btn-blue btn-sm ml-2">
                             <i class="fe-trash"></i>
                         </a>
                         <a href="javascript: window.location.reload();" class="btn btn-blue btn-sm ml-2">
                             <i class="mdi mdi-autorenew"></i>
                         </a>
-                        <a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/add" class="ladda-button waves-effect waves-light btn btn-blue btn-sm ml-1" data-style="expand-right">
+                        <a href="/{{Helper_Dashboard::get_patch()}}/video-courses/add" class="ladda-button waves-effect waves-light btn btn-blue btn-sm ml-1" data-style="expand-right">
                             <span class="ladda-label"><i class="fe-plus-circle"></i></span>
                             <span class="ladda-spinner"></span>
                         </a>
@@ -46,10 +46,8 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Hình ảnh</th>
-                                            <th>Tên khóa học</th>
-                                            <th>Danh mục</th>
-                                            <th>Tên giảng viên</th>
+                                            <th>Tên video</th>
+                                            <th>id video youtube</th>
                                             <th>Trạng thái</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
@@ -61,10 +59,9 @@
                                         @if ($value->status != 2)
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="{{$value->id}}" /></th>
-                                            <td class="table-user"><img src='/public/upload/images/course/thumb/{{$value->photo}}' class="rounded-circle"/></td>
+                                            {{-- <td class="table-user"><img src='/public/upload/images/course/thumb/{{$value->photo}}' class="rounded-circle"/></td> --}}
                                             <td><a href="/{{Helper_Dashboard::get_patch()}}/{{Helper_Dashboard::get_patch(2)}}/edit/{{$value->id}}" title="chỉnh sửa {{$value->name}}">{{$value->name}}</a></td> 
-                                            <td>{{$value->title}}</td>
-                                            <td>{{$value->fullname}}</td>
+                                            <td>{{$value->id_video}}</td>
                                             <td>
                                                 @if($value->status)
                                                 <span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span>

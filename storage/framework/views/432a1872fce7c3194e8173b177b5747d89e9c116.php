@@ -498,36 +498,12 @@ $(document).ready(function() {
                     //$('.popup').html(data);
                     //let dataResut = JSON.parse(data);
                     //console.log(dataResut)
-                    // $(".price-details img").attr("src",data.image_crypto );
                     $(".name-money").html(data.cryptocurrency_name);
                     $(".price").html(data.amount);
                     $(".arcode").html(data.address);
                     $(".cl-popup img").attr("src",data.image_qr);
                 }
             });
-        // },10000);
-
-        // setInterval(function(){
-        //     $.ajax({
-        //         url: "/api/update/123",
-        //         type: "POST",
-        //         data:
-        //         {
-        //             _token: _token,
-        //             // id_crypto: id_crypto,
-        //         },
-        //         success: function(data) {
-        //             console.log(data);
-                    
-        //             //$('.popup').html(data);
-        //             //let dataResut = JSON.parse(data);
-        //             //console.log(dataResut)
-        //             $(".name-money").html(data.cryptocurrency_name);
-        //             $(".price").html(data.amount);
-        //             $(".arcode").html(data.address);
-        //             $(".cl-popup img").attr("src",data.image_qr);
-        //         }
-        //     });
         // },10000);
     });
 });
