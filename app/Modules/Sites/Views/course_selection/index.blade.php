@@ -454,7 +454,7 @@
                                                     <p class="send-below">Send the indicated amount to the address below:</p>
                                                     <p class="address-details">Address</p>
                                                     <div class="link-code">
-                                                        <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
+                                                        <input type="text" class="arcode" readonly="readonly" value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
                                                         <i class="fal fa-copy" id="ic-copy"></i>
                                                         <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
                                                         <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">

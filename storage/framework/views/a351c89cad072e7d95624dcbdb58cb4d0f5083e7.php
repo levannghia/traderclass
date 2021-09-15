@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/public/sites/css/Course selection.css?v=<?php echo e(time()); ?>">
     <link rel="stylesheet" href="/public/sites/css/ecash.css?v=<?php echo e(time()); ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/public/sites/js/js.js" type="text/javascript"></script>
     <!--Icon-->
     <title><?php echo $__env->yieldContent('title'); ?></title>

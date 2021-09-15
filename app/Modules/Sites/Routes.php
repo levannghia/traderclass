@@ -90,7 +90,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
         Route::get("/payment-atm", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
         Route::get("/payment-momo", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
-        Route::post("/payment-ecash", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
+        Route::get("/payment-ecash", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
     });
 
     //Contact

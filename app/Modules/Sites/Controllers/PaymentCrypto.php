@@ -25,11 +25,10 @@ class PaymentCrypto extends Controller
     }
     public function process()
     {
-        $client = new CoinGeckoClient();
-
-        $data = $client->coins()->getMarkets('usd');
         //$data = $client->simple ()->getTokenPrice( 'ethereum' , '0xE41d2489571d322189246DaFA5ebDe1F4699F498' , 'usd, rub' );
         //$result = $client -> simple()->getPrice( '0x, bitcoin' , 'usd' );
+        $client = new CoinGeckoClient();
+        $data = $client->coins()->getMarkets('usd');
         $response = $client->getLastResponse();
         $headers = $response->getHeaders();
 
@@ -48,13 +47,10 @@ class PaymentCrypto extends Controller
         $crypto->id_crypto = $crypto_id->id;
         //$crypto->image_crypto = $crypto_id->image;
         $crypto->symbol = $crypto_id->symbol;
-        if ($crypto_id->symbol == 'BTCUSDT') {
-            $crypto->cryptocurrency_name = 'bitcoin';
-            
-        } elseif ($crypto_id->symbol == 'ETHUSDT') {
-            $crypto->cryptocurrency_name = 'ethereum';
-        }
+        $crypto->cryptocurrency_name = $crypto_id->name;
+        $crypto->image_crypto = '/public/upload/images/crypto/thumb/' . $crypto_id->image;
         $crypto->address = $crypto_id->address;
+        $crypto->email = Auth::user()->email;
         $crypto->currency = 60;
         $crypto->status = 0;
         $crypto->amount = round($crypto->currency / $data['price'],4);
@@ -63,7 +59,7 @@ class PaymentCrypto extends Controller
         $qrCode = new QrCode();
         $qrCode
             ->setText($crypto->cryptocurrency_name . ':' . $crypto->address . '?amount=' . round($crypto->currency / $data['price'],4))
-            ->setSize(300)
+            ->setSize(140)
             ->setPadding(10)
             ->setErrorCorrection('high')
             ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
@@ -92,7 +88,7 @@ class PaymentCrypto extends Controller
         $qrCode = new QrCode();
         $qrCode
             ->setText($crypto->cryptocurrency_name . ':' . $crypto->address . '?amount=' . round($crypto->currency / $data['price'],4))
-            ->setSize(300)
+            ->setSize(140)
             ->setPadding(10)
             ->setErrorCorrection('high')
             ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))

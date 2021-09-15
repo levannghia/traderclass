@@ -14,7 +14,7 @@ class LogInto extends Controller
 {
     public function index()
     {
-        $crypto = Crypto_Model::orderBy('id', 'desc')->get();
+        $crypto = Crypto_Model::whereIn('status',[0,1])->orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Log Into",
         ]));

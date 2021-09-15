@@ -11,6 +11,7 @@
     margin-bottom: 15px;
     border-radius: 5px;
     cursor: pointer;
+    border: 0px;
 }
 
 
@@ -27,6 +28,7 @@
 
 .price-details {
     display: flex;
+    justify-content: flex-end;
 }
 
 .price {
@@ -52,6 +54,9 @@
 .arcode {
     margin-bottom: 0%;
     padding: 1% 2%;
+    border: 0px;
+    border-radius: 5px;
+    width: 90%;
 }
 
 #ic-copy {
@@ -125,9 +130,10 @@
 }
 
 
-/*Ipad ngang(1024 x 768)*/
 /*  */
+
 .cl-popup {
+    padding: 0px 12px 6px 0px;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -136,6 +142,7 @@
     -ms-user-select: none;
     user-select: none;
 }
+
 .cl-popup .cl-popup-img {
     visibility: hidden;
     width: 160px;
@@ -150,6 +157,7 @@
     left: 50%;
     margin-left: -80px;
 }
+
 .cl-popup .cl-popup-img::after {
     content: "";
     position: absolute;
@@ -159,76 +167,87 @@
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
+}
+
 .cl-popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
+
+
 /*  */
+
 @media screen and (max-width: 2560px) {
-    #ic-copy{
+    #ic-copy {
         margin-top: 12px;
-        margin-left: 53%;
+        margin-left: 10px;
     }
-    .link-code img{
+    .link-code img {
         margin-top: 7px;
     }
-    #pay-send{
+    #pay-send {
         padding: 1% 340px;
     }
 }
 
+
 /*  */
+
 @media screen and (max-width: 1920px) {
-    #ic-copy{
+    #ic-copy {
         margin-top: 10px;
-        margin-left: 38%;
     }
-    .link-code img{
+    .link-code img {
         margin-top: 7px;
     }
-    #pay-send{
+    #pay-send {
         padding: 1% 235px;
     }
 }
 
+
 /*  */
+
 @media screen and (max-width: 1536px) {
-    #ic-copy{
+    #ic-copy {
+        margin-top: 11px;
+    }
+    .link-code img {
         margin-top: 7px;
-        margin-left: 24%;
     }
-    .link-code img{
-        margin-top: 4px;
-    }
-    #pay-send{
+    #pay-send {
         padding: 1% 171px;
     }
 }
 
+
 /*  */
+
 @media screen and (max-width: 1440px) {
-    #ic-copy{
-        margin-left: 19%;
+    .link-code img {
+        margin-top: 6px;
     }
-    .link-code img{
-        margin-top: 3px;
-    }
-    #pay-send{
+    #pay-send {
         padding: 1% 156px;
     }
 }
 
+
 /*  */
+
 @media screen and (max-width: 1366px) {
-    #ic-copy{
-        margin-left: 14%;
+    #ic-copy {
+        margin-left: 5%;
     }
-    #pay-send{
+    #pay-send {
         padding: 1% 143px;
     }
 }
+
+
+/*Ipad ngang(1024 x 768)*/
+
 @media screen and (max-width: 1024px) {
     .logo-ecash {
         max-width: 130px;
@@ -251,6 +270,9 @@
     .popup-content {
         min-width: 58%;
     }
+    #pay-send {
+        padding: 1% 140px;
+    }
 }
 
 
@@ -267,11 +289,12 @@
     .arcode {
         font-size: 12px;
     }
-    #ic-copy {
-        margin-left: 18%;
-    }
     #pay-send {
         padding: 5px 110px;
+    }
+    .price-details {
+        justify-content: left;
+        padding-top: 10px;
     }
 }
 
@@ -292,8 +315,7 @@
 
 @media screen and (max-width: 375px) {
     .link-code {
-        margin-left: -15px;
-        width: 114%;
+        width: 100%;
     }
     #pay-send {
         padding: 2% 29%;
@@ -334,8 +356,7 @@
     .link-code {
         display: block;
         text-align: center;
-        width: 130%;
-        margin-left: -20px;
+        width: 100%;
     }
     #pay-send {
         padding: 0 12%;

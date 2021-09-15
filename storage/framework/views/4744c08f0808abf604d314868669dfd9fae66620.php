@@ -7,6 +7,7 @@
         <meta content="" name="description" />
         <meta content="ngoluan.com" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
         <!--link rel="shortcut icon" href="assets/images/favicon.ico"-->
         <!-- Plugins css -->
         <link href="/public/dashboard/assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />

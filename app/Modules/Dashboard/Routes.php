@@ -111,20 +111,21 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 Route::get("/course/status/{id}/{status}", ["as" => "admin.course.status", "uses" => "Teachers@courseStatus"]);
             });
 
-            //CryptocurrencyWallet
+            //Crypto
             Route::group(["prefix" => "crypto"], function() {
-                Route::get("/", ["as" => "admin.wallet", "uses" => "Crypto@index"]);
-                Route::post("/", ["as" => "admin.wallet", "uses" => "Crypto@postIndex"]);
-                Route::get("add", ["as" => "admin.wallet.getAdd", "uses" => "Crypto@add"]);
-                Route::post("add", ["as" => "admin.wallet.postAdd", "uses" => "Crypto@postAdd"]);
-                Route::get("edit/{id}", ["as" => "admin.wallet.edit", "uses" => "Crypto@edit"]);
-                Route::post("edit/{id}", ["as" => "admin.wallet.postEdit", "uses" => "Crypto@postEdit"]);
-                Route::get("delete/{id}", ["as" => "admin.wallet.delete", "uses" => "Crypto@delete"]);
-                Route::get("status/{id}/{status}", ["as" => "admin.wallet.status", "uses" => "Crypto@status"]);
-                Route::get("/trash", ["as" => "admin.wallet.trash", "uses" => "Crypto@trash"]);
-                Route::get("/trash/delete/{id}", ["as" => "admin.wallet.trash", "uses" => "Crypto@trashDelete"]);
-                Route::get("/course/delete/{id}", ["as" => "admin.wallet.delete", "uses" => "Crypto@courseDelete"]);
-                Route::get("/course/status/{id}/{status}", ["as" => "admin.wallet.status", "uses" => "Crypto@courseStatus"]);
+                Route::post("/price-api-crypto", ["as" => "admin.crypto.price", "uses" => "Crypto@priceAPI"]);
+                Route::get("/", ["as" => "admin.crypto", "uses" => "Crypto@index"]);
+                Route::post("/", ["as" => "admin.crypto", "uses" => "Crypto@postIndex"]);
+                Route::get("add", ["as" => "admin.crypto.getAdd", "uses" => "Crypto@add"]);
+                Route::post("add", ["as" => "admin.crypto.postAdd", "uses" => "Crypto@postAdd"]);
+                Route::get("edit/{id}", ["as" => "admin.crypto.edit", "uses" => "Crypto@edit"]);
+                Route::post("edit/{id}", ["as" => "admin.crypto.postEdit", "uses" => "Crypto@postEdit"]);
+                Route::get("delete/{id}", ["as" => "admin.crypto.delete", "uses" => "Crypto@delete"]);
+                Route::get("status/{id}/{status}", ["as" => "admin.crypto.status", "uses" => "Crypto@status"]);
+                Route::get("/trash", ["as" => "admin.crypto.trash", "uses" => "Crypto@trash"]);
+                Route::get("/trash/delete/{id}", ["as" => "admin.crypto.trash", "uses" => "Crypto@trashDelete"]);
+                Route::get("/course/delete/{id}", ["as" => "admin.crypto.delete", "uses" => "Crypto@courseDelete"]);
+                Route::get("/course/status/{id}/{status}", ["as" => "admin.crypto.status", "uses" => "Crypto@courseStatus"]);
             });
 
 

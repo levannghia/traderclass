@@ -19,10 +19,11 @@ class Teacher extends Controller
         $list_course = DB::table('course')->select('teachers.fullname', 'teachers.position','course.id', 'teachers.photo','course.course_category_id','course.name')->join('teachers','teachers.id','=','course.teacher_id')->whereIn('course.status',[0,1])->limit(6)->get();
         $course = DB::table('course')->select('teachers.fullname', 'teachers.position','teachers.id', 'course.photo','course.course_category_id','course.video_id','course.created_at','course.updated_at','course.name')->join('teachers','teachers.id','=','course.teacher_id')->where('course.id',$id)->first();
         $faq = Faq_Model::orderBy('id', 'desc')->get();
+        $list_video = DB::table('video_course')->whereIn('status',[0,1])->where('id_course',$id)->get();
         $row = json_decode(json_encode([
             "title" => $course->fullname,
         ]));
-        return view('Sites::teacher.index',compact('row', 'list_course','faq','course'));
+        return view('Sites::teacher.index',compact('row', 'list_course','faq','course','list_video'));
     }
 
     public function postSubcribe(Request $request)

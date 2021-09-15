@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-3" id="col-md-3">
                             <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
-                            <button id="but" onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="./images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                            <button id="but" onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
                         </div>
                     </div>
                     <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
@@ -76,39 +76,11 @@
                         <p>Browse Lesson Plan</p>
                     </div>
                     <div class="im">
+                        <?php $__currentLoopData = $list_video; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div onclick="nextvideo(0)">
-                            <p>1. Meet Your Instructor: Robin Arzón</p>
+                            <a href=""><p><?php echo e($value->name); ?></p></a>
                         </div>
-                        <div onclick="nextvideo(1)">
-                            <p>2. Hustle and Grit</p>
-                        </div>
-                        <div onclick="nextvideo(2)">
-                            <p>3. Overcoming Mental Blocks</p>
-                        </div>
-                        <div onclick="nextvideo(3)">
-                            <p>4. Know Your Worth</p>
-                        </div>
-                        <div onclick="nextvideo(4)">
-                            <p>5. Food as Fuel</p>
-                        </div>
-                        <div onclick="nextvideo(5)">
-                            <p>6. The Joy Metric</p>
-                        </div>
-                        <div onclick="nextvideo(6)">
-                            <p>7. The Joy Metric</p>
-                        </div>
-                        <div onclick="nextvideo(7)">
-                            <p>8. The Joy Metric</p>
-                        </div>
-                        <div onclick="nextvideo(8)">
-                            <p>9. The Joy Metric</p>
-                        </div>
-                        <div onclick="nextvideo(9)">
-                            <p>10. The Joy Metric</p>
-                        </div>
-                        <div onclick="nextvideo(10)">
-                            <p>11. The Joy Metric</p>
-                        </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                     <div class="upnext">
                         <div style="margin-right: 20px">
