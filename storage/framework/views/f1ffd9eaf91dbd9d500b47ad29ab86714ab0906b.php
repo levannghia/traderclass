@@ -15,8 +15,7 @@
         <div class="header">
             <div class="cart">Your order is being Processed</div>
             <div class="reply">
-                <a href="/log-into"><i class="fal fa-reply"></i>Back</a>
-                
+                <a href="/log-into"><i class="fal fa-reply"></i>Back</a>   
             </div>
         </div>
         <div class="main">
@@ -47,14 +46,18 @@
                                     </div>
                                     <div class="status">
                                         <p class="state">Order status</p>
+                                        <?php if($crypto->status == 0): ?>
                                         <p class="orderstate">Processing</p>
+                                        <?php elseif($crypto->status == 1): ?>
+                                        <p class="ordersuccess">Success</p>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <p class="detail">Payment Details</p>
                                     <div class="method">
                                         <p class="me1">Payment method</p>
-                                        <p class="me2">Bitcoint (BTC)</p>
+                                        <p class="me2" style="text-transform: capitalize;"><?php echo e($crypto->cryptocurrency_name . ' ('.$crypto->symbol.')'); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -75,21 +78,21 @@
                     <div class="content-right">
                         <h5 class="top ri">Payment</h5>
                         <div class="li"></div>
-                        <img src="<?php echo e($result['result']['qrcode_url']); ?>" width="140" height="140" alt="" class="qrcode">
-                        <p class="txt time">This payment will expire in <?php echo e($result['result']['timeout']); ?></p>
+                        <img src="<?php echo e($crypto->image_qr); ?>" width="140" height="140" alt="" class="qrcode">
+                        <p class="txt time">This payment will expire in 12:00</p>
                         <p class="txt below">Send the indicated amount to the address below:</p>
-                        <p class="priceName">Bitcoin (<?php echo e($rcurrency); ?>) amount</p>
+                        <p class="priceName" style="text-transform: capitalize;"><?php echo e($crypto->cryptocurrency_name . ' ('.$crypto->symbol.')'); ?>  amount</p>
                         <div class="pri">
-                            <p class="txt2 txtpri"><?php echo e($result['result']['amount']); ?> <?php echo e($rcurrency); ?></p>
+                            <p class="txt2 txtpri"><?php echo e($crypto->amount); ?></p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <p class="wallet">Wallet address</p>
                         <div class="pri wal-link">
-                            <p class="txt2 txtlink"><?php echo e($result['result']['address']); ?></p>
+                            <p class="txt2 txtlink"><?php echo e($crypto->address); ?></p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <div class="total-price">
-                            <h4>Total Price: 990000 <?php echo e($scurrency); ?></h4>
+                            <h4>Total Price: <?php echo e($crypto->currency); ?> USD</h4>
                         </div>
                     </div>
                 </div>

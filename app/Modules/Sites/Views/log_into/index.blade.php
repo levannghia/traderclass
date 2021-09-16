@@ -520,7 +520,6 @@
                 var _token = $('meta[name="csrf-token"]').attr('content');
                 let id_crypto = $(this).attr("data-id-crypto");
 
-                // setInterval(function(){
                 $.ajax({
                     url: "/api/add-payment-crypto",
                     type: "POST",
@@ -562,9 +561,9 @@
                         $(".price").html(data.amount);
                         $(".arcode").attr("value",data.address);
                         $(".cl-popup img").attr("src", data.image_qr);
+                        $("#pay-send").attr("href", data.link);
                     }
                 });
-                // },10000);
             });
         });
     </script>

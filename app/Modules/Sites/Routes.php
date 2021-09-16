@@ -36,11 +36,11 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     });
 
     Route::group(["prefix" => "api"], function() {
-        
+        //test payment
+        Route::get("/payment", ["as" => "sites.crypto.payment", "uses" => "PaymentCrypto@payment"]);
+        //order
         Route::get("/", ["as" => "sites.crypto.index", "uses" => "PaymentCrypto@index"]);
-        
         Route::get("/test", ["as" => "sites.crypto.process", "uses" => "PaymentCrypto@process"]);
-        
         Route::post("/add-payment-crypto", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
         Route::get("/update/{id}", ["as" => "sites.crypto.getUpdate", "uses" => "PaymentCrypto@getUpdate"]);
     });
@@ -90,7 +90,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
         Route::get("/payment-atm", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
         Route::get("/payment-momo", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);
-        Route::get("/payment-ecash", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
+        Route::get("/payment-ecash/{id}", ["as" => "sites.logInto.paymenteacsh", "uses" => "LogInto@payment_ecash"]);
     });
 
     //Contact

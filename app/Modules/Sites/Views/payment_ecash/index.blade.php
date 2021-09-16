@@ -15,8 +15,7 @@
         <div class="header">
             <div class="cart">Your order is being Processed</div>
             <div class="reply">
-                <a href="/log-into"><i class="fal fa-reply"></i>Back</a>
-                
+                <a href="/log-into"><i class="fal fa-reply"></i>Back</a>   
             </div>
         </div>
         <div class="main">
@@ -47,14 +46,18 @@
                                     </div>
                                     <div class="status">
                                         <p class="state">Order status</p>
+                                        @if ($crypto->status == 0)
                                         <p class="orderstate">Processing</p>
+                                        @elseif ($crypto->status == 1)
+                                        <p class="ordersuccess">Success</p>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <p class="detail">Payment Details</p>
                                     <div class="method">
                                         <p class="me1">Payment method</p>
-                                        <p class="me2">Bitcoint (BTC)</p>
+                                        <p class="me2" style="text-transform: capitalize;">{{$crypto->cryptocurrency_name . ' ('.$crypto->symbol.')'}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,21 +78,21 @@
                     <div class="content-right">
                         <h5 class="top ri">Payment</h5>
                         <div class="li"></div>
-                        <img src="{{$result['result']['qrcode_url']}}" width="140" height="140" alt="" class="qrcode">
-                        <p class="txt time">This payment will expire in {{$result['result']['timeout']}}</p>
+                        <img src="{{$crypto->image_qr}}" width="140" height="140" alt="" class="qrcode">
+                        <p class="txt time">This payment will expire in 12:00</p>
                         <p class="txt below">Send the indicated amount to the address below:</p>
-                        <p class="priceName">Bitcoin ({{$rcurrency}}) amount</p>
+                        <p class="priceName" style="text-transform: capitalize;">{{$crypto->cryptocurrency_name . ' ('.$crypto->symbol.')'}}  amount</p>
                         <div class="pri">
-                            <p class="txt2 txtpri">{{$result['result']['amount']}} {{$rcurrency}}</p>
+                            <p class="txt2 txtpri">{{$crypto->amount}}</p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <p class="wallet">Wallet address</p>
                         <div class="pri wal-link">
-                            <p class="txt2 txtlink">{{$result['result']['address']}}</p>
+                            <p class="txt2 txtlink">{{$crypto->address}}</p>
                             <i class="fal fa-copy" id="ic-copy"></i>
                         </div>
                         <div class="total-price">
-                            <h4>Total Price: 990000 {{$scurrency}}</h4>
+                            <h4>Total Price: {{$crypto->currency}} USD</h4>
                         </div>
                     </div>
                 </div>

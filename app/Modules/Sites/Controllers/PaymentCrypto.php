@@ -13,10 +13,35 @@ use App\Modules\Sites\Models\Crypto_Model;
 
 class PaymentCrypto extends Controller
 {
+    public function payment()
+    {
+        $crypto = PaymentCrypto_Model::find(270);
+        //https://api.bscscan.com/api?module=account&action=txlist&address=0xF426a8d0A94bf039A35CEE66dBf0227A7a12D11e&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=YourApiKeyToken
+        $apiKey = 'A688XZPSE3VZUQDXUZX5DNT7YCMXIJKGXI';
+        $address = '0xa17d23d3d376266053fba25a01f3481a19a2bae2';
+        $url = 'https://api.bscscan.com/api?module=account&action=txlist&address='.$address.'&startblock=0&endblock=99999999&page=1&offset=5&sort=desc&apikey='.$apiKey;
+        $api =  file_get_contents($url);
+        $data = json_decode($api, true);
+        foreach($data['result'] as $key => $value){
+            $a = $value['value'] * pow(10,-18);
+            //var_dump($a);
+            if($a >= $crypto->amount)
+            {
+                //kiem tra trang thai giao dich
+                //https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash=0xe9975702518c79caf81d5da65dea689dcac701fcdd063f848d4f03c85392fd00&apikey=YourApiKeyToken
+                $url_check = 'https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash='.$value['hash'].'&apikey='.$apiKey;
+                $api_check =  file_get_contents($url_check);
+                $data_check = json_decode($api_check, true);
+                $crypto->status = $data_check['result']['status'];
+                $crypto->save();
+                echo 'thanh cong';
+            }
+        }
+        // return response()->json($data, 200);   
+    }
+
     public function index()
     {
-        // $client = new CoinGeckoClient();
-        // $data = $client->coins()->getMarkets('usd');
         $url = 'https://api.binance.com/api/v3/ticker/price';
         $api =  file_get_contents($url);
         $data = json_decode($api, true);
@@ -45,7 +70,7 @@ class PaymentCrypto extends Controller
         $data = json_decode($api, true);
 
         $crypto->id_crypto = $crypto_id->id;
-        //$crypto->image_crypto = $crypto_id->image;
+        //$crypto->link = $crypto_id->image;
         $crypto->symbol = $crypto_id->symbol;
         $crypto->cryptocurrency_name = $crypto_id->name;
         $crypto->image_crypto = '/public/upload/images/crypto/thumb/' . $crypto_id->image;
@@ -82,7 +107,6 @@ class PaymentCrypto extends Controller
         $url = 'https://api.binance.com/api/v3/ticker/price?symbol=' . $crypto->symbol;
         $api =  file_get_contents($url);
         $data = json_decode($api, true);
-        $crypto->status = 1;
         $crypto->amount = round($crypto->currency / $data['price'],4);
         //QR code
         $qrCode = new QrCode();
@@ -98,6 +122,7 @@ class PaymentCrypto extends Controller
             ->setImageType(QrCode::IMAGE_TYPE_PNG);
 
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
+        $crypto->link = '/log-into/payment-ecash/' . $crypto->id;
         // $response = $client->getLastResponse();
         // $headers = $response->getHeaders();
         $crypto->save();
