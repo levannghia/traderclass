@@ -64,7 +64,7 @@ class Teachers extends Controller{
         if ($request->hasFile('photo')) {
             $file = $request->photo;
             $file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
-            $file_name_2 = "all_class".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            $file_name_2 = "teacher".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //$file_name_3 = "teacher".Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
@@ -74,7 +74,7 @@ class Teachers extends Controller{
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
 
                 $image_resize_2 = Image::make($file->getRealPath());
-                $image_resize_2->fit(350, 467);
+                $image_resize_2->fit(350, 480);
                 $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }
             // close upload image
@@ -130,7 +130,7 @@ class Teachers extends Controller{
 
             $file = $request->photo;
             $file_name = Str::slug(explode(".", $file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
-            $file_name_2 = "all_class".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
+            $file_name_2 = "teacher".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //$file_name_3 = "teacher".Str::slug(explode(".",$file->getClientOriginalName())[0], "-") . "-" . time() . "." . $file->getClientOriginalExtension();
             //resize file befor to upload large
             if ($file->getClientOriginalExtension() != "svg") {
@@ -141,7 +141,7 @@ class Teachers extends Controller{
                 $image_resize->save('public/upload/images/teachers/thumb/' . $file_name);
 
                 $image_resize_2 = Image::make($file->getRealPath());
-                $image_resize_2->fit(350, 467);
+                $image_resize_2->fit(350, 480);
                 $image_resize_2->save('public/upload/images/teachers/thumb/' . $file_name_2);
             }
 

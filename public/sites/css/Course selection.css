@@ -491,8 +491,6 @@
     padding: 10px;
 }
 
-
-
 #promo6 {
     float: right;
     margin: 20px 0 20px 0;
@@ -558,6 +556,79 @@
 
 #fade:hover~#boxclose {
     display: none;
+}
+
+.eca {
+    background-color: #d6d6d6;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.ecas {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 15px;
+}
+
+.ecas .col-md-4:nth-child(1) {
+    padding-right: 5px;
+}
+
+.ecas .col-md-4:nth-child(2) {
+    padding: 0px 5px 0px 5px;
+}
+
+.ecas .col-md-4:nth-child(3) {
+    padding-left: 5px;
+}
+
+.ethereum {
+    display: none;
+}
+
+.bsc {
+    display: none;
+}
+
+.tron {
+    display: none;
+}
+
+.ethereum .col-md-4:nth-child(1) {
+    padding-right: 5px;
+}
+
+.ethereum .col-md-4:nth-child(2) {
+    padding: 0 5px 0 5px;
+}
+
+.ethereum .col-md-4:nth-child(3) {
+    padding: 0 14px 0 5px;
+}
+
+.bsc .col-md-4:nth-child(1) {
+    padding-right: 5px;
+}
+
+.bsc .col-md-4:nth-child(2) {
+    padding: 0 5px 0 5px;
+}
+
+.bsc .col-md-4:nth-child(3) {
+    padding: 0 14px 0 5px;
+}
+
+.tron .col-md-4:nth-child(1) {
+    padding-right: 5px;
+}
+
+.tron .col-md-4:nth-child(2) {
+    padding: 0 5px 0 5px;
+}
+
+.tron .col-md-4:nth-child(3) {
+    padding: 0 14px 0 5px;
 }
 
 
@@ -626,12 +697,19 @@
     .tic {
         padding: 0px !important;
     }
+    .eca {
+        font-size: 12px;
+    }
 }
 
 
 /*Ipad dọc(768 x 1024)*/
 
 @media screen and (max-width: 768px) {
+    .eca {
+        font-size: 8px;
+        font-weight: 700;
+    }
     #se p,
     #tot p,
     .cou,
@@ -865,6 +943,18 @@
     }
     #promo6 button {
         width: 20%;
+    }
+    .ecas .col-md-4:nth-child(1) {
+        padding-right: 15px;
+    }
+    .ecas .col-md-4:nth-child(2) {
+        padding: 0 15px 0 15px;
+    }
+    .ecas .col-md-4:nth-child(3) {
+        padding-left: 15px;
+    }
+    .eca {
+        font-size: 9px;
     }
 }
 

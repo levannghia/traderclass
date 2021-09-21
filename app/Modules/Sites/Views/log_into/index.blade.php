@@ -427,6 +427,14 @@
                             <!-- e-cash new -->
                             <div class="mySlides">
                                 <div class="ecash">
+                                    <div class="ecas">
+                                        <div class="row">
+                                            <div class="col-md-4"><button id="btn-ethereum" class="eca" onclick="ethereum()"> Ethereum <br> (ERC20)</button></div>
+                                            <div class="col-md-4"> <button id="btn-bsc" class="eca" onclick="bsc()"> Binance Smart Chain <br> (BEP20)</button></div>
+                                            <div class="col-md-4"> <button id="btn-tron" class="eca" onclick="tron()"> Tron <br> (TRC20)</button></div>
+                                        </div>
+                                    </div>
+                                <div class="ethereum" id="ethereum">
                                     <div class="row">
                                         @foreach ($crypto as $value)
                                             <div class="col-md-4">
@@ -438,44 +446,77 @@
                                                 </button>
                                                 <!-- </div> -->
                                             </div>
-                                            @endforeach
-                                            <div class="popup" id="popup1">
-                                                <div class="popup-content">
-                                                    <span class="popup-close">&times;</span>
-                                                    <h5>PAYMENT</h5>
-                                                    <div class="li-pa"></div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 lef-details">Payment Amount</div>
-                                                        <div class="col-md-6 price-details">
-                                                            <img src="/public/sites/images/ecash1.png" width="20"
-                                                                height="20" alt="">
-                                                            <p class="price">26.33</p>
-                                                            <p class="name-money" style="text-transform: capitalize;">
-                                                                Bitcoin (BTC)</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="send-below">Send the indicated amount to the address
-                                                        below:
-                                                    </p>
-                                                    <p class="address-details">Address</p>
-                                                    <div class="link-code">
-                                                        <input type="text" class="arcode" readonly="readonly" value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
-                                                        <i class="fal fa-copy" id="ic-copy"></i>
-                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup()">
-                                                            <img style="width: 26px;" src="/public/sites/images/qr-code.png"
-                                                                alt="">
-                                                            <span class="cl-popup-img" id="myPopup"><img
-                                                                    src="/public/sites/images/qr-code-ecash.png"
-                                                                    alt=""></span>
-                                                        </div>
-                                                    </div>
-                                                    <a href="/log-into/payment-ecash" id="pay-send">Payment send</a>
-                                                </div>
-                                            </div>
-                                        
+                                        @endforeach
+                                            
                                     </div>
                                 </div>
+                                <div class="bsc" id="bsc">
+                                    <div class="row">
+                                        @foreach ($crypto as $value)
+                                            <div class="col-md-4">
+                                                <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                <button type="submit" class="logo-ecash" data-popup-target="popup1"
+                                                    data-id-crypto="{{ $value->id }}">
+                                                    <img src="/public/upload/images/crypto/thumb/{{ $value->image }}" alt="">
+                                                    <p style="font-size: 14px; text-transform: capitalize;">{{ $value->name . ' (' . $value->symbol . ')' }}</p>
+                                                </button>
+                                                <!-- </div> -->
+                                            </div>
+                                        @endforeach
+                                            
+                                    </div>
+                                </div>
+                                <div class="tron" id="tron">
+                                    <div class="row">
+                                        @foreach ($crypto as $value)
+                                            <div class="col-md-4">
+                                                <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                <button type="submit" class="logo-ecash" data-popup-target="popup1"
+                                                    data-id-crypto="{{ $value->id }}">
+                                                    <img src="/public/upload/images/crypto/thumb/{{ $value->image }}" alt="">
+                                                    <p style="font-size: 14px; text-transform: capitalize;">{{ $value->name . ' (' . $value->symbol . ')' }}</p>
+                                                </button>
+                                                <!-- </div> -->
+                                            </div>
+                                        @endforeach
+                                            
+                                    </div>
+                                </div>
+                                <div class="popup" id="popup1">
+                                    <div class="popup-content">
+                                        <span class="popup-close">&times;</span>
+                                        <h5>PAYMENT</h5>
+                                        <div class="li-pa"></div>
+                                        <div class="row">
+                                            <div class="col-md-6 lef-details">Payment Amount</div>
+                                            <div class="col-md-6 price-details">
+                                                <img src="/public/sites/images/ecash1.png" width="20"
+                                                    height="20" alt="">
+                                                <p class="price">26.33</p>
+                                                <p class="name-money" style="text-transform: capitalize;">
+                                                    Bitcoin (BTC)</p>
+                                            </div>
+                                        </div>
+                                        <p class="send-below">Send the indicated amount to the address
+                                            below:
+                                        </p>
+                                        <p class="address-details">Address</p>
+                                        <div class="link-code">
+                                            <input type="text" class="arcode" readonly="readonly" value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
+                                            <i class="fal fa-copy" id="ic-copy"></i>
+                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                            <div class="cl-popup" onclick="clPopup()">
+                                                <img style="width: 26px;" src="/public/sites/images/qr-code.png"
+                                                    alt="">
+                                                <span class="cl-popup-img" id="myPopup"><img
+                                                        src="/public/sites/images/qr-code-ecash.png"
+                                                        alt=""></span>
+                                            </div>
+                                        </div>
+                                        <a href="/log-into/payment-ecash" id="pay-send">Payment send</a>
+                                    </div>
+                                </div>
+                            </div>  
 
                                 <div class="row">
                                     <div class="col-md-4"></div>

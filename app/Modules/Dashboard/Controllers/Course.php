@@ -29,10 +29,10 @@ class Course extends Controller{
         $data = null;
         if (Cookie::get('search_course') == "") {
             // if cookie not existed
-            $data = DB::table('course')->select('course.id','name','title','course.status','course.created_at','course.updated_at','teachers.fullname','course.photo')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->orderBy('course.id', 'desc')->paginate(15);
+            $data = DB::table('course')->select('course.id','name','title','course.status','course.created_at','course.updated_at','teachers.fullname','course.photo')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->whereIn('course.status',[0,1])->orderBy('course.id', 'desc')->paginate(15);
         } else {
             // if cookie is existed
-            $data = DB::table('course')->select('course.id','name','title','course.status','course.created_at','course.updated_at','teachers.fullname','course.photo')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->where("name", "like", '%' . Cookie::get('search_course') . '%')->orderBy('id', 'desc')->paginate(15);
+            $data = DB::table('course')->select('course.id','name','title','course.status','course.created_at','course.updated_at','teachers.fullname','course.photo')->join('course_category','course_category.id','=','course.course_category_id')->join('teachers','teachers.id','=','course.teacher_id')->where("name", "like", '%' . Cookie::get('search_course') . '%')->whereIn('course.status',[0,1])->orderBy('id', 'desc')->paginate(15);
         }
         $data->setPath('course');
         $row = json_decode(json_encode([

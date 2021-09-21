@@ -22,22 +22,22 @@ class PaymentCrypto extends Controller
         $url = 'https://api.bscscan.com/api?module=account&action=txlist&address='.$address.'&startblock=0&endblock=99999999&page=1&offset=5&sort=desc&apikey='.$apiKey;
         $api =  file_get_contents($url);
         $data = json_decode($api, true);
-        foreach($data['result'] as $key => $value){
-            $a = $value['value'] * pow(10,-18);
-            //var_dump($a);
-            if($a >= $crypto->amount)
-            {
-                //kiem tra trang thai giao dich
-                //https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash=0xe9975702518c79caf81d5da65dea689dcac701fcdd063f848d4f03c85392fd00&apikey=YourApiKeyToken
-                $url_check = 'https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash='.$value['hash'].'&apikey='.$apiKey;
-                $api_check =  file_get_contents($url_check);
-                $data_check = json_decode($api_check, true);
-                $crypto->status = $data_check['result']['status'];
-                $crypto->save();
-                echo 'thanh cong';
-            }
-        }
-        // return response()->json($data, 200);   
+        // foreach($data['result'] as $key => $value){
+        //     $a = $value['value'] * pow(10,-18);
+        //     //var_dump($a);
+        //     if($a >= $crypto->amount)
+        //     {
+        //         //kiem tra trang thai giao dich
+        //         //https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash=0xe9975702518c79caf81d5da65dea689dcac701fcdd063f848d4f03c85392fd00&apikey=YourApiKeyToken
+        //         $url_check = 'https://api.bscscan.com/api?module=transaction&action=gettxreceiptstatus&txhash='.$value['hash'].'&apikey='.$apiKey;
+        //         $api_check =  file_get_contents($url_check);
+        //         $data_check = json_decode($api_check, true);
+        //         $crypto->status = $data_check['result']['status'];
+        //         $crypto->save();
+        //         echo 'thanh cong';
+        //     }
+        // }
+        return response()->json($data, 200);   
     }
 
     public function index()

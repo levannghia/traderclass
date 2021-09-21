@@ -81,7 +81,7 @@ class LogInto extends Controller
         // $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         $apiKey = 'A688XZPSE3VZUQDXUZX5DNT7YCMXIJKGXI';
         $address = '0xa17d23d3d376266053fba25a01f3481a19a2bae2';
-        $url = 'https://api.bscscan.com/api?module=account&action=txlist&address='.$address.'&startblock=0&endblock=99999999&page=1&offset=1&sort=desc&apikey='.$apiKey;
+        $url = 'https://api.bscscan.com/api?module=account&action=txlist&address='.$address.'&startblock=0&endblock=99999999&page=1&offset=10&sort=desc&apikey='.$apiKey;
         $api =  file_get_contents($url);
         $data = json_decode($api, true);
         foreach($data['result'] as $key => $value){

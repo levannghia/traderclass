@@ -737,6 +737,7 @@ footer ul li a svg {
 .create-account.active {
     display: block;
     opacity: 1;
+    z-index: 9;
 }
 
 .create-account h1 {
@@ -1008,7 +1009,6 @@ footer ul li a svg {
     height: 48px;
     outline: 0;
     font-size: 15px;
-    padding: 15px;
 }
 
 .btn-create {
@@ -1366,7 +1366,6 @@ footer ul li a svg {
     height: 48px;
     outline: 0;
     font-size: 15px;
-    padding: 15px;
 }
 
 .btn-create {
@@ -1522,12 +1521,12 @@ video {
 
 /*Responsive*/
 
-@media screen and (max-width: 2561px) {
+@media screen and (max-width: 2560px) {
     .banner_home .main_item .item-left {
         width: 27%;
     }
     .trader_teacher .owl-carousel .item .info {
-        top: 76%;
+        top: 72%;
     }
     .classes .list_category .right_content .tivi_show {
         height: 485px;
@@ -1539,18 +1538,24 @@ video {
         margin-left: 20px;
         margin-right: 0px;
     }
+    .trader_teacher .owl-carousel .item {
+        height: 440px;
+    }
 }
 
-@media screen and (max-width: 1921px) {
+@media screen and (max-width: 1920px) {
     .banner_home .main_item .item-left {
         width: 33%;
     }
     video {
         width: 100%;
     }
+    .trader_teacher .owl-carousel .item .info {
+        top: 70%;
+    }
 }
 
-@media screen and (max-width: 1537px) {
+@media screen and (max-width: 1536px) {
     .banner_home .main_item .item-left {
         width: 50%;
     }
@@ -1562,9 +1567,9 @@ video {
     }
 }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 1440px) {
     .trader_teacher .owl-carousel .item .info {
-        top: 76%;
+        top: 72%;
     }
     .classes .list_category .right_content .tivi_show {
         height: 485px;
@@ -1577,10 +1582,7 @@ video {
     }
 }
 
-@media screen and (max-width: 1367px) {
-    .trader_teacher .owl-carousel .item .info {
-        top: 74%;
-    }
+@media screen and (max-width: 1366px) {
     .classes .list_category .right_content .tivi_show {
         height: 446px;
     }
@@ -1589,7 +1591,16 @@ video {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .trader_teacher .owl-carousel .item {
+        height: 396px;
+    }
+}
+
 @media (max-width: 768px) {
+    .trader_teacher .owl-carousel .item {
+        height: auto;
+    }
     .container,
     .container-sm {
         max-width: 694px;

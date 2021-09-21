@@ -27,21 +27,18 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     dotts[slideIndex - 1].className += " active";
 }
-function choose() {
-    document.getElementById("promo").style.display = "block";
-    document.getElementById("fade").style.display = "block";
-}
+
 function paymen(int) {
     if (int == 4) {
-        window.location.href = "/log-into/payment-bank";
+        window.location.href = "Payment Bank.html";
         return;
     }
     if (int == 3) {
-        window.location.href = "/log-into/payment-momo";
+        window.location.href = "Payment Momo.html";
         return;
     }
     if (int == 2) {
-        window.location.href = "/log-into/payment-atm";
+        window.location.href = "Payment ATM.html";
         return;
     }
     if (int == 1) {
@@ -49,6 +46,21 @@ function paymen(int) {
     }
 }
 
+function choose() {
+    document.getElementById("promo").style.display = "block";
+    document.getElementById("fade").style.display = "block";
+    // scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    //     window.onscroll = function() {
+    //         window.scrollTo(scrollLeft, scrollTop);
+    //     };
+}
+
+function promo_close() {
+    document.getElementById("promo").style.display = "none";
+    document.getElementById("fade").style.display = "none";
+    // window.onscroll = function() {};
+}
 var a = 1;
 
 function tick(int) {
@@ -231,4 +243,31 @@ function tic13() {
     document.getElementById("tic13").style.display = "none";
     document.getElementById("bi13").style.display = "none";
     a = 1;
+}
+
+function ethereum() {
+    document.getElementById("ethereum").style.display = "block";
+    document.getElementById("bsc").style.display = "none";
+    document.getElementById("tron").style.display = "none";
+    document.getElementById("btn-ethereum").style.backgroundColor = "#EF8D21";
+    document.getElementById("btn-bsc").style.backgroundColor = "#d6d6d6";
+    document.getElementById("btn-tron").style.backgroundColor = "#d6d6d6";
+}
+
+function bsc() {
+    document.getElementById("ethereum").style.display = "none";
+    document.getElementById("bsc").style.display = "block";
+    document.getElementById("tron").style.display = "none";
+    document.getElementById("btn-ethereum").style.backgroundColor = "#d6d6d6";
+    document.getElementById("btn-bsc").style.backgroundColor = "#EF8D21";
+    document.getElementById("btn-tron").style.backgroundColor = "#d6d6d6";
+}
+
+function tron() {
+    document.getElementById("ethereum").style.display = "none";
+    document.getElementById("bsc").style.display = "none";
+    document.getElementById("tron").style.display = "block";
+    document.getElementById("btn-ethereum").style.backgroundColor = "#d6d6d6";
+    document.getElementById("btn-bsc").style.backgroundColor = "#d6d6d6";
+    document.getElementById("btn-tron").style.backgroundColor = "#EF8D21";
 }

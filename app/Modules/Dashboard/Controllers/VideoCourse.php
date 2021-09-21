@@ -133,8 +133,6 @@ class VideoCourse extends Controller{
         //     abort(403);
         // }
         $list_id = json_decode($id);
-        //var_dump($list_id);
-        //die();
         if (!isset($list_id[0]->id)) {
             return back()->withInput()->with(["type" => "danger", "flash_message" => "Không có dữ liệu để xóa."]);
         }

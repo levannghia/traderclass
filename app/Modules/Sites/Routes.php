@@ -13,6 +13,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
 
     //All Class
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
+    Route::get("/all-teacher", ["as" => "sites.allTeacher.index", "uses" => "AllTeacher@index"]);
     //Teachers
     Route::get("/teacher/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
     Route::post("/subcribe-teacher", ["as" => "sites.teacher.subcribe", "uses" => "Teacher@postSubcribe"]);
@@ -49,9 +50,6 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::group(["prefix" => "account",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.account.index", "uses" => "Account@index"]);
         Route::get("/logout", ["as" => "sites.account.logout", "uses" => "Users@logout"]);
-        
-       
-
         //updatepassword
         Route::post("/updatepassword", ["as" => "account.updatepassword", "uses" => "Account@updatepassword_request"]);
         //update email
@@ -72,7 +70,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/", ["as" => "sites.course.index", "uses" => "MyCourse@index"]);
     });
 
-    // //course Detail
+    //course Detail
     Route::group(["prefix" => "course-detail",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.courseIntroduction.index", "uses" => "CourseDetail@index"]);
         // Route::get("/{id}", ["as" => "sites.courseIntroduction.intruduction", "uses" => "CourseIntroduction@intruduction"]);
@@ -108,14 +106,6 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/update-password", ["as" => "users.forgot", "uses" => "Users@updatepassword"]);
     Route::post("/update-password", ["as" => "users.forgot", "uses" => "Users@updatepassword_request"]);
     Route::post("/forgotpassword", ["as" => "users.forgot", "uses" => "Users@forgotpasswordrequest"]);
-
-    //Route::get("/updatePassword",["as" =>"user.updatepassword","uses" => "Users@updatepassword"]);
-    // Route::group(['middleware' => 'auth:web'], function () {
-    //     //Route::get("/", ["as" => "users.login", "uses" => "Users@login"]);
-    //     Route::get("/", ["as" => "home.index", "uses" => "Home@index"]);
-    // });
-    //email-verification
-
    
     Route::post("/register_request", ["as" => "users.create_request", "uses" => "Users@create_request"]);
     Route::get("/registerpassword", ["as" => "users.register", "uses" => "Users@register_accuracy"]);

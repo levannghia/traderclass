@@ -2,7 +2,6 @@
     color: #ffffff;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
 }
 
 .main {
@@ -14,7 +13,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -23,7 +22,22 @@
     display: inline-block;
     overflow: hidden;
     border-radius: 5px;
+    height: 480px;
+}
+
+.img:hover .text-center {
+    margin-top: -100px;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: linear-gradient(to top, #171921 1%, transparent 40%, transparent)
 }
 
 .button a {
@@ -32,7 +46,7 @@
 
 .text-center {
     position: absolute;
-    top: 97%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -60%);
     color: white;
@@ -56,8 +70,8 @@
     font-weight: 500;
 }
 
-.teacher .container .row .col-md-3 {
-    padding-bottom: 25px;
+.teacher .container .row .col-md-4 {
+    padding-bottom: 30px;
 }
 
 .button {
@@ -84,21 +98,6 @@ button p {
 
 button p i {
     margin-right: 5px;
-}
-
-.nameclass {
-    color: #aaa;
-}
-
-.nameclass p {
-    margin-bottom: 0;
-    font-size: 13px;
-}
-
-.nameclass p:nth-child(1) {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    font-size: 15px;
 }
 
 .sort {
@@ -171,6 +170,13 @@ button p i {
         font-size: 16px;
         font-weight: 500;
     }
+    .text-center {
+        top: 101%;
+    }
+    .classify .col-md-4 {
+        flex: 0 0 40.333333%;
+        max-width: 40.333333%;
+    }
 }
 
 
@@ -188,9 +194,12 @@ button p i {
     .img {
         height: auto;
     }
-    .classify .col-md-7 {
-        flex: 0 0 80.333333%;
-        max-width: 80.333333%;
+    .text-center {
+        top: 102%;
+    }
+    .classify .col-md-4 {
+        flex: 0 0 52.333333%;
+        max-width: 52.333333%;
     }
 }
 
@@ -206,17 +215,12 @@ button p i {
         font-size: 24px;
         font-weight: 500;
     }
-    .sort button {
-        font-size: 13px;
+    .text-center {
+        top: 100%;
     }
-    .classify .col-md-7 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    .sort p {
-        font-size: 17px;
-        font-weight: 700;
-        margin-bottom: 0px;
+    .classify .col-md-4 {
+        flex: 0 0 76.333333%;
+        max-width: 76.333333%;
     }
     .pagination {
         justify-content: center;
@@ -232,10 +236,12 @@ button p i {
         font-size: 20px;
         font-weight: 500;
     }
-    .sort button {
-        font-size: 12px;
-        font-weight: 500;
-        padding: 5px;
+    .text-center {
+        top: 101%;
+    }
+    .classify .col-md-4 {
+        flex: 0 0 84.333333%;
+        max-width: 84.333333%;
     }
 }
 
@@ -259,11 +265,9 @@ button p i {
         font-size: 18px;
         font-weight: 500;
     }
-    .sort button {
-        font-size: 10px;
-    }
-    .sort p {
-        font-size: 15px;
+    .classify .col-md-4 {
+        flex: 0 0 96.333333%;
+        max-width: 96.333333%;
     }
 }
 
@@ -279,12 +283,20 @@ button p i {
         font-size: 16px;
         font-weight: 500;
     }
-    .sort button {
-        font-size: 8px;
-        font-weight: 700;
-        padding: 9px 5px 9px 5px;
+    .classify .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .sort p {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .sort button {
+        border: 0;
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+        font-weight: 400;
         font-size: 13px;
     }
 }
@@ -301,12 +313,19 @@ button p i {
         font-size: 12px;
         font-weight: 500;
     }
-    .sort button {
-        font-size: 8px;
-        font-weight: 700;
-        padding: 9px 5px 9px 5px;
+    .text-center {
+        top: 103%;
     }
     .sort p {
-        font-size: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .sort button {
+        border: 0;
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+        font-weight: 600;
+        font-size: 9px;
     }
 }

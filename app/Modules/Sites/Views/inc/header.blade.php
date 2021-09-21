@@ -11,6 +11,9 @@
                     <div class="menu">
                         <ul>
                             <li>
+                                <a style="padding-top: 0px;" class="nav-link" href="/all-teacher"><i class="fas fa-chalkboard-teacher"></i>&nbsp; All Teacher</a>
+                            </li>
+                            <li>
                                 <a style="padding-top: 0px;" class="nav-link" href="/all-class"><i
                                         class="fas fa-users-class"></i>&nbsp; All Class</a>
                             </li>
@@ -77,6 +80,9 @@
                     </div>
                     <div class="menu">
                         <ul>
+                            <li>
+                                <a style="padding-top: 0px;" class="nav-link" href="/all-teacher"><i class="fas fa-chalkboard-teacher"></i>&nbsp; All Teacher</a>
+                            </li>
                             <li>
                                 <a style="padding-top: 0px;" class="nav-link"
                                     href="{{ route('sites.allClass.index') }}"><i class="fas fa-users-class"></i>&nbsp;

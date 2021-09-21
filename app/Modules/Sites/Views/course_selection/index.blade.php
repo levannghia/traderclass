@@ -11,7 +11,7 @@
                             <p id="yo">Your order</p>
                             <div class="order">
                                 <div class="un">
-                                    <img src="/public/sites/images/Teacher1.jpg" alt="">
+                                    <img src="./images/Teacher1.jpg" alt="">
                                     <div id="yo2">
                                         <p>Teacher Crypto Trader</p>
                                         <p id="cl_name">Ted Nguyen</p>
@@ -52,14 +52,14 @@
                             </div>
                             <div class="cou">
                                 <div id="is">
-                                    <img src="/public/sites/images/box.png" alt="">
+                                    <img src="./images/box.png" alt="">
                                     <p>
                                         Discount
                                     </p>
                                 </div>
                                 <div id="choo">
                                     <button onclick="choose()" style="background-color: white;
-                                    border: 0;">
+                                        border: 0;">
                                         <p>CHOOSE YOUR OFFER</p>
                                     </button>
                                 </div>
@@ -112,15 +112,15 @@
                                 <div class="cre">
                                     <div class="dot" onclick="currentSlide(1)">
                                         <p>CREDIT</p>
-                                        <img src="/public/sites/svg/logo-mastercard-mobile.svg" alt="">
+                                        <img src="./svg/logo-mastercard-mobile.svg" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(2)">
                                         <p>ATM</p>
-                                        <img id="atm" src="/public/sites/images/atm.png" alt="">
+                                        <img id="atm" src="./images/atm.png" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(3)">
                                         <p>MOMO</p>
-                                        <img id="momo" src="/public/sites/images/momo.png" alt="">
+                                        <img id="momo" src="./images/momo.png" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(4)">
                                         <p>BANK</p>
@@ -188,9 +188,8 @@
                                         CyberSource, the world's largest payment management company (under VISA
                                         organization) VietNam Master does not store your card directly.</p>
                                     <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21"
-                                                href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a
-                                                href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a>
-                                        </span></p>
+                                                href="./Privacy.html">Privacy Policy</a></span> and <span><a
+                                                href="./Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                                 </div>
                                 <div class="pay">
                                     <div><button onclick="paymen(1)">PAYMENT</button></div>
@@ -202,21 +201,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick(1)">
                                                 <i class="bi bi-check-lg" id="bi"></i>
-                                                <img src="/public/sites/svg/vietcombank.svg" alt="">
+                                                <img src="./svg/vietcombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic" onclick="tic()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick2(1)">
                                                 <i class="bi bi-check-lg" id="bi2"></i>
-                                                <img src="/public/sites/svg/acb.svg" alt="">
+                                                <img src="./svg/acb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic2" onclick="tic2()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick3(1)">
                                                 <i class="bi bi-check-lg" id="bi3"></i>
-                                                <img src="/public/sites/svg/vpbank.svg" alt="">
+                                                <img src="./svg/vpbank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic3" onclick="tic3()"></div>
                                         </div>
@@ -225,21 +224,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick4(1)">
                                                 <i class="bi bi-check-lg" id="bi4"></i>
-                                                <img src="/public/sites/svg/sacombank.svg" alt="">
+                                                <img src="./svg/sacombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic4" onclick="tic4()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick5(1)">
                                                 <i class="bi bi-check-lg" id="bi5"></i>
-                                                <img src="/public/sites/svg/abbank.svg" alt="">
+                                                <img src="./svg/abbank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic5" onclick="tic5()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick6(1)">
                                                 <i class="bi bi-check-lg" id="bi6"></i>
-                                                <img src="/public/sites/svg/techcombank.svg" alt="">
+                                                <img src="./svg/techcombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic6" onclick="tic6()"></div>
                                         </div>
@@ -248,21 +247,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick7(1)">
                                                 <i class="bi bi-check-lg" id="bi7"></i>
-                                                <img src="/public/sites/svg/aribank.svg" alt="">
+                                                <img src="./svg/aribank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic7" onclick="tic7()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick8(1)">
                                                 <i class="bi bi-check-lg" id="bi8"></i>
-                                                <img src="/public/sites/svg/hsbc.svg" alt="">
+                                                <img src="./svg/hsbc.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic8" onclick="tic8()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick9(1)">
                                                 <i class="bi bi-check-lg" id="bi9"></i>
-                                                <img src="/public/sites/svg/baoviet.svg" alt="">
+                                                <img src="./svg/baoviet.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic9" onclick="tic9()"></div>
                                         </div>
@@ -271,21 +270,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick10(1)">
                                                 <i class="bi bi-check-lg" id="bi10"></i>
-                                                <img src="/public/sites/svg/lienviet.svg" alt="">
+                                                <img src="./svg/lienviet.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic10" onclick="tic10()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick11(1)">
                                                 <i class="bi bi-check-lg" id="bi11"></i>
-                                                <img src="/public/sites/svg/bidv.svg" alt="">
+                                                <img src="./svg/bidv.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic11" onclick="tic11()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick12(1)">
                                                 <i class="bi bi-check-lg" id="bi12"></i>
-                                                <img src="/public/sites/svg/mb.svg" alt="">
+                                                <img src="./svg/mb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic12" onclick="tic12()"></div>
                                         </div>
@@ -294,7 +293,7 @@
                                         <div class="col-md-4">
                                             <div onclick="tick13(1)">
                                                 <i class="bi bi-check-lg" id="bi13"></i>
-                                                <img src="/public/sites/svg/shb.svg" alt="">
+                                                <img src="./svg/shb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic13" onclick="tic13()"></div>
                                         </div>
@@ -363,9 +362,8 @@
                                 </div>
                                 <div class="be">
                                     <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21"
-                                                href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a
-                                                href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a>
-                                        </span></p>
+                                                href="./Privacy.html">Privacy Policy</a></span> and <span><a
+                                                href="./Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                                 </div>
                                 <div class="pay">
                                     <div><button onclick="paymen(2)">PAYMENT</button></div>
@@ -377,9 +375,8 @@
                                 </div>
                                 <div class="be">
                                     <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21"
-                                                href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a
-                                                href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a>
-                                        </span></p>
+                                                href="./Privacy.html">Privacy Policy</a></span> and <span><a
+                                                href="./Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                                 </div>
                                 <div class="pay">
                                     <div><button onclick="paymen(3)">PAYMENT</button></div>
@@ -407,7 +404,7 @@
                                         <label>Phone number</label>
                                         <div class="suu">
                                             <label for="img">
-                                                <img src="/public/sites/images/laco.png" id="img">
+                                                <img src="./images/laco.png" id="img">
                                                 <i class="bi bi-caret-down-fill"></i>
                                             </label>
                                             <input id="in" type="number" class="form-control">
@@ -420,9 +417,8 @@
                                 </div>
                                 <div class="be">
                                     <p id="to">By completing your order, you agree to our <span><a style="color: #EF8D21"
-                                                href="/public/sites/Privacy.html">Privacy Policy</a></span> and <span><a
-                                                href="/public/sites/Terms.html" style="color: #EF8D21">Terms of Service.</a>
-                                        </span></p>
+                                                href="./Privacy.html">Privacy Policy</a></span> and <span><a
+                                                href="./Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                                 </div>
                                 <div class="pay">
                                     <div><button onclick="paymen(4)">PAYMENT</button></div>
@@ -430,122 +426,145 @@
                             </div>
                             <!-- e-cash new -->
                             <div class="mySlides">
-                            <div class="ecash">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
-                                                    <button type="submit" class="logo-ecash" data-popup-target="popup1">
-                                                    <img src="/public/sites/images/ecash1.png" alt="">
-                                                    <p>Bitcoin (BTC)</p></button>
-                                            <!-- </div> -->
-                                            <div class="popup" id="popup1">
-                                                <div class="popup-content">
-                                                    <span class="popup-close">&times;</span>
-                                                    <h5>PAYMENT</h5>
-                                                    <div class="li-pa"></div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 lef-details">Payment Amount</div>
-                                                        <div class="col-md-6 price-details">
-                                                            <img src="/public/sites/images/ecash1.png" width="20" height="20" alt="">
-                                                            <p class="price">26.33</p>
-                                                            <p class="name-money">Bitcoin (BTC)</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="send-below">Send the indicated amount to the address below:</p>
-                                                    <p class="address-details">Address</p>
-                                                    <div class="link-code">
-                                                        <input type="text" class="arcode" readonly="readonly" value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
-                                                        <i class="fal fa-copy" id="ic-copy"></i>
-                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup()"><img src="/public/sites/images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
-                                                        </div>
-                                                    </div>
-                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
-                                                </div>
-                                            </div>
+                                <div class="ecash">
+                                    <div class="ecas">
+                                        <div class="row">
+                                            <div class="col-md-4"><button id="btn-ethereum" class="eca"
+                                                    onclick="ethereum()"> Ethereum <br> (ERC20)</button></div>
+                                            <div class="col-md-4"> <button id="btn-bsc" class="eca"
+                                                    onclick="bsc()"> Binance Smart Chain <br> (BEP20)</button></div>
+                                            <div class="col-md-4"> <button id="btn-tron" class="eca"
+                                                    onclick="tron()"> Tron <br> (TRC20)</button></div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <!-- <div class="logo-ecash" data-popup-target="popup2"> -->
-                                            <button type="submit" class="logo-ecash" data-popup-target="popup2">
-                                                <img src="/public/sites/images/ecash2.png" width="26" height="26" alt="">
-                                                <p>Ethereum (ETH)</p>
-                                            </button>
-                                            <!-- </div> -->
-                                            <div class="popup" id="popup2">
-                                                <div class="popup-content">
-                                                    <span class="popup-close">&times;</span>
-                                                    <h5>PAYMENT</h5>
-                                                    <div class="li-pa"></div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 lef-details">Payment Amount</div>
-                                                        <div class="col-md-6 price-details">
-                                                            <img src="/public/sites/images/ecash2.png" width="20" height="20" alt="">
-                                                            <p class="price">0.01</p>
-                                                            <p class="name-money">Ethereum (ETH)</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="send-below">Send the indicated amount to the address below:</p>
-                                                    <p class="address-details">Address</p>
-                                                    <div class="link-code">
-                                                        <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                        <i class="fal fa-copy" id="ic-copy"></i>
-                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup2()"><img src="/public/sites/images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup2"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
-                                                        </div>
-                                                    </div>
-                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <!-- <div class="logo-ecash" data-popup-target="popup3"> -->
-                                            <button type="submit" class="logo-ecash" data-popup-target="popup3">
-                                                <img src="/public/sites/images/ecash3.png" width="26" height="26" alt="">
-                                                <p>Cardano (ADA)</p>
-                                            </button>
-                                            <!-- </div> -->
-                                            <div class="popup" id="popup3">
-                                                <div class="popup-content">
-                                                    <span class="popup-close">&times;</span>
-                                                    <h5>PAYMENT</h5>
-                                                    <div class="li-pa"></div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 lef-details">Payment Amount</div>
-                                                        <div class="col-md-6 price-details">
-                                                            <img src="/public/sites/images/ecash3.png" width="20" height="20" alt="">
-                                                            <p class="price">9.25</p>
-                                                            <p class="name-money">Cardano (ADA)</p>
-                                                        </div>
-                                                    </div>
-                                                    <p class="send-below">Send the indicated amount to the address below:</p>
-                                                    <p class="address-details">Address</p>
-                                                    <div class="link-code">
-                                                        <p class="arcode">ajs67daDAJSk2jahs98jkSHDjda12sDK</p>
-                                                        <i class="fal fa-copy" id="ic-copy"></i>
-                                                        <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                        <div class="cl-popup" onclick="clPopup3()"><img src="/public/sites/images/qr-code.png" alt="">
-                                                            <span class="cl-popup-img" id="myPopup3"><img src="/public/sites/images/qr-code-ecash.png" alt=""></span>
-                                                        </div>
-                                                    </div>
-                                                    <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                    <div class="row">
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4"></div>
+
                                     </div>
 
+                                    <div class="ethereum" id="ethereum">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <div class="logo-ecash" data-popup-target="popup2"> -->
+                                                <button type="submit" class="logo-ecash" data-popup-target="popup2">
+                                                    <img src="./images/ecash2.png" width="26" height="26" alt="">
+                                                    <p>Ethereum (ETH)</p>
+                                                </button>
+                                                <!-- </div> -->
+                                                <div class="popup" id="popup2">
+                                                    <div class="popup-content">
+                                                        <span class="popup-close">&times;</span>
+                                                        <h5>PAYMENT</h5>
+                                                        <div class="li-pa"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-6 lef-details">Payment Amount</div>
+                                                            <div class="col-md-6 price-details">
+                                                                <img src="images/ecash2.png" width="20" height="20" alt="">
+                                                                <p class="price">0.01</p>
+                                                                <p class="name-money">Ethereum (ETH)</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="send-below">Send the indicated amount to the address
+                                                            below:</p>
+                                                        <p class="address-details">Address</p>
+                                                        <div class="link-code">
+                                                            <input type="text" class="arcode" readonly="readonly"
+                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
+                                                            <i class="fal fa-copy" id="ic-copy"></i>
+                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                            <div class="cl-popup" onclick="clPopup2()"><img
+                                                                    src="images/qr-code.png" alt="">
+                                                                <span class="cl-popup-img" id="myPopup2"><img
+                                                                        src="images/qr-code-ecash.png" alt=""></span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bsc" id="bsc">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <div class="logo-ecash" data-popup-target="popup4"> -->
+                                                <button type="submit" class="logo-ecash" data-popup-target="popup4">
+                                                    <img src="./images/ecash4.png" width="26" height="26" alt="">
+                                                    <p>Binance Coin (BNB)</p>
+                                                </button>
+                                                <!-- </div> -->
+                                                <div class="popup" id="popup4">
+                                                    <div class="popup-content">
+                                                        <span class="popup-close">&times;</span>
+                                                        <h5>PAYMENT</h5>
+                                                        <div class="li-pa"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-6 lef-details">Payment Amount</div>
+                                                            <div class="col-md-6 price-details">
+                                                                <img src="images/ecash4.png" width="20" height="20" alt="">
+                                                                <p class="price">0.05</p>
+                                                                <p class="name-money">Binance Coin (BNB)</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="send-below">Send the indicated amount to the address
+                                                            below:</p>
+                                                        <p class="address-details">Address</p>
+                                                        <div class="link-code">
+                                                            <input type="text" class="arcode" readonly="readonly"
+                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
+                                                            <i class="fal fa-copy" id="ic-copy"></i>
+                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                            <div class="cl-popup" onclick="clPopup4()"><img
+                                                                    src="images/qr-code.png" alt="">
+                                                                <span class="cl-popup-img" id="myPopup4"><img
+                                                                        src="images/qr-code-ecash.png" alt=""></span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tron" id="tron">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <!-- <div class="logo-ecash" data-popup-target="popup7"> -->
+                                                <button type="submit" class="logo-ecash" data-popup-target="popup7">
+                                                    <img src="./images/1958.png" width="26" height="26" alt="">
+                                                    <p>Tron Coin (TRX)</p>
+                                                </button>
+                                                <!-- </div> -->
+                                                <div class="popup" id="popup7">
+                                                    <div class="popup-content">
+                                                        <span class="popup-close">&times;</span>
+                                                        <h5>PAYMENT</h5>
+                                                        <div class="li-pa"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-6 lef-details">Payment Amount</div>
+                                                            <div class="col-md-6 price-details">
+                                                                <img src="images/1958.png" width="20" height="20" alt="">
+                                                                <p class="price">26.33</p>
+                                                                <p class="name-money">Tron Coin (TRX)</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="send-below">Send the indicated amount to the address
+                                                            below:</p>
+                                                        <p class="address-details">Address</p>
+                                                        <div class="link-code">
+                                                            <input type="text" class="arcode" readonly="readonly"
+                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
+                                                            <i class="fal fa-copy" id="ic-copy"></i>
+                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                            <div class="cl-popup" onclick="clPopup7()"><img
+                                                                    src="images/qr-code.png" alt="">
+                                                                <span class="cl-popup-img" id="myPopup7"><img
+                                                                        src="images/qr-code-ecash.png" alt=""></span>
+                                                            </div>
+                                                        </div>
+                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -553,7 +572,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div id="promo">
         <a class="boxclose" id="boxclose" onclick="promo_close();"></a>
@@ -565,7 +583,22 @@
             <div id="promo4">
                 <input type="text" name="" id="" placeholder="Enter promo code">
             </div>
-          
+            <div id="promo5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button>Promo code 5%</button>
+                        <button>Promo code 10%</button>
+                        <button>Promo code 2%</button>
+                        <button>Promo code 15%</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button>Promo code 20%</button>
+                        <button>Promo code 30%</button>
+                        <button>Promo code 25%</button>
+                        <button>Promo code 40%</button>
+                    </div>
+                </div>
+            </div>
             <div id="promo6">
                 <button id="back" onclick="promo_close()">Back</button>
                 <button id="save" onclick="promo_close()">Save</button>

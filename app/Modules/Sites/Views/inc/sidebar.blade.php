@@ -17,6 +17,7 @@
                     <a href="#">Teacher 4</a>
                 </div>
             </li>
+            <li class="nav-item"><a href="./All Teacher.html.html"><i class="fas fa-chalkboard-teacher"></i>&nbsp; All Teacher</a></li>
             <li class="nav-item"><a href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a></li>
             <li class="nav-item"> <a href="/log-into"><i class="fas fa-shopping-cart"></i>&nbsp; Cart</a></li>
             <li class="nav-item">
@@ -52,6 +53,7 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a href="/All Teacher.html.html"><i class="fas fa-chalkboard-teacher"></i>&nbsp; All Teacher</a>
                 <a href="/all-class"><i class="fas fa-users-class"></i>&nbsp; All Class</a>
             </li>
             <li class="nav-item">

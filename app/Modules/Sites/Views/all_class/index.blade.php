@@ -4,27 +4,62 @@
 @include('Sites::inc.maketting')
 <div class="main">
     <div class="intro">
-        <p style="font-size: 18px;">Start your first course</p>
-        <p style="font-size: 18px;">Choose a course to get started</p>
-        <p style="font-size: 24px;">NEW COURSE FROM PROS</p>
+        <p>Choose a class to start</p>
     </div>
-    <div class="teacher">
+    <div class="classify">
         <div class="container">
             <div class="row">
-                @foreach ($all_class as $value)
-                <div class="col-md-4">
-                    <div class="img">
-                        <img src="{{'/public/upload/images/teachers/thumb/'.'all_class'.$value->photo}}" alt="">
-                        <div class="text-center">
-                            <div class="font" style="color: white;"><span class="a">{{$value->fullname}}</span> <br> <span class="b">-</span> <br><span class="c">{{$value->position}}</span>
+                <div class="col-md-7">
+                    <div class="sort">
+                        <p style="color: white;">Sorted by:</p>
+                        <button>Most Popular</button>
+                        <button>Just Added</button>
+                        <div class="topics">
+                            <button id="navbarDropdown" role="button" data-toggle="dropdown"> Topics &nbsp; <i class="bi bi-caret-down-fill"></i></button>
+                            <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown">
+                                <p class="dropdown-item">Crypto Currency</p>
+                                <p class="dropdown-item">Forex</p>
+                                <p class="dropdown-item">Stock</p>
                             </div>
-                            <div class="button">
-                                <button><a href="{{url('/teacher/'.$value->id)}}"><p><i class="bi bi-play-fill"></i>Watch now</p></a></button>
+                        </div>
+                        <div class="nteacher">
+                            <button id="navbarDropdown" role="button" data-toggle="dropdown">Teacher &nbsp; <i class="bi bi-caret-down-fill"></i></button>
+                            <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown">
+                                <p class="dropdown-item">Hoang Minh Thien</p>
+                                <p class="dropdown-item">Hoang Minh Thien</p>
+                                <p class="dropdown-item">Hoang Minh Thien</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+    </div>
+    <div class="teacher">
+        <div class="container">
+            <div class="row">
+                @foreach ($data as $value)
+                <div class="col-md-3">
+                    <a href="./Teacher.html">
+                        <div class="img">
+                            <img src="/public/upload/images/course/thumb/{{$value->photo}}" alt="">
+                        </div>
+                        <div class="nameclass">
+                            <p>Cập nhật mới nhất về thị trường điện tử</p>
+                            <p>{{$value->title}}</p>
+                            <p>{{$value->fullname}}</p>
+                        </div>
+                    </a> 
+                </div>
                 @endforeach
+            </div>
+            <div class="pagination">
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <p style="color: white; margin-bottom: 0px; padding-top: 10px;">...</p>
+                <a href="#">5</a>
+                <a href="#">6</a>
             </div>
         </div>
     </div>
