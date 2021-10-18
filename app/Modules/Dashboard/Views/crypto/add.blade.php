@@ -8,13 +8,30 @@
         <div class="col-md-6">
             <div class="card-box">
                 <h4 class="header-title mb-3">{{$row->desc}}</h4>
-                <div class="form-group mb-2">
+                {{-- <div class="form-group mb-2">
                     <label for="title">Crypto name</label>
                     <select class="form-control form-control-sm symbol-id" name="name">
                         <option value="">__Mời bạn chọn tên tiền điện tử__</option>
                         @foreach ($name as $value)
                             <option value="{{$value['id']}}">{{$value['name'] .' ('.$value['symbol'] .')'}}</option>
                         @endforeach
+                    </select>
+                </div> --}}
+                <div class="form-group mb-2">
+                    <label for="title">Contract</label>
+                    <input type="text" name="contract" value="{{ old('contract') }}" class="form-control form-control-sm" placeholder="* contract">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Crypto name</label>
+                    <input type="text" name="name" value="{{ old('name') }}" class="form-control form-control-sm" placeholder="* tên tiền điện tử">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Phương thức</label>
+                    <select class="form-control form-control-sm symbol-id" name="method">
+                        <option value="">__Mời bạn chọn phương thức__</option>
+                        <option value="0">Ethereum (ERC20)</option>
+                        <option value="1">Binance Smart Chain (BEP20)</option>
+                        <option value="2">Tron (TRC20)</option>
                     </select>
                 </div>
                 <div class="form-group mb-2">

@@ -8,13 +8,24 @@
         <div class="col-md-6">
             <div class="card-box">
                 <h4 class="header-title mb-3"><?php echo e($row->desc); ?></h4>
+                
+                    
+                        
+                    
+                <div class="form-group mb-2">
+                    <label for="title">Contract</label>
+                    <input type="text" name="contract" value="<?php echo e(old('contract')); ?>" class="form-control form-control-sm" placeholder="* contract">
+                </div>
                 <div class="form-group mb-2">
                     <label for="title">Crypto name</label>
-                    
-                    <select class="form-control form-control-sm symbol-id" name="name">
-                        <?php $__currentLoopData = $name['data']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <option value="<?php echo e($value['id']); ?>" <?php echo e(old('name',$data->name)==$value['id']? "selected" :""); ?>><?php echo e($value['name'] .' ('.$value['symbol'] .')'); ?></option>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <input type="text" name="name" value="<?php echo e(old('name')); ?>" class="form-control form-control-sm" placeholder="* tên tiền điện tử">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Phương thức</label>
+                    <select class="form-control form-control-sm symbol-id" name="method">
+                        <option value="0" <?php echo e(old('method',$data->method)==0? "selected" :""); ?>>Ethereum (ERC20)</option>
+                        <option value="1" <?php echo e(old('method',$data->method)==1? "selected" :""); ?>>Binance Smart Chain (BEP20)</option>
+                        <option value="2" <?php echo e(old('method',$data->method)==2? "selected" :""); ?>>Tron (TRC20)</option>
                     </select>
                 </div>
                 <div class="form-group mb-2">

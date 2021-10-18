@@ -436,7 +436,7 @@
                                     </div>
                                 <div class="ethereum" id="ethereum">
                                     <div class="row">
-                                        @foreach ($crypto as $value)
+                                        @foreach ($crypto_erc20 as $value)
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"
@@ -452,7 +452,7 @@
                                 </div>
                                 <div class="bsc" id="bsc">
                                     <div class="row">
-                                        @foreach ($crypto as $value)
+                                        @foreach ($crypto_bep20 as $value)
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"
@@ -468,7 +468,7 @@
                                 </div>
                                 <div class="tron" id="tron">
                                     <div class="row">
-                                        @foreach ($crypto as $value)
+                                        @foreach ($crypto_trc20 as $value)
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"

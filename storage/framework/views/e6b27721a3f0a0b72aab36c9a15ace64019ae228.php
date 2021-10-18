@@ -41,12 +41,12 @@
             <div class="row">
                 <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-3">
-                    <a href="./Teacher.html">
+                    <a href="/course/<?php echo e($value->id); ?>">
                         <div class="img">
                             <img src="/public/upload/images/course/thumb/<?php echo e($value->photo); ?>" alt="">
                         </div>
                         <div class="nameclass">
-                            <p>Cập nhật mới nhất về thị trường điện tử</p>
+                            <p><?php echo e($value->name); ?></p>
                             <p><?php echo e($value->title); ?></p>
                             <p><?php echo e($value->fullname); ?></p>
                         </div>

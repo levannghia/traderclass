@@ -56,8 +56,8 @@ class Crypto extends Controller{
         if (!Gate::allows('add', explode("\\", get_class())[4])) {
             abort(403);
         }
-        $client = new CoinGeckoClient();
-        $name = $client->coins()->getMarkets('usd');
+        // $client = new CoinGeckoClient();
+        // $name = $client->coins()->getMarkets('usd');
     
         // $url_crypto_name = 'https://api.coincap.io/v2/assets';
         // $api_crypto_name =  file_get_contents($url_crypto_name);
@@ -71,17 +71,18 @@ class Crypto extends Controller{
             "title" => "Crypto - Thêm",
             "desc" => "Thêm mới",
         ]));
-        return view("Dashboard::crypto.add", compact("row", "settings","symbol","name"));
+        return view("Dashboard::crypto.add", compact("row", "settings","symbol"));
     }
 
     public function postAdd(Request $request){
         $settings = config('global.settings');
-        $this->validate($request, ["symbol" => "required","name" => "required","address" => "required", "photo" => "required"], ["name.required" => "Vui lòng nhập tiêu đề","address.required" => "Vui lòng nhập địa chỉ ví","photo.required" => "Vui lòng thêm hình ảnh","symbol.required" => "Vui lòng chọn biểu tượng tiền điện tử."]);
+        $this->validate($request, ["method" => "required","symbol" => "required","name" => "required","address" => "required", "photo" => "required"], ["name.required" => "Vui lòng nhập tên tiền điện tử","address.required" => "Vui lòng nhập địa chỉ ví","photo.required" => "Vui lòng thêm hình ảnh","symbol.required" => "Vui lòng chọn biểu tượng tiền điện tử.","method.required" => "Vui lòng chọn phương thức."]);
         $crypto = new Crypto_Model;
         $crypto->name = $request->name;
         $crypto->address = $request->address;
         $crypto->status = $request->status;
         $crypto->symbol = $request->symbol;
+        $crypto->method = $request->method;
         if ($request->hasFile('photo')) {
             $file = $request->photo;
             $file_name = Str::slug($file->getClientOriginalName(), "-") . "-" . time() . "." . $file->getClientOriginalExtension();
@@ -111,8 +112,8 @@ class Crypto extends Controller{
         // $url_crypto_name = 'https://api.coincap.io/v2/assets';
         // $api_crypto_name =  file_get_contents($url_crypto_name);
         // $name = json_decode($api_crypto_name, true);
-        $client = new CoinGeckoClient();
-        $name = $client->coins()->getMarkets('usd');
+        // $client = new CoinGeckoClient();
+        // $name = $client->coins()->getMarkets('usd');
 
         $url = 'https://api.binance.com/api/v3/ticker/price';
         $api =  file_get_contents($url);
@@ -128,7 +129,7 @@ class Crypto extends Controller{
             "title" => "Crypto - Cập nhật",
             "desc" => "Cập nhật",
         ]));
-        return view("Dashboard::crypto.edit", compact("row", "data","settings","symbol","data_price","name"));
+        return view("Dashboard::crypto.edit", compact("row", "data","settings","symbol","data_price"));
     }
 
     public function postEdit(Request $request, $id = 0) {

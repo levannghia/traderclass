@@ -10,7 +10,7 @@
                     <div class="form-inline">
                         <div class="form-group">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control border-white" name="search" value="<?php echo e(Cookie::get('search_course')); ?>" placeholder="Tên khóa học...">
+                                <input type="text" class="form-control border-white" name="search" value="<?php echo e(Cookie::get('search_faq')); ?>" placeholder="Tên tiêu đề...">
                                 <div class="input-group-append">
                                     <button type="submit" name="btn_search" class="input-group-text bg-blue border-blue text-white">
                                         <i class="fe-search"></i>
@@ -46,10 +46,9 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Hình ảnh</th>
-                                            <th>Tên khóa học</th>
-                                            <th>Danh mục</th>
-                                            <th>Tên giảng viên</th>
+                                            <th>Tiêu đề</th>
+                                            <th>Nội dung</th>
+                                            <th>Type</th>
                                             <th>Trạng thái</th>
                                             <th>Created at</th>
                                             <th>Updated at</th>
@@ -61,10 +60,14 @@
                                         <?php if($value->status != 2): ?>
                                         <tr>
                                             <th scope="row"><input type="checkbox" name="check[]" value="<?php echo e($value->id); ?>" /></th>
-                                            <td class="table-user"><img src='/public/upload/images/course/thumb/<?php echo e($value->photo); ?>' class="rounded-circle"/></td>
-                                            <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->name); ?>"><?php echo e($value->name); ?></a></td> 
-                                            <td><?php echo e($value->title); ?></td>
-                                            <td><?php echo e($value->fullname); ?></td>
+                                            <td><a href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->title); ?>"><?php echo e($value->title); ?></a></td>
+                                            <td><?php echo $value->content; ?></td>
+                                            <?php if($value->type == 1): ?>
+                                            <td>Pricing & Payment</td>
+                                            <?php elseif($value->type == 0): ?>
+                                            <td>general</td>
+                                            <?php endif; ?>
+                                            
                                             <td>
                                                 <?php if($value->status): ?>
                                                 <span class="badge bg-soft-success text-success shadow-none">Kích hoạt</span>
@@ -79,7 +82,6 @@
                                                     <button type="button" class="btn btn-blue btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe-settings"></i></button>
                                                     <div class="dropdown-menu dropdown-menu-right"  x-placement="bottom-start" >
                                                         <a class="dropdown-item" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>"><i class="fe-edit-2"></i> Chỉnh sửa</a>
-                                                        <a class="dropdown-item" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/video-course/<?php echo e($value->id); ?>"><i class="fa fa-eye"></i> Chỉnh sửa video khóa học</a>
                                                         <?php if($value->status==1): ?>
                                                         <a class="dropdown-item text-danger" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/status/<?php echo e($value->id); ?>/0"><i class="fe-lock"></i> Khóa</a>
                                                         <?php elseif($value->status==0): ?>
@@ -124,4 +126,4 @@
     </div>
 </form>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/course/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('Dashboard::layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\wamp64\www\traderclass\app\Modules/Dashboard/Views/faq/index.blade.php ENDPATH**/ ?>

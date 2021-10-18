@@ -48,6 +48,7 @@
                                             <th>#</th>
                                             <th>Hình ảnh</th>
                                             <th>Crypto name</th>
+                                            <th>Method</th>
                                             <th>Symbol</th>
                                             <th>Địa chỉ</th>
                                             <th>Trạng thái</th>
@@ -63,6 +64,13 @@
                                             <th scope="row"><input type="checkbox" name="check[]" value="<?php echo e($value->id); ?>" /></th>
                                             <td class="table-user"><img src='/public/upload/images/crypto/thumb/<?php echo e($value->image); ?>' class="rounded-circle"/></td>
                                             <td><a style="text-transform: capitalize;" href="/<?php echo e(Helper_Dashboard::get_patch()); ?>/<?php echo e(Helper_Dashboard::get_patch(2)); ?>/edit/<?php echo e($value->id); ?>" title="chỉnh sửa <?php echo e($value->name); ?>"><?php echo e($value->name); ?></a></td> 
+                                            <?php if($value->method == 0): ?>
+                                            <td>Ethereum (ERC20)</td>
+                                            <?php elseif($value->method == 1): ?>
+                                            <td>Binance Smart Chain (BEP20)</td>
+                                            <?php elseif($value->method == 2): ?>
+                                            <td>Tron (TRC20)</td>
+                                            <?php endif; ?>
                                             <td><?php echo e($value->symbol); ?></td>
                                             <td><?php echo e($value->address); ?></td>
                                             <td>

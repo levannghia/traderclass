@@ -15,11 +15,13 @@ class LogInto extends Controller
 {
     public function index()
     {
-        $crypto = Crypto_Model::whereIn('status',[0,1])->orderBy('id', 'desc')->get();
+        $crypto_erc20 = Crypto_Model::where('method',0)->whereIn('status',[0,1])->orderBy('id', 'desc')->get();
+        $crypto_bep20 = Crypto_Model::where('method',1)->whereIn('status',[0,1])->orderBy('id', 'desc')->get();
+        $crypto_trc20 = Crypto_Model::where('method',2)->whereIn('status',[0,1])->orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Log Into",
         ]));
-        return view('Sites::log_into.index', compact('row', 'crypto'));
+        return view('Sites::log_into.index', compact('row', 'crypto_erc20','crypto_bep20','crypto_trc20'));
     }
 
     public function course_selection($id)

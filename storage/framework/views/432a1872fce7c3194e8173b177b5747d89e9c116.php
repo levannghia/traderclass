@@ -436,7 +436,7 @@
                                     </div>
                                 <div class="ethereum" id="ethereum">
                                     <div class="row">
-                                        <?php $__currentLoopData = $crypto; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php $__currentLoopData = $crypto_erc20; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"
@@ -452,7 +452,7 @@
                                 </div>
                                 <div class="bsc" id="bsc">
                                     <div class="row">
-                                        <?php $__currentLoopData = $crypto; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php $__currentLoopData = $crypto_bep20; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"
@@ -468,7 +468,7 @@
                                 </div>
                                 <div class="tron" id="tron">
                                     <div class="row">
-                                        <?php $__currentLoopData = $crypto; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php $__currentLoopData = $crypto_trc20; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <div class="col-md-4">
                                                 <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
                                                 <button type="submit" class="logo-ecash" data-popup-target="popup1"

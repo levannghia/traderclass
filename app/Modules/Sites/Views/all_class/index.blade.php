@@ -41,12 +41,12 @@
             <div class="row">
                 @foreach ($data as $value)
                 <div class="col-md-3">
-                    <a href="./Teacher.html">
+                    <a href="/course/{{$value->id}}">
                         <div class="img">
                             <img src="/public/upload/images/course/thumb/{{$value->photo}}" alt="">
                         </div>
                         <div class="nameclass">
-                            <p>Cập nhật mới nhất về thị trường điện tử</p>
+                            <p>{{$value->name}}</p>
                             <p>{{$value->title}}</p>
                             <p>{{$value->fullname}}</p>
                         </div>

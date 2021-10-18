@@ -8,13 +8,29 @@
         <div class="col-md-6">
             <div class="card-box">
                 <h4 class="header-title mb-3">{{$row->desc}}</h4>
-                <div class="form-group mb-2">
+                {{-- <div class="form-group mb-2">
                     <label for="title">Crypto name</label>
                     {{-- <input type="text" name="name" value="{{ old('name', $data->name) }}" class="form-control form-control-sm" placeholder="* tên ví"> --}}
-                    <select class="form-control form-control-sm symbol-id" name="name">
-                        @foreach ($name as $value)
+                    {{-- <select class="form-control form-control-sm symbol-id" name="name"> --}}
+                        {{-- @foreach ($name as $value)
                             <option value="{{$value['id']}}" {{old('name',$data->name)==$value['id']? "selected" :"" }}>{{$value['name'] .' ('.$value['symbol'] .')'}}</option>
-                        @endforeach
+                        @endforeach --}}
+                    {{-- </select>
+                </div>  --}}
+                <div class="form-group mb-2">
+                    <label for="title">Contract</label>
+                    <input type="text" name="contract" value="{{ old('contract') }}" class="form-control form-control-sm" placeholder="* contract">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Crypto name</label>
+                    <input type="text" name="name" value="{{ old('name') }}" class="form-control form-control-sm" placeholder="* tên tiền điện tử">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="title">Phương thức</label>
+                    <select class="form-control form-control-sm symbol-id" name="method">
+                        <option value="0" {{old('method',$data->method)==0? "selected" :"" }}>Ethereum (ERC20)</option>
+                        <option value="1" {{old('method',$data->method)==1? "selected" :"" }}>Binance Smart Chain (BEP20)</option>
+                        <option value="2" {{old('method',$data->method)==2? "selected" :"" }}>Tron (TRC20)</option>
                     </select>
                 </div>
                 <div class="form-group mb-2">
