@@ -10,10 +10,10 @@
                 <div class="avta">
                     <div class="avt">
                         <div class="ava">
-                            <p>M</p>
+                            <p>{{substr(Auth::user()->fullname,  0, 1)}}</p>
                         </div>
                     </div>
-                    <p>Pham Ngoc Minh</p>
+                    <p>{{Auth::user()->fullname}}</p>
                 </div>
                 <div class="profile">
                     <p style="    font-weight: 500;">PROFILE</p>
@@ -24,48 +24,15 @@
             </div>
             <div class="col-md-9">
                 <div class="list">
-                    <div class="items">
-                        <img src="/public/sites/images/a8a27a3e091785de49b2b08bd9a9a6e9.jpg" alt="">
+                    @foreach ($list_course as $value)
+                    <a href="/course/{{$value->id}}"><div class="items">
+                        <img src="/public/upload/images/teachers/thumb/teacher{{$value->photo}}" alt="">
                         <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
+                            <p>{{$value->name}}</p>
+                            <p id="lname">{{$value->fullname}}</p>
                         </div>
-                    </div>
-                    <div class="items">
-                        <img src="/public/sites/images/801fa697751643ce650fcdb3b7e7a86e.jpg" alt="">
-                        <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
-                        </div>
-                    </div>
-                    <div class="items">
-                        <img src="/public/sites/images/81dc103a38ef37182a733720fa218003.jpg" alt="">
-                        <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
-                        </div>
-                    </div>
-                    <div class="items">
-                        <img src="/public/sites/images/Annie Leibovitz.png" alt="">
-                        <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
-                        </div>
-                    </div>
-                    <div class="items">
-                        <img src="/public/sites/images/Alicia Keys.png" alt="">
-                        <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
-                        </div>
-                    </div>
-                    <div class="items">
-                        <img src="/public/sites/images/issa-rae.png" alt="">
-                        <div class="lname">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p id="lname">Brands VietNam</p>
-                        </div>
-                    </div>
+                    </div></a>
+                    @endforeach
                 </div>
             </div>
         </div>

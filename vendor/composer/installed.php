@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8f1e07499b4910b768961934a79abdc52d5a2eb0',
+    'reference' => 'ff547772e6f9bb68d31250218ba062ddaa6ccba1',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -37,6 +37,15 @@
       array (
       ),
       'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
+    ),
+    'bumbummen99/shoppingcart' => 
+    array (
+      'pretty_version' => '4.0.0',
+      'version' => '4.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f2c763e311b0fc58b2dfdfa2c41c6318a7c884e1',
     ),
     'ckfinder/ckfinder-laravel-package' => 
     array (
@@ -490,7 +499,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8f1e07499b4910b768961934a79abdc52d5a2eb0',
+      'reference' => 'ff547772e6f9bb68d31250218ba062ddaa6ccba1',
     ),
     'laravel/sail' => 
     array (

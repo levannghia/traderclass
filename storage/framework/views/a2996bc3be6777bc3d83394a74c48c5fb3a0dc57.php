@@ -12,12 +12,12 @@
             </tr>
             <tr class="title-table">
                 <th class="tb-left">YOU WILL HAVE</th>
-                <th class="tb-cen cen"><?php echo e($teacher->fullname); ?> Course</th>
+                <th class="tb-cen cen"><?php echo e($course->fullname); ?> Course</th>
                 <th class="tb-ri dif">One Year Unlimited Access</th>
             </tr>
             <tr class="body-table">
                 <td class="tb-left">Topics & Lessons</td>
-                <td class="txt cen">18 lessons</td>
+                <td class="txt cen"><?php echo e($count_video); ?> lessons</td>
                 <td class="txt dif">Over 500 different themes</td>
             </tr>
             <tr class="body-table">
@@ -32,11 +32,16 @@
             </tr>
             <tr class="footer-table">
                 <td></td>
-                <td class="txt cen">
-                    <p>2.000.000 ₫</p>
-                    <h5>590.000 ₫</h5>
-                    <h4 class="cous"><a style="color: white;" href="<?php echo e(url('/log-into/course-selection/'.$teacher->id)); ?>">BUY COURSE</a></h4>
-                </td>
+                <form action="<?php echo e(route('sites.logInto.courseSelection')); ?>" method="post">
+                    <?php echo csrf_field(); ?>
+                    <td class="txt cen">
+                        <p>2.000.000 ₫</p>
+                        <input type="hidden" name="id" value="<?php echo e($course->id); ?>">
+                        <h5><?php echo e(number_format($course->price,0,',','.')); ?> ₫</h5>
+                        
+                        <button class="cous" type="submit">BUY COURSE</button>
+                    </td>
+                </form>
                 <td class="txt dif">
                     <p>4.000.000 ₫</p>
                     <h5>990.000 ₫</h5>

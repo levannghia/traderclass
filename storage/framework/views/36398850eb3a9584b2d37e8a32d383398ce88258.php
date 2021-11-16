@@ -31,7 +31,13 @@
                         <div id="countryList"></div>
                     </div>
                     <div class="cart">
-                        <a href="/log-into"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="/log-into/selection"><i class="fas fa-shopping-cart">
+                            <span style="position: absolute;
+                            color: white;
+                            background-color: red;
+                            border-radius: 36%;
+                            font-size: initial;"><?php echo e(Cart::content()->count()); ?></span>
+                        </i></a>
                     </div>
                     <div class="right_nav">
                         <a class="nav-link" style="padding-top: 0px;" href="#" id="navbarDropdown" role="button"

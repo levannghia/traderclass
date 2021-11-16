@@ -17,7 +17,6 @@
                                     <p id="price">990.000 đ</p>
                                     <p id="pricee"><strike id="pre" style="color: #A7A9AC;">4.000.000 ₫</strike><br><span
                                             id="sav">Savings: 75%</span>
-
                                     </p>
                                 </div>
                             </div>

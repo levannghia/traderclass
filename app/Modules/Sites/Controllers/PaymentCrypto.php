@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Codenixsv\CoinGeckoApi\CoinGeckoClient;
 use App\Modules\Sites\Models\PaymentCrypto_Model;
 use App\Modules\Sites\Models\Crypto_Model;
+use Cart;
 
 class PaymentCrypto extends Controller
 {
@@ -72,11 +73,13 @@ class PaymentCrypto extends Controller
         $crypto->id_crypto = $crypto_id->id;
         //$crypto->link = $crypto_id->image;
         $crypto->symbol = $crypto_id->symbol;
+        $crypto->created_at = date("YmdHis");
+        $crypto->updated_at = date("YmdHis");
         $crypto->cryptocurrency_name = $crypto_id->name;
         $crypto->image_crypto = '/public/upload/images/crypto/thumb/' . $crypto_id->image;
         $crypto->address = $crypto_id->address;
         $crypto->email = Auth::user()->email;
-        $crypto->currency = 60;
+        $crypto->currency = str_replace(',','',Cart::subtotal()) / 23000;
         $crypto->status = 0;
         $crypto->amount = round($crypto->currency / $data['price'],4);
 
@@ -123,6 +126,7 @@ class PaymentCrypto extends Controller
 
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         $crypto->link = '/log-into/payment-ecash/' . $crypto->id;
+        $crypto->updated_at = date("YmdHis");
         // $response = $client->getLastResponse();
         // $headers = $response->getHeaders();
         $crypto->save();

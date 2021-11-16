@@ -55,11 +55,12 @@
                 @endforeach
             </div>
             <div class="pagination">
-                <a class="active" href="#">1</a>
+                {{-- <a class="active" href="#">1</a>
                 <a href="#">2</a>
                 <p style="color: white; margin-bottom: 0px; padding-top: 10px;">...</p>
                 <a href="#">5</a>
-                <a href="#">6</a>
+                <a href="#">6</a> --}}
+                {{$data->links()}}
             </div>
         </div>
     </div>

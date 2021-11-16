@@ -22,7 +22,7 @@
     
     
     <link rel="stylesheet" href="/public/sites/css/AllTeacher.css?v=<?php echo e(time()); ?>">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/js.js"></script>
     <!--Icon-->
     <title><?php echo $__env->yieldContent('title'); ?></title>

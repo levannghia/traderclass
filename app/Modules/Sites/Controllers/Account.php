@@ -18,10 +18,11 @@ class Account extends Controller
     public function index()
     {
         $user = auth::user();
+        $lop = DB::table('user_course')->where('user_id',$user->id)->count();
         $row = json_decode(json_encode([
             "title" => "Account information",
         ]));
-        return view('Sites::account.index',compact('row','user'));
+        return view('Sites::account.index',compact('row','user','lop'));
     }
 
     public function UpdatePassword_request(Request $request)

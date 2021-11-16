@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "bumbummen99/shoppingcart": "^4.0",
         "ckfinder/ckfinder-laravel-package": "v3.5.1.7",
         "codeitnowin/barcode": "^3.0",
         "codenix-sv/coingecko-api": "^1.0",

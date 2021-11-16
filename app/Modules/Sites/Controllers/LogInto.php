@@ -10,6 +10,9 @@ use CodeItNow\BarcodeBundle\Utils\QrCode;
 use App\Modules\Sites\Models\PaymentCrypto_Model;
 use App\Modules\Sites\Models\Teachers_Model;
 use App\Modules\Sites\Models\Crypto_Model;
+use Illuminate\Support\Facades\Redirect;
+use Cart;
+use PhpOption\Option;
 
 class LogInto extends Controller
 {
@@ -24,14 +27,29 @@ class LogInto extends Controller
         return view('Sites::log_into.index', compact('row', 'crypto_erc20','crypto_bep20','crypto_trc20'));
     }
 
-    public function course_selection($id)
-    {
-        $teacher = Teachers_Model::find($id);
+    public function selection(){
+        $crypto = Crypto_Model::whereIn('status',[0,1])->orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Course Selection",
         ]));
+        
+        return view('Sites::course_selection.index', compact('row','crypto'));
+    }
 
-        return view('Sites::course_selection.index', compact('row','teacher'));
+    public function course_selection(Request $request)
+    {
+       
+        $id = $request->id;
+        $course = DB::table('course')->select('course.name','teachers.fullname','teachers.position','course.price','teachers.photo','course.id')->join('teachers','teachers.id','=','course.teacher_id')->where('course.id',$id)->first();
+        $data['id'] = $course->id;
+        $data['qty'] = 1;
+        $data['weight'] = $course->price;
+        $data['options']['size'] = $course->position;
+        $data['name'] = $course->name;
+        $data['price'] = $course->price;
+        $data['options']['image'] = $course->photo;
+        Cart::add($data);
+        return Redirect::to('/log-into/selection');
     }
     public function payment_bank()
     {

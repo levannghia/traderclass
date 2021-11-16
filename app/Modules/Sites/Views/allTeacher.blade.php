@@ -22,7 +22,7 @@
     
     {{-- <link rel="stylesheet" href="/public/sites/css/account.css?v={{ time() }}"> --}}
     <link rel="stylesheet" href="/public/sites/css/AllTeacher.css?v={{time()}}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/public/sites/js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="/public/sites/js/js.js"></script>
     <!--Icon-->
     <title>@yield('title')</title>

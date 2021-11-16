@@ -16,6 +16,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/all-teacher", ["as" => "sites.allTeacher.index", "uses" => "AllTeacher@index"]);
     //Teachers
     Route::get("/course/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
+    Route::get("/course/{id}/video/{id_video}",["as" => "sites.teacher.video", "uses" => "Teacher@video"]);
     Route::post("/subcribe-teacher", ["as" => "sites.teacher.subcribe", "uses" => "Teacher@postSubcribe"]);
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
 
@@ -78,13 +79,16 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     //find-my-class
     Route::get("/find-my-class", ["as" => "sites.find-my-class.index", "uses" => "FindMyClass@index"]);
      //master-class
-     Route::get("/master-class", ["as" => "sites.master-class.index", "uses" => "MasterClass@index"]);
+    Route::get("/master-class", ["as" => "sites.master-class.index", "uses" => "MasterClass@index"]);
+    //thanh toan vnp
+    Route::post("/vnp-payment", ["as" => "sites.vnp.create", "uses" => "VNPPayment@create"]);
   
     //log-into
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
         Route::get("/", ["as" => "sites.logInto.index", "uses" => "LogInto@index"]);
         // Route::post("/ecash-bitcoin", ["as" => "sites.logInto.index", "uses" => "LogInto@ecash_bitcoin"]);
-        Route::get("/course-selection/{id}", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
+        Route::post("/course-selection", ["as" => "sites.logInto.courseSelection", "uses" => "LogInto@course_selection"]);
+        Route::get("/selection", ["as" => "sites.logInto.Selection", "uses" => "LogInto@selection"]);
         Route::get("/payment-bank", ["as" => "sites.logInto.paymentbank", "uses" => "LogInto@payment_bank"]);
         Route::get("/payment-atm", ["as" => "sites.logInto.paymentatm", "uses" => "LogInto@payment_atm"]);
         Route::get("/payment-momo", ["as" => "sites.logInto.paymentmomo", "uses" => "LogInto@payment_momo"]);

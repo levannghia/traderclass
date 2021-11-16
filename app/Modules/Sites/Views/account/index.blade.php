@@ -55,7 +55,7 @@
                             <p class="time member">MasterClass member since Jul 21, 2021</p>
                         </div>
                         <div class="col-md-3">
-                            <h4>0</h4>
+                            <h4>{{$lop}}</h4>
                             <p>CLASSES ENROLLED</p>
                         </div>
                         <div class="col-md-3">

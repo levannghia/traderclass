@@ -12,12 +12,12 @@
             </tr>
             <tr class="title-table">
                 <th class="tb-left">YOU WILL HAVE</th>
-                <th class="tb-cen cen">{{$teacher->fullname}} Course</th>
+                <th class="tb-cen cen">{{$course->fullname}} Course</th>
                 <th class="tb-ri dif">One Year Unlimited Access</th>
             </tr>
             <tr class="body-table">
                 <td class="tb-left">Topics & Lessons</td>
-                <td class="txt cen">18 lessons</td>
+                <td class="txt cen">{{$count_video}} lessons</td>
                 <td class="txt dif">Over 500 different themes</td>
             </tr>
             <tr class="body-table">
@@ -32,11 +32,16 @@
             </tr>
             <tr class="footer-table">
                 <td></td>
-                <td class="txt cen">
-                    <p>2.000.000 ₫</p>
-                    <h5>590.000 ₫</h5>
-                    <h4 class="cous"><a style="color: white;" href="{{url('/log-into/course-selection/'.$teacher->id)}}">BUY COURSE</a></h4>
-                </td>
+                <form action="{{route('sites.logInto.courseSelection')}}" method="post">
+                    @csrf
+                    <td class="txt cen">
+                        <p>2.000.000 ₫</p>
+                        <input type="hidden" name="id" value="{{$course->id}}">
+                        <h5>{{number_format($course->price,0,',','.')}} ₫</h5>
+                        {{-- <h4 class="cous"><a style="color: white;" href="{{url('/log-into/course-selection/'.$course->id)}}">BUY COURSE</a></h4> --}}
+                        <button class="cous" type="submit">BUY COURSE</button>
+                    </td>
+                </form>
                 <td class="txt dif">
                     <p>4.000.000 ₫</p>
                     <h5>990.000 ₫</h5>

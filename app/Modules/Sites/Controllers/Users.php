@@ -169,6 +169,7 @@ class Users extends Controller
         $checkEmail =  Users_Model::where('email', $email)->first();
         $checkEmail->status = 1;
         $checkEmail->save();
+        
         session()->flash('message', 'Xác thực thành công');
         return redirect()->route("sites.home.index");
     }

@@ -9,22 +9,24 @@
                     <div class="whitee">
                         <div class="pan">
                             <p id="yo">Your order</p>
+                            @foreach (Cart::content() as $item)
                             <div class="order">
                                 <div class="un">
-                                    <img src="./images/Teacher1.jpg" alt="">
+                                    <img src="/public/upload/images/teachers/thumb/{{$item->options->image}}" alt="">
                                     <div id="yo2">
-                                        <p>Teacher Crypto Trader</p>
-                                        <p id="cl_name">Ted Nguyen</p>
+                                        <p>{{$item->options->size}}</p>
+                                        <p id="cl_name">{{$item->name}}</p>
                                     </div>
                                 </div>
                                 <div class="buy">
-                                    <p id="price">599.000 đ</p>
+                                    <p id="price">{{number_format($item->price,0,',','.')}} đ</p>
                                     <p id="pricee"><strike id="pre" style="color: #A7A9AC;">2.000.000 ₫</strike><br><span
                                             id="sav">Savings: 70%</span>
 
                                     </p>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="dis">
                                 <div id="we"><i class="fas fa-check"></i>
                                     <p> 75% discount. Opportunity to learn from Billion Dollar Founders (Mr. Nguyen Duy Hung
@@ -52,7 +54,7 @@
                             </div>
                             <div class="cou">
                                 <div id="is">
-                                    <img src="./images/box.png" alt="">
+                                    <img src="/public/sites/images/box.png" alt="">
                                     <p>
                                         Discount
                                     </p>
@@ -69,7 +71,7 @@
                                     <p>TOTAL</p>
                                 </div>
                                 <div id="se">
-                                    <p>599.000 đ</p>
+                                    <p>{{Cart::subtotal()}}</p>
                                 </div>
                             </div>
                         </div>
@@ -112,15 +114,15 @@
                                 <div class="cre">
                                     <div class="dot" onclick="currentSlide(1)">
                                         <p>CREDIT</p>
-                                        <img src="./svg/logo-mastercard-mobile.svg" alt="">
+                                        <img src="/public/sites/images/svg/logo-mastercard-mobile.svg" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(2)">
                                         <p>ATM</p>
-                                        <img id="atm" src="./images/atm.png" alt="">
+                                        <img id="atm" src="/public/sites/images/atm.png" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(3)">
                                         <p>MOMO</p>
-                                        <img id="momo" src="./images/momo.png" alt="">
+                                        <img id="momo" src="/public/sites/images/momo.png" alt="">
                                     </div>
                                     <div class="dot" onclick="currentSlide(4)">
                                         <p>BANK</p>
@@ -201,21 +203,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick(1)">
                                                 <i class="bi bi-check-lg" id="bi"></i>
-                                                <img src="./svg/vietcombank.svg" alt="">
+                                                <img src="/public/sites/svg/vietcombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic" onclick="tic()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick2(1)">
                                                 <i class="bi bi-check-lg" id="bi2"></i>
-                                                <img src="./svg/acb.svg" alt="">
+                                                <img src="/public/sites/svg/acb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic2" onclick="tic2()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick3(1)">
                                                 <i class="bi bi-check-lg" id="bi3"></i>
-                                                <img src="./svg/vpbank.svg" alt="">
+                                                <img src="/public/sites/svg/vpbank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic3" onclick="tic3()"></div>
                                         </div>
@@ -224,21 +226,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick4(1)">
                                                 <i class="bi bi-check-lg" id="bi4"></i>
-                                                <img src="./svg/sacombank.svg" alt="">
+                                                <img src="/public/sites/svg/sacombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic4" onclick="tic4()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick5(1)">
                                                 <i class="bi bi-check-lg" id="bi5"></i>
-                                                <img src="./svg/abbank.svg" alt="">
+                                                <img src="/public/sites/svg/abbank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic5" onclick="tic5()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick6(1)">
                                                 <i class="bi bi-check-lg" id="bi6"></i>
-                                                <img src="./svg/techcombank.svg" alt="">
+                                                <img src="/public/sites/svg/techcombank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic6" onclick="tic6()"></div>
                                         </div>
@@ -247,21 +249,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick7(1)">
                                                 <i class="bi bi-check-lg" id="bi7"></i>
-                                                <img src="./svg/aribank.svg" alt="">
+                                                <img src="/public/sites/svg/aribank.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic7" onclick="tic7()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick8(1)">
                                                 <i class="bi bi-check-lg" id="bi8"></i>
-                                                <img src="./svg/hsbc.svg" alt="">
+                                                <img src="/public/sites/svg/hsbc.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic8" onclick="tic8()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick9(1)">
                                                 <i class="bi bi-check-lg" id="bi9"></i>
-                                                <img src="./svg/baoviet.svg" alt="">
+                                                <img src="/public/sites/svg/baoviet.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic9" onclick="tic9()"></div>
                                         </div>
@@ -270,21 +272,21 @@
                                         <div class="col-md-4">
                                             <div onclick="tick10(1)">
                                                 <i class="bi bi-check-lg" id="bi10"></i>
-                                                <img src="./svg/lienviet.svg" alt="">
+                                                <img src="/public/sites/svg/lienviet.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic10" onclick="tic10()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick11(1)">
                                                 <i class="bi bi-check-lg" id="bi11"></i>
-                                                <img src="./svg/bidv.svg" alt="">
+                                                <img src="/public/sites/svg/bidv.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic11" onclick="tic11()"></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div onclick="tick12(1)">
                                                 <i class="bi bi-check-lg" id="bi12"></i>
-                                                <img src="./svg/mb.svg" alt="">
+                                                <img src="/public/sites/svg/mb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic12" onclick="tic12()"></div>
                                         </div>
@@ -293,7 +295,7 @@
                                         <div class="col-md-4">
                                             <div onclick="tick13(1)">
                                                 <i class="bi bi-check-lg" id="bi13"></i>
-                                                <img src="./svg/shb.svg" alt="">
+                                                <img src="/public/sites/svg/shb.svg" alt="">
                                             </div>
                                             <div class="tic" id="tic13" onclick="tic13()"></div>
                                         </div>
@@ -366,7 +368,12 @@
                                                 href="./Terms.html" style="color: #EF8D21">Terms of Service.</a> </span></p>
                                 </div>
                                 <div class="pay">
-                                    <div><button onclick="paymen(2)">PAYMENT</button></div>
+                                    <div><form action="{{route('sites.vnp.create')}}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="price" value="{{Cart::total()}}">
+                                        <input type="hidden" name="id" value="1">
+                                        <button type="submit" onclick="paymen(2)">PAYMENT</button>
+                                        </form></div>
                                 </div>
                             </div>
                             <div class="mySlides">
@@ -404,7 +411,7 @@
                                         <label>Phone number</label>
                                         <div class="suu">
                                             <label for="img">
-                                                <img src="./images/laco.png" id="img">
+                                                <img src="/public/sites/images/laco.png" id="img">
                                                 <i class="bi bi-caret-down-fill"></i>
                                             </label>
                                             <input id="in" type="number" class="form-control">
@@ -441,128 +448,63 @@
 
                                     <div class="ethereum" id="ethereum">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <!-- <div class="logo-ecash" data-popup-target="popup2"> -->
-                                                <button type="submit" class="logo-ecash" data-popup-target="popup2">
-                                                    <img src="./images/ecash2.png" width="26" height="26" alt="">
-                                                    <p>Ethereum (ETH)</p>
-                                                </button>
-                                                <!-- </div> -->
-                                                <div class="popup" id="popup2">
-                                                    <div class="popup-content">
-                                                        <span class="popup-close">&times;</span>
-                                                        <h5>PAYMENT</h5>
-                                                        <div class="li-pa"></div>
-                                                        <div class="row">
-                                                            <div class="col-md-6 lef-details">Payment Amount</div>
-                                                            <div class="col-md-6 price-details">
-                                                                <img src="images/ecash2.png" width="20" height="20" alt="">
-                                                                <p class="price">0.01</p>
-                                                                <p class="name-money">Ethereum (ETH)</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="send-below">Send the indicated amount to the address
-                                                            below:</p>
-                                                        <p class="address-details">Address</p>
-                                                        <div class="link-code">
-                                                            <input type="text" class="arcode" readonly="readonly"
-                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
-                                                            <i class="fal fa-copy" id="ic-copy"></i>
-                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                            <div class="cl-popup" onclick="clPopup2()"><img
-                                                                    src="images/qr-code.png" alt="">
-                                                                <span class="cl-popup-img" id="myPopup2"><img
-                                                                        src="images/qr-code-ecash.png" alt=""></span>
-                                                            </div>
-                                                        </div>
-                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
+                                            <div class="row">
+                                                @foreach ($crypto as $value)
+                                                    <div class="col-md-4">
+                                                        <!-- <div class="logo-ecash" data-popup-target="popup1"> -->
+                                                        <button type="submit" class="logo-ecash" data-popup-target="popup1"
+                                                            data-id-crypto="{{ $value->id }}">
+                                                            <img src="/public/upload/images/crypto/thumb/{{ $value->image }}" alt="">
+                                                            <p style="font-size: 14px; text-transform: capitalize;">{{ $value->name . ' (' . $value->symbol . ')' }}</p>
+                                                        </button>
+                                                        <!-- </div> -->
                                                     </div>
+                                                @endforeach
+                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popup" id="popup1">
+                                        <div class="popup-content">
+                                            <span class="popup-close">&times;</span>
+                                            <h5>PAYMENT</h5>
+                                            <div class="li-pa"></div>
+                                            <div class="row">
+                                                <div class="col-md-6 lef-details">Payment Amount</div>
+                                                <div class="col-md-6 price-details">
+                                                    <img src="/public/sites/images/ecash1.png" width="20"
+                                                        height="20" alt="">
+                                                    <p class="price">26.33</p>
+                                                    <p class="name-money" style="text-transform: uppercase;">
+                                                        Bitcoin (BTC)</p>
                                                 </div>
                                             </div>
+                                            <p class="send-below">Send the indicated amount to the address
+                                                below:
+                                            </p>
+                                            <p class="address-details">Address</p>
+                                            <div class="link-code">
+                                                <input type="text" class="arcode" readonly="readonly" value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
+                                                <i class="fal fa-copy" id="ic-copy"></i>
+                                                <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
+                                                <div class="cl-popup" onclick="clPopup()">
+                                                    <img style="width: 26px;" src="/public/sites/images/qr-code.png"
+                                                        alt="">
+                                                    <span class="cl-popup-img" id="myPopup"><img
+                                                            src="/public/sites/images/qr-code-ecash.png"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <a href="/log-into/payment-ecash" id="pay-send">Payment send</a>
                                         </div>
                                     </div>
                                     <div class="bsc" id="bsc">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <!-- <div class="logo-ecash" data-popup-target="popup4"> -->
-                                                <button type="submit" class="logo-ecash" data-popup-target="popup4">
-                                                    <img src="./images/ecash4.png" width="26" height="26" alt="">
-                                                    <p>Binance Coin (BNB)</p>
-                                                </button>
-                                                <!-- </div> -->
-                                                <div class="popup" id="popup4">
-                                                    <div class="popup-content">
-                                                        <span class="popup-close">&times;</span>
-                                                        <h5>PAYMENT</h5>
-                                                        <div class="li-pa"></div>
-                                                        <div class="row">
-                                                            <div class="col-md-6 lef-details">Payment Amount</div>
-                                                            <div class="col-md-6 price-details">
-                                                                <img src="images/ecash4.png" width="20" height="20" alt="">
-                                                                <p class="price">0.05</p>
-                                                                <p class="name-money">Binance Coin (BNB)</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="send-below">Send the indicated amount to the address
-                                                            below:</p>
-                                                        <p class="address-details">Address</p>
-                                                        <div class="link-code">
-                                                            <input type="text" class="arcode" readonly="readonly"
-                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
-                                                            <i class="fal fa-copy" id="ic-copy"></i>
-                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                            <div class="cl-popup" onclick="clPopup4()"><img
-                                                                    src="images/qr-code.png" alt="">
-                                                                <span class="cl-popup-img" id="myPopup4"><img
-                                                                        src="images/qr-code-ecash.png" alt=""></span>
-                                                            </div>
-                                                        </div>
-                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="tron" id="tron">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <!-- <div class="logo-ecash" data-popup-target="popup7"> -->
-                                                <button type="submit" class="logo-ecash" data-popup-target="popup7">
-                                                    <img src="./images/1958.png" width="26" height="26" alt="">
-                                                    <p>Tron Coin (TRX)</p>
-                                                </button>
-                                                <!-- </div> -->
-                                                <div class="popup" id="popup7">
-                                                    <div class="popup-content">
-                                                        <span class="popup-close">&times;</span>
-                                                        <h5>PAYMENT</h5>
-                                                        <div class="li-pa"></div>
-                                                        <div class="row">
-                                                            <div class="col-md-6 lef-details">Payment Amount</div>
-                                                            <div class="col-md-6 price-details">
-                                                                <img src="images/1958.png" width="20" height="20" alt="">
-                                                                <p class="price">26.33</p>
-                                                                <p class="name-money">Tron Coin (TRX)</p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="send-below">Send the indicated amount to the address
-                                                            below:</p>
-                                                        <p class="address-details">Address</p>
-                                                        <div class="link-code">
-                                                            <input type="text" class="arcode" readonly="readonly"
-                                                                value="ajs67daDAJSk2jahs98jkSHDjda12sDK">
-                                                            <i class="fal fa-copy" id="ic-copy"></i>
-                                                            <!-- <img src="images/qr-code.png" width="26" height="26" alt=""> -->
-                                                            <div class="cl-popup" onclick="clPopup7()"><img
-                                                                    src="images/qr-code.png" alt="">
-                                                                <span class="cl-popup-img" id="myPopup7"><img
-                                                                        src="images/qr-code-ecash.png" alt=""></span>
-                                                            </div>
-                                                        </div>
-                                                        <a href="./Payment Ecash.html" id="pay-send">Payment send</a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            
                                         </div>
                                     </div>
                                 </div>
@@ -606,4 +548,32 @@
         </div>
     </div>
     <div id="fade" onclick="promo_close()"></div>
+
+<script>
+    $(document).ready(function(){
+        $("[data-id-crypto]").click(function(){
+            var _token = $('meta[name="csrf-token"]').attr('content');
+            var id_crypto = $(this).attr("data-id-crypto");
+
+            $.ajax({
+                url: "/api/add-payment-crypto",
+                type: "POST",
+                data: {
+                    _token: _token,
+                    id_crypto: id_crypto,
+                },
+                success: function(data){
+                    
+                    $(".arcode").attr("value",data.address);
+                    $(".cl-popup img").attr("src",data.image_qr);
+                    $(".price-details img").attr("src",data.image_crypto);
+                    $(".price").html(data.amount);
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $("#pay-send").attr("href",data.link);
+
+                }
+            });
+        });
+    });
+</script>
 @endsection

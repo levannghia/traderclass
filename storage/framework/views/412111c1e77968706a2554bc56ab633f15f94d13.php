@@ -23,7 +23,7 @@
                         </a>
                     </div>
                     <div class="continue">
-                        <a href="<?php echo e(url('/register/'.$course->id)); ?>" style="color: white;">
+                        <a href="<?php echo e(url('/register/'.$course->course_id)); ?>" style="color: white;">
                             <p id="continue">Register now</p>
                         </a>
                         <p id="money">TraderClass is $15/month (billed annually)</p>
@@ -42,15 +42,15 @@
                 <div class="col-md-8">
                     <div class="youtube wrappe" onclick="playvideo()">
                         
-                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/<?php echo e($course->video_id); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="video" width="730" height="400" src="https://www.youtube.com/embed/<?php echo e($video->id_video); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         
                         
                     </div>
                     <div class="row">
                         <div class="col-md-9">
-                            <p id="title">Ted Nguyen</p>
-                            <p style="font-size: 20px; color: white; font-weight: 100;">Teacher Crypto Trader</p>
-                            <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - 0 Học viên</span></p>
+                            <p id="title"><?php echo e($course->fullname); ?></p>
+                            <p style="font-size: 20px; color: white; font-weight: 100;"><?php echo e($course->position); ?></p>
+                            <p><span style="font-size: 14px; color: #EF8D21;"> 4.5 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>&ensp;<span style="font-size: 14px; color: white;">(940 Đánh giá) - <?php echo e($hoc_vien); ?> Học viên</span></p>
                         </div>
                         <div class="col-md-3" id="col-md-3">
                             <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
@@ -78,7 +78,7 @@
                     <div class="im">
                         <?php $__currentLoopData = $list_video; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div onclick="nextvideo(0)">
-                            <a href=""><p><?php echo e($value->name); ?></p></a>
+                            <a href="<?php echo e(route('sites.teacher.video',['id' => $course->course_id,'id_video' => $value->id])); ?>"><p><?php echo e($value->name); ?></p></a>
                         </div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
