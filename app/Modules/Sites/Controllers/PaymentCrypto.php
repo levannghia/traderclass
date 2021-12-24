@@ -11,6 +11,7 @@ use Codenixsv\CoinGeckoApi\CoinGeckoClient;
 use App\Modules\Sites\Models\PaymentCrypto_Model;
 use App\Modules\Sites\Models\Crypto_Model;
 use Cart;
+use Illuminate\Support\Carbon;
 
 class PaymentCrypto extends Controller
 {
@@ -69,17 +70,17 @@ class PaymentCrypto extends Controller
         $url = 'https://api.binance.com/api/v3/ticker/price?symbol=' . $crypto_id->symbol;
         $api =  file_get_contents($url);
         $data = json_decode($api, true);
-
+        $id = $crypto->id;
         $crypto->id_crypto = $crypto_id->id;
-        //$crypto->link = $crypto_id->image;
+        $crypto->link = "into/payment-ecash/" . $id;
         $crypto->symbol = $crypto_id->symbol;
-        $crypto->created_at = date("YmdHis");
-        $crypto->updated_at = date("YmdHis");
+        $crypto->created_at = Carbon::now();
+        $crypto->updated_at = Carbon::now();
         $crypto->cryptocurrency_name = $crypto_id->name;
         $crypto->image_crypto = '/public/upload/images/crypto/thumb/' . $crypto_id->image;
         $crypto->address = $crypto_id->address;
         $crypto->email = Auth::user()->email;
-        $crypto->currency = str_replace(',','',Cart::subtotal()) / 23000;
+        $crypto->currency = str_replace(',','',Cart::subtotal())/23000;
         $crypto->status = 0;
         $crypto->amount = round($crypto->currency / $data['price'],4);
 
@@ -101,6 +102,46 @@ class PaymentCrypto extends Controller
         //return response()->json($crypto, 200);
         return redirect()->route('sites.crypto.getUpdate', $crypto->id);
     }
+
+    public function testJS(Request $request)
+    {
+        $crypto_id = Crypto_Model::find($request->id_crypto);
+        
+        $url = 'https://api.binance.com/api/v3/ticker/price?symbol=' . $crypto_id->symbol;
+        $api =  file_get_contents($url);
+        $data = json_decode($api, true);
+        $json = array();
+
+        $json['symbol'] = $crypto_id->symbol;
+        $json['created_at'] = Carbon::now();
+        $json['updated_at'] = Carbon::now();
+        $json['cryptocurrency_name'] = $crypto_id->name;
+        $json['image_crypto'] = '/public/upload/images/crypto/thumb/' . $crypto_id->image;
+        $json['address'] = $crypto_id->address;
+        $json['email'] = Auth::user()->email;
+        $json['currency'] = str_replace(',','',Cart::subtotal())/23000;
+        $json['status'] = 0;
+        $json['amount'] = (str_replace(',','',Cart::subtotal())/23000) / $data['price'];
+
+        //QR code
+        $qrCode = new QrCode();
+        $qrCode
+            ->setText($crypto_id->name . ':' . $crypto_id->address . '?amount=' . round((str_replace(',','',Cart::subtotal())/23000) / $data['price'],4))
+            ->setSize(140)
+            ->setPadding(10)
+            ->setErrorCorrection('high')
+            ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
+            ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0))
+            ->setLabel('Scan Qr Code')
+            ->setLabelFontSize(16)
+            ->setImageType(QrCode::IMAGE_TYPE_PNG);
+
+        $json['image_qr'] = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
+        
+        return response()->json($json, 200);
+        
+    }
+
 
     public function getUpdate($id)
     {
@@ -126,7 +167,7 @@ class PaymentCrypto extends Controller
 
         $crypto->image_qr = 'data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate();
         $crypto->link = '/log-into/payment-ecash/' . $crypto->id;
-        $crypto->updated_at = date("YmdHis");
+        $crypto->updated_at = Carbon::now();
         // $response = $client->getLastResponse();
         // $headers = $response->getHeaders();
         $crypto->save();

@@ -2,6 +2,15 @@
 @section('title', $row->title)
 @section('content')
     @include('Sites::inc.maketting')
+    @if (session()->has('success'))
+            <div class="alert alert-success">
+                {{ session()->get('success') }}
+            </div>
+        @elseif (session()->has('errors'))
+            <div class="alert alert-danger">
+                {{ session()->get('errors') }}
+            </div>
+        @endif
     <div class="main">
         <div class="container">
             <div class="row">
@@ -371,7 +380,7 @@
                                     <div><form action="{{route('sites.vnp.create')}}" method="post">
                                         @csrf
                                         <input type="hidden" name="price" value="{{Cart::total()}}">
-                                        <input type="hidden" name="id" value="1">
+                                        <input type="hidden" name="id" value="">
                                         <button type="submit" onclick="paymen(2)">PAYMENT</button>
                                         </form></div>
                                 </div>
@@ -523,41 +532,43 @@
                 <p>Please select or enter the promotional code you want to apply</p>
             </div>
             <div id="promo4">
-                <input type="text" name="" id="" placeholder="Enter promo code">
+                <input type="text" name="input_discount" id="input_discount" placeholder="Enter promo code">
             </div>
             <div id="promo5">
                 <div class="row">
+                    @foreach ($discount as $item)
                     <div class="col-md-6">
-                        <button>Promo code 5%</button>
-                        <button>Promo code 10%</button>
-                        <button>Promo code 2%</button>
-                        <button>Promo code 15%</button>
+                        <button id="discout_code" namecode="{{$item->code}}" code_id="{{$item->id}}">{{$item->code}}</button>
                     </div>
-                    <div class="col-md-6">
-                        <button>Promo code 20%</button>
-                        <button>Promo code 30%</button>
-                        <button>Promo code 25%</button>
-                        <button>Promo code 40%</button>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div id="promo6">
-                <button id="back" onclick="promo_close()">Back</button>
+                <button id="back" class="kk" onclick="promo_close()">Back</button>
                 <button id="save" onclick="promo_close()">Save</button>
             </div>
         </div>
     </div>
     <div id="fade" onclick="promo_close()"></div>
 
-<script>
+<script>  
+    $(function(){
+        $("[code_id]").click(function(){
+            var code_id = $(this).attr("code_id");
+            var btnText = $(this).attr("namecode");
+            var input_discount = document.getElementById('input_discount').value = btnText;
+            
+        
+        })
+    });
     $(document).ready(function(){
         $("[data-id-crypto]").click(function(){
             var _token = $('meta[name="csrf-token"]').attr('content');
             var id_crypto = $(this).attr("data-id-crypto");
 
-            $.ajax({
-                url: "/api/add-payment-crypto",
-                type: "POST",
+                $.ajax({
+                url: "/api/test-js",
+                type: "GET",
                 data: {
                     _token: _token,
                     id_crypto: id_crypto,
@@ -573,7 +584,33 @@
 
                 }
             });
-        });
+
+            var oK = setInterval(() => {
+                $.ajax({
+                url: "/api/test-js",
+                type: "GET",
+                data: {
+                    _token: _token,
+                    id_crypto: id_crypto,
+                },
+                success: function(data){
+                    
+                    $(".arcode").attr("value",data.address);
+                    $(".cl-popup img").attr("src",data.image_qr);
+                    $(".price-details img").attr("src",data.image_crypto);
+                    $(".price").html(data.amount);
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $("#pay-send").attr("href",data.link);
+
+                }
+            });
+            }, 10000);
+
+            $(".popup-close").click(function(){
+                clearInterval(oK);
+            });
+  
+        });   
     });
 </script>
 @endsection

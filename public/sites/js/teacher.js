@@ -249,6 +249,16 @@ function nextvideo(mum) {
     console.log(o);
 }
 
+function thongBao() {
+    alert('Vui lòng mua khóa học để xem tiếp nội dung');
+
+    // if (confirm('Vui lòng mua khóa học để xem tiếp nội dung')) {
+    //     window.location = 'http://traderclass.local/all-class';
+    // } else {
+    //     window.location = 'http://traderclass.local/all-class';
+    // }
+}
+
 function nvideo(name) {
     var videoFile = name;
     $('.wrappe video source').attr('src', videoFile);

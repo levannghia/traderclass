@@ -32,12 +32,16 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('view', function ($admin, $className) {
             $admin_id = auth()->user("admin")->id;
             $getRole = DB::table('admins_role')->where("admins_id", $admin_id)->get();
+            //dd($getRole);
             if (!empty($getRole[0])) {
                 foreach ($getRole as $role) {
                     $rolePermission = RolePermission_Model::where("ClassName", $className)->where("role_id", $role->role_id)->first();
                     if ($rolePermission->views == 1) {
                         return $rolePermission->views === 1;
                     }
+                    // elseif($rolePermission->ClassName == "" || !isset($rolePermission->views)){
+                    //     echo "nao ok";
+                    // }
                 }
             }
             return 0;
@@ -93,5 +97,6 @@ class AuthServiceProvider extends ServiceProvider
             }
             return 0;
         });
+        
     }
 }

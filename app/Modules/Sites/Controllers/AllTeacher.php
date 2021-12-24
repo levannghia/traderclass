@@ -15,6 +15,15 @@ class AllTeacher extends Controller
         $row = json_decode(json_encode([
         "title" => "All Teacher",
         ]));
+        //xac dinh teacher co ton tai trong bang course thong qua id
+        // $a = DB::table('teachers')
+        // ->whereExists(function ($query) {
+        //     $query->select(DB::raw(1))
+        //           ->from('course')
+        //           ->whereRaw('la_course.teacher_id = la_teachers.id');
+        // })
+        // ->get();
+        // dd($a);
         return view('Sites::all_teacher.index',compact('row','data'));
     }
 }

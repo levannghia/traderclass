@@ -10,6 +10,7 @@ use CodeItNow\BarcodeBundle\Utils\QrCode;
 use App\Modules\Sites\Models\PaymentCrypto_Model;
 use App\Modules\Sites\Models\Teachers_Model;
 use App\Modules\Sites\Models\Crypto_Model;
+use App\Modules\Sites\Models\Discount_Model;
 use Illuminate\Support\Facades\Redirect;
 use Cart;
 use PhpOption\Option;
@@ -29,11 +30,12 @@ class LogInto extends Controller
 
     public function selection(){
         $crypto = Crypto_Model::whereIn('status',[0,1])->orderBy('id', 'desc')->get();
+        $discount = Discount_Model::orderBy('id', 'desc')->get();
         $row = json_decode(json_encode([
             "title" => "Course Selection",
         ]));
         
-        return view('Sites::course_selection.index', compact('row','crypto'));
+        return view('Sites::course_selection.index', compact('row','crypto','discount'));
     }
 
     public function course_selection(Request $request)
@@ -49,6 +51,7 @@ class LogInto extends Controller
         $data['price'] = $course->price;
         $data['options']['image'] = $course->photo;
         Cart::add($data);
+        
         return Redirect::to('/log-into/selection');
     }
     public function payment_bank()

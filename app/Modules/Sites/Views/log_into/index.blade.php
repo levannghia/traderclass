@@ -567,30 +567,7 @@
                         _token: _token,
                         id_crypto: id_crypto,
                     },
-                    // beforeSend: function() {
-                    //     let timerInterval
-                    //     Swal.fire({
-                    //         title: 'Vui lòng đợi ',
-                    //         html: '<br> <br> <br> I will close in <b></b> milliseconds. <br> <br> <br> <br> ',
-                    //         timer: 2000,
-                    //         timerProgressBar: true,
-                    //         didOpen: () => {
-                    //             Swal.showLoading()
-                    //             const b = Swal.getHtmlContainer().querySelector('b')
-                    //             timerInterval = setInterval(() => {
-                    //                 b.textContent = Swal.getTimerLeft()
-                    //             }, 100)
-                    //         },
-                    //         willClose: () => {
-                    //             clearInterval(timerInterval)
-                    //         }
-                    //     }).then((result) => {
-                    //         /* Read more about handling dismissals below */
-                    //         if (result.dismiss === Swal.DismissReason.timer) {
-                    //             console.log('I was closed by the timer')
-                    //         }
-                    //     })
-                    // },
+                    
                     success: function(data) {
                         console.log(data);
                         //$('.popup').html(data);

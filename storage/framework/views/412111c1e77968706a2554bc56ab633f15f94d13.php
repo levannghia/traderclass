@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-3" id="col-md-3">
                             <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
-                            <button id="but" onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                            <button id="but" onclick="nextv()"><a style="color: white; text-decoration: none" href="/course/<?php echo e($course->id); ?>/video/"><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</a></button>
                         </div>
                     </div>
                     <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
@@ -76,10 +76,21 @@
                         <p>Browse Lesson Plan</p>
                     </div>
                     <div class="im">
+                        <?php
+                            $i = 1;
+                        ?>
                         <?php $__currentLoopData = $list_video; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <?php if(isset($user_course)): ?>
                         <div onclick="nextvideo(0)">
-                            <a href="<?php echo e(route('sites.teacher.video',['id' => $course->course_id,'id_video' => $value->id])); ?>"><p><?php echo e($value->name); ?></p></a>
+                            <a id="videos" href="<?php echo e(route('sites.teacher.video',['id' => $course->course_id, 'id_video' => $value->id])); ?>"><p><?php echo e($i++ .'. '.$value->name); ?></p></a>
                         </div>
+                        <?php else: ?>
+                        <div onclick="thongBao()">
+                            <p><?php echo e($i++ .'. '.$value->name); ?></p>
+                        </div>
+                        
+                        <?php endif; ?>
+                        
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                     <div class="upnext">

@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\DB;
             <div class="alert alert-danger">
                 {{ session()->get('flash_message') }}
             </div>
+        @elseif (session()->has('success'))
+            <div class="alert alert-success">
+                {{ session()->get('success') }}
+            </div>
+        @elseif (session()->has('errors'))
+            <div class="alert alert-danger">
+                {{ session()->get('errors') }}
+            </div>
         @endif
         <div class="main_item">
             <div class="item-left">

@@ -25,7 +25,7 @@
             <div class="col-md-9">
                 <div class="list">
                     @foreach ($list_course as $value)
-                    <a href="/course/{{$value->id}}"><div class="items">
+                    <a href="/course/{{$value->id . '-' . Str::slug($value->name)}}"><div class="items">
                         <img src="/public/upload/images/teachers/thumb/teacher{{$value->photo}}" alt="">
                         <div class="lname">
                             <p>{{$value->name}}</p>

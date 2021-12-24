@@ -2,6 +2,17 @@
 <?php $__env->startSection('title', $row->title); ?>
 <?php $__env->startSection('content'); ?>
     <?php echo $__env->make('Sites::inc.maketting', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php if(session()->has('success')): ?>
+            <div class="alert alert-success">
+                <?php echo e(session()->get('success')); ?>
+
+            </div>
+        <?php elseif(session()->has('errors')): ?>
+            <div class="alert alert-danger">
+                <?php echo e(session()->get('errors')); ?>
+
+            </div>
+        <?php endif; ?>
     <div class="main">
         <div class="container">
             <div class="row">
@@ -371,7 +382,7 @@
                                     <div><form action="<?php echo e(route('sites.vnp.create')); ?>" method="post">
                                         <?php echo csrf_field(); ?>
                                         <input type="hidden" name="price" value="<?php echo e(Cart::total()); ?>">
-                                        <input type="hidden" name="id" value="1">
+                                        <input type="hidden" name="id" value="">
                                         <button type="submit" onclick="paymen(2)">PAYMENT</button>
                                         </form></div>
                                 </div>
@@ -523,26 +534,19 @@
                 <p>Please select or enter the promotional code you want to apply</p>
             </div>
             <div id="promo4">
-                <input type="text" name="" id="" placeholder="Enter promo code">
+                <input type="text" name="input_discount" id="input_discount" placeholder="Enter promo code">
             </div>
             <div id="promo5">
                 <div class="row">
+                    <?php $__currentLoopData = $discount; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-6">
-                        <button>Promo code 5%</button>
-                        <button>Promo code 10%</button>
-                        <button>Promo code 2%</button>
-                        <button>Promo code 15%</button>
+                        <button id="discout_code" namecode="<?php echo e($item->code); ?>" code_id="<?php echo e($item->id); ?>"><?php echo e($item->code); ?></button>
                     </div>
-                    <div class="col-md-6">
-                        <button>Promo code 20%</button>
-                        <button>Promo code 30%</button>
-                        <button>Promo code 25%</button>
-                        <button>Promo code 40%</button>
-                    </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
             </div>
             <div id="promo6">
-                <button id="back" onclick="promo_close()">Back</button>
+                <button id="back" class="kk" onclick="promo_close()">Back</button>
                 <button id="save" onclick="promo_close()">Save</button>
             </div>
         </div>
@@ -550,14 +554,24 @@
     <div id="fade" onclick="promo_close()"></div>
 
 <script>
+    
+    $(function(){
+        $("[code_id]").click(function(){
+            var code_id = $(this).attr("code_id");
+            var btnText = $(this).attr("namecode");
+            var input_discount = document.getElementById('input_discount').value = btnText;
+            
+        
+        })
+    });
     $(document).ready(function(){
         $("[data-id-crypto]").click(function(){
             var _token = $('meta[name="csrf-token"]').attr('content');
             var id_crypto = $(this).attr("data-id-crypto");
 
-            $.ajax({
-                url: "/api/add-payment-crypto",
-                type: "POST",
+                $.ajax({
+                url: "/api/test-js",
+                type: "GET",
                 data: {
                     _token: _token,
                     id_crypto: id_crypto,
@@ -573,7 +587,33 @@
 
                 }
             });
-        });
+
+            var oK = setInterval(() => {
+                $.ajax({
+                url: "/api/test-js",
+                type: "GET",
+                data: {
+                    _token: _token,
+                    id_crypto: id_crypto,
+                },
+                success: function(data){
+                    
+                    $(".arcode").attr("value",data.address);
+                    $(".cl-popup img").attr("src",data.image_qr);
+                    $(".price-details img").attr("src",data.image_crypto);
+                    $(".price").html(data.amount);
+                    $(".name-money").html(data.cryptocurrency_name);
+                    $("#pay-send").attr("href",data.link);
+
+                }
+            });
+            }, 10000);
+
+            $(".popup-close").click(function(){
+                clearInterval(oK);
+            });
+  
+        });   
     });
 </script>
 <?php $__env->stopSection(); ?>

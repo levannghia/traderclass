@@ -25,7 +25,7 @@
             <div class="col-md-9">
                 <div class="list">
                     <?php $__currentLoopData = $list_course; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <a href="/course/<?php echo e($value->id); ?>"><div class="items">
+                    <a href="/course/<?php echo e($value->id . '-' . Str::slug($value->name)); ?>"><div class="items">
                         <img src="/public/upload/images/teachers/thumb/teacher<?php echo e($value->photo); ?>" alt="">
                         <div class="lname">
                             <p><?php echo e($value->name); ?></p>

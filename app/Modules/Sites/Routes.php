@@ -15,8 +15,8 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/all-class", ["as" => "sites.allClass.index", "uses" => "AllClass@index"]);
     Route::get("/all-teacher", ["as" => "sites.allTeacher.index", "uses" => "AllTeacher@index"]);
     //Teachers
-    Route::get("/course/{id}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
-    Route::get("/course/{id}/video/{id_video}",["as" => "sites.teacher.video", "uses" => "Teacher@video"]);
+    Route::get("/course/{id}-{slug}", ["as" => "sites.teacher.index", "uses" => "Teacher@index"]);
+    Route::get("/course/{id}/video/{id_video}",["middleware" => "check", "as" => "sites.teacher.video", "uses" => "Teacher@video"]);
     Route::post("/subcribe-teacher", ["as" => "sites.teacher.subcribe", "uses" => "Teacher@postSubcribe"]);
     //Route::get("/login", ["as" => "users.login", "uses" => "Users@login"]);
 
@@ -45,6 +45,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
         Route::get("/test", ["as" => "sites.crypto.process", "uses" => "PaymentCrypto@process"]);
         Route::post("/add-payment-crypto", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@postAdd"]);
         Route::get("/update/{id}", ["as" => "sites.crypto.getUpdate", "uses" => "PaymentCrypto@getUpdate"]);
+        Route::get("/test-js", ["as" => "sites.crypto.postAdd", "uses" => "PaymentCrypto@testJS"]);
     });
 
     //Account
@@ -82,6 +83,7 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
     Route::get("/master-class", ["as" => "sites.master-class.index", "uses" => "MasterClass@index"]);
     //thanh toan vnp
     Route::post("/vnp-payment", ["as" => "sites.vnp.create", "uses" => "VNPPayment@create"]);
+    Route::get("/return", ["as" => "sites.vnp.return", "uses" => "VNPPayment@return"]);
   
     //log-into
     Route::group(["prefix" => "log-into",'middleware' => 'auth:web'], function() {
@@ -127,5 +129,4 @@ Route::group(['module' => 'sites', 'middleware' => 'web', 'namespace' => "App\Mo
 
     Route::post("/updateinformaition", ["as" => "account.updateinformation", "uses" => "Account@UpdateInformation_request"]);
     
-
 });

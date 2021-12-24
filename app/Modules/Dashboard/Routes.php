@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "App\Modules\Dashboard\Controllers"], function () {
 
+    Route::get("/test-excel", ["as" => "excel", "uses" => "TestExcel@setDefautFont"]);
     Route::get("error/login.html", ["as" => "login", "uses" => "Errorcode@index"]);
 
     Route::group(["prefix" => "dashboard"], function () {
@@ -38,6 +39,21 @@ Route::group(['module' => 'dashboard', 'middleware' => 'web', 'namespace' => "Ap
                 // Route::post("edit/{id}", ["as" => "admin.users.postEdit", "uses" => "Users@postEdit"]);
                 // Route::get("delete/{id}", ["as" => "admin.users.delete", "uses" => "Users@delete"]);
                 Route::get("status/{id}/{status}", ["as" => "admin.users.status", "uses" => "Users@status"]);
+                // Route::get("status-role/{id}/{status}", ["as" => "admin.users.role.status", "uses" => "Users@statusRole"]);
+            });
+
+            //order
+            Route::group(["prefix" => "order"], function() {
+                Route::get("/", ["as" => "admin.order", "uses" => "Order@index"]);
+                Route::post("/", ["as" => "admin.order", "uses" => "Order@postIndex"]);
+                // Route::get("status-role/{id}/{status}", ["as" => "admin.users.role.status", "uses" => "Users@statusRole"]);
+            });
+
+            //order_DETAIL
+            Route::group(["prefix" => "order-detail"], function() {
+                Route::get("/{id}", ["as" => "admin.orderDetail", "uses" => "Order@orderDetail"]);
+                Route::post("/", ["as" => "admin.postOrderDetail", "uses" => "Order@postOrderDetail"]);
+                Route::get("/download-excel/{id}", ["as" => "admin.downloadExcel", "uses" => "TestExcel@downloadExcel"]);
                 // Route::get("status-role/{id}/{status}", ["as" => "admin.users.role.status", "uses" => "Users@statusRole"]);
             });
 

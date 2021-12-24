@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\DB;
                 <?php echo e(session()->get('flash_message')); ?>
 
             </div>
+        <?php elseif(session()->has('success')): ?>
+            <div class="alert alert-success">
+                <?php echo e(session()->get('success')); ?>
+
+            </div>
+        <?php elseif(session()->has('errors')): ?>
+            <div class="alert alert-danger">
+                <?php echo e(session()->get('errors')); ?>
+
+            </div>
         <?php endif; ?>
         <div class="main_item">
             <div class="item-left">

@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-3" id="col-md-3">
                             <button><p> <a href="./Register.html"><i class="bi bi-plus-lg"></i> &ensp;Register the course</a></p></button>
-                            <button id="but" onclick="nextv()"><p><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</p></button>
+                            <button id="but" onclick="nextv()"><a style="color: white; text-decoration: none" href="/course/{{$course->id}}/video/"><img width="12px" style="margin-bottom: 3px;"  src="/public/sites/images/nextvideo.png" alt="">&ensp; Next video</a></button>
                         </div>
                     </div>
                     <p style="font-size: 13px; color: white;">From litigator to ultramarathoner to bestselling author to head instructor and VP at Peloton, Robin Arzón keeps proving it’s never too late to level up in your life. Now, she’s ready to teach you how building your mental strength can
@@ -76,10 +76,23 @@
                         <p>Browse Lesson Plan</p>
                     </div>
                     <div class="im">
+                        @php
+                            $i = 1;
+                        @endphp
                         @foreach ($list_video as $value)
+                        @if (isset($user_course))
                         <div onclick="nextvideo(0)">
-                            <a href="{{route('sites.teacher.video',['id' => $course->course_id,'id_video' => $value->id])}}"><p>{{$value->name}}</p></a>
+                            <a id="videos" href="{{route('sites.teacher.video',['id' => $course->course_id, 'id_video' => $value->id])}}"><p>{{$i++ .'. '.$value->name}}</p></a>
                         </div>
+                        @else
+                        <div onclick="thongBao()">
+                            <p>{{$i++ .'. '.$value->name}}</p>
+                        </div>
+                        {{-- <div onclick="thongBao()">
+                            <a id="videos" href="{{route('sites.teacher.video',['id' => $course->course_id,'id_video' => $value->id])}}"><p>{{$value->name}}</p></a>
+                        </div> --}}
+                        @endif
+                        
                         @endforeach
                     </div>
                     <div class="upnext">

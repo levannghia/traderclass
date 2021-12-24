@@ -41,7 +41,7 @@
             <div class="row">
                 @foreach ($data as $value)
                 <div class="col-md-3">
-                    <a href="/course/{{$value->id}}">
+                    <a href="/course/{{$value->id . '-'.Str::slug($value->name)}}">
                         <div class="img">
                             <img src="/public/upload/images/course/thumb/{{$value->photo}}" alt="">
                         </div>
